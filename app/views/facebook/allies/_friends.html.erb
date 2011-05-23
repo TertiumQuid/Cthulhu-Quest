@@ -1,0 +1,118 @@
+<ul class='grid-table' id='friend-list' style='height:465px;'>  
+<% friends.each do |friend| %>
+<li>	
+  <div class='container'>	
+	<h4>
+	  <span class='avatar'>	
+	  <%= image_tag friend.facebook_photo, :height => '50', :width => '50' %>
+	  </span>			
+	
+	  <%= truncate(friend.investigator.name, :length => 20) %>
+	</h4>	
+	<h6><%= truncate(friend.full_name, :length => 30) %></h6>
+	
+	<h5><%= friend.investigator.profile_name %><br />Level <%= friend.investigator.level %></h5>
+	<ul>			
+    <% friend.investigator.stats.positive.each_with_index do |s,s_idx| %>
+      <% if s_idx % 2 == 0 %>
+      <li style='color:#201913'>
+	    <span class='even'><%= s.skill_name %></span>
+	    <span class='value'><%= s.skill_level %></span>
+	  <% else %>	
+	    <span class='value'><%= s.skill_level %></span>
+	    <span class='odd'><%= s.skill_name %></span>
+      <% end %>
+	
+      <% if s_idx % 2 == 1  || s_idx == friend.investigator.stats.positive.size %></li><% end %>
+    <% end %>	
+
+	<% if friend.investigator.wounded? %>
+	  <li style='background-color:#801;'>
+	    <span><em>Injured</em></span>
+	    <div class='right'>-<%= friend.investigator.wounds %>&hearts; &nbsp;</div>
+	  </li>
+	<% end %>
+	<% if friend.investigator.maddened? %>
+	  <li style='background-color:#346270;'>
+	    <span><em>Unwell</em></span>
+	    <div class='right'>-<%= friend.investigator.madness %>&there4; &nbsp;</div>
+	  </li>
+	<% end %>
+	<% if friend.investigator.destitute? %>
+	  <li style='background-color:#444;'>
+	    <span><em>Destitute</em></span>
+	  <div class='right'>0&pound; &nbsp;</div>
+	  </li>
+	<% end %>		
+	</ul>
+	
+	<h5 class='tab-bottom'>
+	  <% if friend.last_login_at %>
+		last seen <%= time_ago_in_words(friend.last_login_at) %> ago
+	  <% end %>
+	</h5>		
+	
+	<div class='cmd' style='padding-left:15px;'>
+	  <% if @allies && @allies.size >= Ally::MAX_ALLIES %>
+	    <a href='javascript:void(0);' class='add-ally-button disabled'>max allies</a>
+	  <% else %>	
+	    <%= link_to "add ally", 
+	                facebook_allies_path('ally[ally_id]' => friend.investigator_id), 
+	                :class => 'add-ally-button', 
+	                :remote => true,
+	                :method => 'post' %>		
+	  <% end %>		
+	  <%= link_to "view profile", 
+	              "/facebook/investigators/#{friend.investigator_id}", 
+	              :remote => true, 
+	              :class => 'ally-button', 
+	              'data-title' => "Your Friend: #{friend.investigator.name}" %>
+
+	</div>		
+  </div>
+</li>
+<% end %>   
+
+<% if (friends.size % 6) != 0 %>
+  <% (6 - (friends.size % 6)).times do %>
+  <li>
+  <div class='container empty'>
+	<h4>
+	  <span class='avatar'></span>
+	</h4>
+	<h6>&nbsp;</h6>
+	<h5>&nbsp;<br />&nbsp;</h5>
+	<ul>
+	  <li>&nbsp;</li>
+	</ul>
+	<span class='cmd'></span>
+  </div>
+  </li>
+  <% end %>
+<% end %>		
+ </ul>
+
+<div class='float-strip'>
+<div class='next-prev'>
+  <span id='friends-prev'>&lang; PREV</span> 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <span id='friends-next'>NEXT &rang;</span>
+</div>	
+</div>
+
+
+<script>
+$(function() {
+  $('#friend-list').paginated({
+	controls: { prev: $('#friends-prev'), next: $('#friends-next') },
+	perPage: 6
+  });	
+  $( "a.add-ally-button" ).bindAjaxRequester({
+	confirmation: "Are you sure you want to add this friend to your Inner Circle?",
+    success: function(sender) {
+      $('#nav-tab-society').trigger('click'); 
+	}
+  });
+  $( ".add-ally-button.disabled" ).button('disable');
+});
+</script>

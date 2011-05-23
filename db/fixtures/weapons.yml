@@ -1,0 +1,107 @@
+winchester_shotgun:
+  id: 12
+  name: Winchester 12-guage Shotgun
+  description: The rugged, 5-round Winchester 1912 is a weapon of impecable reputation and a history of indisputable effect upon its targets.
+  price: 500
+  power: 7
+  attacks: 1
+  kind: firearm
+  
+38_revolver:
+  id: 11
+  name: .38 Reolver
+  description: Smith & Wesson's famous .38 Special is a confident and respected sidearm, suresighted and reliable to the very end.
+  price: 300
+  power: 4
+  attacks: 2
+  kind: firearm
+  
+elephant_gun:
+  id: 10
+  name: Elephant Gun
+  description: From the glory of the nitro express rifle comes the elephant gun, capable of bringing the greatest beasts on God's wild earth to a dead stop.
+  price: 1500
+  power: 12
+  attacks: 1
+  kind: firearm
+  
+303_lee_enfield:
+  id: 9
+  name: 303 Lee-Enfield
+  description: A thunderous repeating rifle, the battle-tested 303 is one of the British Empire's greatest assets and tools of war among the Commonwealth.
+  price: 900
+  power: 6
+  attacks: 2
+  kind: firearm
+  
+calvary_saber:
+  id: 8
+  name: Calvary Saber
+  description: This trusty blade is the deadly backsword of the modern knight; completed by an ornate scabbard and hadnguard, the weapon is suitable for both thrusting and slashing attacks. 
+  price: 70
+  power: 3
+  attacks: 3
+  kind: blade
+  
+thompson_smg:
+  id: 7
+  name: Thompson Submachinegun
+  description: The trench-sweeping Tommy Gun had little opportunity to demonstrate its merits in the Great War, but acquits itself in full confidence when trained on enemies in the streets.
+  price: 1500
+  power: 8
+  attacks: 5
+  kind: firearm
+  
+stiletto:
+  id: 6
+  name: Stiletto
+  description: The weapon of choice of old-world Sicilian knifemen, this long thin blade is marvellously well-styled for a throat or stabbing kill.
+  price: 25
+  power: 1
+  attacks: 4
+  kind: blade
+  
+sword_cane:
+  id: 5
+  name: Sword Cane
+  description: Sharp fashion and a sharper blade are the design goals of this handy and elegant brass-headed, Malacca-wooded gentleman's defense.
+  price: 40
+  power: 2
+  attacks: 3
+  kind: blade
+  
+luger_pistol:
+  id: 4
+  name: Luger P08 Pistol
+  description: A deadly creation of the German weaponsmith Georg Luger, this semi-automatic pistol makes a reliable sidearm with a parabellum magazine of versitile 9mm rounds.
+  price: 200
+  power: 4
+  attacks: 1
+  kind: firearm
+  
+winchester_m1895_rile:
+  id: 3
+  name: Winchester M1985 Rile
+  description: A lever action rile with a 28 inch barrel and loading five .303 slugs, this redoubtable model is a deadly yet affordable instrument for hunting and defense. 
+  price: 550
+  power: 5
+  attacks: 1
+  kind: firearm
+  
+colt_45_automatic:
+  id: 2
+  name: Colt .45 Automatic
+  description: Used by the military and civilian police forces alike, the Colt M1911 combines phenomenal stopping power with indefatigable reliability and a speedy rate of fire.
+  price: 450
+  power: 4
+  attacks: 3
+  kind: firearm
+  
+remington_double_derringer:
+  id: 1
+  name: Remington Double Derringer
+  description: Designed by the Philadelphia gunsmith Henry Derringer, Jr, this descrete pistol has two over-and-under barrels discharging .41 rimfire short rounds.
+  price: 50
+  power: 3
+  attacks: 2
+  kind: firearm

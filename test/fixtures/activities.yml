@@ -1,0 +1,276 @@
+gifted_weapon:
+  name: Received a Weapon From an Ally
+  namespace: gifted.weapon
+  message: <actor> gave <investigator> a <subject>
+  passive: true
+
+gift_weapon:
+  name: Gave Weapon to Ally
+  namespace: gift.weapon
+  message: <investigator> gave <object> a <subject>
+  passive: false
+  
+treated_psychosis:
+  name: Went Insane
+  namespace: insanity.treated
+  message: <investigator> has treated their condition of <object>
+  passive: false
+
+gained_psychosis:
+  name: Went Insane
+  namespace: insanity.gained
+  message: <investigator> was driven insane and gained <object>
+  passive: true
+
+assignment_accepted:
+  name: Accepted Ally's Assignment
+  namespace: assignment.assigned
+  message: <investigator> accepted assignment by <actor> to help investigate <subject>
+  passive: true
+
+assignment_reward:
+  name: Rewarded for Plot Assignment
+  namespace: assignment.reward
+  message: <investigator> received <scope> exp helping <actor> to <object>
+  passive: true
+  
+guested:
+  name: Guest RSVP
+  namespace: socialfunction.rsvp
+  message: <actor> is a guest at <investigator>'s <object>
+  passive: false
+
+plot_failed:
+  name: Failed Investigating Plot
+  namespace: plot.failed
+  message: <investigator> failed to investigate <subject>
+  passive: false
+  
+plot_solved:
+  name: Solved a Plot
+  namespace: plot.solved
+  message: <investigator> solved <subject>
+  passive: false
+  
+assignment_refused:
+  name: Ally Refused Plot Assignment
+  namespace: assignment.refused
+  message: <actor> refused assignment by <investigator> to help investigate <subject>
+  passive: true
+  
+assignment_accepted:
+  name: Ally Accepted Plot Assignment
+  namespace: assignment.accepted
+  message: <actor> accepted assignment by <investigator> to help investigate <subject>
+  passive: true
+  
+investigation_started:
+  name: Began Investigating Plot
+  namespace: plot.investigating
+  message: <investigator> began investigating <subject>
+  passive: false
+  
+accepted_plot:
+  name: Accepted Plot Thread
+  namespace: plot.accepted
+  message: <investigator> decided to investigate <subject>
+  passive: false
+  
+healing_ally:
+  name: Healed Ally
+  namespace: healing.ally
+  message: <investigator> healed <actor> for <scope> wounds
+  passive: false
+  
+healing_self:
+  name: Healed Self
+  namespace: healing.self
+  message: <investigator> healed for <scope> wounds
+  passive: false
+  
+healing_allied:
+  name: Healed by Ally
+  namespace: healing.allied
+  message: <actor> healed <investigator> for <scope> wounds
+  passive: true
+  
+travel:
+  name: Traveled
+  namespace: travel
+  message: <investigator> traveled to <subject>
+  passive: false
+  
+contact_introduction_accepted:
+  name: Ally's Introduction Accepted
+  namespace: contact.introduction_accepted
+  message: <actor> accepted <investigator>'s introduction to <subject>
+  passive: true
+  
+contact_introduction_refused:
+  name: Ally's Introduction Refused
+  namespace: contact.introduction_refused
+  message: <actor> refused <investigator>'s introduction to <subject>
+  passive: true
+  
+contact_introduction:
+  name: Introduced to Contact by Ally
+  namespace: contact.introduction
+  message: <actor> introduced <investigator> to <subject>
+  passive: true
+  
+grimoire_read:
+  name: Read a Grimoire
+  namespace: grimoire.read
+  message: <investigator> read <subject>
+  passive: false
+  
+investigation_assigned:
+  name: Assigned to Ally's Investigation
+  namespace: investigation.assigned
+  message: <actor> assigned <investigator> to <subject>
+  passive: true
+  
+contact_introduced:
+  name: Introduced Contact to Ally
+  namespace: contact.introduced
+  message: <investigator> introduced <actor> to <subject>
+  passive: false
+  
+contact_entreated:
+  name: Entrated Contact for Favor
+  namespace: contact.entreat
+  message: <investigator> entreated <subject> for help
+  passive: false
+  
+spell_casting:
+  name: Performed a Ritual Spell
+  namespace: spell.cast
+  message: <investigator> perform the rituals for <subject>
+  passive: false
+  
+gifted_item:
+  name: Received an Item From an Ally
+  namespace: gifted.item
+  message: <actor> gave <investigator> a <subject>
+  passive: true
+  
+gifted_fund:
+  name: Received Funds From an Ally
+  namespace: gifted.funds
+  message: <actor> gave <investigator> £<scope> funds
+  passive: true
+  
+gift_item:
+  name: Gave Item to Ally
+  namespace: gift.item
+  message: <investigator> gave <object> a <subject>
+  passive: false
+  
+gift_fund:
+  name: Gave Funds to Ally
+  namespace: gift.funds
+  message: <investigator> gave <object> £<scope> funds
+  passive: false
+  
+weapon_purchase:
+  name: Purchased a Weapon
+  namespace: weapon.purchased
+  message: <investigator> purchase a <object>
+  passive: false
+  
+ally_allied:
+  name: Added to Ally's Inner Circle
+  namespace: ally.allied
+  message: <actor> added <investigator> as an Ally
+  passive: true
+  
+ally_added:
+  name: Added Ally to Inner Circle
+  namespace: ally.added
+  message: <investigator> added <object> as an Ally
+  passive: false
+  
+social_reward:
+  name: Rewarded at a Social Function
+  namespace: social.rewarded
+  message: <investigator> a reward of <scope> <object> at <actor>
+  passive: false
+  
+social_hosted:
+  name: Hosted a Social Function
+  namespace: social.hosted
+  message: <investigator> hosted a <object>
+  passive: false
+  
+social_function:
+  name: Hosting a Social Function
+  namespace: social.function
+  message: <investigator> started hosting a <object>
+  passive: false
+  
+guest:
+  name: Guest at a Social Function
+  namespace: socialfunction.guest
+  message: <investigator> is a guest at <actor>'s <object>
+  passive: false
+  
+skilled:
+  name: Improved a Skill
+  namespace: skill
+  message: <investigator> advanced <object> to rank <scope>
+  passive: false
+  
+leveled:
+  name: Gained a Level
+  namespace: level
+  message: <investigator> advanced to level <scope>
+  passive: true
+
+gifted:
+  name: Received a Gift
+  namespace: gift.received
+  message: <investigator> received a gift of <object> from <actor>
+  passive: true
+  
+gift:
+  name: Sent a Gift
+  namespace: gift.sent
+  message: <investigator> sent a gift of <object> to <actor>
+  passive: false
+  
+registered:
+  name: Joined the World
+  namespace: registered
+  message: <investigator> stepped into the world
+  dashboard_news: <investigator> stepped into the world
+  passive: false
+  
+income:
+  name: Earned Daily Income
+  namespace: income
+  message: <investigator> earned a daily income
+  passive: true
+  
+first_aid_received:
+  name: Wounds Treated by a Friend
+  namespace: wounds.received.healing
+  message: <investigator> had wounds treated by <actor>
+  passive: true
+
+first_aid_given:
+  name: Treated the Wounds of a Friend
+  namespace: wounds.ally.healing
+  message: <investigator> treated <actor>'s wounds
+  passive: false
+  
+first_aid:
+  name: Treated Wounds with First Aid 
+  namespace: wounds.self.healing
+  message: <investigator> treated themself for wounds
+  passive: false
+  
+monster_combat:
+  name: Battled a Monster
+  namespace: monster.combat
+  message: <investigator> battled a <actor> in <location>
+  passive: false

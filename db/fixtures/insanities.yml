@@ -1,0 +1,59 @@
+nightmares:
+  id: 10
+  name: Nightmares
+  description: Frayed and weakened by the lucidity of night terrors, the fantastic torments of slumber cling like a reality to the inconscient sufferer.
+  skill_id: 7
+  
+sociopathy:
+  id: 9
+  name: Sociopathy
+  description: Traumatized, cold, and inhumanly numb to the pains and lunacies of the universe, the sociopath will never again experience empathy or understanding.
+  skill_id: 9
+  
+depression:
+  id: 8
+  name: Depression
+  description: The defeat of crushing dispair makes those condemned to depression capable of few thoughts beyond suicide and grief.
+  skill_id: 5
+  
+psychosis:
+  id: 7
+  name: Psychosis
+  description: Antisocial and disdainful of their fellow man, psychotic individuals are a danger to themselves and all around them.
+  skill_id: 6
+  
+phobia:
+  id: 6
+  name: Phobia
+  description: Enslaved to the influence of abject terror provoked by seemingly harmless events or things, fear consumes the horrified and their sense of the world.
+  skill_id: 10
+  
+mania:
+  id: 5
+  name: Mania
+  description: Insomnia, distress, and the impulse of a furrious ugency that overtakes thought and action will be the death of the maniac.
+  skill_id: 2
+  
+hallucinations:
+  id: 4
+  name: Hallucinations
+  description: Witness to things which aren't there, audiance to a choir of threatening voices, a victim of halluciinations is helpless in conflicts.
+  skill_id: 3
+  
+conversion:
+  id: 3
+  name: Conversion
+  description: Sickly and afflected by unplaceable frailty and pain, the somatic agonies of the mind makes pitiful creatures of man.
+  skill_id: 8
+
+dementia:
+  id: 2
+  name: Dementia
+  description: Struck into a amnesiatic state of disorientation and uncertainty, research and memory is impossible for a shattered mind.
+  skill_id: 4
+  
+paranoia:
+  id: 1
+  name: Paranoia
+  description: Gripped by the fear of supreme conspiracy and cosmic malevonce, these individuals are incapable of heroic adventure.
+  skill_id: 1

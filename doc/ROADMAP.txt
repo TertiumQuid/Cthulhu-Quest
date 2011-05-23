@@ -1,0 +1,14 @@
+## On The Web:
+
++ Facebook Connect (user management)
++ Remember Me / Session Mgmt
++ Facebook Friends List
++ Create Investigator
++ Journal View
++ Plot Investigation / Intrigues <=> Allies
++ Challenge Resolution
+
+## Other
+
++ Resource Validation
++ CRON plot and facebook profile tasks

@@ -1,0 +1,111 @@
+fraternal_order_warchest:
+  id: 16
+  skill_id: 6
+  task_type: funds
+  name: Fraternal Order Warchest
+  description: Your service to a descrete yet honorable society of old money is called upon for a privy favor
+
+astronomical_anomaly:
+  id: 15
+  skill_id: 4
+  task_type: funds
+  name: Astronomical Anomaly
+  description: Observe the movements of a surprising stellar phenomena and report your findings to the astronomical society
+  
+census_records:
+  id: 14
+  skill_id: 4
+  task_type: funds
+  name: Census Records
+  description: The government requires your investigative talents to record census details on its thriving citizenry
+
+alienist_case_study:
+  id: 13
+  skill_id: 9
+  task_type: funds
+  name: Alientist Case Study
+  description: Help observe the case of a raving madman under the clincal care of a team of inquisitive alienists.
+
+union_strongarm:
+  id: 12
+  skill_id: 3
+  task_type: funds
+  name: Union Strongarm
+  description: A labor union needs your muscle at a chapter meeting to guard the union safehouse against their many enemies
+
+loan_shark:
+  id: 11
+  skill_id: 3
+  task_type: funds
+  name: Loan Shark
+  description: Make a collection run for a loan shark, using intimidation and necessary force to return the elusive debts
+
+stage_acting:
+  id: 10
+  skill_id: 10
+  task_type: funds
+  name: Stage Acting
+  description: Carry a notable role in a classical theater production before an urbane and descriminating audiance
+
+lead_safari:
+  id: 9
+  skill_id: 1
+  task_type: funds
+  name: Lead Safari
+  description: Lead a safari of wealthy sportsmen, escorting them through the wilderness in the hunt for exotic quarry
+  
+negotiate_bank_loan:
+  id: 8
+  skill_id: 2
+  task_type: funds
+  name: Negotiate Bank Loan
+  description: Negotiate a minor loan from an insolvent and desperate bank willing to concede favorable terms
+
+fence_stolen_goods:
+  id: 7
+  skill_id: 8
+  task_type: funds
+  name: Fence Stolen Goods
+  description: Use your available connections and social status, such as it is, to fence the jewlery and heirlooms of a cat burgler
+
+liberty_bonds:
+  id: 6
+  skill_id: 2
+  task_type: funds
+  name: Liberty Bonds
+  description: Support United States and the liberty of the free world with securities investments from the New York Stock Exchange
+
+publish_book:
+  id: 5
+  skill_id: 5
+  task_type: funds
+  name: Publish Book
+  description: Bring your controversial ideas to life with a nodescript yet provocatively titled print run of your book
+
+publish_paper:
+  id: 4
+  skill_id: 5
+  task_type: funds
+  name: Publish Scholarly Paper
+  description: Pen a stimulating thesis concerning the unstudied corner notions of your specialty
+
+curate_exhibit:
+  id: 3
+  skill_id: 5
+  task_type: funds
+  name: Curate Exhibit
+  description: Provide your services to the museum board in the arrangement and curation of a very unusual collection
+
+bootlegging:
+  id: 2
+  skill_id: 8
+  task_type: funds     
+  name: Bootlegging
+  description: Collude with a local crime syndicate to transport a shipment of dark liquors to the city's speakeasies
+  
+university_lecture:
+  id: 1    
+  skill_id: 5
+  task_type: funds     
+  name: University Lecture
+  description: Present your curious findings before an audiance of esteemed peers and eager young minds

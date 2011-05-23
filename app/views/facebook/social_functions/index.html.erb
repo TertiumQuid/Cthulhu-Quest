@@ -1,0 +1,12 @@
+<% unless @socials.blank? %>
+  <%= render :partial => 'facebook/socials/socials', 
+             :locals => { :socials => @socials } %>
+<% end %>
+
+<% if @social.blank? %>
+  <%= render :partial => 'facebook/social_functions/social_functions', 
+             :locals => { :social_functions => @social_functions } %>
+<% else %>
+  <%= render :partial => 'facebook/socials/social', 
+             :locals => { :social => @social } %>
+<% end %>

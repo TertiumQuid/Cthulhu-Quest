@@ -1,0 +1,21 @@
+<div class="box profile" id='investigator'>
+  <em class='title right green small'><%= investigation.plot.subtitle %></em>	
+  <h3 class='green'><span><%= investigation.plot.title %><span></h3>
+  <div class='para square-top-left green small'>
+	<%= raw (investigation.plot.description || '').gsub("\n",'<br />') %>
+  </div>	
+
+  <% if investigation.active? || investigation.investigated? %>
+    <%= render :partial => 'facebook/investigations/investigating', :locals => { :investigation => @investigation } %>
+  <% elsif investigation.completed? %>
+    <%= render :partial => 'facebook/investigations/completed', :locals => { :investigation => @investigation } %>
+  <% end %>
+</div>
+
+<script>
+$(function() {
+  $( "#investigation-bar" ).progressbar({
+	value: <%= investigation.active? ? (100 - investigation.remaining_time_in_percent) : 100 %>
+  });
+});
+</script>

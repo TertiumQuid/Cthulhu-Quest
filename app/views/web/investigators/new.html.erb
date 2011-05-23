@@ -1,0 +1,44 @@
+<article>
+  <header>
+	<h2>New Investigator</h2>
+  </header>
+
+  <div class="profile">	
+	<%= form_for [:web, @investigator] do |f| %>
+	  <%= field_set_tag '1. Name Your Investigator' do %>
+      <ul>
+	    <li><%= f.label :name, 'Name:' %> <%= f.text_field :name, :placeholder => 'investigator name' %></li>
+	  </ul>
+	  <% end %>
+	  <%= field_set_tag '2. Choose a Profile' do %>
+      <ul class="centered">		
+	    <li>
+		  <ul class="radiolist">
+		  <% @profiles.each do |p| %>
+		    <li class="radio <%= 'selected' if @investigator.profile_id == p.id %>">
+			  <%= f.radio_button :profile_id, p.id, :id => p.name.tableize.singularize %>
+			  <label for="<%= p.name.tableize.singularize %>">
+				<span class="radio circle"><span>&nbsp;</span></span>
+			    <%= p.name %>
+			  </label>
+	          <ul>	
+			    <li><span>INCOME</span><span>£<%= p.income %> per day</span></li>
+				<% p.profile_skills.each do |s| %>
+				  <li><span><%= s.skill_name %></span><span><%= s.skill_level %></span></li>
+				<% end %>		
+		      </ul>			
+		    </li>
+		  <% end %>
+		  </ul>
+		</li>
+	  </ul>
+	  <% end %>
+
+	  <%= field_set_tag '' do %>	
+	    <%= f.submit "Create Investigator", :class => 'submit' %>	
+	  <% end %>
+	<% end %>
+  </div>
+</article>
+
+<%= javascript_include_tag 'web/investigator' %>

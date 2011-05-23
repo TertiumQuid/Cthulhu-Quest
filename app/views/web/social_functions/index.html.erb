@@ -1,0 +1,36 @@
+<article class='sidebar'>
+  <% unless @socials.blank? %>
+    <h2>Invitations</h2>
+    <ul class="picklist">
+	  <li class="header">Your allies are hosting events to the benefit of all. Won't you attend? For each event, you must decide how you will conduct yourself.</li>
+	  <% @socials.each do |social| %>
+	    <li>
+		  <div class="body">
+			<label>
+			  <%= social.name %>, 
+			 <%= social.scheduled? ? 'immediately' :  "in #{distance_of_time_in_words( Time.now, social.appointment_at )}" %>
+			</label>
+			<img class='photo' src='' />
+			<br />
+			<p style='margin-bottom:5x;height:15px;'>
+			  <%= link_to social.investigator.name, web_investigator_path(social.investigator), :style =>' display:inline-block;' %> has invited you to join them for <%= social.social_function.description %> 
+				<%= button_to(social.social_function.defection, web_social_guests_path(social, :status => 'defected'), :method => :post, :style => 'height:60px;white-space:normal;margin-top:20px;') %>
+				<%= button_to(social.social_function.cooperation, web_social_guests_path(social, :status => 'cooperated'), :method => :post, :style => 'height:60px;white-space:normal', :class => 'submit') %>				
+			</p>
+		  </div>
+		</li>
+	  <% end %>
+	</ul>
+  <% end %>
+</article>
+
+<article>
+  <header>
+	<h2>Social Functions</h2>
+  </header>
+
+  <div class="profile">
+	<p>Enjoy the pleasure of the company of your most trusted allies by hosting a social function. Investigators may only host one function a day, and their allies will have a chance to RSVP as guests. Everyone attending a social function gains some benefit, measured by their behavior.</p>
+    <%= render @social_functions %>
+  </div>
+</article>

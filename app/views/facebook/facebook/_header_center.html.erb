@@ -1,0 +1,45 @@
+<div class="title">
+  <%= link_to 'Cthulhu Quest', 
+              'http://www.facebook.com/apps/application.php?id='+AppConfig.facebook.app_id, 
+              :target => '_blank', :style => 'text-decoration:none;' %>
+</div>
+
+<div class="body">
+  <% if current_investigator %>
+  <ul>
+	<li><label>&nabla;</label><span><%= current_investigator.location.name %></span></li>
+	<li>
+	  <label>&pound;</label>
+	  <span><label class='investigator-funds'><%= current_investigator.funds %></label> <em>Next income in 2 hours</em></span>
+	</li>
+	<li><label>&hearts;</label><span class='investigator-wounds'><%= current_investigator.wound_status %></span></li>
+	<li><label>&there4;</label><span class='investigator-madness'><%= current_investigator.madness_status %></span></li>
+	<li>
+	  <label>xp</label>
+      <div id="header-experience" class="progressbar"></div>				
+	  <em>level <%= current_investigator.level %>&nbsp;<br />
+	  <%=current_investigator.next_level_experience - current_investigator.experience%>xp to next&nbsp;</em>
+	</li>				
+  </ul>
+  <% else %>
+  <ul>
+	<li><label>&nabla;</label><span>Miskatonic Valley</span></li>
+	<li><label>&pound;</label><span>230 <em>Next income in 2 hours</em></span></li>
+	<li><label>&hearts;</label><span>Healthy and unharmed</span></li>
+	<li><label>&there4;</label><span>Reasonably self-possessed</span></li>
+	<li>
+	  <label>xp</label>
+      <div id="header-experience" class="progressbar"></div>				
+	  <em>level 3&nbsp;<br />52xp to next&nbsp;</em>
+	</li>				
+  </ul>
+  <% end %>
+</div>
+
+<script>
+$(function() {
+  $( "#header-experience" ).progressbar({
+	value: <%= current_investigator ? current_investigator.percent_until_next_level : 50 %>
+  });
+});
+</script>

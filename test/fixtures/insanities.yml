@@ -1,0 +1,49 @@
+nightmares:
+  name: Nightmares
+  description: Frayed and weakened by the lucidity of night terrors, the fantastic torments of slumber cling like a reality to the inconscient sufferer.
+  skill: sorcery
+  
+sociopathy:
+  name: Sociopathy
+  description: Traumatized, cold, and inhumanly numb to the pains and lunacies of the universe, the sociopath will never again experience empathy or understanding.
+  skill: psychology
+  
+depression:
+  name: Depression
+  description: The defeat of crushing dispair makes those condemned to depression capable of few thoughts beyond suicide and grief.
+  skill: scholarship
+  
+psychosis:
+  name: Psychosis
+  description: Antisocial and disdainful of their fellow man, psychotic individuals are a danger to themselves and all around them.
+  skill: society
+  
+phobia:
+  name: Phobia
+  description: Enslaved to the influence of abject terror provoked by seemingly harmless events or things, fear consumes the horrified and their sense of the world.
+  skill: sensitivity
+  
+mania:
+  name: Mania
+  description: Insomnia, distress, and the impulse of a furrious ugency that overtakes thought and action will be the death of the maniac.
+  skill: bureaucracy
+  
+hallucinations:
+  name: Hallucinations
+  description: Witness to things which aren't there, audiance to a choir of threatening voices, a victim of halluciinations is helpless in conflicts.
+  skill: conflict
+  
+conversion:
+  name: Conversion
+  description: Sickly and afflected by unplaceable frailty and pain, the somatic agonies of the mind makes pitiful creatures of man.
+  skill: underworld
+
+dementia:
+  name: Dementia
+  description: Struck into a amnesiatic state of disorientation and uncertainty, research and memory is impossible for a shattered mind.
+  skill: research
+  
+paranoia:
+  name: Paranoia
+  description: Gripped by the fear of supreme conspiracy and cosmic malevonce, these individuals are incapable of heroic adventure.
+  skill: adventure

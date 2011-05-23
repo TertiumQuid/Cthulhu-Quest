@@ -1,0 +1,96 @@
+/* STYLE RESETS - html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)  */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+}
+
+article, aside, figure, footer, header,
+hgroup, nav, section { display:block; }
+	 
+nav ul { list-style:none; }
+	 
+blockquote, q { quotes:none; }
+	 
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+	 
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent;}
+	 
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+	 
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+	 
+del { text-decoration: line-through; }
+	 
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+	 
+table { border-collapse:collapse; border-spacing:0; } /* tables still need cellspacing="0" in the markup */
+	 
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+	 
+input, select { vertical-align:middle; }
+
+
+/* BASE STYLE */
+
+body { font:13px/1.231 sans-serif; *font-size:small; } /* hack retained to preserve specificity */
+
+select, input, textarea, button { font:99% sans-serif; }
+
+pre, code, kbd, samp { font-family: monospace, sans-serif; } /* normalize monospace sizing */
+ 
+body, select, input, textarea {
+color: #444;
+font-family: serif;
+}
+
+h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+
+html { -webkit-font-smoothing: antialiased; } /* maxvoltar.com/archive/-webkit-font-smoothing */
+html { overflow-y: scroll; } /* always force a scrollbar in non-IE */
+
+small { font-size: 85%; }
+
+strong, th { font-weight: bold; }
+
+td, td img { vertical-align: top; }
+
+a:hover, a:active { outline: none; }
+
+button { width: auto; overflow: visible; } /* make buttons play nice in IE */
+
+button, input, select, textarea { margin: 0; }
+
+input[type=button], input[type=submit], button { cursor: pointer; } /* hand cursor on clickable input elements */
+
+textarea { overflow: auto; }
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+pre {
+padding: 15px;
+white-space: pre; /* CSS2 */
+white-space: pre-wrap; /* CSS 2.1 */
+white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+word-wrap: break-word; /* IE */
+}
+
+/* bicubic resizing for non-native sized IMG:
+code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }

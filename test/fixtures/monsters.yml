@@ -1,0 +1,17 @@
+hound_of_tindalos:
+  name: Hound of Tindalos
+  description: Approaching a horrendous canine shape when it manifests in the 3rd dimension, these unfathomable creatures inhabit the angles of time and space and prey upon those such as humans who descend from and act through curves.
+  kind: entity
+  attacks: 2
+  power: 6
+  defense: 3
+  madness: 5
+
+acolyte:
+  name: Acolyte
+  description: Weakness of character and a deep averice have driven these fallen souls over the edge of humanity's darkest cliffs.
+  kind: human
+  attacks: 1
+  power: 2
+  defense: 2
+  bounty: 5

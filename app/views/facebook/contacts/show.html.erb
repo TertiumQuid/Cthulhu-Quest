@@ -1,0 +1,79 @@
+<div class='ui-tabs-panel'>
+<div class="box profile" style='padding:5px'>
+  <em class='title right'><%= @contact.character.profession %></em>
+  <h3>
+    <%= @contact.name %>
+  </h3>	
+  <div class='para square-top-left'>		
+    <%= @contact.character.biography %>
+
+	<div class='info'>
+	  &nbsp;<span>Residing in <strong><%= @contact.character.location.name %></strong></span>
+	  <span class='note'>
+		<%= @contact.located? ? "being nearby, you may visit your contact" : "you are elsewhere" %>
+	  </span>	  
+	</div>
+	
+	<div class='info'>
+	  <em>&nbsp;Favors</em><span>
+	  <strong id='contact-favor-count' style='font-size:16px;'><%= @contact.favor_count %></strong></span>
+
+      <% if @contact.located? && !@contact.entreatable? %>
+	    <div id='entreat-progress' class='progress-bar'>
+		  <span>wait <%= distance_of_time_in_words(@contact.last_entreated_at, Time.now - 1.day )%></span>
+	    </div>
+      <% elsif @contact.located? && @contact.entreatable? %>
+	    <%= link_to "entreat favor", 
+	                entreat_facebook_contact_path(@contact), 
+	                :remote => true,
+	                :method => 'put',
+	                :id => 'entreat-favor-button' %>
+      <% else %>
+        <span class='note'>travel to visit your contact and ask for favors</span>
+      <% end %>
+	</div>	
+  </div>
+	
+  <div class='para'>
+	<h4>Skill Profile</h4>
+	<ul class='big'>	
+      <% @contact.character.character_skills.each do |stat| %>
+	    <li>
+	      <span class='label'>
+	        <%= stat.skill_name %> 
+		    <span><%= stat.skill_level %></span>
+		  </span>
+        </li>
+      <% end %>	
+	</ul>
+  </div>
+	
+  <% unless @allies.blank? %>	
+    <%= render :partial => 'facebook/contacts/introductions', :locals => {:allies => @allies} %>
+  <% end %>
+
+  <% unless @plots.blank? %>
+    <%= render :partial => 'facebook/contacts/plots', :locals => { :plots => @plots } %>
+  <% end %>
+</div>
+</div>
+
+<script>
+$(function() {
+  <% if @contact.located? && !@contact.entreatable? %>
+    $("#entreat-progress").progressbar({ value: <%= @contact.percent_before_entreatable %> });
+  <% end %>
+
+  $( "#entreat-favor-button" ).bindAjaxRequester({
+    success: function(sender) {
+	  var bar = $("<div id='entreat-progress' class='progress-bar'><span>wait about 24 hours</span</div>")
+	  bar.progressbar({ value:0 });
+	  $( "#entreat-favor-button" ).replaceWith(bar);
+		
+	  var favorLabel = $('#contact-favor-count');
+      var val = favorLabel.text();
+      favorLabel.text( parseInt(val) + 1);
+	}
+  });
+});
+</script>

@@ -1,0 +1,117 @@
+hong_kong:
+  id: 22
+  name: Hong Kong
+  zone: Asia
+  
+harvard_university:
+  id: 21
+  location_id: 4
+  name: Harvard University
+  zone: America
+  
+british_museum:
+  id: 20
+  location_id: 5
+  name: British Museum
+  zone: Great Britan
+  
+bibliotheque_nationale:
+  id: 19
+  location_id: 6
+  name: Bibliotheque Nationale
+  zone: France
+  
+innsmouth:
+  id: 18
+  location_id: 1
+  name: Innsmouth
+  zone: Miskatonic Valley
+  
+kingsport:
+  id: 17
+  location_id: 1
+  name: Kingsport
+  zone: Miskatonic Valley
+  
+dunwich:
+  id: 16
+  location_id: 1  
+  name: Dunwich
+  zone: Miskatonic Valley
+  
+sydney:
+  id: 15
+  name: Sydney
+  zone: Australia
+  
+naples:
+  id: 14
+  name: Naples
+  zone: Italy
+  
+cape_town:
+  id: 13
+  name: Cape Town
+  zone: South Africa
+  
+berlin:
+  id: 12
+  name: Berlin
+  zone: Germany
+  
+rome:
+  id: 11
+  name: Rome
+  zone: Italy
+  
+chicago:
+  id: 10
+  name: Chicago
+  zone: America
+  
+san_francisco:
+  id: 9
+  name: San Francisco
+  zone: America
+  
+new_orleans:
+  id: 8
+  name: New Orleans
+  zone: America
+  
+miskatonic_university:
+  id: 7
+  location_id: 2
+  name: Miskatonic University
+  zone: Arkham
+  
+paris:
+  id: 6
+  name: Paris
+  zone: France
+  
+london:
+  id: 5    
+  name: London
+  zone: Great Britan
+  
+boston:
+  id: 4    
+  name: Boston
+  zone: America
+  
+new_york:
+  id: 3    
+  name: New York
+  zone: America    
+
+arkham:
+  id: 2
+  location_id: 1
+  name: Arkham
+  zone: Miskatonic Valley
+  
+miskatonic_valley:
+  id: 1
+  name: Miskatonic Valley
+  zone: America

@@ -1,0 +1,21 @@
+<% if current_investigator %>
+  <article class='sidebar funds'>
+    <h2>Funds : £<%= current_investigator.funds %>.00</h2>
+  </article>
+<% end %>
+
+<article>
+  <header>
+	<h2>Dry Goods Catalogue</h2>
+  </header>
+
+  <div class="profile">
+	<p>Find exquisite equipment to suit your adventuring needs from Sears Roebuck and Co, Montgomery Ward, the J. C. Penney Company, and other fine and trustworthy catalogue merchants.</p>
+	<table class="tabular">
+	  <tbody>
+		<tr><th>Item Listing</th><th>Price</th><th>&nbsp;</th></tr>
+		<%= render @items %> 
+	  </tbody>
+	</table>	
+  </div>
+</article>

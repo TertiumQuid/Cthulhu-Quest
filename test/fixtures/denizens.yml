@@ -1,0 +1,7 @@
+arkham_acolyte:
+  location: arkham
+  monster: acolyte
+  
+new_york_acolyte:
+  location: new_york
+  monster: acolyte    

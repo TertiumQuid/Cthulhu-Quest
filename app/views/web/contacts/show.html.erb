@@ -1,0 +1,78 @@
+<article class='sidebar'>
+  <h3>Entreat Favor</h3>	
+  <ul class="picklist">
+	<li class="header">You can call upon your contact to help overcome plot intrigues, but you must have first entreated their favor.</li>
+	<li >
+		<% if !@contact.entreatable? %>
+		  <div style="padding:10px;color:#eee;text-align:center;">You must wait a decorous period before entreating your contact's favor again.</div>
+		<% elsif !@contact.located? %>
+		  <div style="padding:10px;color:#eee;text-align:center;">You must travel to <%=@contact.character.location.name %> to confide and entreat your contact's favor.</div>
+		<% else %>
+		<div style='padding:4px;'>
+        <%= button_to( 'Entreat Favor (+1)', 
+						 entreat_web_contact_path(@contact), 
+						 :method => 'put', :class => 'submit') %>
+		</div>
+		<% end %>
+	</li>
+  </ul>
+
+  <h3>Introductions</h3>
+  <ul class="picklist">
+	<li class="header">You can arrange an introduction between your contact and one of your allies. Naturally, <strong>it costs <%= Introduction::COST %> favors</strong> to persuade your contact to extend their trust to your friend.</li>
+	<div style="padding:10px;color:#eee;text-align:center;">
+	<% if !current_investigator.can_introduce? %>
+	  You've already arranged an introduction in the last <%= Introduction::TIMEFRAME %> hours; you'd not want to be thought a sycophant.
+	<% elsif !@contact.located? %>
+	  You must travel to <%=@contact.character.location.name %> to meet and arrange an introduction.
+	<% elsif @contact.favor_count < Introduction::COST %>	
+	  You don't have enough favor right now to request an introduction.
+	<% else %>
+	  <% @introducable = true %>
+	  Choose for whom among your allies you'll arrange an introduction:
+	<% end %>
+	</div>
+  </ul>	
+
+  <% unless @allies.blank? || !@introducable == true %>
+	<table class="tabular">
+	  <tbody>
+		<% @allies.each do |ally| %>
+		  <tr><th><%= ally.name %></th><td style='font-size:16px;text-align:right;padding-right:5px;'><%= link_to 'Introduce', web_contact_introductions_path(@contact.id, :investigator_id => ally.ally_id), :method => :post %></td></tr>
+		<% end %>
+	  </tbody>
+	</table>
+  <% end %>
+</article>
+
+	
+<article>
+  <header>
+	<h2>Character Contact</h2>
+	
+    <div class="profile">
+      <fieldset>
+        <legend><%= @contact.name %></legend>	
+	      <ul>
+		    <li>
+			  <header>
+			    <span class='right'><%= "#{@contact.character.location.name}, #{@contact.character.location.zone}" %></span>
+			    <%= @contact.character.profession %>
+			  </header>
+			</li>
+			<li><%= @contact.favor_count > 0 ? raw("They owe you <strong>#{pluralize(@contact.favor_count,'favor')}</strong> you can use to help with your investigations") : "They don't owe you any favors." %></li>
+			<li style='margin-top:10px'><em><%= @contact.character.biography %></em></li>
+		  </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Skills</legend>
+        <ul>
+	    <% @contact.character.character_skills.each do |s| %>
+	      <li><label><%= s.skill_name %>:</label> <span><%= s.skill_level %></span></li>
+	    <% end %>
+        </ul>
+      </fieldset>
+    </div>
+  </header>
+</article>

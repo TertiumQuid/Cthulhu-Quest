@@ -1,0 +1,102 @@
+<table class="box pager">
+  <tr>
+    <td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='possession-prev' style='left:-5px;'>&lang;<span>PREV</span></a>
+    </td>		
+	  <td>
+		<div class='grid-list-container'>
+		<ul class='grid-list small' id='possession-list' style='width:570px;'>
+		<% items.each do |possession| %>
+		<li>
+		  <h6><%= possession.item.name %></h6>
+		  <div class='body'><%= possession.item.description %></div>
+		  <div class="info">
+			<% if possession.item.equipment? %>
+			  <span>(equipment)</span>
+			<% else %>
+		      <span id="item-uses-<%= possession.id %>"><%= possession.uses_count %></span> <%= possession.uses_count > 1 ? 'uses' : 'use' %> 
+		    <% end %>
+		    <%= possession.item.equipment? ? '' : "(#{possession.item.kind})" %>
+		  </div>
+		  <div class="cmd">
+			<% if possession.item.equipment? %>
+		      <a href='javascript:void(0);' class='activate-button disabled'>plot item</a>
+			<% elsif possession.item.medical? %>  
+		      <%= link_to 'minister', 
+		                  facebook_investigator_heal_path( current_investigator, :id => possession.id ), 
+		                  'data-counter' => "item-uses-#{possession.id}",
+		                  'data-kind' => 'medical',
+		                  :class => 'activate-button', 
+		                  :method => 'post',
+		                  :remote => true %>	
+			<% elsif possession.item.spirit? %>  
+		      <%= link_to 'imbibde', 
+		                  facebook_investigator_becalm_path( current_investigator, :id => possession.id ), 
+		                  'data-counter' => "item-uses-#{possession.id}",
+		                  'data-kind' => 'spirit',
+		                  :class => 'activate-button', 
+		                  :method => 'post',
+		                  :remote => true %>
+		    <% elsif possession.primed? %>
+		      <%= link_to "activate", 
+		                  facebook_possession_path( possession ), 
+		                  'data-title' => possession.item.name,
+		                  'data-kind' => possession.item.kind,
+		                  :class => 'activate-button', 
+		                  :method => 'put',
+		                  :remote => true %>	
+		    <% else %>
+		      <a href='javascript:void(0);' class='activate-button disabled'>recharging</a>
+		    <% end %>
+		  </div>
+		</li>
+		<% end %>
+
+		<% if (items.size % 8) != 0 %>
+		  <% (8 - (items.size % 8)).times do %>
+		  <li class='empty'>
+		    <h6>&nbsp;</h6>
+		    <div class='body'>&nbsp;</div>
+		    <div class="info">&nbsp;</div>
+		  </li>
+		  <% end %>
+		<% end %>
+		</ul>
+		</div>
+    </td>
+	  <td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='possession-next' style='left:3px;'>&rang;<span>NEXT</span></a>
+    </td>
+  </tr>
+</table>
+
+<script>
+$(function() {
+  $('#possession-list').paginated({
+	controls: { prev: $('#possession-prev'), next: $('#possession-next') },
+	perPage: 8
+  });	
+  $( "a.activate-button" ).bindAjaxRequester({
+    success: function(sender, html, json) {
+	  var kind = sender.attr('data-kind');
+	  var usesLabel = $('#'+ sender.attr('data-counter') );
+	  var usesCount = usesLabel.text();
+	  usesLabel.text( parseInt(usesCount) - 1);
+	
+	  if ( parseInt(usesCount) == 1) { // used up, remove container
+	    sender.parents('ul').first.remove();
+	  } else {
+	    if (kind == 'medical') { 
+		  setWoundsLabel(json);
+	    } else if (kind == 'spirit') {
+		  setMadnessLabel(json);		
+		} else {
+	      sender.button( 'option', 'label', 'recharging' );
+		  sender.button( 'disable' );
+		};
+	  };
+	}
+  });
+  $( ".activate-button.disabled" ).button('disable');
+});
+</script>

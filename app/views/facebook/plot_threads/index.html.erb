@@ -1,0 +1,71 @@
+<div class="panel">
+  <div class="wrapper">
+	<div id='casebook-tabs' class="tabs">
+	  <ul>
+	    <% unless @investigation.blank? %>
+	      <li><a href="#tabs-investigation">Open Investigation</a></li>
+	    <% end %>
+	    <li>
+		  <a href="#tabs-casebook">Known Plots (<%= @plot_threads.size %>)</a>
+		</li>
+	    <li><a href="#tabs-solved">Solved Plots</a></li>
+	    <% unless @assignments.blank? %>
+	      <li><a href="#tabs-assignments" id='nav-tab-assignments'><%= "Assignments (#{@assignments.size})" %></a></li>
+	    <% end %>
+      </ul>
+
+      <% unless @investigation.blank? %>
+	    <div id="tabs-investigation" class='tab-panel'>
+		  <%= render :partial => 'facebook/investigations/investigation', :locals => { :investigation => @investigation } %>
+	    </div>
+      <% end %>
+
+	  <div id="tabs-casebook" class='tab-panel'>
+		<% if @plot_threads.blank? %>
+		  <p class='box'>
+		    <label>Casebook Empty</label>
+		    <br /><br />
+		    You have no un-investigated plots in your casebook. You can seek out new plot threads at locations around the world, or receive them from your contacts.
+		  </p>
+		<% else %>
+	      <%= render :partial => 'facebook/plot_threads/plot_threads', :locals => { :plot_threads => @plot_threads } %>
+		<% end %>
+	  </div>
+	
+	  <div id="tabs-solved" class='tab-panel'>	
+		<% if @solved_plots.blank? %>
+		  <div class='box'>
+		    <h3>No Plots Solved</h3>
+	        <p><em>Solving plots is critical to understanding the dark forces working against you, and unlocking the deepening mysteries of the universe. The investigation may not be easy, but you can rely upon your allies and contacts for support.</em></p>
+	       </div>		
+		<% else %>
+		  <%= render :partial => 'facebook/plot_threads/solved', :locals => { :plot_threads => @solved_plots } %>
+		<% end %>
+	  </div>
+		
+	  <% unless @assignments.blank? %>
+	    <div id="tabs-assignments" class='tab-panel'>
+		  <%= render :partial => 'facebook/assignments/assignments', :locals => { :assignments => @assignments } %>
+	    </div>
+	  <% end %>
+	</div>
+  </div>
+</div>
+<script>
+$(function() {
+  $( "div#casebook-tabs" ).tabs();
+  $( "a.investigate-button" ).bindAjaxRequester({ 
+	height: 1000,
+	buttons: { 
+	  "Nevermind": function() { 
+        $(this).dialog( "close" ); 
+        $(this).parent( "ui-dialog" ).remove();
+      },
+	  "Investigate": function() { 
+		var form = $('#new_investigation').submit();
+      }
+    }
+  });
+  $( "a.investigate-button.disabled" ).button('disable');
+});
+</script>

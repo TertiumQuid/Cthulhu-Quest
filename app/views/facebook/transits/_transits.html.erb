@@ -1,0 +1,59 @@
+<div class='grid-list-container' style='height:220px;'>
+  <ul class='grid-list wide blue' id='transit-list'>  
+	<% transits.each do |transit| %>
+	<li>
+	  <h4><span>via</span> <%= transit.destination.name %></h4>
+	  <ul class='listing'>
+		<% transit.destination.transits.each do |via| %>
+		  <% next if via.destination_id == transit.origin_id %>
+		  <li>&rsaquo; <%= via.destination.name %></li>
+		<% end %>		
+	  </ul>
+	  <div class="cmd">
+	    <%= link_to_if logged_in?, "#{transit.mode} £ #{transit.price}", 
+	                facebook_location_path(:id => transit.destination_id), 
+	                'data-name' => transit.destination.name,
+	                'data-title' => "Travel to #{transit.destination.name}",
+	                'data-price' => transit.price,
+	                :method => 'put',
+	                :remote => true,
+	                :class => 'travel-button blue' %>	
+	  </div>
+	</li>
+	<% end %>
+	
+	<% if (transits.size % 4) != 0 %>
+	  <% (4 - (transits.size % 4)).times do %>
+	  <li class='empty'>
+	    <h4>&nbsp;</h4>
+	    <ul class='listing'></ul>
+	  </li>
+	  <% end %>
+	<% end %>	
+  </ul>
+
+  <div class='float-strip'>
+	<div class='next-prev'>
+	  <span id='transit-prev'>&lang; PREV</span> 
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	  <span id='transit-next'>NEXT &rang;</span>
+	</div>	
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( "a.travel-button" ).bindAjaxRequester({
+	confirmation: "Are you sure you wish to travel elsewhere?",
+    success: function(sender) {
+      $('#nav-tab-map').trigger('click'); 
+	  $('#centerpiece-location').html( sender.attr('data-name') );
+	}
+  });
+});
+
+$('#transit-list').paginated({
+	controls: { prev: $('#transit-prev'), next: $('#transit-next') },
+	perPage: 4
+});
+</script>

@@ -1,0 +1,24 @@
+<article>
+  <header>
+	<h2>Hunting a <%= @monster.name %> in <%= @location.name %></h2>
+  </header>
+
+  <div class="profile">
+  <fieldset>
+    <legend><%= @monster.name %></legend>
+  	<ul><li><%= @monster.description %></li></ul>
+  	<ul><li><header>There is a bounty £<%= @monster.bounty %> for killing this monster</header></li></ul>
+  	<ul><li><label>Power :</label> <%= @monster.power %></li></ul>
+  	<ul><li><label>Defense :</label> <%= @monster.defense %></li></ul>
+  	<ul><li><label>Attacks :</label> <%= @monster.attacks %></li></ul>
+
+    <% if current_investigator.combat_fit? %>
+      <a href="/web/monsters/<%=@monster.id %>/combats" data-method='post'>
+        <button type='submit'>Fight the Monster</button>
+      </a>
+    <% else %>
+	   <center><h4 style='padding:20px 0 0 0;color:#9F3430'>You are too wounded to fight right now.</h4></center>
+    <% end %>
+    </fieldset>
+  </div>
+</article>

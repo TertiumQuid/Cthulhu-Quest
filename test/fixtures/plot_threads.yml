@@ -1,0 +1,23 @@
+beth_zohar:
+  investigator: beth_pi
+  plot: zohar
+  plot_title: The Zohar
+  status: investigating
+
+gimel_troubled_dreams:
+  investigator: gimel_pi
+  plot: troubled_dreams
+  plot_title: Troubled Dreams
+  status: available
+  
+aleph_grandfathers_journal:
+  investigator: aleph_pi
+  plot: grandfathers_journal
+  plot_title: Grandfather's Journal
+  status: investigating
+  
+aleph_troubled_dreams:
+  investigator: aleph_pi
+  plot: troubled_dreams
+  plot_title: Troubled Dreams
+  status: available

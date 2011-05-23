@@ -1,0 +1,36 @@
+<fieldset>
+<legend><%= social_function.name %></legend>	
+	
+<ul>
+  <li>	
+    <header>Will you host <%= social_function.description %>..</header>
+  </li>
+</ul>
+<ul>
+  <% if @social.blank? %>
+    <li class='list-button' style=''>
+      <%= link_to "Host #{social_function.name}", web_social_function_socials_path(social_function), :method => :post %>
+    </li>
+  <% elsif @social.social_function_id == social_function.id && @social.scheduled? %>	
+    <li>
+      <% @social.guests.each do |guest| %>
+	  <p style='margin:5px 0 0 10px;'>&dagger; Your ally <%= link_to guest.investigator.name, web_investigator_path(guest.investigator) %> shall be attending.</p>
+	</li>
+  <% end %>
+    <li class='list-button' style=''>
+      <%= link_to "Host #{social_function.name} (#{pluralize(@social.guests.count, 'guest')})", web_social_function_social_path(social_function, @social), :method => :put %>
+    </li>
+  <% elsif @social.social_function_id != social_function.id %>
+    <li>
+	  You're currently hosting another event at this time.
+    </li>
+  <% else %>
+    <li>
+	  <p style='font-weight:bold;color:#336644;text-shadow: 2px 1px 2px #fff;'>You're currently preparing to host this function. Events will commence in <%= distance_of_time_in_words( Time.now, @social.appointment_at )%> ... now would be a good time to <%= link_to 'invite your allies', web_allies_path %>.</p>
+	  <% @social.guests.each do |guest| %>
+		<p style='margin:5px 0 0 10px;'>&dagger; Your ally <%= link_to guest.investigator.name, web_investigator_path(guest.investigator) %> shall be attending.</p>
+	  <% end %>
+    </li>
+  <% end %>
+</ul>
+</fieldset>

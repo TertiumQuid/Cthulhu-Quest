@@ -1,0 +1,99 @@
+rome_warlock:
+  monster_id: 15
+  location_id: 11
+  
+kingsport_warlock:
+  monster_id: 15
+  location_id: 17
+  
+paris_warlock:
+  monster_id: 15
+  location_id: 6
+  
+dunwich_dark_young:
+  monster_id: 14
+  location_id: 16
+
+miskatonic_valley_dark_young:
+  monster_id: 14
+  location_id: 1
+
+miskatonic_university_novitiate:
+  monster_id: 12
+  location_id: 7
+  
+harvard_university_novitiate:
+  monster_id: 12
+  location_id: 21
+  
+hong_kong_tcho_tcho:
+  monster_id: 11
+  location_id: 22
+  
+rome_tcho_tcho:
+  monster_id: 11
+  location_id: 11
+  
+harvard_university_tcho_tcho:
+  monster_id: 11
+  location_id: 21
+  
+new_york_tcho_tcho:
+  monster_id: 11
+  location_id: 3
+  
+poltergeist_harvard_university:
+  monster_id: 9
+  location_id: 21
+  
+poltergeist_british_museum:
+  monster_id: 9
+  location_id: 20
+  
+london_lunatic:
+  monster_id: 8
+  location_id: 5
+
+miskatonic_valley_byakhee:
+  monster_id: 4
+  location_id: 1
+  
+kingsport_byakhee:
+  monster_id: 4
+  location_id: 17
+  
+bibliotheque_nationale_byakhee:
+  monster_id: 4
+  location_id: 19    
+
+new_york_voodoo_zombi:
+  monster_id: 10
+  location_id: 3
+
+arkham_hunting_horror:
+  monster_id: 7
+  location_id: 2
+
+boston_bunyip:
+  monster_id: 3
+  location_id: 4
+
+arkham_ghoul:
+  monster_id: 5
+  location_id: 2
+  
+paris_ghoul:
+  monster_id: 5
+  location_id: 6
+  
+boston_ghoul:
+  monster_id: 5
+  location_id: 4
+  
+new_york_lunatic:
+  monster_id: 8
+  location_id: 3
+  
+miskatonic_valley_witch:
+  monster_id: 6
+  location_id: 1

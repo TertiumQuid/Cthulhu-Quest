@@ -1,0 +1,31 @@
+thomas_malone_malleus_maleficarum:
+  character_id: 2
+  plot_id: 7
+  
+father_iwanicki_malleus_maleficarum:
+  character_id: 6
+  plot_id: 7
+  
+ambrose_dexter_malleus_maleficarum:
+  character_id: 7
+  plot_id: 7
+  
+doctor_munoz_malleus_maleficarum:
+  character_id: 8
+  plot_id: 7
+  
+john_legrasse_malleus_maleficarum:
+  character_id: 11
+  plot_id: 7
+  
+francis_morgan_malleus_maleficarum:
+  character_id: 13
+  plot_id: 7
+  
+albert_wilmarth_malleus_maleficarum:
+  character_id: 15
+  plot_id: 7
+  
+arthur_munroe_malleus_maleficarum:
+  character_id: 16
+  plot_id: 7

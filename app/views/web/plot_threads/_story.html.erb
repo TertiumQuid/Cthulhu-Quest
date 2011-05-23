@@ -1,0 +1,21 @@
+<% unless @solved_plots.blank? %>
+	<br />
+    <h3>The Story so Far</h3>
+    <ul class="picklist">
+	  <li class="header">
+		In a web of plots and intrigues, you've began to grasp the secret war of supernatural forces with your investigations
+	  </li>	
+	  <% @solved_plots.each do |p| %>
+        <li>
+	      <div class="body" style='padding:0px 15px;line-height:24px;'>
+			<label style='text-align:left;'>
+			  <em><%= "#{time_ago_in_words( p.investigations.final.finished_at )} ago" %></em><br />
+			  You solved <%= link_to p.plot_title, web_casebook_path(p) %><br />
+			  <div style='padding:10px 0 0 10px;font-size:14px;color:#597182;'>After investigating, you choose to <%= p.solution.title %>.</div><br />	
+			</label>
+	      </div>
+	    </li>
+	  <% end %>
+	</ul>
+  <br />
+<% end %>

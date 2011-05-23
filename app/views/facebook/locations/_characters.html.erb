@@ -1,0 +1,89 @@
+<div class='grid-list-container' style='height:220px;'>
+  <ul class='grid-list big' id='character-list'>  
+	<% characters.each do |character| %>
+	<li>
+	  <h5><%= character.name %> <em>&nabla; <%= character.location.name %></em></h5>	
+	  <center><span class='tab-header'><%= character.profession %></span></center>	
+	  
+	  <% if @contacts && @contacts.map(&:character_id).include?(character.id) %>
+	    <div class='desc'><%= character.biography %></div>
+	    <div class="info">
+	      owes you <%= pluralize(@contacts.select{|c| character.id == c.character_id }.first.favor_count, 'favor') %>
+	    </div>
+		<div class='cmd'>
+		  <%= link_to "visit", 
+		              facebook_contact_path( @contacts.select{|c| character.id == c.character_id }.first ), 
+		              :remote => true, 
+		              :class => 'contact-button', 
+		              'data-title' => character.name %>
+		</div>
+	  <% elsif @introductions && @introductions.map(&:character_id).include?(character.id) %>
+	    <% introduction = @introductions.select{|i| i.character_id == character.id}.first %>
+	    <div class='desc'><em><%= introduction.message %></em></div>
+	    <div class="info">make your introduction</div>
+		<div class='cmd'>
+		  <%= link_to "visit and introduce", 
+		              facebook_character_path( character.id ), 
+		              :remote => true, 
+		              :class => 'character-button', 
+		              'data-title' => character.name %>
+		</div>	
+	  <% else %>
+	    <div class='desc'><em>You can make this character into a contact by solving the right plot or through a friend's introduction.</em></div>
+	    <div class="info">you are not acquainted</div>
+		<div class='cmd'>
+		  <a class='character-button disabled'>contact required</a>
+		</div>	
+	  <% end %>
+	</li>
+	<% end %>
+
+	<% if (characters.size % 3) != 0 %>
+	  <% (3 - (characters.size % 3)).times do %>
+	  <li class='empty'>
+	    <h5>&nbsp;<em>&nbsp;</em></h5>
+	    <center><span class='tab-header'>&nbsp;</span></center>
+	    <div class='desc'>&nbsp;</div>
+	    <div class="info">&nbsp;</div>
+	  </li>
+	  <% end %>
+	<% end %>	
+  </ul>
+		
+  <div class='float-strip'>
+	<div class='next-prev'>
+	  <span id='character-prev'>&lang; PREV</span> 
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	  <span id='character-next'>NEXT &rang;</span>
+	</div>	
+  </div>
+</div>
+
+
+<script>
+$(function() {
+  $( ".contact-button" ).bindAjaxRequester({
+    height: 700	
+  });
+  $( ".character-button" ).bindAjaxRequester({
+    height: 600,
+	buttons: { 
+	  "Graciously Accept": function() { 
+	     $('#accept-introduction-button').click();
+         $(this).dialog( "close" ); 
+         $(this).parent( "ui-dialog" ).remove();
+       },	
+	  "Brusquely Refuse": function() { 
+	     $('#refuse-introduction-button').click();
+         $(this).dialog( "close" ); 
+         $(this).parent( "ui-dialog" ).remove();
+      }
+    }	
+  });
+  $( ".character-button.disabled" ).button('disable');
+  $('#character-list').paginated({
+	controls: { prev: $('#character-prev'), next: $('#character-next') },
+	perPage: 3
+  });
+});
+</script>

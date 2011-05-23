@@ -1,0 +1,11 @@
+arkham_new_york:
+  origin: arkham
+  destination: new_york
+  mode: bus
+  price: 2
+  
+new_york_arkham:
+  origin: new_york
+  destination: arkham
+  mode: bus
+  price: 3

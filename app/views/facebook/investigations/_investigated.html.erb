@@ -1,0 +1,71 @@
+<div class="box profile" id='investigator'>
+  <h3 class='green'>Investigating <span><%= @investigation.plot.title %><span></h3>
+  <div class='para square-top-left green small'>
+    <h4 class='green'>
+      Subplots
+    </h4>
+
+    <ul class='long-list green'>
+	  <% @investigation.assignments.each do |assignment| %>
+	    <li>
+	      <h3>
+	        <em>
+		      <strong class='value big'>
+		        <%= ((assignment.challenge_target.to_f / Intrigue::CHALLENGE_RANGE.to_f) * 100).to_i %>%
+		      </strong>
+		      vs. <%= assignment.intrigue.challenge.name %>
+		    </em> 
+	        <%= assignment.intrigue.title %>
+	      </h3>	
+	      <% success = true %>
+	      <% if @completed_assignments && completed_assignment = @completed_assignments.select{|a| a.intrigue_id == assignment.intrigue_id}.first %>
+	
+	        <div class='float-strip'>
+	          <div class='subplot-completed-bar progress-bar' style='margin:-10px auto 0 auto;height:16px;'>
+	            <span style='padding-left:100px;font-size:14px;'>ALREADY SOLVED subplot during prior investigation</span>
+	          </div>
+	        </div>
+	
+          <% else %>
+	        <div class='float-strip'>
+	          <div class='subplot-chance-bar progress-bar' data-value='<%= !success ? 0 : assignment.challenge_score <= assignment.challenge_target ? 100 : [(((assignment.challenge_score-assignment.challenge_target) / (Intrigue::CHALLENGE_RANGE.to_f-assignment.challenge_target)) * 100).to_i,0].max %>' style='margin:-10px auto 0 auto;height:22px;'>
+	            <span style='padding-left:200px;font-size:14px;'>
+		          <%= assignment.challenge_score <= assignment.challenge_target ? 'Succeeded solving subplot' : 'Failed to solve this subplot' %>
+		        </span>
+		
+	          </div>
+		      <% success = success && assignment.successful? %>
+	        </div>	
+	
+	      <% end %>	
+	      <br />&nbsp;
+	    </li>
+	  <%end %>
+
+    </ul>
+    <br />
+    <div class='para green'>
+	  <% if @investigation.completed? %>
+	    Indeed, well done! You managed to complete your investigations. Now that the subplots have been put to rest, you can now choose how you'd like to solve the plot.
+	  <% else %>
+	    It was not to be. Defeated by fate and intrigue, you failed to fully complete your investigations. But don't lose heart, you can try again, and next time you'll surely be wiser and better prepared.
+	  <% end %>
+    </div>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $('.subplot-completed-bar').progressbar({value:100});
+  $('.subplot-chance-bar').progressbar();
+
+  var stopAssignments = false;
+  $.each( $('.subplot-chance-bar'), function(index, bar) {	
+    var progressBar = $(bar);
+    var barValue = parseInt( progressBar.attr('data-value') );
+
+    animateProgressBar(progressBar, 0, barValue, 40);
+  });	
+	
+});
+</script>

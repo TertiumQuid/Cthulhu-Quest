@@ -1,0 +1,8 @@
+aleph_monster_combat:
+  activity: monster_combat
+  investigator: aleph_pi
+  actor_id: witch
+  actor_type: Monster
+  read: true
+  message: Aleph battled a Witch in Miskatonic Valley
+  created_at: 2010-10-21 17:33:58

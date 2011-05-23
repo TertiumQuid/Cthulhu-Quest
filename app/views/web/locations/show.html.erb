@@ -1,0 +1,65 @@
+<% if current_investigator %>
+<article class='sidebar'>
+  <h2>Travel</h2>
+
+  <table class="tabular">
+	<tbody>
+	  <% @transits.each do |transit| %>
+		<tr>
+		  <th><%= transit.destination.name %></th>
+		</tr>		
+		<tr>
+		  <td><%= link_to transit.description, web_location_path(transit.destination), :method => :put %></td>
+		</tr>
+	  <% end %>
+	</tbody>
+  </table>
+</article>
+<% end %>
+
+<article>
+  <header>
+	<h2><%= @location.name %>, <em><%= @location.zone %></em></h2>
+  </header>
+
+  <div class="profile">
+	<% unless current_investigator.blank? || @plots.blank? %>
+    <fieldset>
+      <legend>Plots</legend>
+      <ul>
+		<% @plots.each do |plot| %>
+		  <li>
+			<label><strong><%= plot.title %></strong>... <%= link_to_if investigator_present?, "Do you wish to investigate #{plot.short_subtitle}?", web_casebook_index_path(:id => plot.id), :method => :post %></label>
+		  </li>
+		<% end %>
+      </ul>
+    </fieldset>
+  <% end %>
+
+	<% unless @characters.blank? %>
+      <fieldset>
+        <legend>Characters</legend>
+        <ul>
+		<% @characters.each do |character| %>
+		  <li>
+			<label><strong><%= link_to character.name, web_character_path(character) %></strong> can be found here.</label>
+		  </li>
+		<% end %>
+        </ul>
+      </fieldset>
+    <% end %>
+
+	<% unless @denizens.blank? %>
+      <fieldset>
+        <legend>Monsters</legend>
+        <ul>
+		<% @denizens.each do |denizen| %>
+		  <li>
+			<label>A <strong><%= denizen.monster.name %></strong> lurks here, <%= link_to_if investigator_present?, 'will you dare to battle it?', new_web_monster_combat_path(denizen.monster) %> The bounty is £<%= denizen.monster.bounty %>, the peril is crippling injury.</label>
+		  </li>
+		<% end %>
+        </ul>	
+      </fieldset>
+    <% end %>
+  </div>
+</article>

@@ -1,0 +1,2 @@
+require 'action_controller/authentication_support'
+require 'action_controller/ux_support'

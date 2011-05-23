@@ -1,0 +1,527 @@
+dark_rum:
+  name: Rum (Dark)
+  description: Suffused with sugar and beloved of both sailor and slave, wars have been fought for its measure, and a taste that conjures island tropics.
+  price: 65
+  kind: spirit
+  uses_count: 6
+  power: 2
+  
+distilled_gin:
+  name: Gin (Distilled)
+  description: From juniper to pharmacy, the historic spirit of gin is old and storied, laden as much with salacious social ruin as the cask its savory botanicals.
+  price: 100
+  kind: spirit
+  uses_count: 10
+  power: 3
+  
+vodka:
+  name: Vodka
+  description: The aqua vitae of the Baltic lands, war between wheat and rye grain aged in boreal casks grant Vodka its unforgettable power.
+  price: 60
+  kind: spirit
+  uses_count: 5
+  power: 2
+  
+campari:
+  name: Campari
+  description: A bitter-sweet apéritif cultivated by the Italians and best served with citrus or soda water to bring the alcohol alive.
+  price: 15
+  kind: spirit
+  uses_count: 7
+  power: 1
+
+blended_whisky:
+  name: Whisky (Blended)
+  description: Fiery smooth malt-grain blend of trusty flavor set to warm one's marrow and spirits against impossibly cold reality.
+  price: 50
+  kind: spirit
+  uses_count: 5
+  power: 3
+  
+napoleon_brandy:
+  name: Brandy (Napoleon)
+  description: Extra-old, barrel-aged caramel-brown elixir known for its universal effectiveness in many patent medicines and jaunty lounge settings.
+  price: 30
+  kind: spirit
+  uses_count: 5
+  power: 2
+  
+sigillum_dei_aemeth:
+  name: Sigillum Dei Aemeth
+  description: An elaborate amulet bearing the symbol of the living God, composed of a latticework of heptagons and pentagrams granting an exalted power over fear of all creatures.
+  price: 1000
+  kind: artifact
+  uses_count: 7
+  
+croock_and_flail:
+  name: Croock and Flail
+  description: The regalia of the Pharaoh's mortal office, the staff and flail are inlaid with gold and ivory hieroglyphs to please the forgotten gods whose powers they command.
+  price: 700
+  kind: artifact
+  uses_count: 5
+  
+charmstone:
+  name: Charmstone
+  description: Rough-hewn crystal mineral cleaved from the face of a sacred rock and prepared by shamanistic ritual to grant friendship and good fortune to the bearer.
+  price: 100
+  kind: artifact
+  uses_count: 3
+
+athame:
+  name: Athame
+  description: The black-handled blood-letter of the witch, this ceremonial dagger imbues the user with enhanced speed of purpose in all murderous actions.
+  price: 400
+  kind: artifact
+  uses_count: 3
+  
+hand_of_glory:
+  name: Hand of Glory
+  description: A candle made from the fat of a gallows corpse, virgin wax, and lapland oil, placed within the grip of the hanged man's severed hand and bestowing the defensive powers of invisibility and evasion.
+  price: 100
+  kind: artifact
+  uses_count: 10
+  
+fire_of_asshurbanipal:
+  name: Fire of Asshurbanipal
+  description: Ancient and accursed jewels belonging to a magician king whom the Grecians called Sardanapalus and the Semitic peoples Asshurbanipal, this artifact burns with a luminous hellfire of ambition's cause.
+  price: 1000
+  kind: artifact
+  uses_count: 9
+  
+abraxas_stone:
+  name: Abraxas Stone
+  description: A Greek talisman ring with the inscription 'ΑΒΡΑΣΑΞ' and image of a grotesque rooster-serpent Pantheus bearing a sword and shield, the Gnostics and Romans revered the auspicious word and godling for its wisdom, strength, and eternal vitality. 
+  price: 250
+  kind: artifact
+  uses_count: 10
+  
+epinephrine_injection:
+  name: Epinephrine Injection
+  description: A spring-loaded syringe filled to dripping with pure epinephrine, a powerful hormone acting upon one's heart and effecatious against otherwise fatal shocks.
+  price: 15
+  kind: medical
+  power: 10
+  uses_count: 1
+
+bandages:
+  name: Bandages
+  description: A tube of wound gel, absorbant dressings, and a roll of stretch bandages, fit for preserving blood, organs, and life.
+  price: 5
+  kind: medical
+  power: 2
+  uses_count: 1
+  
+bandages:
+  name: Bandages
+  description: A tube of wound gel, absorbant dressings, and a roll of stretch bandages, fit for preserving blood, organs, and life.
+  price: 5
+  kind: medical
+  power: 2
+  uses_count: 1
+
+abramelin_oil:
+  name: Abramelin Oil
+  description: A fragrant ceremonial magick oil, corrupted from the qualities found in the Holy anointing oil of Moses. Among other esoteric results, the oil is known for greatly precipitating magical effects.
+  price: 500
+  kind: artifact
+  uses_count: 10
+  
+rod_of_asclepius:
+  name: Rod of Asclepius
+  description: Bearing a coiling serpent envoy of the Greek God Asclepius, this long-handled artifact draws its power from the constellation Ophiuchus to invoke the dual nature of life and death and allay the pains of body and soul. 
+  price: 250
+  kind: artifact
+  uses_count: 5
+
+first_aid_kit:
+  name: First Aid Kit
+  description: Forceps, scalpels, alcohol, gauze, hypoderic syringes, and other macabre tools of today's field-surgeon.
+  price: 25
+  kind: medical
+  power: 3
+  uses_count: 10
+  
+the_zohar:
+  name: Zohar, The
+  description: A fundamental work in Jewish mysticism leading to the understanding of God through various means of contemplation and revelation.
+  price: 0
+  kind: book
+  uses_count: 10
+  
+malleus_maleficarum:
+  name: Malleus Maleficarum
+  description: A witch hunters guide, the "Hammer of Witches" instructs inquistors on the necessary means of persecuting the medieval witch, authored by Jakob Sprenger and Heinrich Kramer, 1486 AD.
+  price: 0
+  kind: book
+  uses_count: 10
+  
+the_key_of_solomon:
+  name: Key of Solomon, The
+  description: An instructional volume guiding conduct when dealing with spirits and other magical agency, authored circa 14th century. 
+  price: 0
+  kind: book
+  uses_count: 10
+  
+beatus_methodivo:
+  name: Beatus Methodivo
+  description: A universal history of the Gnostic state of humanity, from its magical origins to prophecy of an Apocalyptical future, as penned by St. Methodius of Olympus circa 300 AD.
+  price: 0
+  kind: book
+  uses_count: 10
+  
+i_ching:
+  name: I Ching
+  description: A Confucian system of divination induced through contemplation on the volume's poetical text.
+  price: 0
+  kind: book
+  uses_count: 10
+  
+the_emerald_tablet:
+  name: Emerald Tablet, The
+  description: A Phoenician alchemical text published circa 200 AD, replete with ancient allusion and alegory.
+  price: 0
+  kind: book
+  uses_count: 10
+  
+the_golden_bough:
+  name: Golden Bough, The
+  description: A vast treastise on religious anthropology and magick authored 1890 AD by Sir George Frazer. 
+  price: 0
+  kind: book
+  uses_count: 10
+
+hand_mirror:
+  name: Hand Mirror
+  price: 1
+  kind: equipment
+  uses_count: 1
+
+padlock:
+  name: Padlock
+  price: 1
+  kind: equipment
+  uses_count: 1
+  
+sewing_kit:
+  name: Sewing Kit
+  price: 2
+  kind: equipment
+  uses_count: 1
+
+battery:
+  name: Battery
+  price: 6
+  kind: equipment
+  uses_count: 1
+  
+chalk:
+  name: Chalk
+  price: 1
+  kind: equipment
+  uses_count: 1
+  
+signet_ring:
+  name: Signet Ring
+  price: 5
+  kind: equipment
+  uses_count: 1
+  
+rope:
+  name: Rope
+  price: 2
+  kind: equipment
+  uses_count: 1
+  
+carpentry_tools:
+  name: Carpentry Tools
+  price: 15
+  kind: equipment
+  uses_count: 1
+
+sulphur:
+  name: Sulphur
+  price: 6
+  kind: equipment
+  uses_count: 1
+  
+violin:
+  name: Violin
+  price: 23
+  kind: equipment
+  uses_count: 1
+
+ammonia:
+  name: Ammonia
+  price: 3
+  kind: equipment
+  uses_count: 1
+
+umbrella:
+  name: Umbrella
+  price: 2
+  kind: equipment
+  uses_count: 1
+  
+typewriter:
+  name: Typewriter
+  price: 12
+  kind: equipment
+  uses_count: 1
+  
+bear_trap:
+  name: Bear Trap
+  price: 8
+  kind: equipment
+  uses_count: 1
+
+carbide_lamp:
+  name: Carbide Lamp
+  price: 6
+  kind: equipment
+  uses_count: 1
+
+fingerprint_kit:
+  name: Fingerprint Kit
+  price: 25
+  kind: equipment
+  uses_count: 1
+
+pick_and_pitons:
+  name: Pick and Pitons
+  price: 7
+  kind: equipment
+  uses_count: 1
+
+crampons:
+  name: Crampons
+  price: 3
+  kind: equipment
+  uses_count: 1
+
+microscope:
+  name: Microscope
+  price: 12
+  kind: equipment
+  uses_count: 1
+  
+hydrochloric_acid:
+  name: Hydrochloric Acid
+  price: 5
+  kind: equipment
+  uses_count: 1
+
+skis:
+  name: Skis
+  price: 7
+  kind: equipment
+  uses_count: 1
+      
+radio_receiver:
+  name: Radio Receiver
+  price: 25
+  kind: equipment
+  uses_count: 1
+  
+newspaper_clippings:
+  name: Newspaper Clippings
+  price: 5
+  kind: equipment
+  uses_count: 1
+  
+parachute:
+  name: Parachute
+  price: 28
+  kind: equipment
+  uses_count: 1
+    
+phonograph:
+  name: Phonograph
+  price: 30
+  kind: equipment
+  uses_count: 1
+
+box_camera:
+  name: Box Camera
+  price: 18
+  kind: equipment
+  uses_count: 1
+    
+blowtorch:
+  name: Blowtorch
+  price: 38
+  kind: equipment
+  uses_count: 1
+    
+playing_cards:
+  name: Pack of Playing Cards
+  price: 1
+  kind: equipment
+  uses_count: 1
+      
+arsenic:
+  name: Arsenic
+  price: 10
+  kind: equipment
+  uses_count: 1
+    
+straightjacket:
+  name: Straightjacket
+  price: 18
+  kind: equipment
+  uses_count: 1
+
+ouija_board:
+  name: Ouija Board
+  price: 11
+  kind: equipment
+  uses_count: 1
+
+binoculars:
+  name: Binoculars
+  price: 15
+  kind: equipment
+  uses_count: 1
+
+laudanum:
+  name: Laudanum
+  price: 7
+  kind: equipment
+  uses_count: 1
+
+compass:
+  name: Compass
+  price: 5
+  kind: equipment
+  uses_count: 1
+      
+smelling_salts:
+  name: Smelling Salts
+  price: 2
+  kind: equipment
+  uses_count: 1
+  
+candles:
+  name: Candles
+  price: 5
+  kind: equipment
+  uses_count: 1
+  
+cigars:
+  name: Cigars
+  price: 15
+  kind: equipment
+  uses_count: 1
+  
+gas_mask:
+  name: Gas Mask
+  price: 28
+  kind: equipment
+  uses_count: 1
+  
+region_map:
+  name: Region Map
+  price: 10
+  kind: equipment
+  uses_count: 1
+  
+street_map:
+  name: Street Map
+  price: 3
+  kind: equipment
+  uses_count: 1
+  
+pocket_knife:
+  name: Pocket Knife
+  price: 4
+  kind: equipment
+  uses_count: 1
+  
+handcuffs:
+  name: Handcuffs
+  price: 15
+  kind: equipment
+  uses_count: 1
+      
+kerosene:
+  name: Kerosene
+  price: 20
+  kind: equipment
+  uses_count: 1
+  
+signal_flare:
+  name: Signal Flare
+  price: 10
+  kind: equipment
+  uses_count: 1
+  
+telegram:
+  name: Telegram
+  price: 5
+  kind: equipment
+  uses_count: 1
+  
+Matchbook:
+  name: Matchbook
+  price: 1
+  kind: equipment
+  uses_count: 1
+  
+notebook:
+  name: Notebook
+  price: 5
+  kind: equipment
+  uses_count: 1
+  
+crowbar:
+  name: Crowbar
+  price: 7
+  kind: equipment
+  uses_count: 1
+  
+cigarettes:
+  name: Cigarettes
+  price: 1
+  kind: equipment
+  uses_count: 1
+  
+timepiece:
+  name: Timepiece
+  price: 20
+  kind: equipment
+  uses_count: 1
+  
+evening_wear:
+  name: Evening Wear
+  price: 60
+  kind: equipment
+  uses_count: 1
+  
+lockpicks:
+  name: Lockpicks
+  price: 20
+  kind: equipment
+  uses_count: 1
+  
+library_card:
+  name: Library Card
+  price: 3
+  kind: equipment
+  uses_count: 1
+  
+electric_torch:
+  name: Electric Torch
+  price: 30
+  kind: equipment
+  uses_count: 1
+  
+lantern:
+  name: Lantern
+  price: 9
+  kind: equipment
+  uses_count: 1
+  
+shovel:
+  name: Shovel
+  price: 7
+  kind: equipment
+  uses_count: 1

@@ -1,0 +1,92 @@
+<article class='sidebar'>
+  <h2>Your Friends</h2>
+  <ul class="picklist">
+	<li class="header">Call upon your allies to form your inner circle.</li>
+	<% if @friends.blank? %>
+	  <li><div class="body empty" style='color:#666;padding:35px 10px 0 10px;'>None of your friends are playing. You should invite them somehow, perhaps by telegram or at the next charity ball or air ballon launch!</div></li>
+	<% else %>
+	  <% inner_circle_ids = current_investigator.inner_circle_ids %>
+	  <% @friends.each do |f| %>
+	    <li>
+		  <div class="body">
+		  <%= image_tag f.facebook_photo, :alt => 'Photo', :class => 'photo' %>
+		  <a href="#" class="facebook"><%= f.name %></a>
+		  <div class='right' style='margin:5px 10px 0 0;'>
+			<%= link_to_facebook(f) %>
+		  </div>		
+		
+		  <p>
+			<% if f.investigator_id %>
+		      <%= link_to f.investigator.wounded? ? "#{f.investigator.name} (wounded)" : f.investigator.name, web_investigator_path(f.investigator) %>
+		      <span><%= f.investigator.profile_name %></span>
+			<% else %>
+			  <span>No Investigator</span>
+			<% end %>
+		  </p>
+		
+		  <% if f.investigator_id %>
+		    <% if inner_circle_ids.include?( f.investigator_id ) %>
+		      <input type="submit" value="Among your Inner Circle" class="selected submit" disabled="disabled" />
+	        <% else %>
+	          <%= button_to( 'Add to Inner Circle', 
+							 web_allies_path('ally[ally_id]' => f.investigator_id), 
+							 :method => 'post', :class => 'submit') %>
+	        <% end %>
+	      <% end %>
+	      </div>
+	    </li>
+	  <% end %>
+	<% end %>
+  </ul>	
+
+  <% unless @contacts.blank? %>
+    <h2>Contacts</h2>
+    <ul class="picklist">
+	  <li class="header">Your contacts will give you plots and help with investigations.</li>
+      <%= render @contacts %>
+    </ul>
+  <% end %>
+
+  <% unless @introductions.blank? %>
+    <h2>Introductions</h2>
+  <ul class="picklist">
+	  <li class="header">You can accept introductions to gain a new contact, or else cooly dismiss the appointment for reasons of your own.</li>
+    <%= render @introductions %>
+  </ul>
+  <% end %>
+</article>
+
+<article>
+  <h2>Your Inner Circle</h2>
+  <table class="grid allies">
+	<caption>Your Inner Circle constitute your most valued allies who can be trusted to help you investigate plots. You only have nine seats to assign to your allies, but you're free to reorganize your inner circle at any time.</caption>
+	<tbody>
+	  <% 3.times do |i| %>
+	    <tr>
+	    <% 3.times do |j| %>
+	      <td>
+		  <% idx = ((i*3) + j) %>
+	      <% if @allies.size > idx %>
+			<%= render :partial => "web/investigators/investigator", 
+					   :object => @allies[idx].ally, 
+					   :locals => { :ally => @allies[idx] } %>
+			<div class='remove'>
+			<%= button_to('Remove from Inner Circle', web_ally_path( @allies[idx] ), :confirm => 'Are you sure?', :method => 'delete') %>
+			</div>
+		  <% else %>
+			  <div class='faint'>
+				<div class="badge investigator">
+				  <div style='text-align:center'>
+					<span style='display:inline-block;margin-top:60px;font-size:26px;color:#eee'>NONE</span>
+				  </div>
+				</div>
+				<input type="submit" value="This Inner Circle Seat is Empty" disabled='true' />
+			  </div>
+		  <% end %>
+		  </td>
+	    <% end %>
+	    </tr>
+	  <% end %>	
+	</tbody>
+  </table>
+</article>

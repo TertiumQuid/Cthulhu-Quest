@@ -1,0 +1,14 @@
+<ul>
+  <li>
+	<header><%= spell.name %></header>
+	<% if current_investigator.spellcasting? && current_investigator.castings.completing.first.spell_id == spell.id %>
+	  <p style='color:#597182;font-weight:bold;font-size:14px;font-style:italic'>You are presently engaged in the rituals for casting this spell... the ceremony shall complete and the spell take effect in <%= distance_of_time_in_words(current_investigator.castings.first.completed_at, Time.now, false) %>. You may not cast any other spells until that time.</p>
+	<% elsif !@castings.blank? && @castings.map(&:spell_id).include?(spell.id) %>
+	  <p style='font-size:14px;'><%= spell.description %></p>
+	  <p><a class='link-button' style='background-color:#336644;'>This spell is ACTIVE, you are empowered with <%= spell.effect.split(' for ').first %> for <%= distance_of_time_in_words( Time.now, @castings.select{|c| c.spell_id == spell.id}.first.ended_at )%></a></p>
+	<% else %>
+	  <p style='font-size:14px;'><%= spell.description %></p>
+	  <%= link_to_if !current_investigator.spellcasting?, "#{spell.effect}, after #{pluralize(spell.time_cost, 'hour')} of casting rituals", web_spell_castings_path(spell), :method => :post, :class => 'link-button' %>
+	<% end %>
+  </li>
+</ul>

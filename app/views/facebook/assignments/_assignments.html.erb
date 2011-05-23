@@ -1,0 +1,79 @@
+<div class="box" id='plot-assignments'>
+<p><em>You'll receive assignments from allies who solicit your help in their investigations. If you can help them solve a plot, you'll both receive a modest experience reward.</em></p>
+
+<table id='assignments-table' class="box pager">
+  <tr>
+    <td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='assignment-prev' style='left:-5px;'>&lang;<span>PREV</span></a>
+    </td>		
+	<td>
+	  <div class='grid-list-container' style='height:185px;width:570px;'>
+	    <ul class='grid-list small' id='assignment-list' style=''>
+		  <% assignments.each do |assignment| %>
+		    <li>
+			  <h6 class='tall'><%= assignment.investigation.investigator.name %></h6>
+			  <div class='body short'>
+				<%= assignment.investigation.investigator.user ? assignment.investigation.investigator.user.name : 'A friend ' %>
+				needs your help to <%= assignment.intrigue.title.downcase %> while investigating <%= assignment.intrigue.plot.title %>
+			  </div>
+		      <div class='info'>vs. <%= assignment.intrigue.challenge.name %> <%= assignment.intrigue.difficulty %></div>
+			  <div class="cmd">
+			      <%= link_to 'Refuse', 
+			                facebook_assignment_path(assignment, 'assignment[status]' => 'refused'),
+			                :remote => true,
+			                :method => 'put',		
+			                :class => 'respond-button' %>
+			      <%= link_to 'Help', 
+			                facebook_assignment_path(assignment, 'assignment[status]' => 'accepted'),
+			                :remote => true,
+			                :method => 'put',
+			                :class => 'respond-button' %> 
+
+			
+			  </div>			
+		    </li>
+		  <% end %>
+
+		  <% if (assignments.size % 4) != 0 %>
+		    <% (4 - (assignments.size % 4)).times do %>
+		    <li class='empty'>
+	          <h6 class='tall'>&nbsp;</h6>
+	          <div class='body short'>&nbsp;</div>
+		      <div class="info">&nbsp;</div>	
+		    </li>
+		    <% end %>
+		  <% end %>	
+	    </ul>				
+	  </div>
+    </td>
+	<td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='assignment-next' style='left:3px;'>&rang;<span>NEXT</span></a>
+    </td>
+  </tr>
+</table>
+</div>
+
+<script>
+$(function() {
+  $('#assignment-list').paginated({
+	controls: { prev: $('#assignment-prev'), next: $('#assignment-next') },
+	perPage: 4
+  });
+	
+  $( "a.respond-button" ).bindAjaxRequester({
+	success: function(sender) {	
+	  var listItem = sender.parents('li').first()
+	  listItem.addClass('empty');
+	  $.each( listItem.children(), function(index, el) {	
+		$(el).html('');
+	  });
+	
+	  var container = listItem.parent('ul').first();
+	  if ( container.children().length == container.children('.empty').length ) {
+		$('#assignments-table').fadeOut(700);
+		$('#nav-tab-assignments').html('Assignments');
+	  };
+    }
+  });
+});
+</script>

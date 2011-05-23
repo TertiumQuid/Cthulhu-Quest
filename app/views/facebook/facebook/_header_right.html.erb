@@ -1,0 +1,44 @@
+<span id='header-like'><%= fb_like_button %></span>
+
+<h3>Newswire</h3>
+<div id='newswire-nav'>
+  <a href="javascript:void(0);" id='newswire-prev'>&laquo;</a>&nbsp;
+  <a href="javascript:void(0);" id='newswire-next'>&raquo;</a>
+</div>
+<ul id="newswire">
+<% if current_investigator %>
+  <% @news ||= InvestigatorActivity.limit(16).news(current_investigator) %>
+  <% @news.each do |news_item| %>
+    <%= investigator_news_item(news_item) %>
+  <% end %>
+<% else %>
+  <li>	
+	<img src="/images/web/background.jpg" />
+	<h6>A Dear Friend</h6>
+	<em>2 hours ago</em>
+	<div>planned a Estate Auction</div>
+  </li>
+  <li>	
+	<img src="/images/web/background.jpg" />
+	<h6>A New Friend</h6>
+	<em>30 minutes ago</em>
+	<div>joined the world</div>
+  </li>
+  <li>	
+	<img src="/images/web/background.jpg" />
+	<h6>An Old Friend</h6>
+	<em>2 hours ago</em>
+	<div>asked your help with a dire intrigue</div>
+  </li>
+<% end %>
+</ul>
+
+<script>
+
+$(function() {
+  $('#newswire').paginated({
+	controls: { prev: $('#newswire-prev'), next: $('#newswire-next') },
+	perPage: 4
+  });
+});
+</script>

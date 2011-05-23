@@ -1,0 +1,33 @@
+gimel_henry_armitage:
+  name: Dr. Henry Armitage    
+  investigator: gimel_pi
+  character: henry_armitage
+  favor_count: 5
+  
+gimel_robert_blake:
+  name: Robert Blake
+  investigator: gimel_pi
+  character: robert_blake
+  favor_count: 5
+  
+beth_henry_armitage:
+  name: Dr. Henry Armitage    
+  investigator: beth_pi
+  character: henry_armitage
+  
+beth_thomas_malone:
+  name: Detective Thomas F. Malone    
+  investigator: beth_pi
+  character: thomas_malone
+  
+aleph_henry_armitage:
+  name: Dr. Henry Armitage    
+  investigator: aleph_pi
+  character: henry_armitage
+  favor_count: 3
+  
+aleph_thomas_malone:
+  name: Detective Thomas F. Malone    
+  investigator: aleph_pi
+  character: thomas_malone
+  favor_count: 1

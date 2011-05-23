@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cthulhu Quest</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <%= stylesheet_link_tag "reset", "fonts", "web", :cache => false %>
+
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+
+  <%= render :partial => "web/google_analytics" if Rails.env.production? %>
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+	  <h1>Cthulhu Quest</h1>
+	  <h5>Version <%= AppConfig.version %></h5>
+	  <% if logged_in? %>
+	    <nav>
+	      <%= link_to 'Account', web_user_path %> | 
+	      <%= link_to 'Journal', web_journal_path %> |
+	      <%= link_to 'Logout', logout_web_user_path, :method => :delete, :rel => 'nofollow' %>
+	    </nav>
+	  <% end %>
+    </header>
+
+	<nav id="navigation">
+	  <ul>
+	  	<li><%= link_to 'Home', web_root_path %></li>
+	    <% if logged_in? %>
+	      <li>
+	        <%= link_to 'Investigator', 
+	                    (current_investigator ? edit_web_investigator_path : new_web_investigator_path) %>
+	      </li>
+	      <% if current_investigator && !current_investigator.new_record? %>
+	        <li><%= link_to 'Map', web_location_path( current_investigator.location_id ) %></li>
+	        <li><%= link_to 'Casebook', web_casebook_index_path %></li>
+	        <li><%= link_to 'Grimoires', web_spellbooks_path %></li>
+	        <li><%= link_to 'Allies', web_allies_path %></li>
+	      <% else %>
+	        <li><%= link_to 'Map', web_locations_path %></li>
+	      <% end %>
+	    <% end %>
+	  	<li><%= link_to 'Items', web_items_path %></li>
+	  	<li><%= link_to 'Weapons', web_weapons_path %></li>
+	  	<li><%= link_to 'Arcana', artifacts_web_items_path %></li>
+	  	<li><%= link_to 'Socials', web_social_functions_path %></li>
+	  	<li><%= link_to 'Guide', web_guide_path %></li>
+	  </ul>
+	</nav>
+	
+    <section id="main">
+      <% [:notice,:error].each do |type| %>
+		<% next if controller.flash.blank? || controller.flash[type].blank? %>
+	    <article class="<%= type.to_s %>">
+		  <h3><%= type.to_s %></h3>
+		  <p><%= controller.flash[type] %></p>
+	    </article>
+	  <% end %>	  
+	
+	  <%= yield %>
+    </section>
+
+    <footer>
+	  <%= mail_to 'narrator@cthulhuquest.com', 'Contact' %> |
+	  <%= link_to 'Topsite Voting', web_topsites_path %> |
+	  <%= link_to 'iPhone / Android', touch_root_path %> | 
+	  <%= link_to 'Facebook', 'http://apps.facebook.com/cthulhuquest' %>
+    </footer>
+  </div>
+</body>
+</html>

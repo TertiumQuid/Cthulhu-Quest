@@ -1,0 +1,12 @@
+<fieldset>
+<legend>
+	<%= link_to plot_thread.plot.title, web_casebook_path(plot_thread) %>
+</legend>	
+	
+<ul>
+  <li>
+	  <header><%= plot_thread.plot.subtitle %></header>
+	  <h5><%= pluralize( plot_thread.plot.duration, 'hour' ) %></h5>
+	</li>
+</ul>
+</fieldset>

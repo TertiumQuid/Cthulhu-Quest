@@ -1,0 +1,35 @@
+<article>
+  <header>
+	<h2>Assigned to <%= @investigation.plot.title %></h2><br />
+	<h4>
+	  <%= time_ago_in_words(@investigation.created_at) %> ago
+		by your impeccable ally, <%= link_to @investigation.investigator.name, web_investigator_path( @investigation.investigator ) %> 
+	</h4>
+  </header>
+
+  <div class="profile">
+    <header><h3><%= @investigation.plot.subtitle %></h3></header>
+	
+	<br/>
+    <fieldset>
+      <legend>Your skills are requested to...</legend><br>
+      <ul>
+        <li>
+		  <label style='font-size:20px;'><%= @assignment.intrigue.title %></label> 
+          <span class='right' style='font-size:14px;'><%= "#{@assignment.intrigue.challenge.name} Challenge : #{@assignment.intrigue.difficulty}" %></span>
+          <% unless @assignment.self_assigned? || @assignment.accepted? %>
+			<br />
+			  <em style='font-size:14px'>Your assistance adds a +<%= current_investigator.skill_by_name(@assignment.intrigue.challenge.name) %>
+			  <%= @assignment.intrigue.challenge.name.downcase %> bonus</em>
+          <% end %>
+        </li>
+	  </ul>
+    </fieldset>
+	
+    <fieldset>
+	<%= button_to('Help Your Ally Investigate', web_assignment_path(@assignment, 'assignment[status]' => 'accepted'), :method => :put, :class => 'submit') %>
+		<%= button_to("Hmmm... They can pursue this one alone", web_assignment_path(@assignment, 'assignment[status]' => 'refused'), :method => :put, :class => 'submit') %>
+    </fieldset>
+
+  </div>
+</article>

@@ -1,0 +1,66 @@
+<div class='ui-tabs-panel'>
+  <div class="box profile" style='padding:5px'>	
+	<em class='title right'><%= @monster.kind %></em>
+	<em class='title right'>Level <%= @monster.level %></em>
+	<h3>vs. <%= truncate(@monster.name, :length => 35) %></h3>
+	
+    <div class='para square-top-left'>
+	  <div><%= @monster.description %></div>
+	  <br />
+	  <em>You can battle this monster and collect a bounty if you must raise funds, but the ordeal will often leave you wounded and suffering from madness.</em>
+	</div>
+	
+    <div class='para'>
+	  <h4 class='red'><center>Combat</center></h4>
+	
+	  <div class='info red'>
+	    <em>&hearts; Wounds</em><span>&nbsp;</span>
+	    <div id='wound-progress' class='progress-bar' style='width:400px'>
+		  <span>suffered 0 wounds</span>
+	    </div>
+	  </div>
+	  <div class='info red'>
+	    <em>&there4; Madness</em><span>&nbsp;</span>
+	    <div id='madness-progress' class='progress-bar' style='width:400px'>
+		  <span>suffered <%= @monster.madness %> madness</span>
+	    </div>	
+	  </div>	
+	
+	</div>	
+	
+  <div class='para'>
+	<% if (@combat.wounds || 0) > 0 %>
+	  The encounter left you <%= current_investigator.wound_status.downcase %>
+	  <% if @monster.madness > 0 %>
+	    and mentally shaken, <%= current_investigator.madness_status.downcase %>.
+	  <% else %>
+	    but sound of mind.
+	  <% end %>
+	<% else %>
+	  You survived the encounter unscathed
+	  <% if @monster.madness > 0 %>
+	  ,  but affected, <%= current_investigator.madness_status.downcase %>.
+	  <% else %>
+	    and sound of mind.
+	  <% end %>	
+	<% end %>
+  </div>
+
+  <div class='para'>
+	<% if current_investigator.combat_fit? %>
+      <div class='big green bonus'>Earned &pound;<%= @monster.bounty %> bounty from mysterious yet virtuous benefactors.</div>
+    <% else %>
+      <div class='big red bonus'>Earned nothing but trauma, but at least you escaped with your life</div>
+    <% end %>
+  </div>
+</div>	
+
+<script>
+$(function() {
+  $( "#wound-progress" ).progressbar({});
+  animateProgressBar($( "#wound-progress" ), <%= (((current_investigator.wounds.to_f - (@combat.wounds || 0).to_f) / current_investigator.maximum_wounds.to_f) * 100).to_i %>, <%= ((current_investigator.wounds.to_f / current_investigator.maximum_wounds.to_f) * 100).to_i %>, 40);
+
+  $( "#madness-progress" ).progressbar({});
+  animateProgressBar($( "#madness-progress" ), <%= (((current_investigator.madness.to_f - @monster.madness.to_f) / current_investigator.maximum_madness.to_f) * 100).to_i %>, <%= ((current_investigator.madness.to_f / current_investigator.maximum_madness.to_f) * 100).to_i %>, 40);
+});
+</script>

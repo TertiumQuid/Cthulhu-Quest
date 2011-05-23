@@ -1,0 +1,67 @@
+<article class='sidebar'>
+  <h2>Requirements</h2>
+  <ul class="picklist">
+	<li class="header">You must to meet these prerequisites to begin investigating.</li>
+    <li>
+	  <div class="body centered">
+		<table>
+		<%= render @prerequisites %>
+	    </table>
+	  </div>
+	</li>
+  </ul>
+
+  <h2>Rewards</h2>
+  <ul class="picklist">
+	<li class="header">You'll receive these rewards for solving the plot.</li>
+    <li>
+	  <div class="body centered">
+		<table>
+		<%= render @rewards %>
+	    </table>
+	  </div>
+	</li>
+  </ul>
+</article>
+
+<article>
+  <header>
+	<h2>Investigating : <%= @plot_thread.plot.title %></h2>
+  </header>
+	
+  <div class="profile">	
+    <header><h3><%= @plot_thread.plot.subtitle %></h3></header>
+    <br />
+	<%= form_for [:web, @plot_thread, @investigation], :url => web_casebook_investigations_path do |f| %>
+	  <fieldset>
+	    <ul>
+	      <li><label><%= pluralize( @plot_thread.plot.duration, 'hour' ) %> of investigation required to solve</label></li>
+	      <li>
+		    <% if current_investigator.moxie < @plot_thread.plot.duration %> 
+		      <em>No moxie to spend on hastening the investigation.</em>
+		   <% else %>
+		 	  <%= f.label :moxie_speed, raw("Can't afford to wait? Spend <strong>#{@plot_thread.plot.duration} moxie</strong> and try to solve the plot immediately") %>
+			  <div style='display:3px;float:right;background-color:#3B5998;height:22px;padding:0;margin-top:5px'><%= f.check_box :moxie_speed, {:style => 'width:20px;height:20px;position:relative;top:-5px;'}, @plot_thread.plot.duration %></div>
+		   <% end %>
+		  </li>
+	    </ul>
+	  </fieldset>
+	
+	  <%= field_set_tag 'Intrigues' do %>
+	    <ul>
+		  <%= f.fields_for :assignments do |assignment_fields| %>
+		    <li>
+			  <%= render :partial => 'assignment_field', :locals => {:assignment_fields => assignment_fields, :f => f} %>
+			</li>
+	      <% end %>
+	    </ul>
+	  <% end %>	
+
+	  <%= field_set_tag '' do %>
+	    <%= f.submit "Begin Investigating the Plot", :class => 'submit' %>
+	  <% end %>
+	<% end %>
+  </div>
+</article>
+
+<%= javascript_include_tag 'web/assignments' %>

@@ -1,0 +1,16 @@
+<% if reward_counter % 3 == 0 %>
+  <tr>
+<% end %>
+<td>
+  <div class='badge reward'>
+	<div>
+      <header>
+        <%= reward.reward_type %>
+      </header>
+      <span><%= reward.reward_type == 'plot' ? 'A new plot thread...' : reward.reward_name %></span>
+    </div>
+  </div>
+</td>
+<% if reward_counter % 3 == 3 || reward_counter == (@rewards.size - 1) %>
+  </tr>
+<% end %>

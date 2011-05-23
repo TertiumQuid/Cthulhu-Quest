@@ -1,0 +1,9 @@
+beth_colt_45_automatic:
+  weapon: colt_45_automatic
+  investigator: beth_pi
+  weapon_name: Colt .45 Automatic M1911
+  
+aleph_colt_45_automatic:
+  weapon: colt_45_automatic
+  investigator: aleph_pi
+  weapon_name: Colt .45 Automatic M1911

@@ -1,0 +1,119 @@
+professor_henry_armitage:
+  character_id: 1
+  profile_id: 15
+  
+librarian_henry_armitage:
+  character_id: 1
+  profile_id: 14
+  
+occultist_thomas_olney:
+  character_id: 3
+  profile_id: 13
+  
+soldier_ambrose_dexter:
+  character_id: 7
+  profile_id: 12
+  
+journalist_arthur_munroe:
+  character_id: 16
+  profile_id: 11
+  
+psychotheropist_henry_armitage:
+  character_id: 1
+  profile_id: 10
+  
+police_inspector_john_legrasse:
+  character_id: 11
+  profile_id: 9
+  
+archeologist_henry_armitage:
+  character_id: 1
+  profile_id: 8
+  
+artist_henry_armitage:
+  character_id: 1
+  profile_id: 7
+  
+antiquarian_henry_armitage:
+  character_id: 1
+  profile_id: 6
+  
+gangster_father_iwanicki:
+  character_id: 6
+  profile_id: 5
+  
+dilettante_henry_armitage:
+  character_id: 1
+  profile_id: 4
+  
+priest_father_iwanicki:
+  character_id: 6
+  profile_id: 3
+  
+athelete_henry_armitage:
+  character_id: 1
+  profile_id: 2
+  
+parapsychologist_thomas_olney:
+  character_id: 3
+  profile_id: 1
+
+professor_thomas_malone:
+  character_id: 2
+  profile_id: 15
+  
+librarian_francis_morgan:
+  character_id: 13
+  profile_id: 14
+  
+occultist_asenath_waite:
+  character_id: 12
+  profile_id: 13
+  
+soldier_thomas_malone:
+  character_id: 2
+  profile_id: 12
+  
+journalist_thomas_malone:
+  character_id: 2
+  profile_id: 11
+  
+psychotheropist_robert_blake:
+  character_id: 4
+  profile_id: 10
+  
+police_inspector_thomas_malone:
+  character_id: 2
+  profile_id: 9
+  
+archeologist_sir_william_brinton:
+  character_id: 9
+  profile_id: 8
+  
+artist_thomas_malone:
+  character_id: 2
+  profile_id: 7
+  
+antiquarian_ambrose_dexter:
+  character_id: 7
+  profile_id: 6
+  
+gangster_doctor_munoz:
+  character_id: 8
+  profile_id: 5
+  
+dilettante_robert_blake:
+  character_id: 4
+  profile_id: 4
+  
+priest_thomas_malone:
+  character_id: 2
+  profile_id: 3
+  
+athelete_arthur_munroe:
+  character_id: 16
+  profile_id: 2
+  
+parapsychologist_robert_blake:
+  character_id: 4
+  profile_id: 1    

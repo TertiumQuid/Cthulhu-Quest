@@ -1,0 +1,109 @@
+<div class="panel">
+  <div class="box">
+	<div id="shop-tabs" class="tabs">
+	  <ul>
+		<li><a href="#tabs-equipment">Dry Goods Catalogue</a></li>
+		<li><a href="#tabs-weapons">Munitions &amp; Firearms</a></li>
+		<li><a href="#tabs-arcana">Curio &amp; Arcana</a></li>
+	  </ul>
+	
+	  <div id="tabs-equipment" class='tab-panel'>
+		<div class="box">
+		  <p>Find exquisite equipment to suit your adventuring needs from Sears Roebuck and Co, Montgomery Ward, the J. C. Penney Company, and other fine and trustworthy catalogue merchants. <em>You'll need equipment for your investigations.</em></p>
+		
+		  <table class="box pager">
+		    <tr>
+              <td style='width:28px;'>
+	            <a class='page-nav' href='javascript:void(0)' id='equipment-prev' style='left:-5px;'>&lang;<span>PREV</span></a>
+		      </td>		
+			  <td>
+				<%= render :partial => 'facebook/items/equipment', :locals => { :items => @items } %>	
+		      </td>
+			  <td style='width:28px;'>
+		        <a class='page-nav' href='javascript:void(0)' id='equipment-next' style='left:3px;'>&rang;<span>NEXT</span></a>
+		      </td>
+		    </tr>
+	      </table>
+		</div>
+	  </div>
+	
+	  <div id="tabs-weapons" class='tab-panel'>
+		<div class="box">
+		  <p>Get your household arsenal and ordinance from such fine suppliers as Revelation, Hawthorne, J. C. Higgens, and Ted Williams, hardware and military surplus outfitting-by-mail.</p>
+		
+		  <table class="box pager">
+		    <tr>
+              <td style='width:28px;'>
+	            <a class='page-nav' href='javascript:void(0)' id='weapon-prev' style='left:-5px;'>&lang;<span>PREV</span></a>
+		      </td>		
+			  <td>
+				<%= render :partial => 'facebook/weapons/weapons', :locals => { :weapons => @weapons } %>
+		      </td>
+			  <td style='width:28px;'>
+		        <a class='page-nav' href='javascript:void(0)' id='weapon-next' style='left:3px;'>&rang;<span>NEXT</span></a>
+		      </td>
+		    </tr>
+	      </table>
+		</div>
+	  </div>
+	
+	  <div id="tabs-arcana" class='tab-panel'>
+		<div class="box">
+		  <p>From the shadowy back alley vendors and windowless specialty shops come the world's fantastic arcana and magical technologies. <em>Once used, their effects will heighten your abilities for a period of time.</em></p>
+		
+		  <table class="box pager">
+		    <tr>
+            <td style='width:28px;'>
+	            <a class='page-nav' href='javascript:void(0)' id='artifact-prev' style='left:-5px;'>&lang;<span>PREV</span></a>
+		      </td>		
+			  <td>
+				<%= render :partial => 'facebook/items/artifacts', :locals => { :artifacts => @artifacts } %>
+		      </td>
+			  <td style='width:28px;'>
+		        <a class='page-nav' href='javascript:void(0)' id='artifact-next' style='left:3px;'>&rang;<span>NEXT</span></a>
+		      </td>
+		    </tr>
+	      </table>
+		</div>
+	  </div>	
+			
+	</div>	
+  </div>	
+</div>
+
+
+<script>
+$(function() {
+  $( "#shop-tabs" ).tabs();
+  $('#equipment-list').paginated({
+	controls: { prev: $('#equipment-prev'), next: $('#equipment-next') },
+	perPage: 8
+  });
+  $('#artifact-list').paginated({
+	controls: { prev: $('#artifact-prev'), next: $('#artifact-next') },
+	perPage: 8
+  });
+  $('#weapon-list').paginated({
+	controls: { prev: $('#weapon-prev'), next: $('#weapon-next') },
+	perPage: 8
+  });
+
+  $( "a.buy-button" ).bindAjaxRequester({
+	confirmation: "Are you sure you wish to purchase this item?",
+    success: function(sender) {
+	  setFundsLabel( -parseInt( sender.attr('data-price') ));
+	
+	  var owned = sender.attr('data-owned');
+	  if (owned) {
+		owned = parseInt(owned) + 1;
+		sender.attr('data-owned', owned);
+	  };
+	
+	  var label = sender.parent('.cmd').siblings('.info').children('.amount-owned').first();
+	  if (label) {
+		label.html(' / ('+owned+' owned)');
+	  };
+    }
+  });
+});
+</script>

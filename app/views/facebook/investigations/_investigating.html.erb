@@ -1,0 +1,106 @@
+<div class='para green'>
+  <h4 class='green'>
+    Investigation Progress
+    <em><%= pluralize(investigation.duration, 'hour') %> required</em>
+  </h4>
+  <div class='body'>
+    <div id='investigation-bar' class="progress-bar">
+  	  <span><%= investigation.elapsed? ? (investigation.completed? ? "Investigation Completed" : "Investigation 100% Elapsed") : "#{investigation.investigation_ends_at_in_words} remaining" %></span>
+    </div>	
+  </div>
+</div>
+
+<div class='para green'>
+  <h4 class='green'>
+    Subplots
+  </h4>
+  <ul class='long-list green'>
+     <%= render :partial => 'facebook/investigations/assignments', 
+                :locals => { :investigation => @investigation, :completed => @completed_assignments } %>
+  </ul>
+</div>
+
+<% if investigation.investigated? %>
+
+<div class='para green'>
+    <%= link_to "Attempt to Solve", 
+                facebook_casebook_investigation_path(investigation.plot_thread, investigation),
+                :remote => true,
+                :method => 'put',
+                :class => 'big', 
+                :id => 'solve-investigation-button', 
+                :style =>'margin-left:240px' %>
+</div>
+
+<script>
+$(function() {
+  $( "#solve-investigation-button" ).bindAjaxRequester({
+	height: 650,
+    success: function(sender) {
+      $('#nav-tab-casebook').trigger('click'); 
+	},	
+    failure: function(sender) {
+      $('#nav-tab-casebook').trigger('click'); 
+	}	
+  });		
+	
+  $( "#xxxxxxx" ).parent('form')
+    .bind("ajax:success", function(obj, data, status, xhr) {
+      json = jQuery.parseJSON(data);
+	  var popup = $('#investigation-completed-dialog');
+	  var assignments = jQuery.parseJSON( json.html );
+	
+	  $( '#completed-investigation-desc' ).html( json.message );
+	
+	  var stopAssignments = false;
+	  $.each(assignments, function(index, assignment) {		
+		if (stopAssignments == false) {
+		  var a = assignment['assignment'];
+		  var results_bar = $('#assignment-bar-'+a.id);
+		  var results_label = $('#assign-results-'+a.id);
+		  var bar_value = 100;
+		  var target = parseFloat(a.challenge_target);
+		  var score = parseFloat(a.challenge_score);
+		
+		  if (a.result == 'succeeded') {
+		    var versus = (target / <%= Intrigue::CHALLENGE_RANGE.to_f %>) * 100;
+		    results_label.html("SUCCEEDED vs. "+parseInt(versus)+"%");
+		  }
+		  else {	
+			var total_at = <%= Intrigue::CHALLENGE_RANGE.to_f %> - target;
+			bar_value = ((score - target) / total_at) * 100;
+			var failed_with = (target / <%= Intrigue::CHALLENGE_RANGE.to_f %>) * 100;
+			
+		    results_label.html("FAILED vs. "+parseInt(failed_with)+"%");
+		    stopAssignments = true;
+	        removeStatusItem('investigating');		
+		  }
+		  animateProgressBar(results_bar, 0, parseInt(bar_value), 40);
+		}	
+	  });
+		
+	  $('#plot-title-status').html( stopAssignments == false ? "SUCCEEDED" : "FAILED" );
+			
+      popup.dialog({ 
+	    autoOpen: true, 
+        show: {effect: "fade", duration: 300},		
+        hide: {effect: "fade", duration: 200},	
+        position: ['center','top'],
+	    modal: true, 
+	    height:750,
+	    width: 600,
+	    title: json.title,
+	    buttons: { 
+		  "Close": function() { 
+	        $('#nav-tab-casebook').trigger('click');
+		    $( this ).dialog( "close" );
+	      }
+	    }
+	  });
+  });
+});
+</script>
+
+
+<% end %>
+

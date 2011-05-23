@@ -1,0 +1,59 @@
+parapsychologist:
+  name: Parapsychologist
+  income: 5
+  
+athelete:
+  name: Athelete
+  income: 10
+  
+priest:
+  name: Priest    
+  income: 6
+    
+dilettante:
+  name: Dilettante    
+  income: 12
+  
+gangster:
+  name: Gangster
+  income: 8
+  
+antiquarian:
+  name: Antiquarian
+  income: 4
+      
+artist:
+  name: Artist
+  income: 2
+    
+archeologist:
+  name: Archeologist
+  income: 5
+
+police_inspector:
+  name: Police Inspector
+  income: 8
+      
+psychotheropist:
+  name: Psychotheropist
+  income: 10
+  
+journalist:
+  name: Journalist
+  income: 5
+    
+soldier:
+  name: Soldier
+  income: 3
+  
+occultist:
+  name: Occultist
+  income: 3
+
+librarian:
+  name: Librarian
+  income: 4
+  
+professor:
+  name: Professor
+  income: 7

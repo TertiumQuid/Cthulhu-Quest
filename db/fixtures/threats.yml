@@ -1,0 +1,65 @@
+the_i_ching_warlock:
+  plot_id: 3
+  monster_id: 15
+  intrigue_id: 97
+  name: Taoist Sorcerer
+  
+malleus_maleficarum_third_5_witch:
+  plot_id: 27
+  monster_id: 6
+  intrigue_id: 95
+  name: Goddess of the Crossroads
+  
+malleus_maleficarum_third_4_witch:
+  plot_id: 27
+  monster_id: 6
+  intrigue_id: 94
+  name: Three-Formed Witch
+  
+malleus_maleficarum_third_3_witch:
+  plot_id: 27
+  monster_id: 6
+  intrigue_id: 93
+  name: Hecate's Daughter
+  
+malleus_maleficarum_second_5_witch:
+  plot_id: 27
+  monster_id: 6
+  intrigue_id: 90
+  name: Wolf Mother
+  
+malleus_maleficarum_first_5_witch:
+  plot_id: 7
+  monster_id: 6
+  intrigue_id: 85
+  name: Nightsoil Hag
+  
+king_in_yellow_shantak:
+  plot_id: 24
+  monster_id: 17
+  intrigue_id: 73
+  name: Tatterdemalion Deamon
+  
+grandfathers_journal_hunting_horror:
+  plot_id: 21
+  monster_id: 7
+  intrigue_id: 56
+  name: Farmhouse Horror
+  
+unquiet_dead_zombie:
+  plot_id: 19
+  monster_id: 13
+  intrigue_id: 48
+  name: Reanimated Corpse
+  
+last_man_standing_brute_2:
+  plot_id: 11
+  monster_id: 1
+  intrigue_id: 32
+  name: Champion Pugilist
+  
+last_man_standing_brute_1:
+  plot_id: 11
+  monster_id: 1
+  intrigue_id: 33
+  name: Promotor's Henchman

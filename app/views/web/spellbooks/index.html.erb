@@ -1,0 +1,67 @@
+<% unless @read_spellbooks.blank? %>
+<article class='sidebar'>
+  <h2>Grimoires Studied</h2>
+
+  <table class="tabular">
+	<tbody>
+	  <% @read_spellbooks.each do |spellbook| %>
+		<tr>
+		  <th><%= spellbook.name %></th>
+		</tr>		
+		<tr>
+		  <td><%= spellbook.grimoire.description %></td>
+		</tr>
+	  <% end %>
+	</tbody>
+  </table>
+</article>
+<% end %>
+
+<% if @spellbooks.blank? %>
+  <article>
+    <header>
+	  <h2>Magical Grimoires</h2>
+    </header>
+
+	<div class="profile">
+	  <fieldset>
+		<ul>
+		  <li>It seems you remain a fortunate stranger to the dark arts. There are words written in the books of ancient wizards that are absolutely not to be trusted or contemplated without inviting madness and inevitable doom.</li>
+		</ul><br />
+		<ul>
+		  <li>If you must court such power for a higher goal, however, know that grimoires replete with useful spells can be gained as rewards for <%= link_to 'solving plots', web_casebook_index_path %>.</li>
+		</ul>
+	  </fieldset>
+	</div>
+  </article>
+<% end %>
+
+<% unless @unread_spellbooks.blank? %>
+<article>
+  <header>
+	<h2>Mysterious Grimoires</h2>
+  </header>
+	
+  <div class="profile">
+    <p>Before you lay pages of instructions to attack reality (and sanity) itself should you unlock their powers. Once you have read a grimoire, its spells are learned forever and its secrets never forgotten, nor may you never trust yourself to give it away.</p>
+    <br />
+	<fieldset>
+	  <%= render @unread_spellbooks %> 
+	</fieldset>
+  </div>
+</article>
+<br />
+<% end %>
+
+<% unless @read_spellbooks.blank? %>
+<article>
+  <header>
+	<h2>Mythos Spellbook</h2>
+  </header>	
+  <div class="profile">
+	<fieldset>
+	  <%= render @spells, :locals => {:castings => @castings} %>
+	</fieldset>
+  </div>
+</article>
+<% end %>

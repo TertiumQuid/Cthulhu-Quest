@@ -1,0 +1,18 @@
+<article>
+  <header>
+	<h2>Personal Journal</h2>
+  </header>
+
+  <div class="profile">
+	<p>Your journal comprises a recent history of your investigator's storied activity and interactions with other investigators.</p>
+	<table class="tabular">
+	  <tbody>
+		<% @journal.each do |journal| %>
+		<tr <%= "style='background-color:#84A273;color:#fff;letter-spacing:0.8px;'" if journal.activity.passive? %>>
+		  <td><em><%= time_ago_in_words(journal.created_at) %> ago</em> <%= journal.message %></td>
+		</tr>
+		<% end %>
+	  </tbody>
+	</table>	
+  </div>
+</article>

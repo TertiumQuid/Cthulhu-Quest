@@ -1,0 +1,66 @@
+<div class='grid-list-container' style='height:auto'>
+  <ul class='item-list' id='psychoses-list'>  	
+	<% psychoses.each do |psychosis| %>
+	  <li>
+		<h3>
+		  <em><%= "-#{psychosis.severity} #{psychosis.insanity.skill.name}" %></em> 
+		  <%= psychosis.name %>
+		</h3>
+		<div class='info'>
+		  <em><%= psychosis.degree %> Case</em>
+		  <em><%= (((10-psychosis.treatment_threshold).to_f / 10.0) * 100).to_i %>% Chance to Cure</em>
+		  <% if @psychoses.select{|p| p.treating? }.blank? %>
+            <%= link_to 'Treat in Asylum', 
+                        facebook_psychosis_path( psychosis ), 
+                        'data-title' => psychosis.name,
+                        :method => 'put',
+                        :remote => true,				
+                        :class => 'asylum-treatment-button' %>		
+          <% elsif psychosis.treatable? %>
+            <%= link_to 'Finish Treatment', 
+                        facebook_psychosis_path( psychosis ),
+                        'data-title' => psychosis.name,		 
+                        :method => 'delete',
+                        :remote => true,				
+                        :class => 'asylum-treat-button' %>
+          <% elsif psychosis.treating? %>
+            <a href="javascript:void(0)" class='asylum-treatment-button disabled'>Confined for Treatment</a>
+		  <% else %>
+		    <a href="javascript:void(0)" class='asylum-treatment-button disabled'>Institutionalized</a>
+		  <% end %>
+		  <div><%= psychosis.insanity.description %></div>
+		</div>		
+	  </li>
+	<% end %>
+  </ul>
+</div>
+
+<script>
+$(function() {
+  $( ".asylum-treatment-button" ).bindAjaxRequester({
+	success: function(sender) {
+	  $( ".asylum-treatment-button" ).button('disable');
+	  $( ".asylum-treatment-button" ).unbind('click');
+	  $( ".asylum-treatment-button" ).button( 'option', 'label', 'institutionalized' );
+	  sender.button( 'option', 'label', 'Confined for Treatment' );
+	  sender.button('disable').unbind('click');
+	
+	  addStatusItem( sender.attr('data-title'), 'treating');
+	}
+  });	
+
+  $( ".asylum-treat-button" ).bindAjaxRequester({
+	success: function(sender, html, json) {
+	  setMadnessLabel( json );
+	  $('#nav-tab-investigator').trigger('click');
+	  removeStatusItem('treating');
+	},
+	failure: function(sender, html, json) {
+	  $('.madness-status').html( html );
+	  $('#nav-tab-investigator').trigger('click');
+	  removeStatusItem('treating');
+	}	
+  });
+  $( ".asylum-treatment-button.disabled" ).button('disable');
+});
+</script>

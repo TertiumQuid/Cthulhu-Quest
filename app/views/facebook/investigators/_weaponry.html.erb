@@ -1,0 +1,73 @@
+<table class="box pager">
+  <tr>
+    <td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='armament-prev' style='left:-5px;'>&lang;<span>PREV</span></a>
+    </td>		
+	<td>
+	  <div class='grid-list-container' style='height:200px;width:570px;'>
+		<ul class='grid-list tall' id='armament-list'>
+		<% items.each do |armament| %>
+		<li>
+		  <h6><%= armament.weapon.name %></h6>
+		  <div class='body'><%= armament.weapon.description %></div>
+		  <div class="info">
+			<div class='float-strip'>
+		      <div class="circle medium blue"><%= armament.weapon.attacks %> <em>ATK</em></div>
+			  <div class="circle medium red"><%= armament.weapon.power %> <em>POW</em></div>
+		    </div>
+		  </div>
+		  <div class="cmd">
+			<% if (current_investigator.armed_id != armament.id) %>
+		    <%= link_to "arm weapon", 
+		                facebook_armament_path( armament ), 
+		                :method => 'put',
+		                :remote => true,
+		                :class => 'arm-button' %>
+
+		    <% else %>
+		      <%= link_to "ARMED", 
+		                  facebook_armament_path( armament ), 
+		                  :method => 'put',
+		                  :remote => true,
+		                  :disabled => true,
+		                  :class => 'arm-button disasbled' %>
+		    <% end %>
+		  </div>
+		</li>
+		<% end %>
+
+		<% if (items.size % 4) != 0 %>
+		  <% (4 - (items.size % 4)).times do %>
+		  <li class='empty'>
+		    <h6>&nbsp;</h6>
+		    <div class='body'>&nbsp;</div>
+		    <div class="info">&nbsp;</div>
+		  </li>
+		  <% end %>
+		<% end %>
+		</ul>
+	  </div>
+    </td>
+	  <td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='armament-next' style='left:3px;'>&rang;<span>NEXT</span></a>
+    </td>
+  </tr>
+</table>
+
+<script>
+$(function() {
+  $('#armament-list').paginated({
+	controls: { prev: $('#armament-prev'), next: $('#armament-next') },
+	perPage: 4
+  });	
+  $( "a.arm-button").bindAjaxRequester({
+	success: function(sender) {
+      $("a.arm-button").button('enable');
+	  $("a.arm-button").button( 'option', 'label', 'arm weapon' );
+      sender.button('disable');
+      sender.button( 'option', 'label', 'ARMED' );
+    }
+  });
+  $( ".arm-button" ).button('disable');
+});
+</script>

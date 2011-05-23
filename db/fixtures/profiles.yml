@@ -1,0 +1,74 @@
+parapsychologist:
+  id: 1
+  name: Parapsychologist
+  income: 20
+  
+athelete:
+  id: 2
+  name: Athelete
+  income: 35
+  
+priest:
+  id: 3
+  name: Priest    
+  income: 20
+    
+dilettante:
+  id: 4
+  name: Dilettante    
+  income: 60
+  
+gangster:
+  id: 5
+  name: Gangster
+  income: 45
+  
+antiquarian:
+  id: 6
+  name: Antiquarian
+  income: 20
+      
+artist:
+  id: 7
+  name: Artist
+  income: 15
+    
+archeologist:
+  id: 8
+  name: Archeologist
+  income: 30
+
+police_inspector:
+  id: 9
+  name: Police Inspector
+  income: 35
+      
+psychotheropist:
+  id: 10
+  name: Psychotheropist
+  income: 40
+  
+journalist:
+  id: 11
+  name: Journalist
+  income: 30
+    
+soldier:
+  id: 12
+  name: Soldier
+  income: 25
+  
+occultist:
+  id: 13
+  name: Occultist
+  income: 20
+
+librarian:
+  id: 14
+  name: Librarian
+  income: 20
+  
+professor:
+  id: 15
+  name: Professor
+  income: 35

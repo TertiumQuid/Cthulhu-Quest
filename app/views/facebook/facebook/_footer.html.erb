@@ -1,0 +1,7 @@
+<div class="panel">
+  <div id="footer">
+	<%= link_to "Latest Update: #{AppConfig.updated_at}, v#{AppConfig.version}", 
+                "http://www.facebook.com/apps/application.php?id=#{AppConfig.facebook.app_id}", 
+                :target => '_blank', :style => 'text-decoration:none;color:#336644' %>
+  </div>
+</div>

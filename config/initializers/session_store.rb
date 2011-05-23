@@ -1,0 +1,1 @@
+CthulhuQuest::Application.config.session_store :active_record_store, :key => '_cthulhu_quest_session'

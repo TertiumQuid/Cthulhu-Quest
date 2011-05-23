@@ -1,0 +1,53 @@
+<div class="panel">
+  <div class="box">
+	<div id="home-tabs" class="tabs">
+	  <ul>
+		<li><a href="#tabs-forward">Forward</a></li>
+		<li><a href="#tabs-quickstart">Quickstart</a></li>
+		<li><a href="#tabs-rules">Rulebook</a></li>
+	  </ul>			
+
+	  <div id="tabs-forward" class='tab-panel'>
+		<div class="box">
+		  <h2>Hopeless Adventure and Horror</h2>
+		  <p>Cthulhu Quest is a browser-based horror RPG where you create an investigator and solve Lovecraftian plots with your friends. You'll pursue the Great Old Ones through storied investigations and obtain sundry Mythos lore to empower you for mankind's secret battle against cosmic extinction.</p>
+		
+		  <p>A world of cosmic horror, victorian attire, and pulp adventure, Cthulhu Quest remains faithful to the literature of H. P. Lovecraft while taking your investigations through Arkham, Miskatonic Valley and beyond. </p>
+
+	      <p>Being a social game, you'll gain many benefits of having trusty friends playing beside you, but there is little advantage in numbers against such enormous odds, and a handful of stout allies are far better than a many hapless, passive ones. </p>
+	
+		  <h4>Features</h4>
+		  <ul class='bulleted'>
+		    <li> Play a globetrotting investigator in the historic 1920s</li>
+		    <li> Skill-based character advancement</li>
+		    <li> Plot-based gameplay, from minor intrigues to major story-arcs</li>
+		    <li> Appointment-based, real-time scheduling of your actions</li>
+		    <li> Work with your friends to solve investigations</li>
+		    <li> Hunt criminals, monsters, spirits, otherworldly beings, and cosmic evil</li>
+		    <li> Madness and investigator psychoses</li>
+		    <li> Occult grimoires and ritual spellcasting</li>
+		  </ul>		
+
+	      <p>Cthulhu Quest is currently in open (very early) beta, and anyone is welcome to play. Be forewarned, however, that the game is under the rule of violent, ceaseless and erratic development and change, and your progress may be lost as updates are deployed.</p>
+			
+	      <p>The current focus is UI and finalizing the various gameplay mechanics, much to the detriment of content and balance. After a few more iterations of interface work and gameplay hooks, a merciless period of plot-writing and difficulty tweaking will follow.</p>		
+		</div>
+	  </div>
+	  <div id="tabs-quickstart" class='tab-panel'>	
+		<%= render :partial => "facebook/facebook/quickstart_guide" %>
+	  </div>
+	  <div id="tabs-rules" class='tab-panel'>	
+		<div class="box">
+		  <h3>Forthcoming...</h3>
+		  <p>&nbsp;<br />The mechanistic yet mysterious ways of the universe are in flux.<br />&nbsp;</p>
+	    </div>		
+	  </div>
+	</div>
+  </div>	
+</div>
+
+<script>
+$(function() {
+  $( "#home-tabs" ).tabs();
+});
+</script>

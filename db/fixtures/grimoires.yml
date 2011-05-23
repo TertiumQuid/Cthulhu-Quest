@@ -1,0 +1,53 @@
+the_king_in_yellow:
+  id: 9
+  name: The King in Yellow
+  description: English, 1895, unknown author
+  madness_cost: 7
+  
+gharne_fragments:
+  id: 8
+  name: G'Harne Fragments
+  description: English, 1919, Sir Amery Wendy-Smith
+  madness_cost: 3
+  
+eltdown_shards:
+  id: 7
+  name: Eltdown Shards
+  description: English, 1912, Rev. Arthur Brooke Winters-Hall
+  madness_cost: 3
+  
+de_vermiis_mysteriis:
+  id: 6
+  name: De Vermiis Mysteriis
+  description: Latin, 1542, Ludwig Prinn
+  madness_cost: 6
+  
+cultes_des_goules:
+  id: 5
+  name: Cultes Des Goules
+  description: French, 1702, Francois-Honore Balfour Comte d'Erlette
+  madness_cost: 6
+  
+cthaat_aquadingen:
+  id: 4
+  name: Cthaat Aquadingen
+  description: Latin, 11th century, unknown author
+  madness_cost: 4
+  
+book_of_dzyan:
+  id: 3
+  name: Book of Dzyan
+  description: English, unknown origin, unknown author
+  madness_cost: 3
+  
+liber_ivonis:
+  id: 2
+  name: Liber Ivonis
+  description: Latin, 9th century, Caius Phillipus Faber
+  madness_cost: 5
+    
+book_of_eibon:
+  id: 1
+  name: Book of Eibon
+  description: English, 15th century, author unknown
+  madness_cost: 5

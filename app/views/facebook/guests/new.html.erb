@@ -1,0 +1,63 @@
+<div class='ui-tabs-panel'>
+  <div class="box profile" style='padding:5px'>	
+    <em class='title right'>Hosted by the esteemed <%= truncate("#{@social.investigator.profile_name} #{@social.investigator.name}", :length => 35, :omission => '.') %></em>
+	<h3><%= @social.social_function.name %></h3>	
+
+    <div class='para square-top-left'>		
+      Come enjoy <%= @social.social_function.description %> Of course, your comportment is another matter entirely. Choose how you shall conduct yourself at your ally's function social function, either for the betterment of yourself or else for everyone together:
+    </div>
+
+	<div class='para'>
+	  <h4>
+		How will you conduct yourself?
+		<em>attend to gain <%= @social.social_function.kind == 'item' ? 'items' : @social.social_function.kind %></em>
+	  </h4>
+	
+	  <p>
+		Will you <%= @social.social_function.cooperation %>
+        <%= link_to @social.social_function.cooperation, 
+                    facebook_social_guests_path(@social, :status => 'cooperated'), 
+                    :remote => true,
+                    :method => 'post',
+                    'data-id' => @social.id,
+                    :id => 'guest-cooperate-button',
+                    :class => 'attend-social-button hidden',
+                    :style => 'display:none;' %>		
+	  </p>
+	  <p>
+		Or will you <%= @social.social_function.defection %>
+
+       <%= link_to @social.social_function.defection, 
+                   facebook_social_guests_path(@social, :status => 'defected'), 
+                   :remote => true,
+                   :method => 'post',
+                   'data-id' => @social.id,	
+                   :id => 'guest-defect-button',
+                   :class => 'attend-social-button hidden',
+                   :style => 'display:none;' %>		
+	  </p>	
+    </div>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( ".attend-social-button" ).bindAjaxRequester({
+	success: function(sender) {
+      var container = $('#social-invitation-'+sender.attr('data-id'));
+
+	  container.addClass('empty');
+	  $.each( container.children(), function(index, el) {	
+		$(el).html('&nbsp;');
+	  });
+	
+	  var list = $('#social-invitations-list');
+	  if ( list.children().length == list.children('.empty').length ) { 
+		$('#social-invitations').fadeOut(800);
+		$('#nav-tab-socials').html('Investigator Socials');
+	  };	
+      $('#dialogs').dialog("close");
+	}
+  });
+});
+</script>

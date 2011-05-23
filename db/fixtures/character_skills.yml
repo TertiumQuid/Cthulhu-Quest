@@ -1,0 +1,496 @@
+zadok_allen_adventure:
+  id: 71
+  skill_id: 1
+  character_id: 17
+  skill_level: 1
+  skill_name: Adventure
+  
+zadok_allen_sensitivity:
+  id: 70
+  skill_id: 10
+  character_id: 17
+  skill_level: 6
+  skill_name: Sensitivity
+  
+zadok_allen_underworld:
+  id: 69
+  skill_id: 8
+  character_id: 17
+  skill_level: 2
+  skill_name: Underworld
+  
+arthur_munroe_adventure:
+  id: 68
+  skill_id: 1
+  character_id: 16
+  skill_level: 4
+  skill_name: Adventure
+  
+arthur_munroe_underworld:
+  id: 67
+  skill_id: 8
+  character_id: 16
+  skill_level: 2
+  skill_name: Underworld
+  
+arthur_munroe_society:
+  id: 66
+  skill_id: 6
+  character_id: 16
+  skill_level: 2
+  skill_name: Society
+  
+arthur_munroe_research:
+  id: 65
+  skill_id: 4
+  character_id: 16
+  skill_level: 5
+  skill_name: Research
+  
+albert_wilmarth_bureaucracy:
+  id: 64
+  skill_id: 2
+  character_id: 15
+  skill_level: 4
+  skill_name: Bureaucracy
+  
+albert_wilmarth_sensitivity:
+  id: 63
+  skill_id: 10
+  character_id: 15
+  skill_level: 3
+  skill_name: Sensitivity
+  
+albert_wilmarth_research:
+  id: 62
+  skill_id: 4
+  character_id: 15
+  skill_level: 5
+  skill_name: Research
+  
+albert_wilmarth_scholarship:
+  id: 61
+  skill_id: 5
+  character_id: 15
+  skill_level: 6
+  skill_name: Scholarship
+  
+arthur_jermyn_adventure:
+  id: 60
+  skill_id: 1
+  character_id: 14
+  skill_level: 2
+  skill_name: Adventure
+  
+arthur_jermyn_underworld:
+  id: 59
+  skill_id: 8
+  character_id: 14
+  skill_level: 3
+  skill_name: Underworld
+  
+arthur_jermyn_society:
+  id: 58
+  skill_id: 6
+  character_id: 14
+  skill_level: 3
+  skill_name: Society
+  
+arthur_jermyn_research:
+  id: 57
+  skill_id: 4
+  character_id: 14
+  skill_level: 3
+  skill_name: Research
+  
+francis_morgan_research:
+  id: 56
+  skill_id: 4
+  character_id: 13
+  skill_level: 3
+  skill_name: Research
+  
+francis_morgan_scholarship:
+  id: 55
+  skill_id: 5
+  character_id: 13
+  skill_level: 5
+  skill_name: Scholarship
+  
+francis_morgan_conflict:
+  id: 54
+  skill_id: 3
+  character_id: 13
+  skill_level: 3
+  skill_name: Conflict
+  
+francis_morgan_bureaucracy:
+  id: 53
+  skill_id: 2
+  character_id: 13
+  skill_level: 2
+  skill_name: Bureaucracy
+  
+francis_morgan_adventure:
+  id: 52
+  skill_id: 1
+  character_id: 13
+  skill_level: 3
+  skill_name: Adventure
+  
+asenath_waite_research:
+  id: 51
+  skill_id: 4
+  character_id: 12
+  skill_level: 2
+  skill_name: Research
+  
+asenath_waite_sensitivity:
+  id: 50
+  skill_id: 10
+  character_id: 12
+  skill_level: 4
+  skill_name: Sensitivity
+  
+asenath_waite_psychology:
+  id: 49
+  skill_id: 9
+  character_id: 12
+  skill_level: 5
+  skill_name: Psychology
+  
+asenath_waite_sorcery:
+  id: 48
+  skill_id: 7
+  character_id: 12
+  skill_level: 6
+  skill_name: Sorcery
+  
+john_legrasse_sensitivity:
+  id: 47
+  skill_id: 10
+  character_id: 11
+  skill_level: 2
+  skill_name: Sensitivity
+  
+john_legrasse_adventure:
+  id: 46
+  skill_id: 1
+  character_id: 11
+  skill_level: 5
+  skill_name: Adventure
+  
+john_legrasse_research:
+  id: 45
+  skill_id: 4
+  character_id: 11
+  skill_level: 3
+  skill_name: Research
+  
+john_legrasse_conflict:
+  id: 44
+  skill_id: 3
+  character_id: 11
+  skill_level: 4
+  skill_name: Conflict
+  
+randolph_delapore_conflict:
+  id: 43
+  skill_id: 3
+  character_id: 10
+  skill_level: 3
+  skill_name: Conflict
+  
+randolph_delapore_underworld:
+  id: 42
+  skill_id: 8
+  character_id: 10
+  skill_level: 2
+  skill_name: Underworld
+  
+randolph_delapore_sorcery:
+  id: 41
+  skill_id: 7
+  character_id: 10
+  skill_level: 4
+  skill_name: Sorcery
+  
+randolph_delapore_sensitivity:
+  id: 40
+  skill_id: 10
+  character_id: 10
+  skill_level: 3
+  skill_name: Sensitivity
+  
+sir_william_brinton_sensitivity:
+  id: 39
+  skill_id: 10
+  character_id: 9
+  skill_level: 1
+  skill_name: Sensitivity
+  
+sir_william_brinton_conflict:
+  id: 38
+  skill_id: 3
+  character_id: 9
+  skill_level: 4
+  skill_name: Conflict
+  
+sir_william_brinton_adventure:
+  id: 37
+  skill_id: 1
+  character_id: 9
+  skill_level: 4
+  skill_name: Adventure
+  
+sir_william_brinton_research:
+  id: 36
+  skill_id: 4
+  character_id: 9
+  skill_level: 4
+  skill_name: Research
+  
+doctor_munoz_scholarship:
+  id: 35
+  skill_id: 5
+  character_id: 8
+  skill_level: 2
+  skill_name: Scholarship
+  
+doctor_munoz_underworld:
+  id: 34
+  skill_id: 8
+  character_id: 8
+  skill_level: 2
+  skill_name: Underworld
+  
+doctor_munoz_society:
+  id: 33
+  skill_id: 6
+  character_id: 8
+  skill_level: 2
+  skill_name: Society
+  
+doctor_munoz_bureaucracy:
+  id: 32
+  skill_id: 2
+  character_id: 8
+  skill_level: 4
+  skill_name: Bureaucracy
+  
+doctor_munoz_research:
+  id: 31
+  skill_id: 4
+  character_id: 8
+  skill_level: 4
+  skill_name: Research
+  
+ambrose_dexter_research:
+  id: 30
+  skill_id: 4
+  character_id: 7
+  skill_level: 2
+  skill_name: Research
+  
+ambrose_dexter_sorcery:
+  id: 29
+  skill_id: 7
+  character_id: 7
+  skill_level: 1
+  skill_name: Sorcery
+  
+ambrose_dexter_conflict:
+  id: 28
+  skill_id: 3
+  character_id: 7
+  skill_level: 2
+  skill_name: Conflict
+  
+ambrose_dexter_adventure:
+  id: 27
+  skill_id: 1
+  character_id: 7
+  skill_level: 3
+  skill_name: Adventure
+  
+ambrose_dexter_underworld:
+  id: 26
+  skill_id: 8
+  character_id: 7
+  skill_level: 3
+  skill_name: Underworld
+  
+father_iwanicki_underworld:
+  id: 25
+  skill_id: 8
+  character_id: 6
+  skill_level: 2
+  skill_name: Underworld
+  
+father_iwanicki_scholarship:
+  id: 24
+  skill_id: 5
+  character_id: 6
+  skill_level: 2
+  skill_name: Scholarship
+  
+father_iwanicki_research:
+  id: 23
+  skill_id: 4
+  character_id: 6
+  skill_level: 4
+  skill_name: Research
+  
+father_iwanicki_sensitivity:
+  id: 22
+  skill_id: 10
+  character_id: 6
+  skill_level: 3
+  skill_name: Sensitivity
+  
+ammi_pierce_sensitivity:
+  id: 21
+  skill_id: 10
+  character_id: 5
+  skill_level: 1
+  skill_name: Sensitivity
+  
+ammi_pierce_conflict:
+  id: 20
+  skill_id: 3
+  character_id: 5
+  skill_level: 4
+  skill_name: Conflict
+  
+ammi_pierce_adventure:
+  id: 19
+  skill_id: 1
+  character_id: 5
+  skill_level: 4
+  skill_name: Adventure
+  
+blake_bureaucracy:
+  id: 18
+  skill_id: 2
+  character_id: 4
+  skill_level: 1
+  skill_name: Bureaucracy
+  
+blake_research:
+  id: 17
+  skill_id: 4
+  character_id: 4
+  skill_level: 4
+  skill_name: Research
+  
+blake_psychology:
+  id: 16
+  skill_id: 9
+  character_id: 4
+  skill_level: 3
+  skill_name: Psychology
+  
+blake_sensitivity:
+  id: 15
+  skill_id: 10
+  character_id: 4
+  skill_level: 3
+  skill_name: Sensitivity
+  
+olney_scholarship:
+  id: 14
+  skill_id: 5
+  character_id: 3
+  skill_level: 4
+  skill_name: Scholarship
+  
+olney_adventure:
+  id: 13
+  skill_id: 1
+  character_id: 3
+  skill_level: 4
+  skill_name: Adventure
+  
+olney_sensitivity:
+  id: 12
+  skill_id: 10
+  character_id: 3
+  skill_level: 5
+  skill_name: Sensitivity
+
+malone_sensitivity:
+  id: 11
+  skill_id: 10
+  character_id: 2
+  skill_level: 3
+  skill_name: Sensitivity
+  
+malone_psychology:
+  id: 10
+  skill_id: 9
+  character_id: 2
+  skill_level: 3
+  skill_name: Psychology
+  
+malone_research:
+  id: 9
+  skill_id: 4
+  character_id: 2
+  skill_level: 2
+  skill_name: Research
+  
+malone_underworld:
+  id: 8
+  skill_id: 8
+  character_id: 2
+  skill_level: 4
+  skill_name: Underworld
+  
+malone_bureaucracy:
+  id: 7
+  skill_id: 2
+  character_id: 2
+  skill_level: 2
+  skill_name: Bureaucracy
+  
+malone_conflict:
+  id: 6
+  skill_id: 3
+  character_id: 2
+  skill_level: 5
+  skill_name: Conflict
+  
+armitage_sensitivity:
+  id: 5
+  skill_id: 10
+  character_id: 1
+  skill_level: 2
+  skill_name: Sensitivity
+  
+armitage_sorcery:
+  id: 4
+  skill_id: 7
+  character_id: 1
+  skill_level: 4
+  skill_name: Sorcery
+  
+armitage_research:
+  id: 3
+  skill_id: 4
+  character_id: 1
+  skill_level: 5
+  skill_name: Research
+  
+armitage_bureaucracy:
+  id: 2
+  skill_id: 2
+  character_id: 1
+  skill_level: 2
+  skill_name: Bureaucracy
+
+armitage_scholarship:
+  id: 1
+  skill_id: 5
+  character_id: 1
+  skill_level: 7
+  skill_name: Scholarship

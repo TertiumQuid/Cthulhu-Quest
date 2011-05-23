@@ -1,0 +1,83 @@
+<div class='grid-list-container' style='height:220px;'>
+  <ul class='grid-list wide blue' id='tasking-list'>  
+	<% taskings.each do |tasking| %>
+	<li>
+      <h4><%= tasking.task.name %></h4>
+	  <% if tasking.available_for?(current_investigator) %>	
+	    <div class='desc' style='height:50px;'><em><%= tasking.task.description %></em></div>	
+	    <center><span class='tab-header small'>reward</span></center>	
+		<div class='desc' style='height:20px;'><center class='title-type'><%= tasking.reward_name %></center></div>
+	    <div class="info">&nbsp;
+		  <div class="circle big blue right" style='top:-10px;'>vs.<br/><%= (tasking.success_target_for(current_investigator) / Task::CHALLENGE_RANGE * 100).to_i %>%</div>
+		  pass <%= tasking.task.skill.name %>
+		</div>	
+		<div class='cmd'>	
+		<% if (last = tasking.last_effort_for(current_investigator).first) %>
+	      <%= link_to "Wait " +distance_of_time_in_words(Time.now, last.created_at + 1.day), 
+	                  'javascript:void(0)',
+	                  :class => 'task-button disabled', 
+                      :style => 'top:-8px', 		
+                      :disabled => true %>		
+		  
+		<% else %>
+	      <%= link_to "Attempt Task", 
+	                  facebook_location_tasking_efforts_path( tasking ),  
+	                  'data-title' => tasking.task.name,
+	                  :class => 'task-button', 
+	                  :style => 'top:-8px', 	
+                      :method => 'post',
+                      :remote => true %>		
+		<% end %>
+		</div>
+	  <% else %>
+	    <div class='desc' style='height:50px;'><em>You cannot attempt this task or know its particulars until you reach a higher level.</em></div>	
+	 
+	    <center><span class='tab-header small'>reward</span></center>		
+	    <div class='desc' style='height:20px;'><center class='title-type'>Unknown Reward</center></div>
+	    <div class="info">&nbsp;
+		  <div class="circle big blue right" style='top:-10px;'>vs.<br/>?%</div>
+		  pass <%= tasking.task.skill.name %>
+		</div>
+		<div class='cmd'><a href='javascript:void(0);' class='task-button disabled' style='top:-8px'>level <%= tasking.level %> needed</a></div>
+	  <% end %>
+	</li>
+	<% end %>
+
+	<% if (taskings.size % 4) != 0 %>
+	  <% (4 - (taskings.size % 4)).times do %>
+	  <li class='empty'>
+	    <h4>&nbsp;</h4>
+	    <ul class='listing'></ul>
+	  </li>
+	  <% end %>
+	<% end %>	
+  </ul>
+
+  <div class='float-strip'>
+	<div class='next-prev'>
+	  <span id='tasking-prev'>&lang; PREV</span> 
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	  <span id='tasking-next'>NEXT &rang;</span>
+	</div>	
+  </div>
+</div>
+
+
+<script>
+$(function() {
+  $('#tasking-list').paginated({
+	controls: { prev: $('#tasking-prev'), next: $('#tasking-next') },
+	perPage: 8
+  });	
+	
+  $( "a.task-button" ).bindAjaxRequester({
+    success: function(sender) {
+      $( "a.task-button" ).unbind('click').button('disable').html('Wait about 24 hours');
+    },
+    failure: function(sender) {
+      $( "a.task-button" ).unbind('click').button('disable').html('Wait about 24 hours');
+    }
+  });
+  $( ".task-button.disabled" ).button('disable');
+});
+</script>

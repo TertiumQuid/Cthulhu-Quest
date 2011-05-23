@@ -1,0 +1,744 @@
+dark_rum:
+  id: 92
+  name: Rum (Dark)
+  description: Suffused with sugar and beloved of both sailor and slave, wars have been fought for its measure, and a taste that conjures island tropics.
+  price: 65
+  kind: spirit
+  uses_count: 6
+  power: 2
+  
+distilled_gin:
+  id: 91
+  name: Gin (Distilled)
+  description: From juniper to pharmacy, the historic spirit of gin is old and storied, laden as much with salacious social ruin as the cask its savory botanicals.
+  price: 100
+  kind: spirit
+  uses_count: 10
+  power: 3
+  
+vodka:
+  id: 90
+  name: Vodka
+  description: The aqua vitae of the Baltic lands, war between wheat and rye grain aged in boreal casks grant Vodka its unforgettable power.
+  price: 60
+  kind: spirit
+  uses_count: 5
+  power: 2
+  
+campari:
+  id: 89
+  name: Campari
+  description: A bitter-sweet apéritif cultivated by the Italians and best served with citrus or soda water to bring the alcohol alive.
+  price: 15
+  kind: spirit
+  uses_count: 7
+  power: 1
+
+blended_whisky:
+  id: 88
+  name: Whisky (Blended)
+  description: Fiery smooth malt-grain blend of trusty flavor set to warm one's marrow and spirits against impossibly cold reality.
+  price: 50
+  kind: spirit
+  uses_count: 5
+  power: 3
+  
+napoleon_brandy:
+  id: 87
+  name: Brandy (Napoleon)
+  description: Extra-old, barrel-aged caramel-brown elixir known for its universal effectiveness in many patent medicines and jaunty lounge settings.
+  price: 30
+  kind: spirit
+  uses_count: 5
+  power: 2
+  
+sigillum_dei_aemeth:
+  id: 86
+  name: Sigillum Dei Aemeth
+  description: An elaborate amulet bearing the symbol of the living God, composed of a latticework of heptagons and pentagrams granting an exalted immunity of fear from all terrors.
+  price: 1000
+  kind: artifact
+  uses_count: 7
+
+almanac:
+  id: 85
+  name: Almanac
+  description: The esteemed Old Farmer's Almanac has well served as man's guide to the weather, tide tables, agriculture, astronomical data, and more, indexing the patterns of nature in digestable form.
+  price: 4
+  kind: equipment
+  uses_count: 1
+  
+croock_and_flail:
+  id: 84
+  name: Croock and Flail
+  description: The regalia of the Pharaoh's divine office, the heka and nekhakha are inlaid with gold and ivory hieroglyphs, bound in blue copper and bound to please the forgotten gods whose powers they command.
+  price: 700
+  kind: artifact
+  uses_count: 5
+  
+athame:
+  id: 83
+  name: Athame
+  description: The black-handled blood-letter of the witch, this ceremonial dagger imbues the user with enhanced speed of purpose in all murderous actions.
+  price: 400
+  kind: artifact
+  uses_count: 3
+
+hand_of_glory:
+  id: 82
+  name: Hand of Glory
+  description: A candle made from the fat of a gallows corpse, virgin wax, and lapland oil, placed within the grip of the hanged man's severed hand and bestowing the prudent abilities of invisibility and evasion.
+  price: 100
+  kind: artifact
+  uses_count: 10
+  
+fire_of_asshurbanipal:
+  id: 81
+  name: Fire of Asshurbanipal
+  description: Ancient and accursed jewels belonging to a magician king whom the Grecians called Sardanapalus and the Semitic peoples Asshurbanipal, this artifact burns with a luminous hellfire of ambition's cause.
+  price: 1000
+  kind: artifact
+  uses_count: 9
+
+abraxas_stone:
+  id: 80
+  name: Abraxas Stone
+  description: A Greek talisman ring with the inscription 'ΑΒΡΑΣΑΞ' and an image of the grotesque rooster-serpent pantheus bearing a sword and shield, the Gnostics and Romans revered the auspicious word and godling for its wisdom, strength, and eternal vitality. 
+  price: 250
+  kind: artifact
+  uses_count: 10
+  
+calligraphy_set:
+  id: 79
+  name: Calligraphy Set
+  description: Inside this ornate box rest various pens and brushes, ink wells and an inkstone, and paper and desk pads - the tools of the fastidious calligrapher.
+  price: 4
+  kind: equipment
+  uses_count: 1
+  
+londontown_overcoat:
+  id: 78
+  name: Londontown Overcoat
+  description: Robust through every seam, this tough wool overcoat cuts rain and weather like the Great White Fleet cuts through the enemy's sail.
+  price: 7
+  kind: equipment
+  uses_count: 1
+  
+epinephrine_injection:
+  id: 77
+  name: Epinephrine Injection
+  description: A spring-loaded syringe filled to dripping with pure epinephrine, a powerful hormone acting upon one's heart and effecatious against otherwise fatal shocks.
+  price: 15
+  kind: medical
+  power: 10
+  uses_count: 1
+  
+bandages:
+  id: 76
+  name: Bandages
+  description: A tube of wound gel, absorbant dressings, and a roll of stretch bandages, fit for preserving blood, organs, and life.
+  price: 5
+  kind: medical
+  power: 2
+  uses_count: 1
+  
+charmstone:
+  id: 75
+  name: Charmstone
+  description: Rough-hewn crystal mineral cleaved from the face of a sacred rock and prepared by shamanistic ritual to grant friendship and good fortune to the bearer.
+  price: 100
+  kind: artifact
+  uses_count: 3
+  
+abramelin_oil:
+  id: 74
+  name: Abramelin Oil
+  description: A fragrant ceremonial magick oil, corrupted from the qualities found in the Holy anointing oil of Moses. Among other esoteric results, the oil is known for greatly precipitating magical effects.
+  price: 500
+  kind: artifact
+  uses_count: 10
+  
+rod_of_asclepius:
+  id: 73
+  name: Rod of Asclepius
+  description: Bearing a coiling serpent envoy of the Greek God Asclepius, this long-handled artifact draws its power from the constellation Ophiuchus to invoke the dual nature of life and death and allay the pains of body and soul. 
+  price: 250
+  kind: artifact
+  uses_count: 5
+
+dynamite:
+  id: 72
+  name: Dynamite
+  description: Nobel's Blasting Powder protects as it destroys, an explosive testimony to powers of human invention.
+  price: 20
+  kind: equipment
+  uses_count: 1
+  
+crucifix:
+  id: 71
+  name: Crucifix
+  description: Finely crafted of polished wood with a figure of The Christ crucified, this pendant is hung about the neck like a badge.
+  price: 3
+  kind: equipment
+  uses_count: 1
+
+hypodermic_syringe:
+  id: 70
+  name: Hypodermic Syringe
+  description: A sharp gleaming instrument designed to literally attack one's bloodstream.
+  price: 2
+  kind: equipment
+  uses_count: 1
+  
+first_aid_kit:
+  id: 69
+  name: First Aid Kit
+  description: Forceps, scalpels, alcohol, gauze, hypodermic syringes, and other macabre tools of today's field-surgeon.
+  price: 50
+  kind: medical
+  power: 3
+  uses_count: 10
+  
+knuckle_dusters:
+  id: 68
+  name: Knuckle Dusters
+  description: A bashing fist-handle of brass, sure to floor footpad and practiced pugilist with ease.
+  price: 5
+  kind: equipment
+  uses_count: 1
+  
+tarot_cards:
+  id: 67
+  name: Tarot Cards
+  description: A pack of 78 medieval cards used for practicing divination and mapping spiritual and mental pathways.
+  price: 4
+  kind: equipment
+  uses_count: 1
+
+the_clavis_alchimiae:
+  id: 66
+  name: Clavis Alchimiae
+  description: A seventeenth century work composed by the master alchemist Robery Fludd, as instructive in chemical workings as in lurid allegorical philosophy.
+  price: 0
+  kind: book
+  uses_count: 30
+  
+the_oracles_of_nostradamus:
+  id: 65
+  name: Oracles of Nostradamus, The
+  description: A sixteenth century work of dense imagistic verse illustrating the course of human events through prophecy and code.
+  price: 0
+  kind: book
+  uses_count: 15
+  
+the_zohar:
+  id: 64
+  name: Zohar, The
+  description: A fundamental work in Jewish mysticism leading to the understanding of God through various means of contemplation and revelation.
+  price: 0
+  kind: book
+  uses_count: 50
+  
+the_malleus_maleficarum:
+  id: 63
+  name: Malleus Maleficarum
+  description: A witch hunters guide, the "Hammer of Witches" instructs inquisitors on the necessary means of persecuting the medieval witch, authored by Jakob Sprenger and Heinrich Kramer, 1486 AD.
+  price: 0
+  kind: book
+  uses_count: 30
+  
+the_key_of_solomon:
+  id: 62
+  name: The Key of Solomon
+  description: An instructional volume guiding conduct when dealing with spirits and other magical agency, authored circa 14th century. 
+  price: 0
+  kind: book
+  uses_count: 60
+  
+the_beatus_methodivo:
+  id: 61
+  name: Beatus Methodivo
+  description: A universal history of the Gnostic state of humanity, from its magical origins to prophecy of an Apocalyptical future, as penned by St. Methodius of Olympus circa 300 AD.
+  price: 0
+  kind: book
+  uses_count: 25
+  
+the_i_ching:
+  id: 60
+  name: I Ching
+  description: A Confucian system of divination induced through contemplation on the volume's poetical text.
+  price: 0
+  kind: book
+  uses_count: 25
+  
+the_emerald_tablet:
+  id: 59
+  name: Emerald Tablet, The
+  description: A Phoenician alchemical text published circa 200 AD, replete with ancient allusion and alegory.
+  price: 0
+  kind: book
+  uses_count: 50
+  
+the_golden_bough:
+  id: 58
+  name: Golden Bough, The
+  description: A vast treastise on religious anthropology and magick authored 1890 AD by Sir George Frazer. 
+  price: 0
+  kind: book
+  uses_count: 20
+
+hand_mirror:
+  id: 57
+  name: Hand Mirror
+  description: A small oval slate framed in polished wood, the hand mirror is ready at the quick when called for by occult ritual or other utility.
+  price: 1
+  kind: equipment
+  uses_count: 1
+
+padlock:
+  id: 56
+  name: Padlock
+  description: Ancestor of the rugged cast-iron predecessor, today's Master Lock is a laminated masterwork of impact resistant discs.
+  price: 2
+  kind: equipment
+  uses_count: 1
+  
+sewing_kit:
+  id: 55
+  name: Sewing Kit
+  description: With an impressive arsenal of needles and threads, this kit is equally proficient working a tailered suit or a ship's sails.
+  price: 2
+  kind: equipment
+  uses_count: 1
+
+battery:
+  id: 54
+  name: Battery
+  description: A wooden box-chest holding a Voltamp dry battery of sufficient charge to power small electric devices for as much as days at a time.
+  price: 20
+  kind: equipment
+  uses_count: 1
+  
+chalk:
+  id: 53
+  name: Chalk
+  description: Thick, colored chalk sticks for inscribing durable sigils and glyphs upon nearly any material.
+  price: 1
+  kind: equipment
+  uses_count: 1
+  
+signet_ring:
+  id: 52
+  name: Signet Ring
+  description: Hand-crafted and detailed with precision to the exacting specifications of hearldry or symbolism, many associations and societies are known by this accessory.
+  price: 5
+  kind: equipment
+  uses_count: 1
+  
+rope:
+  id: 51
+  name: Rope
+  description: One of the most underrated inventions in mankind's toolkit, a strong rope can be put to a use in nearly any crisis situation.
+  price: 2
+  kind: equipment
+  uses_count: 1
+  
+carpentry_tools:
+  id: 50
+  name: Carpentry Tools
+  description: Hammer, level, saw, chisel, screws, nails, and sundry other devices which complete the impressive toolset of the later-day wood mason.
+  price: 15
+  kind: equipment
+  uses_count: 1
+
+sulphur:
+  id: 49
+  name: Sulphur
+  description: A violently flamable chemical element best employed when preparing explosives or to produce toxic fumes or other contaminates.
+  price: 5
+  kind: equipment
+  uses_count: 1
+  
+violin:
+  id: 48
+  name: Violin
+  description: This magnificant, versitile instrument is capable like no other of expressing pathos from a gamut of musical styles and the full scale of the human condition.
+  price: 23
+  kind: equipment
+  uses_count: 1
+
+ammonia:
+  id: 47
+  name: Ammonia
+  description: A pungent chemical liquid whose caustic nature makes it a perfect cleaning agent for blood, gore, and more vile material.
+  price: 3
+  kind: equipment
+  uses_count: 1
+
+umbrella:
+  id: 46
+  name: Umbrella
+  description: Whether an important gentleman's bat wing or a lady's parasol, the umbrella is a required accessory for the depressing climates of the land.
+  price: 2
+  kind: equipment
+  uses_count: 1
+  
+typewriter:
+  id: 45
+  name: Typewriter
+  description: Of these indespensible tools of posterity, the Remington is one of the finest visible typewriters on the market, flawlessly and faithfully committing untold volumes of thought to paper.
+  price: 12
+  kind: equipment
+  uses_count: 1
+  
+bear_trap:
+  id: 44
+  name: Bear Trap
+  description: A wide-mouthed, iron-toothed jaw levered by springs and a plate trigger, these traps are designed to fell beasts too enormous to face on equal footing.
+  price: 8
+  kind: equipment
+  uses_count: 1
+
+carbide_lamp:
+  id: 43
+  name: Carbide Lamp
+  description: This acetylene-burning device produces a large wide beam of light ideal for the exploration of caverns, under the sea, or in the remote and benighted wilderness.
+  price: 6
+  kind: equipment
+  uses_count: 1
+
+fingerprint_kit:
+  id: 42
+  name: Fingerprint Kit
+  description: This ominous black case holds a selection of instruments known well to the police inspector for scientifically identifying a culprit by nature's stamp.
+  price: 25
+  kind: equipment
+  uses_count: 1
+
+pick_and_pitons:
+  id: 41
+  name: Pick and Pitons
+  description: Rock climbers use these to strike a path up a rockface, hammering the soft-steel piton spikes into handholds while clawing their way upward with the pick.
+  price: 7
+  kind: equipment
+  uses_count: 1
+
+crampons:
+  id: 40
+  name: Crampons
+  description: Saw-toothed attachments strapped to the boot for climbing and hiking in the ice, lifting men through the most boreal threats with relative ease.
+  price: 3
+  kind: equipment
+  uses_count: 1
+
+microscope:
+  id: 39
+  name: Microscope
+  description: Often available in a popular Carl Zeiss model, the microscope is an invaluable and scientifically complicated instrument for examining the invisibly small worlds around us.
+  price: 12
+  kind: equipment
+  uses_count: 1
+  
+hydrochloric_acid:
+  id: 38
+  name: Hydrochloric Acid
+  description: A corrosive mineral acid first used by European alchemists and still harnessed as an industrial reagent today, this hazardous substance cuts through most materials and is completely unsafe to the skin. 
+  price: 5
+  kind: equipment
+  uses_count: 1
+
+skis:
+  id: 37
+  name: Skis
+  description: Backcountry skis, designed for traversing unbroken tundra and rugged rock banks alike, skis are indispensable to arctic travel. 
+  price: 7
+  kind: equipment
+  uses_count: 1
+      
+radio_receiver:
+  id: 36
+  name: Radio Receiver
+  description: A state-of-the-art Westinghouse RCA battery set of the utmost clarity in sound, the modish case bristles with ballast tubes, knobs, dials, circuit lights.
+  price: 25
+  kind: equipment
+  uses_count: 1
+  
+newspaper_clippings:
+  id: 35
+  name: Newspaper Clippings
+  description: News clipping services charge a small fee either to monitor the world's papers and clip articles on a requested subject, or else pull related clippings from their compendious archives.
+  price: 4
+  kind: equipment
+  uses_count: 1
+  
+parachute:
+  id: 34
+  name: Parachute
+  description: Contained in a strapped backpack, this vast silk canopy bursts open on command, allowing the wearer to fall safely through the air from the greatest of heights as slow as a feather.
+  price: 28
+  kind: equipment
+  uses_count: 1
+    
+phonograph:
+  id: 33
+  name: Phonograph
+  description: A talking-machine scientifically suited for taking dictation, or just as well for playing recorded music with the warm acustics of a grapmophone parlor.
+  price: 30
+  kind: equipment
+  uses_count: 1
+
+box_camera:
+  id: 32
+  name: Box Camera
+  description: Kodak's remarkable device has even so much as opened a new art to the public, and given it a better way of capturing the moment of truth.
+  price: 18
+  kind: equipment
+  uses_count: 1
+    
+blowtorch:
+  id: 31
+  name: Blowtorch
+  description: A kerosene-powered Nyberg blowlamp, the scorching torch from this device is capable of fusing together most of nature's matter.
+  price: 35
+  kind: equipment
+  uses_count: 1
+    
+playing_cards:
+  id: 30
+  name: Pack of Playing Cards 
+  description: A rousing game of bridge or dockside rummy is a ready excuse to make new company or test the present direction of fate's fickle wind.
+  price: 1
+  kind: equipment
+  uses_count: 1
+      
+arsenic:
+  id: 29
+  name: Arsenic
+  description: A toxic chemical which can be used to produce coma and death through a lethal dose or prolonged, nearly undetectable poisoning.
+  price: 10
+  kind: equipment
+  uses_count: 1
+    
+straightjacket:
+  id: 28
+  name: Straightjacket
+  description: Extracted from asylum dungeons for desperate use in the dangerous encounters of private life, this dreadful restraint is far kinder to a lost friend than a gunshot.
+  price: 18
+  kind: equipment
+  uses_count: 1
+
+ouija_board:
+  id: 27
+  name: Ouija Board
+  description: The infamous talking-board of the spiritualist, the Ouija is used during a seance by means of planchette which unveils the words of supernatural beings and permits communication with the Other Side.
+  price: 11
+  kind: equipment
+  uses_count: 1
+
+binoculars:
+  id: 26
+  name: Binoculars
+  description: Accurate at distance and comfortable to use on an extended lookout, Porro prism binoculars are the leading choice in optical technology for watchers everywhere.
+  price: 12
+  kind: equipment
+  uses_count: 1
+
+laudanum:
+  id: 25
+  name: Laudanum
+  description: The 'Tincture of Opium' is a bitter yet becalming friend to the hysteric and lunatic, allying fears and producing sleep. 
+  price: 7
+  kind: equipment
+  uses_count: 1
+
+compass:
+  id: 24
+  name: Compass
+  description: Mysteriously fixed upon the poles of the world, countless lives have been saved by the remarkable phenomena of the compass.
+  price: 5
+  kind: equipment
+  uses_count: 1
+      
+smelling_salts:
+  id: 23
+  name: Smelling Salts
+  description: Waved below the nose, these salts excel at abruptly arousing consciousness in the shocked, stunned, and insensate.
+  price: 2
+  kind: equipment
+  uses_count: 1
+  
+candles:
+  id: 22
+  name: Candles
+  description: They come in many forms and functions, for holding mass and drinking tea, for preparing summoning circles, and to simply seeing what's in the corner of the room.
+  price: 5
+  kind: equipment
+  uses_count: 1
+  
+cigars:
+  id: 21
+  name: Cigars
+  description: A humidified oak box holds a dozen or so hand-rolled parejo Cubans from the hands of one prevailing cigar families.
+  price: 15
+  kind: equipment
+  uses_count: 1
+  
+gas_mask:
+  id: 20
+  name: Gas Mask
+  description: A military issue model of the British Small Box Respirator type, the merits of this mask extend to enlarged googles and a portable filter drum.
+  price: 25
+  kind: equipment
+  uses_count: 1
+  
+region_map:
+  id: 19
+  name: Region Map
+  description: A fold-out mapbook for a larger region and the notable landmarks, cities, and towns found there.
+  price: 10
+  kind: equipment
+  uses_count: 1
+  
+street_map:
+  id: 18
+  name: Street Map
+  price: 3
+  description: A colorful yet highly descriptive motorist's map to the major and minor local streets and environs.
+  kind: equipment
+  uses_count: 1
+  
+pocket_knife:
+  id: 17
+  name: Pocket Knife
+  description: A fine slipjoint blade, the popular Stockman has a clip and a woodgrain sowbelly handle, an accessory as classy as it is useful.
+  price: 4
+  kind: equipment
+  uses_count: 1
+  
+handcuffs:
+  id: 16
+  name: Handcuffs
+  description: There are no better bonds for restraining the large and strong than these modern shackles.
+  price: 15
+  kind: equipment
+  uses_count: 1
+      
+kerosene:
+  id: 15
+  name: Kerosene
+  description: Also known as paraffin, this combustible liquid is used for heating and illumination purposes the world over.
+  price: 15
+  kind: equipment
+  uses_count: 1
+  
+signal_flare:
+  id: 14
+  name: Signal Flare
+  description: Despite their menacing appearance, these maritime hand canons simply discharge brightly burning signals which waft down from the sky.
+  price: 10
+  kind: equipment
+  uses_count: 1
+  
+telegram:
+  id: 13
+  name: Telegram
+  description: Faster than Hermes himself, the telegram message travels across oceans nearly instantaneously to deliver short and frequently essential communication over urgent matters.
+  price: 2
+  kind: equipment
+  uses_count: 1
+  
+matchbook:
+  id: 12
+  name: Matchbook
+  description: With a stylish cover illustration, this book of 20 matches holds the powers of Prometheus given to man.
+  price: 1
+  kind: equipment
+  uses_count: 1
+  
+notebook:
+  id: 11
+  name: Notebook
+  description: Nothing collects the thoughts like a handsome leather-bound volume of ruled legal paper, across whose pages obsession quickly scribes.
+  price: 3
+  kind: equipment
+  uses_count: 1
+  
+crowbar:
+  id: 10
+  name: Crowbar
+  description: A tool of dismantling, destruction, and forced entry, the crowbar is the iron arm of necessity.
+  price: 5
+  kind: equipment
+  uses_count: 1
+  
+cigarettes:
+  id: 9
+  name: Cigarettes
+  description: From Chesterfields and Camels to the queer tobaccos of the Turk and the Egyptian, few things in life are as calming to the duressed mind as a delicious cigarette.
+  price: 1
+  kind: equipment
+  uses_count: 1
+  
+timepiece:
+  id: 8
+  name: Timepiece
+  description: That man has measured time is a great accomplishment, yet this jeweled, hunter-case pocket-watch is no less impressive in its elegant form than in its meticulous function.
+  price: 12
+  kind: equipment
+  uses_count: 1
+  
+evening_wear:
+  id: 7
+  name: Evening Wear
+  description: Something like a worsted suit, Oxford shoes, and a dog fur coat for the gentlemen, or a French Repp, Parisian slippers, and a Velour overcoat and hat for the ladies.
+  price: 60
+  kind: equipment
+  uses_count: 1
+  
+lockpicks:
+  id: 6
+  name: Lockpicks
+  description: The latest in the arms race with the forbidden places of the world, these clawed instruments are the investigator's inquisitive friend.
+  price: 20
+  kind: equipment
+  uses_count: 1
+  
+library_card:
+  id: 5
+  name: Library Card
+  description: A key which unlocks the accumulated knowledge of mankind and offers limitless research opportunities in the obscurities of the world.
+  price: 3
+  kind: equipment
+  uses_count: 1
+  
+electric_torch:
+  id: 4
+  name: Electric Torch
+  description: A light that doesn't flicker in a draught, extinguish in the wind, and reacts instantly to the finger, is a light that everyone needs.
+  price: 25
+  kind: equipment
+  uses_count: 1
+  
+lantern:
+  id: 3
+  name: Lantern
+  description: A sturdy iron-wrought oil-burning light cage, complete with a hood to dim and direct the yellow beam.
+  price: 6
+  kind: equipment
+  uses_count: 1
+  
+shovel:
+  id: 2
+  name: Shovel
+  description: From the hands of gravediggers to Chinese rail gangs, this versatile tool can also be used for digging up secrets.
+  price: 7
+  kind: equipment
+  uses_count: 1
+  
+easel_and_paints:
+  id: 1
+  name: Easel and Paints
+  description: The power of imagination and beauty cannot be overstated in such a dreary and oppressive world.
+  price: 5
+  kind: equipment
+  uses_count: 1

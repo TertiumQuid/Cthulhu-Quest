@@ -1,0 +1,55 @@
+<div class='box'>
+  <p><em>Visit your contacts to entreat their favor in assisting your investigations.</em></p>
+</div>
+
+<div class='grid-list-container' style='height:220px;'>
+  <ul class='grid-list big' id='contact-list'>  
+	<% @contacts.each do |contact| %>
+	<li>
+	  <h5><%= contact.character.name %> <em>&nabla; <%= contact.character.location.name %></em></h5>	
+	  <center><span class='tab-header'><%= contact.character.profession %></span></center>
+	
+      <div class='desc'><%= contact.character.biography %></div>
+      <div class="info">
+        owes you <%= pluralize(contact.favor_count, 'favor') %>
+      </div>
+	  <div class='cmd'>
+	    <%= link_to "view", 
+	                facebook_contact_path( contact ), 
+	                :remote => true, 
+	                :class => 'contact-button', 
+	                'data-title' => contact.character.name %>
+	  </div>
+	</li>
+	<% end %>
+	
+	<% if (@contacts.size % 3) != 0 %>
+	  <% (3 - (@contacts.size % 3)).times do %>
+	  <li class='empty'>
+	    <h5>&nbsp;<em>&nbsp;</em></h5>
+	    <center><span class='tab-header'>&nbsp;</span></center>
+	    <div class='desc'>&nbsp;</div>
+	    <div class="info">&nbsp;</div>
+	  </li>
+	  <% end %>
+	<% end %>	
+  </ul>	
+
+  <div class='float-strip'>
+	<div class='next-prev'>
+	  <span id='contact-prev'>&lang; PREV</span> 
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	  <span id='contact-next'>NEXT &rang;</span>
+	</div>	
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( "a.contact-button" ).bindAjaxRequester({ height:675 });                                                      
+  $('#contact-list').paginated({
+	controls: { prev: $('#contact-prev'), next: $('#contact-next') },
+	perPage: 3
+  });
+});
+</script>

@@ -1,0 +1,183 @@
+<div id="home" class="current">	
+  <div class="toolbar">
+    <h1>Cthulhu Quest</h1><br/> 
+    <center style='font-size:10px;margin-top:3px;'><%= AppConfig.version %></center>
+  </div>
+
+  <div class="info">
+    <p>Cthulhu Quest is a browser-based, social RPG where you play an investigator solving Lovecraftian plots with your friends.</p>
+
+	<% if !logged_in? %>
+	  <br /><p>You must connect your Facebook account before you can play.</p>
+	<% end %>
+  </div>
+  <ul class="rounded">
+    <li class="arrow"><a href="#guide">Quickstart Game Guide</a></li>
+    <li class="arrow"><a href="#devlog">Development Log</a></li>
+	<% if !logged_in? %>
+      <li class="forward"><%= link_to 'Connect with Facebook', oauth_authorize_path(:display => 'touch'), :target => '_webapp' %></li>
+    <% end %>
+  </ul>	
+
+  <div class="info" style='text-align:left'>
+    <p>This site is optimized for touch devices.<br />
+	<%= link_to 'Go to the main website instead...', web_root_path %></p>
+  </div>
+</div>
+
+<div id="devlog" class="current">	
+  <%= render :partial => "touch/titlebar" %>		
+	
+  <div class="info" style='text-align:left'>
+	<h3>Development Progress</h3><br />
+	
+	<p><em>Last site update on Nov 13th</em></p>
+  </div>
+
+  <h4 style='padding:8px 15px'>Version 0.06</h4>
+
+  <div class="info" style='text-align:left'>
+	+ <em>Sanity</em><br />
+	+ <em>Madness</em><br />
+	+ <em>Therapy / Confessions / Diaries</em><br />
+	+ <em>Travel</em><br />
+	+ <em>Plot Acqisition</em><br />
+    + <em>Investigation Encounters</em><br />
+	+ <em>Dev Blog (Web/iPhone)</em><br />
+  </div>
+
+  <h4 style='padding:8px 15px'>Version 0.05</h4>
+
+  <div class="info" style='text-align:left'>
+	+ <em>Allies (iPhone)</em><br />
+	+ <em>Investigator Create / View Profile (iPhone)</em><br />
+    + <em>Monsters</em><br />
+	+ <em>Grimoires</em><br />
+	+ <em>Spells / Ritual Magick</em><br />
+    + <em>Weapon Store (iPhone)</em><br />
+	+ <em>Facebook Game Stream Activity</em><br />
+	+ Combat<br />
+	+ Contacts<br />
+  </div>
+
+  <h4 style='padding:8px 15px'>Version 0.04</h4>
+
+  <div class="info" style='text-align:left'>
+    + Characters<br />
+    + Moxie<br />
+    + Investigation History<br />
+	+ Locations<br />
+    + Investigator Health<br />
+    + Stat Advancement<br />
+    + Weapon Store (Web)<br />
+    + Weaponry<br />
+  </div>
+
+  <h4 style='padding:8px 15px'>Version 0.03</h4>
+
+  <div class="info" style='text-align:left'>
+	+ User Registration / Facebook Graph (iPhone)<br />
+    + Investigator Experience<br />
+    + Skills<br />
+	+ Daily Login Income / Investigator Funds<br />
+	+ User Site Cookies / Remember Me<br />
+    + Book Collections<br />	
+  </div>
+
+  <h4 style='padding:8px 15px'>Version 0.02</h4>
+
+  <div class="info" style='text-align:left'>	
+	+ Wireframe Site Design (<em>iPhone</em>)<br />
+    + Plot Rewards<br />
+    + Plot Solutions<br />
+    + Plot Resolution<br />
+	+ Gifting (<em>Web</em>)<br />
+	+ Plot Prerequisites<br />
+	+ Item Purchase / Management (<em>Web</em>)<br />
+  </div>
+
+  <h4 style='padding:8px 15px'>Version 0.01</h4>
+
+  <div class="info" style='text-align:left'>
+	+ Base CQ Rules Engine<br />
+	+ Wireframe Site Design (<em>Web</em>)<br />
+	+ User Registration / Facebook Graph (<em>Web</em>)<br />
+	+ Facebook Friend Detection<br />
+	+ Session Management<br />
+	+ Investigator Create / View Profile (<em>Web</em>)<br />
+	+ View Journal / Plot Threads (<em>Web</em>)<br />
+	+ Investigator Ally Management (<em>Web</em>)<br />
+	+ Plot Advancement (<em>Web</em>)<br />
+	+ Plot Ally Assignments (<em>Web</em>)<br />
+  </div>	
+</div>
+
+<div id="guide">	
+  <%= render :partial => "touch/titlebar" %>		
+	
+  <h4 style='padding:8px 15px'>How to Play</h4>
+
+  <div class="info" style='text-align:left'>
+	Cthulhu Quest is a browser-based horror RPG where you create an investigator and solve Lovecraftian plots with your friends.
+  </div>
+
+  <div class="info" style='text-align:left'>
+	Each plot you solve unlocks deeper mysteries and brings experience and rewards to strengthen your investigator for ever greater challenges in mankind's secret battle against cosmic extinction.	
+  </div>
+
+  <h4 style='padding:8px 15px'>Investigators</h4>
+
+  <div class="info" style='text-align:left'>
+	Your investigator's skills are their most valuable asset, and every investigator begins with a profile of skills depending on their profession.
+  </div>
+
+  <div class="info" style='text-align:left'>
+	Excelling in some disciplines while helpless in others, investigators must rely on the help of their allies during an investigation to complete sets of intrigues within a plot.
+  </div>
+
+  <div class="info" style='text-align:left'>
+	As experience is gained, your investigator accrues skill points which you can assign to further advance their existing skills or gain new ones, rounding out their investigative abilities or else honing a specialty.
+  </div>	
+
+  <h4 style='padding:8px 15px'>Allies</h4>
+
+  <div class="info" style='text-align:left'>
+	Your allies are your friends' investigators, and you will want their help to succeed in solving investigations.
+  </div>
+
+  <div class="info" style='text-align:left'>
+	Your allies will be lending you their skills and deciding to assist with your plots, thus it is far more important to have a few skillful allies you trust than many unreliable allies playing the game.
+  </div>
+
+  <div class="info" style='text-align:left'>
+	When investigating a plot, you may assign one of your friends to each of the plot's intrigues provided that their investigator has the skill required by the intrigue's challenge. When you solve the plot, participating allies will also receive a nominal share in the rewards.
+  </div>
+
+  <h4 style='padding:8px 15px'>Investigating Plots</h4>
+
+  <div class="info" style='text-align:left'>
+	Progress is made in the struggle against dark forces by investigating and solving webs of plots. Your investigator keeps a casebook used to track the plot threads available to them, the plot they are currently investigating, and requests from allies to help investigate their own plots.
+  </div>
+
+  <div class="info" style='text-align:left'>
+	Every plot has prerequisites that must be met before it can be investigated, such as possessing certain items, or previously solving another plot (note: items used during an investigation are permanently lost).
+  </div>
+
+  <div class="info" style='text-align:left'>
+	A plot is composed of intrigues that must be undertaken in the course of investigation, and each intrigue carries a challenge against a specific skill. For each intrigue, your investigator may attempt to solve the intrigue on their own (even without the skill), or request the help of a friend by assigning an ally to the intrigue.
+  </div>
+
+  <div class="info" style='text-align:left'>
+	A plot takes time to solve, and after the investigation begins, you must wait a number of hours before you can attempt to solve it. During this time, allies will also have the opportunity to see your request for help, and respond before time runs out.
+  </div>
+
+  <div class="info" style='text-align:left'>
+	Once you successfully conclude an investigation, you will be presented with several alternative solutions to the plot, from which you must choose one. Your choice carries meaning in the grand scheme of the cosmos, and will come to weigh on your investigator in subtle ways. 
+  </div>
+
+  <div class="info" style='text-align:left'>
+	After choosing a solution, your investigator will receive various awards for solving the plot, often unlocking additional plot threads as well.
+  </div>
+</div>
+
+<%= javascript_include_tag 'touch/home' %>

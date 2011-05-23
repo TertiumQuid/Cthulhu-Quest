@@ -1,0 +1,72 @@
+<div class="panel">
+  <div class="wrapper">
+	<div id='profile-tabs' class="tabs">
+		<ul>
+		  <li><a href="#tabs-profile">Profile</a></li>
+		  <li><a href="#tabs-possessions">Equipment</a></li>
+		  <li><a href="#tabs-weaponry">Weaponry</a></li>
+		  <li><a href="#tabs-library">Library</a></li>
+		  <li><%= link_to 'Journal', facebook_journal_path(:format => :js, :anchor => 'tabs-5')  %></li>
+		  <% unless @psychoses.blank? %>
+		    <li><a href="#tabs-insanity">Insanity (<%= @psychoses.size %>)</a></li>
+		  <% end %>
+		</ul>
+		
+		<div id="tabs-profile" class='tab-panel'>
+	      <%= render :partial => 'facebook/investigators/investigator', :locals => { :investigator => @investigator } %>
+		</div>
+		
+		<div id="tabs-possessions" class='tab-panel'>
+		  <div class="box">			
+		    <p>Vision is not enough, it must be combined with venture.</p>
+		
+		    <% if @equipment.blank? %>
+		      <p class='empty'><em>Sadly, you're empty handed.</em></p>
+		    <% else %>
+		      <%= render :partial => 'facebook/investigators/possessions', :locals => { :items => @equipment } %>
+		    <% end %>	
+		  </div>	
+		</div>
+		
+		<div id="tabs-weaponry" class='tab-panel'>
+		  <div class="box">			
+		    <p>Every man of ambition has to fight his century with its own weapons.</p>
+			
+		    <% if @armaments.blank? %>
+		      <p class='empty'>Alas, at present you have none to fight with at all.</p>
+		    <% else %>
+		      <%= render :partial => 'facebook/investigators/weaponry', :locals => { :items => @armaments } %>
+		    <% end %>
+		  </div>
+		</div>				
+		
+		<div id="tabs-library" class='tab-panel'>
+		  <div class="box">
+		    <p>The closest thing you will find to an orderly universe is a good library. <em>Once you acquire occult tomes to add to your collection, you can gain moxie by studying them daily.</em></p>
+
+		    <% if @books.blank? %>
+		      <p class='empty'>Troublingly, your library is empty.</p>
+		    <% else %>
+		      <%= render :partial => 'facebook/investigators/library', :locals => { :items => @books } %>
+		    <% end %>
+		  </div>
+		</div>
+		
+		<% unless @psychoses.blank? %>
+		  <div id="tabs-insanity" class='tab-panel'>
+		    <div class="box">			
+		      <p>Men are so necessarily mad, that not to be mad would amount to another form of madness. <em>Insanities penalize certain skills depending on their severity, but can be removed by spending time in an asylum with successful psychiatric treatment.</em></p>
+
+		      <%= render :partial => 'facebook/psychoses/psychoses', :locals => { :psychoses => @psychoses } %>
+		    </div>
+		  </div>			
+		<% end %>
+	</div>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( "#profile-tabs" ).tabs();
+});
+</script>

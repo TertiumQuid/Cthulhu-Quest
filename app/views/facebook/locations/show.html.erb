@@ -1,0 +1,64 @@
+<div class="panel">
+  <div class="box dark">
+    <h2><%= @location.name %></h2>
+    <p><em>From here you can travel elsewhere, or remain and pursue the sundry plots, threats, and characters of the land.</em></p>
+	<div id="location-tabs" class="tabs">
+	  <ul>
+		<li><a href="#tabs-travel">Travel</a></li>
+		<% unless @characters.blank? %><li><a href="#tabs-residents">Residents</a></li><% end %>
+		<% unless @denizens.blank? %><li><a href="#tabs-monsters">Monsters</a></li><% end %>
+		<% unless @plots.blank? %><li><a href="#tabs-plots">Plot Threads</a></li><% end %>
+	    <% unless @taskings.blank? %><li><a href="#tabs-tasks">Tasks</a></li><% end %>
+	  </ul>		
+
+	  <div id="tabs-travel" class='tab-panel'>
+	    <div class='box'>
+	      <p>In Rome you long for the country; in the country you praise the distant city to the stars.</p>
+	    </div>			
+        <%= render :partial => 'facebook/transits/transits', :locals => { :transits => @transits } %>
+	  </div>
+	
+	  <% unless @characters.blank? %>
+	  <div id="tabs-residents" class='tab-panel'>
+	    <div class='box'>
+	      <p>Great perils have this beauty, that they bring to light the fraternity of strangers.</p>
+	    </div>	
+	    <%= render :partial => 'facebook/locations/characters', :locals => { :characters => @characters } %>
+	  </div>
+	  <% end %>	
+	
+	  <% unless @denizens.blank? %>
+	  <div id="tabs-monsters" class='tab-panel'>
+	    <div class='box'>
+	      <p>What would an ocean be without a monster lurking in the dark? It would be like sleep without dreams. <em>You can earn a bounty by killing monsters if you're not already too inured to fight.</em></p>
+	    </div>	
+	    <%= render :partial => 'facebook/denizens/denizens', :locals => { :denizens => @denizens } %>
+	  </div>
+	  <% end %>	
+	
+	  <% unless @plots.blank? %>
+	  <div id="tabs-plots" class='tab-panel'>
+	    <div class='box'>
+	      <p>The real voyage of discovery consists not in seeking new landscapes, but in having new eyes.</p>
+	    </div>			
+        <%= render :partial => 'facebook/locations/plots', :locals => { :plots => @plots } %>
+	  </div>	
+	  <% end %>
+	
+	  <% unless @taskings.blank? %>
+	  <div id="tabs-tasks" class='tab-panel'>
+	    <div class='box'>
+	      <p>It is for us to pray not for tasks equal to our powers, but for powers equal to our tasks. <em>With the right skill, you can attempt to immediately earn a reward by performing one task per location per day.</em></p>
+	    </div>	
+	    <%= render :partial => 'facebook/locations/taskings', :locals => { :taskings => @taskings } %>
+	  </div>
+	  <% end %>	
+    </div>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( "div#location-tabs" ).tabs();
+});
+</script>

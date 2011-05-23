@@ -1,0 +1,12 @@
+<tr <%= "style='font-weight:bold;'" if current_investigator.armed_id == armament.id %>>
+  <td><%= armament.weapon_name %></td>
+  <td><%= armament.weapon.power %> (<%= armament.weapon.kind %>)</td>
+  <td><%= armament.weapon.attacks %></td>
+  <td>
+	<% if current_investigator.armed_id == armament.id %>
+	  <label>&dagger; ARMED &dagger;</label>
+	<% else %>
+	  <%= link_to "[arm]", web_armament_path( armament ), :method => :put %>
+	<% end %>
+  </td>
+</tr>

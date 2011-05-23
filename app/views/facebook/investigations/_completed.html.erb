@@ -1,0 +1,63 @@
+<div class='para green'>
+  <h4 class='green'>
+    SUBPLOTS 100% COMPLETE
+  </h4>
+  <ul class='long-list green'>
+    <% investigation.assignments.each do |assignment| %>
+      <li>
+        <h3>
+          <em style='text-align:right'>
+            <strong class='value big checked'>&radic;</strong>
+            <span style='font-size:12px;left:25px;position:relative;'>
+	           vs.<%= assignment.intrigue.challenge.name %>
+            </span>
+          </em> 
+          <%= assignment.intrigue.title %>
+        </h3>	
+      </li>
+	<% end %>
+  </ul>
+</div>
+
+<div class='para green'>
+  <h4 class='green'>
+	Plot Rewards
+    <em>Choose a solution and receive your rewards</em>
+  </h4>
+  <ul class='reward-list' style='height:75px'>	
+    <% investigation.plot.rewards.each do |reward| %>
+      <li class='<%= reward.reward_type %> big'>
+	    <span class='name'><%= reward.reward_type.upcase %></span>
+	    <span>
+	      <%= reward.reward_name %>
+	    </span>
+	  </li>
+    <% end %>	
+  </ul>
+</div>
+
+<div class='para green'>
+  <h4 class='green'>
+    PLOT SOLVED! Now you must choose how to put the matter to rest
+  </h4>
+  <center>
+
+  <% investigation.plot.solutions.each do |solution| %>
+  <%= link_to solution.title, 
+              facebook_casebook_investigation_path(investigation.plot_thread_id, investigation, :solution_id => solution.id),
+              :remote => true,
+              :method => 'put',
+              :class => 'solution-button', 
+              :style => 'font-size:18px;margin:10px 0 0 0;' %>
+  <% end %>
+  </center>
+</div>
+
+<script>
+$( ".solution-button" ).bindAjaxRequester({
+  success: function(sender) {
+    removeStatusItem('investigating');
+	  $('#nav-tab-casebook').trigger('click');
+	}	
+});
+</script>

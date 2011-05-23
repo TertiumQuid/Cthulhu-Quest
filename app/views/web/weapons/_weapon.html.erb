@@ -1,0 +1,21 @@
+<tr>
+<td class='nowrap'><%= weapon.name %></td>
+<td>£<%= weapon.price %></td>
+<td><%= weapon.kind %></td>
+<td><%= weapon.power %></td>
+<td><%= weapon.attacks %></td>
+<td>
+  <% if logged_in? && current_investigator %>	
+    <% if current_investigator.funds >= weapon.price %>
+       <%= button_to( 'Buy Now', 
+				     purchase_web_armament_path( weapon ), 
+				     :method => 'post', :class => 'submit') %>
+	<% else %>
+	  <input type='submit' value='Funds Lacking' disabled='true' />
+	<% end %>
+  <% end %>
+</td>
+</tr>
+<tr>
+  <td colspan="6" style='line-height:14px;font-size:12px;padding:4px 8px;font-style:italic;'><%= weapon.description %></td>
+</tr>

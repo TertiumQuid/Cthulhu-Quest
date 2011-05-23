@@ -1,0 +1,11 @@
+grandfathers_journal_acolyte:
+  intrigue: grandfathers_journal_4
+  plot: grandfathers_journal
+  monster: acolyte
+  name: Thule Cultist
+  
+hellfire_club_acolyte:
+  intrigue: hellfire_club_1
+  plot: hellfire_club
+  monster: acolyte
+  name: Hellfire Libertine

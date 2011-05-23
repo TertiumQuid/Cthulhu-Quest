@@ -1,0 +1,12 @@
+<% button_opts ||= {} %>
+
+<%= radio_button_tag 'nav-radio', "", false, :id => 'nav-radio-'+button_index.to_s %>
+<label for="nav-radio-<%=button_index%>">
+  <%= link_to button_text, 
+              button_path, 
+              { 
+	            :remote => true, 
+	            :class => 'nav-link ' + (button_opts[:disabled] ? 'disabled' : ''), 
+	            :id => 'nav-tab-'+button_text.tableize.singularize
+	          }.merge( button_opts ) %>
+</label>

@@ -1,0 +1,61 @@
+<div id='spellbooks-grid' class="grid-container">
+  <table>	
+	<tbody>
+	<tr>
+      <td class='left-nav pager' data-index='-2'><a></a></td>
+      <td>
+	    <table class="grid" data-index="0">
+		<% cell_leftover = (@spellbooks.size % 2) %>
+		<% (@spellbooks.size + (cell_leftover > 0 ? (2 - cell_leftover) : 0)).times do |idx| %>
+		  <% if idx % 2 == 0 %><tr class="<%= 'hidden' if idx >= 4 %>" data-index="<%= (idx / 2) %>"><% end %>
+		  <td>
+			<% if idx < @spellbooks.size %>	
+			  <img class='pic' src="/images/web/background.jpg" />
+			  <ul style='width:275px'>
+			    <li class='title' style='padding-left:45px;'>
+			      <%= @spellbooks[idx].name %>
+			    </li>
+			    <li class='desc' style='padding-left:45px;min-height:15px;'>
+				  <%= @spellbooks[idx].grimoire.description %>
+				</li>		
+				<% @spellbooks[idx].grimoire.spells.each do |spell| %>
+				  <li><%= spell.name %></li>
+				<% end %>
+				<li class='cmd'>
+				  <% if @spellbooks[idx].read? %>
+				    <em>read and studied</em>
+				  <% else %>
+				    <%= link_to "read grimoire", 
+				                facebook_spellbook_path(@spellbooks[idx]), 
+				                :remote => true,
+				                :method => 'put',
+				                :class => 'read-button', 
+				                :style=>'width:165px;' %>
+				  <% end %>	
+				</li>
+			  </ul>
+			<% else %>
+			  <div style='width:300px;'>&nbsp;</div>
+			<% end %>
+		  </td>
+		  <% if (idx % 3 == 2) %></tr><% end %>
+		<% end %>	
+		</table>
+	  </td>
+       <td class='right-nav pager' data-index='2'><a></a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+$(function() {
+  $( ".read-button" ).bindAjaxRequester({
+	success: function(sender) {
+	  sender.button( 'option', 'label', '<em>read and studied</em>' );
+	  sender.button( 'disable' );
+	  $('#nav-tab-magick').trigger('click');
+	}
+  });
+});
+</script>

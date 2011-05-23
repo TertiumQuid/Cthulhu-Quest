@@ -1,0 +1,17 @@
+<li id='activity-<%= link_text.tableize.singularize %>'>
+  <p><strong id='progress-link-<%= link_text.tableize.singularize %>'><%= link_text %></strong> <%= link_desc %></p>
+  <div id='progress-activity-bar-<%= link_text.tableize.singularize %>' class="activity-progress progressbar">
+  <span><%= time_text %></span></div>
+</li>
+
+<script>
+  $(function() {$( "#progress-activity-bar-<%= link_text.tableize.singularize %>" ).progressbar({
+	value: <%= time_in_percent %> });
+  });
+
+  <% unless link_path.blank? %>
+    $('#progress-link-<%= link_text.tableize.singularize %>').click(function(e){
+	  $('<%= link_path %>').trigger('click');
+    });  
+  <% end %>
+</script>

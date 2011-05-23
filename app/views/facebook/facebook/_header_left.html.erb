@@ -1,0 +1,71 @@
+<% if current_investigator %>
+  <h4><%= truncate(current_investigator.name, :length => 15, :omission => '') %></h4>
+  <h5><%= current_investigator.profile_name %></h5>
+
+  <div class='frame'>
+	<%= image_tag current_user.facebook_photo, :height => '50', :width => '50' %>
+	<span><%= truncate(current_user.name, :length => 10, :omission => '') %></span>
+  </div>
+
+  <ul id='investigator-activity-list'>
+  <% if investigation = current_investigator.investigations.open.first %>
+    <%= investigator_activity_item 'Investigating', 
+                                   investigation.plot_title,
+                                   '#nav-tab-casebook',
+                                   (investigation.active? ? (100 - investigation.remaining_time_in_percent) : 100),
+                                   '' %>
+  <% end %>
+
+  <% if social = current_investigator.socials.active.first %>
+    <%= investigator_activity_item 'Hosting', 
+                                   social.name,
+                                   '#nav-tab-society',
+                                   (social.scheduled? ? (100 - social.remaining_time_in_percent) : 100),
+                                   '' %>
+  <% end %>
+
+  <% if casting = current_investigator.castings.active.first %>
+    <%= investigator_activity_item 'Casting', 
+                                   casting.name,
+                                   '#nav-tab-magick',
+                                   (casting.completing? ? (100 - casting.remaining_time_in_percent) : 100),
+                                   '' %>
+  <% end %>
+
+  <% if psychosis = current_investigator.psychoses.treating.first %>
+    <%= investigator_activity_item 'Treating', 
+                                   "Your #{psychosis.name}",
+                                   '#nav-tab-investigator',
+                                   (psychosis.treating? ? (100 - psychosis.remaining_time_in_percent) : 100),
+                                   '' %>
+  <% end %>
+
+  <% if investigation.blank? && social.blank? && casting.blank? && psychosis.blank? %>
+    <li id='activity-inactive'>You are currently inactive...</li>
+  <% end %>
+  </ul>
+	
+<% else %>
+  <h4>Unknown Persona</h4>
+  <h5 id='header-login'><%= fb_login_button %></h5>
+  <div class='frame'><img src="/images/web/background.jpg" width="50" height="50" /><span>Yourself</span></div>
+  <ul>
+    <li>
+	<p><strong>Investigating</strong> a dreadful plot</p>
+    <div class="activity-progress progressbar"><span>2 hours remaining</span></div>
+  </li>
+  <li>
+	<p><strong>Hosting</strong> a delightful function among friends</p>
+    <div class="activity-progress progressbar"><span>70 minutes remaining</span></div>
+  </li>
+  <li>
+	<p><strong>Treating</strong> insanity in a sanitarium</p>
+    <div class="activity-progress progressbar"><span>1 hour remaining</span></div>
+  </li>
+  <li>
+	<p><strong>Casting</strong> a ritual spell</p>
+    <div class="activity-progress progressbar"><span>1 minute remaining</span></div>
+  </li>						
+</ul>
+<script>$(function() { $( ".activity-progress" ).progressbar({ value: 30 }); });</script>
+<% end %>

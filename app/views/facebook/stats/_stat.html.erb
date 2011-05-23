@@ -1,0 +1,28 @@
+<li>
+  <span class='label'><%= stat.skill_name %> <span class='stat-skill-level'><%= stat.skill_level %></span></span>
+
+  <div class='stat-progress progress-bar' data-value='<%= ((stat.skill_points.to_f / stat.next_level_skill_points.to_f) * 100).to_i %>' data-skill-points='<%= stat.skill_points %>' data-next-level-skill-points='<%= stat.next_level_skill_points %>'>
+	<span><strong><%= "#{stat.skill_points} / #{stat.next_level_skill_points}" %></strong> skill points to advance</span>
+  </div>	
+	
+  <span class='right stats'>
+	<% if @investigator.skill_points > 0 %>
+	  <%= link_to '+1', facebook_stat_path( stat.skill_id || 0 ), 
+	                     :method => :put, 
+	                     :remote => true,
+	                     'data-value' => 1,
+	                     'data-step' => ((1.0/stat.next_level_skill_points.to_f) * 100).ceil,
+	                     :class => 'add-stat-button' %>
+	
+	  <%= link_to '++', 
+	              facebook_stat_path( 
+	                     stat.skill_id || 0, 
+	                    :skill_points => [stat.next_level_skill_points - stat.skill_points, current_investigator.skill_points].min ), 
+	              :method => :put, 
+	              :remote => true,
+                  'data-value' => [stat.next_level_skill_points - stat.skill_points, current_investigator.skill_points].min,	
+                  'data-step' => ((1.0/stat.next_level_skill_points.to_f) * 100).ceil,
+	              :class => 'add-stat-button' %>
+	<% end %>
+  </span>
+</li>

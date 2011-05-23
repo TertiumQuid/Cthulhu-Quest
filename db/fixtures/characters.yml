@@ -1,0 +1,135 @@
+zadok_allen:
+  id: 17
+  user_id: 42
+  name: Zadok Allen
+  profession: Derelict
+  location_id: 18
+  biography: This hoary character was 96 years old and somewhat touched in the head, besides being the town drunkard. He was a strange, furtive creature who constantly looked over his shoulder as if afraid of something, and when sober could not be persuaded to talk at all with strangers.
+
+arthur_munroe:
+  id: 16
+  user_id: 41
+  name: Arthur Munroe
+  profession: Journalist
+  location_id: 10
+  biography: A dark, lean man of about thirty-five, whose education, taste, intelligence, and temperament all seemed to mark him as one not bound to conventional ideas and experiences. 
+
+albert_wilmarth:
+  id: 15
+  user_id: 40
+  name: Albert Wilmarth
+  profession: Folklorist
+  location_id: 7
+  biography: Slender and silver-haired, with a mocking sardonic note which has caused some to call him 'unpleasantly' rather than simply 'very' erudite.
+
+arthur_jermyn:
+  id: 14
+  user_id: 39
+  name: Arthur Jermyn
+  profession: Dilettante
+  location_id: 5
+  biography: The poetic delicacy of Arthur Jermyn was the more remarkable because of his uncouth personal appearance. Most of the Jermyns had possessed a subtly odd and repellent cast, but Arthur’s case was very striking. 
+
+francis_morgan:
+  id: 13
+  user_id: 38
+  name: Francis Morgan
+  profession: Professor
+  location_id: 7
+  biography: Morgan uncased the big-game rifle on which he relied despite his colleague's warnings that no material weapon would be of help. 
+
+asenath_waite:
+  id: 12
+  user_id: 37
+  name: Asenath Waite
+  profession: Occultist
+  location_id: 2
+  biography: Dark, smallish, and very good-looking except for overprotuberant eyes; but something in her expression alienated extremely sensitive people. It was, however, largely her origin and conversation which caused average folk to avoid her.
+
+john_legrasse:
+  id: 11
+  user_id: 36
+  name: Inspector John Raymond Legrasse
+  profession: Police Inspector
+  location_id: 8
+  biography: It must not be fancied that Inspector Legrasse had the least interest in archaeology. On the contrary, his wish for enlightenment was prompted by purely professional considerations.
+
+randolph_delapore:
+  id: 10
+  user_id: 35
+  name: Randolph Delapore
+  profession: Bokor
+  location_id: 13
+  biography: The young Delapore of Carfax who went among the negroes and became a voodoo priest after he returned from the Mexican War. 
+
+sir_william_brinton:
+  id: 9
+  user_id: 34
+  name: Sir William Brinton
+  profession: Archeologist
+  location_id: 5
+  biography: Of seven cultivated men, only Sir William Brinton retained his composure, a thing the more to his credit because he led the party and must have seen the sight first. 
+
+doctor_munoz:
+  id: 8
+  user_id: 32
+  name: Doctor Muñoz
+  profession: Medical Doctor
+  location_id: 3
+  biography: Short but exquisitely proportioned, and clad in somewhat formal dress of perfect cut and fit. A high-bred face of masterful though not arrogant expression was adorned by a short iron-grey full beard, and an old-fashioned pince-nez shielded the full, dark eyes and surmounted an aquiline nose which gave a Moorish touch to a physiognomy otherwise dominantly Celtiberian. Thick, well-trimmed hair that argued the punctual calls of a barber was parted gracefully above a high forehead; and the whole picture was one of striking intelligence and superior blood and breeding. 
+
+ambrose_dexter:
+  id: 7
+  user_id: 31
+  name: Dr. Ambrose Dexter
+  profession: Physician
+  location_id: 2
+  biography: A man of medicine, science, and superstitution, with no contradiction between his two selves.
+
+father_iwanicki:
+  id: 6
+  user_id: 30
+  name: Father Iwanicki
+  profession: Clergyman
+  location_id: 2
+  biography: It would be better for the gentleman to take a room and get a crucifix from some good priest like Father Iwanicki. 
+
+ammi_pierce:
+  id: 5
+  user_id: 29
+  name: Ammi Pierce
+  profession: Agriculturist
+  location_id: 1
+  biography: Ammi, whose head has been a little queer for years, is the only one who still remains, or who ever talks of the strange days; and he dares to do this because his house is so near the open fields and the travelled roads around Arkham.
+
+robert_blake:
+  id: 4
+  user_id: 28
+  name: Robert Blake
+  profession: Author
+  location_id: 2
+  biography: He had a curious sense that he was looking upon some unknown, ethereal world which might or might not vanish in dream if ever he tried to seek it out and enter it in person. 
+
+thomas_olney:
+  id: 3
+  user_id: 27
+  name: Thomas Olney
+  profession: Philosopher
+  location_id: 17
+  biography: He taught ponderous things in a college by Narragansett Bay, and his eyes were weary with seeing the same things for many years, and thinking the same well-disciplined thoughts. He looked at the mists from the diadem of Father Neptune, and tried to walk into their white world of mystery along the titan steps of The Causeway.
+
+thomas_malone:
+  id: 2
+  user_id: 26
+  name: Detective Thomas F. Malone
+  profession: Police Detective
+  location_id: 3
+  biography: In youth he had felt the hidden beauty and ecstasy of things, and he had been a poet; but poverty and sorrow and exile had turned his gaze in darker directions, and he had thrilled at the imputations of evil in the world around.
+  
+henry_armitage:
+  id: 1
+  user_id: 25
+  name: Dr. Henry Armitage
+  profession: Library Director
+  location_id: 7
+  biography: Morning found Dr Armitage in a cold sweat of terror and a frenzy of wakeful concentration. He had not left the manuscript all night, but sat at his table under the electric light turning page after page with shaking hands as fast as he could decipher the cryptic text.

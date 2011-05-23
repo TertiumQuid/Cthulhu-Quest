@@ -1,0 +1,119 @@
+<div class='ui-tabs-panel'>
+  <div class="box profile" style='padding:5px'>
+	<em class='title right'>Level <%= @investigator.level %> <span><%= @investigator.profile_name %></span></em>		
+	<h3>
+	  <%= truncate(@investigator.name, :length => 35) %>
+	</h3>
+	  <div class='para square-top-left'>
+		<div class='info'>
+		  <em>&hearts; Wounds</em>
+		  <span class='investigator-wounds'><%= @investigator.wound_status %></span>
+		  <% if @investigator.wounded? && @medical == true %>
+	        <span class='right'>
+		      <%= link_to '+ treat wounds', 
+		                  "/facebook/investigators/#{@investigator.id}/heal", 
+		                  :class => 'micro', 
+		                  :remote => true,
+		                  :id => 'heal-investigator-button' %>
+	        </span>
+	        <div id="medical-dialog"></div> 
+		  <% end %>
+		</div>
+		
+		<div class='info'>
+		  <em>&pound; Funds</em>Holding <strong class='investigator-funds'><%= @investigator.funds %></strong> cash
+		</div>
+
+		<% unless @psychoses.blank? %>
+		  <div class='info'>
+		    <em>&there4; Insanity</em>
+		    <span class='investigator-madness'>Suffering from <%= @psychoses.map(&:name).join(", ") %></span>		
+		  </div>	
+		<% end %>
+				
+		<div class='info'>
+		  &nbsp;<span>Residing in <strong><%= @investigator.location.name %></strong></span>
+		  <span class='note'>
+		  <% if @investigator.user && @investigator.user.last_login_at %>
+			last seen <%= time_ago_in_words(@investigator.user.last_login_at) %> ago
+		  <% elsif @investigator.last_income_at %>	
+			last seen <%= time_ago_in_words(@investigator.last_income_at) %> ago
+		  <% end %>
+		  </span>	  
+		</div>
+		
+      </div>	
+	
+	  <div class='para'>
+		<h4>
+		  Skill Profile
+		</h4>
+		<ul class='big'>
+	      <% @investigator.stats.each do |stat| %>
+	        <li>
+		      <span class='label'><%= stat.skill_name %> <span class='stat-skill-level'><%= stat.skill_level %></span></span>
+		    </li>
+	      <% end %>
+		</ul>
+	  </div>
+	
+	  <% unless @assignments.blank? %>
+	  <div class='para'>	
+		<h4>
+		  Investigations
+	      <em>
+		    <a href="javascript:void(0);" id='assignment-help-prev'>&laquo; prev</a>&nbsp;
+		    <a href="javascript:void(0);" id='assignment-help-next'>next &raquo;</a>		
+		  </em>
+		</h4>
+		<ul id='assignment-help-list' class='box-list mid'>
+		  <% @assignments.each do |assignment| %>
+		    <li>
+			  <h6><%= assignment.status.upcase %></h6>
+			  <p>help to investigate <%= assignment.investigation.plot_title %></p>
+			  <label><%= time_ago_in_words( assignment.investigation.created_at ) %> ago</label>
+			</li>
+		  <% end %>
+		</ul>
+	  </div>	
+	  <% end %>
+	
+	  <div class='para'>
+		<h4>Send a Helpful Gift</h4>		
+		<%= form_tag facebook_investigator_gift_path( @investigator.id ), :remote => true, :id => 'gift-form' do %>
+		  <%= submit_tag "Send Gift", :class => 'right', :id => 'gift-button' %>
+		
+		  <%= text_field_tag 'gift[gifting]', '', :placeholder => 'fund amount, or item or weapon name' %>
+		<% end %>
+	  </div>	
+				
+	</div>
+</div>
+
+<script>
+$(function() {
+  $( "#heal-investigator-button").bindAjaxRequester({
+    dialogContainer: $('#medical-dialog')
+  });
+  $( "#becalm-investigator-button").bindAjaxRequester({
+    dialogContainer: $('#medical-dialog')
+  });
+
+  $('#assignment-help-list').paginated({
+	controls: { prev: $('#assignment-help-prev'), next: $('#assignment-help-next') },
+	perPage: 6
+  });
+
+  $( "#gift-form" ).bindAjaxRequester({
+	button: $( "#gift-button" ),
+	success: function(sender) {
+	  var gift = $('#gift').val();
+	  if ( !isNaN( parseInt(gift) )) {
+	    setFundsLabel( -parseInt(gift) );
+	  };
+	  $('#gift').val('');
+	}
+  });
+
+});
+</script>

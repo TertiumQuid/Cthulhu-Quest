@@ -1,0 +1,18 @@
+<br />
+<ul>
+  <li>
+	<div class='right'>
+	  <span class='upcase'>Induces Madness</span> 
+	  <strong style='font-size:24px;'><%= spellbook.grimoire.madness_cost %></strong>
+	</div>
+	
+	
+	<header><%= spellbook.name %></header>
+	<h5 style='margin:5px 0;'><%= spellbook.grimoire.description %></h5>
+  </li>
+</ul>	
+<ul>
+  <li class='list-button' style=''>
+    <%= link_to 'Read this Mythos Grimoire to Learn Spells', web_spellbook_path(spellbook), :method => :put %>
+  </li>
+</ul>

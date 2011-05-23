@@ -1,0 +1,47 @@
+the_king_in_yellow:
+  name: The King in Yellow
+  description: English, 1895, unknown author
+  madness_cost: 7
+  spells: eyes_of_hypnos, transmigration_of_consciousness, wine_of_the_thiasus
+  
+gharne_fragments:
+  name: G'Harne Fragments
+  description: English, 1919, Sir Amery Wendy-Smith
+  madness_cost: 3
+  spells: eyes_of_hypnos, call_of_nodens, chant_of_thoth, transmigration_of_consciousness
+  
+eltdown_shards:
+  name: Eltdown Shards
+  description: English, 1912, Rev. Arthur Brooke Winters-Hall
+  madness_cost: 3
+  spells: sway_of_the_adept
+  
+de_vermiis_mysteriis:
+  name: De Vermiis Mysteriis
+  description: Latin, 1542, Ludwig Prinn
+  madness_cost: 6
+  
+cultes_des_goules:
+  name: Cultes Des Goules
+  description: French, 1702, Francois-Honore Balfour Comte d'Erlette
+  madness_cost: 6
+  
+cthaat_aquadingen:
+  name: Cthaat Aquadingen
+  description: Latin, 11th century, unknown author
+  madness_cost: 4
+  
+book_of_dzyan:
+  name: Book of Dzyan
+  description: English, unknown origin, unknown author
+  madness_cost: 3
+  
+liber_ivonis:
+  name: Liber Ivonis
+  description: Latin, 9th century, Caius Phillipus Faber
+  madness_cost: 5
+    
+book_of_eibon:
+  name: Book of Eibon
+  description: English, 15th century, author unknown
+  madness_cost: 5

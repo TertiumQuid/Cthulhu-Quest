@@ -1,0 +1,83 @@
+<script type="text/javascript" charset="utf-8">
+$(function(){
+  $('.selectbutton').click( function(e){
+	
+    var el = $(this);
+	var id = el.attr('data-profile-id');
+	var name = el.attr('data-profile-name');
+	
+	$('#investigator_profile_id').val(id);
+	$('#investigator_profile_name').text(name);
+	
+	$.jQTouch().goTo('#investigator','swap');
+    return false;
+  });
+});
+</script>
+
+<div class="current" id="investigator">
+  <div class="toolbar">
+    <h1>Cthulhu Quest</h1><br/> 
+    <center style='font-size:10px;margin-top:3px;'><%= AppConfig.version %></center>
+  </div>
+
+  <%= form_for [:web, @investigator] do |f| %>
+    <h2>Investigator</h2>
+    <ul class='edit rounded'>
+	  <li><%= f.text_field :name, :placeholder => 'enter name' %></li>
+	</ul>
+	
+    <h2>Profile</h2>
+    <ul class='edit rounded'>
+      <li>
+	    <%= f.hidden_field :profile_id %>
+	    <span id='investigator_profile_name'>...</span>
+	  </li>
+	</ul>
+  <% end %>
+
+  <ul class="rounded">
+    <li class="arrow"><a href="#profiles">select your profile</a></li>	
+    </li>
+	</ul>
+</div>
+
+<div id="profiles">
+  <%= render :partial => "touch/titlebar" %>
+	
+  <ul class='edit rounded'>
+  <% @profiles.each do |p| %>
+    <li class='arrow'>
+  	  <a href='#profile<%=p.id%>'><%= p.name %></a>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+<% @profiles.each do |p| %>
+  <div id="profile<%=p.id%>">
+	<div class="toolbar"><h1><%= p.name %></h1><a class="back" href="#">Profiles</a></div>
+	<ul class='edit rounded'>
+	  <li>
+		<a href="#callbacks">Income</a> 
+		<small class="counter">£ <%= p.income %></small>		
+	  </li>
+	</ul>
+	<ul class='edit rounded'>
+	  <% p.profile_skills.each do |s| %>
+	    <li>
+		  <a href="#callbacks"><%= s.skill_name %></a> 
+		  <small class="counter"><%= s.skill_level %></small>		
+	    </li>
+	  <% end %>
+	</ul>
+	
+	<ul class='edgetoedge' style='background-color:#84A273;text-align:center;'>
+	  <li style='color:#fff;cursor:pointer;'>
+		<a class='selectbutton' data-profile-id="<%= p.id %>"  data-profile-name='<%= p.name %>'>
+		  Select Profile
+		</a>
+	  </li>
+	</ul>
+  </div>
+<% end %>

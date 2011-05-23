@@ -1,0 +1,138 @@
+<% investigation.assignments.each do |assignment| %>
+  <li>
+    <h3>
+      <em>
+	    vs. <%= assignment.intrigue.challenge.name %> 
+	    <strong class='value'><%= assignment.intrigue.difficulty %></strong>
+	  </em> 
+      <%= assignment.intrigue.title %>
+    </h3>
+
+    <% success_chance = assignment.intrigue.difficulty %>
+
+    <% if completed.blank? || completed.select{|a| a.intrigue_id == assignment.intrigue_id}.blank? %>
+
+      <div class='details green'>
+        <div class='short'>
+          <% if !assignment.ally_assigned? && !assignment.contact_assigned? %>
+            You are investigating this alone
+          <% else %>
+
+            <% if assignment.ally_assigned? %>
+              <span class='item <%= 'pending' unless assignment.accepted? %>'>
+                <label class='title'><%= assignment.ally.name %></label>
+                <span>
+                  <% if assignment.requested? %>
+                    You are waiting for <%= assignment.ally.user ? assignment.ally.user.name : 'your ally' %> to answer your request
+                  <% elsif assignment.refused? %>
+                    <%= assignment.ally.user ? assignment.ally.user.name : 'Your ally' %> declined to help
+                  <% else %>
+                    <%= assignment.ally.user ? assignment.ally.user.name : 'Your ally' %> is helping with this subplot
+                  <% end %>
+                </span>
+                <label class='good'>
+                  <%= assignment.intrigue.challenge.name %>
+                  <strong>+<%= assignment_bonus = assignment.ally.skill_by_name( assignment.intrigue.challenge.name ) %></strong>
+                </label>
+                <% success_chance = success_chance + assignment_bonus if assignment.accepted? %>
+              </span>			
+            <% end %>
+
+            <% if assignment.contact_assigned? %>
+              <span class='item'>
+                <label class='title'><%= assignment.contact.name %></label>
+                <span>Your contact is helping with this subplot</span>
+                <label class='good'>
+                  <%= assignment.intrigue.challenge.name %>
+                  <strong>+<%= contact_bonus = assignment.contact.character.skill_by_name( assignment.intrigue.challenge.name ) %></strong>
+                </label>
+              </span>
+             <% success_chance = success_chance + contact_bonus %>
+           <% end %>
+        <% end %>
+      </div>
+
+      <div class='quick-list'>
+        <p class='good'>
+	     <% if (skill_level = current_investigator.skill_by_name( assignment.intrigue.challenge.name )) > 0 %>
+	       Your <%= assignment.intrigue.challenge.name %> skill 
+          <strong>+<%= skill_level %></strong>
+	     <% else %>
+	       You're unskilled in <%= assignment.intrigue.challenge.name %>
+           <strong>--</strong>	
+	     <% end %>
+        </p>
+
+        <% success_chance = success_chance + skill_level %>
+
+        <% if current_investigator.wounded? %>
+          <p class='bad'>
+	        Suffering debilitating wounds 
+ 	        <strong>-<%= wound_penalty = assignment.intrigue.wound_penalty( current_investigator ) %></strong>
+          </p>
+          <% success_chance = success_chance - wound_penalty %>
+        <% end %>
+
+        <% if (magic_bonus = assignment.intrigue.effect_bonus(current_investigator)) > 0 %>
+          <p class='good'>
+	        Empowered by magick 
+	        <strong>+<%= assignment.intrigue.effect_bonus(current_investigator) %></strong>
+	      </p>			
+          <% success_chance = success_chance + magic_bonus %>
+        <% end %>
+
+        <% if @psychoses && !@psychoses.select{|p|p.insanity.skill_id == assignment.intrigue.challenge_id}.blank? %>
+          <p class='bad'>
+	        Impaired by psychosis 
+	        <strong>-<%= psychosis_penalty = @psychoses.select{|p|p.insanity.skill_id == assignment.intrigue.challenge_id}.first.treatment_threshold %></strong>
+	      </p>
+          <% success_chance = success_chance - psychosis_penalty %>	
+        <% end %>
+      </div>
+ 
+        <% success_chance = (([success_chance,0].max.to_f / Intrigue::CHALLENGE_RANGE)*100).to_i %>
+      </div>
+
+      <% if threat = assignment.intrigue.threat %>
+        <div class='threat' style='margin-bottom:20px;border-bottom:2px solid #CCC;'>
+		  <div class='float-strip'>
+			<div class='title'>This subplot requires <span style='color:#722;font-weight:bold;font-size:14px;'>combat</span> with: <strong><%= threat.name %></strong>
+			</div>
+			
+	        <div class="circle medium blue"><%= investigator_equals_monster_level(threat.monster) ? threat.monster.attacks : '?' %> <em>ATK</em></div>
+		    <div class="circle medium green"><%= investigator_equals_monster_level(threat.monster) ? threat.monster.defense : '?' %> <em>DEF</em></div>
+	        <div class="circle medium red"><%= investigator_equals_monster_level(threat.monster) ? threat.monster.power : '?' %> <em>POW</em></div>
+		    <div class="circle medium yellow"><%= investigator_equals_monster_level(threat.monster) ? threat.monster.madness : '?' %> <em>MAD</em></div>      
+	      </div>
+	    </div>
+      <% end %>
+
+      <div class='float-strip'>
+        <div class='subplot-chance-bar progress-bar' data-value='<%= success_chance %>' style='margin:-10px auto 0 auto;height:16px;'>
+          <span><%= success_chance %>% Chance to Solve Subplot</span>
+        </div>
+      </div>
+
+    <% elsif completed_assignment = completed.select{|a| a.intrigue_id == assignment.intrigue_id}.first %>
+      <div class='assignment-strip empty'>
+        <div class='float-strip'>
+          <div class='subplot-chance-bar progress-bar' data-value='100' style='margin:-5px auto 0 auto;height:20px;'>
+            <span style='padding-left:100px;'>ALREADY SOLVED subplot during prior investigation</span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</li>
+<% end %>
+
+
+<script>
+$(function() {
+  $( ".subplot-chance-bar" ).each(function(index) {
+    var val = parseInt( $(this).attr('data-value') );
+    if (val > 0) {
+      $(this).progressbar({ value: val });
+    };
+  });
+});
+</script>

@@ -1,0 +1,178 @@
+sigillum_dei_aemeth_resist_madness:
+  effecacy: resist_madness
+  trigger: sigillum_dei_aemeth
+  trigger_type: Item
+  duration: 7
+  power: 1
+  name: Sigillum Dei Aemeth
+  target_name: Sanity
+  description: The infinte nature of God's magical seal grants a strength of mind against madness for seven blessed hours.
+
+rod_of_asclepius_restore_health:
+  effecacy: restore_health
+  trigger: rod_of_asclepius
+  trigger_type: Item
+  duration: 7
+  power: 2
+  name: Rod of Asclepius
+  target_name: Healing
+  description: The Asklepian scepter makes the bearer as Hippocrates for seven hours, blessing all healing actions during that time.
+
+charmstone_bond_social:
+  effecacy: bond_social
+  trigger: charmstone
+  trigger_type: Item
+  duration: 12
+  power: 1
+  name: Charmstone
+  target_name: Social Functions
+  description: For twelve hours, where envy and paranoia would disrupt meetings between allies the charmstone compels all to cooperate.
+
+athame_enhance_attacks:
+  effecacy: enhance_attacks
+  trigger: athame
+  trigger_type: Item
+  duration: 9
+  power: 1
+  name: Athame
+  target_name: Attacks
+  description: Like the witch's talon, the Athame makes one quick and deadly, delivering an additional attack in all combat for nine hours.
+
+hand_of_glory_discount_travel:
+  effecacy: discount_travel
+  trigger: hand_of_glory
+  trigger_type: Item
+  duration: 8
+  power: 50
+  name: Hand of Glory
+  target_name: Travel
+  description: Renders the candle-bearer immune to detection, permitting free and unrestricted travel in the world for eight hours.
+
+fire_of_asshurbanipal_challenge_intrigue:
+  effecacy: challenge_intrigue
+  trigger: fire_of_asshurbanipal
+  trigger_type: Item
+  duration: 3
+  power: 1
+  name: Fire of Asshurbanipal
+  target_name: Intrigues
+  description: Confers the will of ambition upon the owner, granting a bonus against intrigues for three hours.
+  
+abraxas_stone_enhance_attack:
+  effecacy: enhance_attack
+  trigger: abraxas_stone
+  trigger_type: Item
+  duration: 6
+  power: 2
+  name: Abraxas Stone Ring
+  target_name: Attacking Power
+  description: Strengthens the wearer with the wisdom, authority, and effecacy of a seasoned warrior.
+  
+abraxas_stone_enhance_defense:
+  effecacy: enhance_defense
+  trigger: abraxas_stone
+  trigger_type: Item
+  duration: 6
+  power: 2
+  name: Abraxas Stone Ring
+  target_name: Defense in Combat
+  description: Endures the wearer's body with powers against harm for six hours.
+
+abramelin_oil_hasten_casting:
+  effecacy: hasten_casting
+  trigger: abramelin_oil
+  trigger_type: Item
+  duration: 3
+  power: 90
+  name: Abramelin Oil
+  
+sway_of_the_adept_enhance_skill:
+  effecacy: enhance_skill
+  trigger: sway_of_the_adept
+  trigger_type: Spell
+  target: conflict
+  duration: 8
+  power: 2
+  name: Sway of the Adept
+  
+transmigration_of_consciousness_enhance_skill:
+  effecacy: enhance_skill
+  trigger: transmigration_of_consciousness
+  trigger_type: Spell
+  target: psychology
+  duration: 8
+  power: 2
+  name: Transmigration of Consciousness
+  
+adoration_of_atlach_nacha_enhance_skill:
+  effecacy: enhance_skill
+  trigger: adoration_of_atlach_nacha
+  trigger_type: Spell
+  target: bureaucracy
+  duration: 8
+  power: 2
+  name: Adoration of Atlach Nacha
+  
+trance_state_of_daoloth_enhance_skill:
+  effecacy: enhance_skill
+  trigger: trance_state_of_daoloth
+  trigger_type: Spell
+  target: research
+  duration: 8
+  power: 2
+  name: Trance State of Daoloth
+  
+wine_of_the_thiasus_enhance_skill:
+  effecacy: enhance_skill
+  trigger: wine_of_the_thiasus
+  trigger_type: Spell
+  target: society
+  duration: 8
+  power: 2
+  name: Wine of the Thiasus
+  
+fifty_names_of_marduk_enhance_skill:
+  effecacy: enhance_skill
+  trigger: fifty_names_of_marduk
+  trigger_type: Spell
+  target: sorcery
+  duration: 8
+  power: 2
+  name: Fifty Names of Marduk
+  
+eyes_of_hypnos_enhance_skill:
+  effecacy: enhance_skill
+  trigger: eyes_of_hypnos
+  trigger_type: Spell
+  target: sensitivity
+  duration: 8
+  power: 2
+  name: Eyes of Hypnos
+  
+call_of_nodens_enhance_skill:
+  effecacy: enhance_skill
+  trigger: call_of_nodens
+  trigger_type: Spell
+  target: adventure
+  duration: 8
+  power: 2
+  name: Call of Nodens
+  
+flatus_of_tsathoggua_enhance_skill:
+  effecacy: enhance_skill
+  trigger: flatus_of_tsathoggua
+  trigger_type: Spell
+  target: underworld
+  duration: 8
+  power: 2
+  name: Flatus of Tsathoggua
+  
+chant_of_thoth_enhance_skill:
+  effecacy: enhance_skill
+  trigger_id: <%= Fixtures.identify(:chant_of_thoth) %>  
+  trigger_type: Spell
+  target_id: <%= Fixtures.identify(:scholarship) %>    
+  target_type: skill
+  duration: 8
+  power: 2
+  name: Chant of Thoth

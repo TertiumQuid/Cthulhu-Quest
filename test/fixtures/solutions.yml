@@ -1,0 +1,29 @@
+grandfathers_journal_confronted:
+  plot: grandfathers_journal
+  title: Confront the Truth
+  description: Confront the truth
+  kind: heroic
+  
+the_golden_bough_understood:
+  plot: the_golden_bough
+  title: Understand the Nunances
+  description: come to understand the nuanced power of ritual myth, and the symbols of its agents through the science of magic.
+  kind: scientific
+  
+troubled_dreams_embrace:
+  plot: troubled_dreams
+  title: Embrace the Dreams
+  description: Embrace the dreaming bodement of mankind's universal extinction.
+  kind: insane
+  
+troubled_dreams_documented:
+  plot: troubled_dreams
+  title: Record What is to Come
+  description: In written word, fragments, sketches, leave presentiments of the portents for others to find and know. 
+  kind: heroic
+  
+troubled_dreams_banished:
+  plot: troubled_dreams
+  title: Banish the Dreams
+  description: Banish the nightly trauma of the prophetic dreams and steel your mind.
+  kind: denial

@@ -1,0 +1,20 @@
+<% if prerequisite_counter % 3 == 0 %>
+  <tr>
+<% end %>
+<td>
+  <div class='badge prerequisite'>
+	<div>
+      <header>
+        <% satisfied = prerequisite.satisfied?( current_investigator ) %>
+        <span style='background-color:<%= satisfied ? 'green' : '#BB1111' %>'>
+          <%= satisfied ? raw('&radic;') : 'X' %>
+        </span> 
+        <%= prerequisite.requirement_type %>
+      </header>
+      <span><%= prerequisite.requirement_name %></span>
+    </div>
+  </div>
+</td>
+<% if prerequisite_counter % 3 == 3 || prerequisite_counter == (@prerequisites.size - 1) %>
+  </tr>
+<% end %>

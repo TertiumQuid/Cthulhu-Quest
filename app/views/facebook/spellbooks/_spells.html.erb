@@ -1,0 +1,56 @@
+<div id='spells-grid' class="grid-container">
+  <table>	
+	<tbody>
+	<tr>
+      <td class='left-nav pager' data-index='-2'><a></a></td>
+      <td>
+	    <table class="grid" data-index="0">
+		<% cell_leftover = (@spells.size % 2) %>
+		<% (@spells.size + (cell_leftover > 0 ? (2 - cell_leftover) : 0)).times do |idx| %>
+		  <% if idx % 2 == 0 %><tr class="<%= 'hidden' if idx >= 4 %>" data-index="<%= (idx / 2) %>"><% end %>
+		  <td>
+			<% if idx < @spells.size %>	
+			  <ul style='width:275px'>	
+			    <li class='title'><%= @spells[idx].name %></li>	
+			    <li class='desc'>
+				  <%= @spells[idx].description %>
+				</li>
+			    <li class='subtitle'>
+				  <%= @spells[idx].effect %>
+				</li>
+				<li class='cmd'>
+				  <% if @casting.blank? %>
+				    <%= link_to "perform casting", new_facebook_spell_casting_path(@spells[idx]), :remote => true, :class => 'cast-button', :style=>'width:165px;', 'data-title' => "Casting #{@spells[idx].name}" %>
+				  <% else %>
+				    <%= link_to "preoccupied in rituals", '', :class => 'cast-button', :style=>'width:165px;', :disabled => true %>
+				  <% end %>
+				</li>
+			  </ul>
+			<% else %>
+			  <div style='width:300px;'>&nbsp;</div>
+			<% end %>
+		  </td>
+		  <% if (idx % 3 == 2) %></tr><% end %>
+		<% end %>	
+		</table>
+	  </td>
+       <td class='right-nav pager' data-index='2'><a></a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+$(function() {
+  $( "a.cast-button" ).bindAjaxRequester();
+  $( "a.cast-button" ).bindAjaxRequester({ buttons: { 
+	"Nevermind": function() { 
+        $(this).dialog( "close" ); 
+        $(this).parent( "ui-dialog" ).remove();
+    },
+	"Cast Spell": function() { 
+		var form = $('#new_casting').submit();
+    }
+  }});
+});
+</script>

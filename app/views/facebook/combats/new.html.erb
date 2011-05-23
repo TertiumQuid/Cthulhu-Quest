@@ -1,0 +1,113 @@
+<div class='ui-tabs-panel'>
+  <div class="box profile" style='padding:5px'>	
+	<em class='title right'><%= @monster.kind %></em>
+	<em class='title right'>Level <%= @monster.level %></em>
+	<h3>vs. <%= truncate(@monster.name, :length => 35) %></h3>
+	
+    <div class='para square-top-left'>
+	  <div><%= @monster.description %></div>
+	  <br />
+	  <em>You can battle this monster and collect a bounty if you must raise funds, but the ordeal will often leave you wounded and suffering from madness.</em>
+	</div>
+	
+    <div class='para'>
+	  <h4><center>Combat Profile</center></h4>
+	  <table class='versus-table mid'>
+		<tr>
+		  <th>Your Investigator</th>
+		  <th></th>
+		  <th>Your Quarry</th>		
+		</tr>
+		<tr>
+		  <td>
+			<span>
+			  <%= current_investigator.armed ? "using #{current_investigator.armed.weapon.name}" : "unarmed" %>
+			</span>
+			<label><%= current_investigator.power %></label>
+		  </td>
+		  <td>Power</td>
+		  <td>
+			<label><%= investigator_equals_monster_level(@monster) ? @monster.power : '?' %></label>
+			<% unless investigator_equals_monster_level(@monster) %><span>high power level unknown</span><% end %>
+		  </td>
+		</tr>
+		<tr>
+		  <td><label><%= current_investigator.defense %></label></td>
+		  <td>Defense</td>
+		  <td>
+			<label><%= investigator_equals_monster_level(@monster) ? @monster.defense : '?' %></label>
+			<% unless investigator_equals_monster_level(@monster) %><span>high defense level unknown</span><% end %>
+		  </td>
+		</tr>		
+		<tr>
+		  <td><label><%= current_investigator.attacks %></label></td>
+		  <td>Attacks</td>
+		  <td>
+			<label><%= investigator_equals_monster_level(@monster) ? @monster.attacks : '?' %></label>
+			<% unless investigator_equals_monster_level(@monster) %><span>high attack level unknown</span><% end %>
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <span>
+		      <%= pluralize( current_investigator.maximum_wounds - current_investigator.wounds, 'more wound') %> defeats you
+		    </span>
+		    <label class='small'><%= raw "#{current_investigator.wounds}/<br />#{current_investigator.maximum_wounds}" %></label>
+		  </td>
+		  <td>Wounds</td>
+		  <td>
+			<label><%= investigator_equals_monster_level(@monster) ? '1' : '?' %></label>
+			<span><%= investigator_equals_monster_level(@monster) ? "one hit will destroy this monster" : "high wound level unknown" %></span>
+		  </td>		
+		</tr>
+		<tr>
+		  <td>
+		    <span><%= current_investigator.maximum_madness - current_investigator.madness %> more madness drives you insane</span>
+		    <label class='small'><%= raw "#{current_investigator.madness}/<br />#{current_investigator.maximum_madness}" %></label>
+		  </td>
+		  <td>Madness</td>
+		  <td>
+			<label><%= investigator_equals_monster_level(@monster) ? @monster.madness : '?' %></label>
+			<span><%= !investigator_equals_monster_level(@monster) ? "high madness level unknown" : (@monster.madness > 0 ? "facing this monster confers madness" : '') %></span>
+		  </td>
+		</tr>		
+		<tr>
+		  <td>
+		  	<% if @effections.blank? %>
+		      <span>no magical effects</span>
+		    <% else %>
+		      <span>
+			    <% @effections.each do |effection| %>
+			      <%= "+ #{effection.effect.power} #{effection.effect.target_name}" %><br />
+			    <% end %>
+			  </span>
+		    <% end %>
+		  </td>
+		  <td>Magic</td>
+		  <td>
+		  	<span><%= investigator_equals_monster_level(@monster) ? 'no magical effects' : 'magical abilities unkown' %></span>
+		  </td>		
+		</tr>	
+		<tr>
+		  <th></th>
+		  <th><div class='big green'>&pound;<%= @monster.bounty %> Bounty</div></th>
+		  <th></th>		
+		</tr>					
+	  </table>
+    </div>	
+  </div>	
+</div>
+
+<%= link_to "Do Battle", facebook_monster_combats_path(@monster),
+              :id => 'do-battle-button',
+              :remote => true,
+              :method => 'post',         
+              :style => 'display:none',
+              :class => 'hidden' %>
+
+
+<script>
+$(function() {
+  $("#do-battle-button").bindAjaxRequester();
+});
+</script>

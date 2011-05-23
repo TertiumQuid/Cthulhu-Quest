@@ -1,0 +1,91 @@
+the_king_in_yellow_eyes_of_hypnos:
+  spell_id: 4
+  grimoire_id: 9
+  
+the_king_in_yellow_transmigration_of_consciousness:
+  spell_id: 9
+  grimoire_id: 9
+  
+the_king_in_yellow_wine_of_the_thiasus:
+  spell_id: 6
+  grimoire_id: 9
+  
+gharne_fragments_eyes_of_hypnos:
+  spell_id: 4
+  grimoire_id: 8
+  
+gharne_fragments_call_of_nodens:
+  spell_id: 3
+  grimoire_id: 8
+  
+eltdown_shards_chant_of_thoth:
+  spell_id: 1
+  grimoire_id: 7
+  
+eltdown_shards_transmigration_of_consciousness:
+  spell_id: 9
+  grimoire_id: 7
+  
+de_vermiis_mysteriis_eyes_of_hypnos:
+  spell_id: 4
+  grimoire_id: 6
+  
+de_vermiis_mysteriis_trance_state_of_daoloth:
+  spell_id: 7
+  grimoire_id: 6
+  
+de_vermiis_mysteriis_adoration_of_atlach_nacha:
+  spell_id: 8
+  grimoire_id: 6
+  
+cultes_des_goules_wine_of_the_thiasus:
+  spell_id: 6
+  grimoire_id: 5
+  
+cultes_des_goules_flatus_of_tsathoggua:
+  spell_id: 2
+  grimoire_id: 5
+  
+cthaat_aquadingen_eyes_of_hypnos:
+  spell_id: 4
+  grimoire_id: 4
+  
+cthaat_aquadingen_call_of_nodens:
+  spell_id: 3
+  grimoire_id: 4
+  
+book_of_dzyan_trance_state_of_daoloth:
+  spell_id: 7
+  grimoire_id: 3
+  
+book_of_dzyan_eyes_of_hypnos:
+  spell_id: 4
+  grimoire_id: 3
+  
+book_of_dzyan_sway_of_the_adept:
+  spell_id: 10
+  grimoire_id: 3
+  
+liber_ivonis_adoration_of_atlach_nacha:
+  spell_id: 8
+  grimoire_id: 2
+  
+liber_ivonis_eyes_of_hypnos:
+  spell_id: 4
+  grimoire_id: 2
+  
+liber_ivonis_sway_of_the_adept:
+  spell_id: 10
+  grimoire_id: 2
+  
+book_of_eibon_adoration_of_atlach_nacha:
+  spell_id: 8
+  grimoire_id: 1
+  
+book_of_eibon_trance_state_of_daoloth:
+  spell_id: 7
+  grimoire_id: 1
+  
+book_of_eibon_sway_of_the_adept:
+  spell_id: 10
+  grimoire_id: 1

@@ -1,0 +1,389 @@
+malleus_maleficarum_2_almanac:
+  plot_id: 26
+  requirement_id: 85
+  requirement_type: item
+  requirement_name: Almanac
+  
+oracles_of_nostradamus_almanac:
+  plot_id: 9
+  requirement_id: 85
+  requirement_type: item
+  requirement_name: Almanac
+
+the_beatus_methodivo_oracles_of_nostradamus:
+  plot_id: 5
+  requirement_id: 65
+  requirement_type: item
+  requirement_name: The Oracles of Nostradamus
+  
+oracles_of_nostradamus_notebook:
+  plot_id: 9
+  requirement_id: 11
+  requirement_type: item
+  requirement_name: Notebook
+  
+oracles_of_nostradamus_newspaper_clippings:
+  plot_id: 9
+  requirement_id: 35
+  requirement_type: item
+  requirement_name: Newspaper Clippings
+
+the_golden_bough_typewriter:
+  plot_id: 2
+  requirement_id: 45
+  requirement_type: item
+  requirement_name: Typewriter
+
+i_ching_calligraphy_set:
+  plot_id: 3
+  requirement_id: 79
+  requirement_type: item
+  requirement_name: Chinese Calligraphy Set
+  
+i_ching_notebook:
+  plot_id: 3
+  requirement_id: 11
+  requirement_type: item
+  requirement_name: Notebook
+
+i_ching_playing_cards:
+  plot_id: 3
+  requirement_id: 30
+  requirement_type: item
+  requirement_name: Playing Cards
+  
+i_ching_street_map:
+  plot_id: 3
+  requirement_id: 18
+  requirement_type: item
+  requirement_name: Chinatown Street Map
+  
+malleus_maleficarum_3_the_malleus_maleficarum:
+  plot_id: 27
+  requirement_id: 63
+  requirement_type: item
+  requirement_name: Malleus Maleficarum
+  
+malleus_maleficarum_3_hand_mirror:
+  plot_id: 27
+  requirement_id: 57
+  requirement_type: item
+  requirement_name: Hand Mirror
+  
+malleus_maleficarum_3_ammonia:
+  plot_id: 27
+  requirement_id: 47
+  requirement_type: item
+  requirement_name: Ammonia
+  
+malleus_maleficarum_3_matchbook:
+  plot_id: 27
+  requirement_id: 12
+  requirement_type: item
+  requirement_name: Matchbook
+  
+malleus_maleficarum_3_kerosene:
+  plot_id: 27
+  requirement_id: 15
+  requirement_type: item
+  requirement_name: Kerosene
+  
+malleus_maleficarum_2_londontown_overcoat:
+  plot_id: 26
+  requirement_id: 78
+  requirement_type: item
+  requirement_name: Londontown Overcoat
+  
+malleus_maleficarum_2_region_map:
+  plot_id: 26
+  requirement_id: 3
+  requirement_type: item
+  requirement_name: Salem Region Map
+  
+malleus_maleficarum_2_lantern:
+  plot_id: 26
+  requirement_id: 3
+  requirement_type: item
+  requirement_name: Lantern
+  
+malleus_maleficarum_1_londontown_overcoat:
+  plot_id: 7
+  requirement_id: 78
+  requirement_type: item
+  requirement_name: Londontown Overcoat
+  
+malleus_maleficarum_1_binoculars:
+  plot_id: 7
+  requirement_id: 26
+  requirement_type: item
+  requirement_name: Binoculars
+  
+malleus_maleficarum_1_rope:
+  plot_id: 7
+  requirement_id: 51
+  requirement_type: item
+  requirement_name: Rope
+  
+national_electric_light_association_pocket_knife:
+  plot_id: 25
+  requirement_id: 17
+  requirement_type: item
+  requirement_name: Pocket Knife
+  
+national_electric_light_association_cigarettes:
+  plot_id: 25
+  requirement_id: 9
+  requirement_type: item
+  requirement_name: Cigarettes
+  
+national_electric_light_association_lockpicks:
+  plot_id: 25
+  requirement_id: 6
+  requirement_type: item
+  requirement_name: Lockpicks
+  
+king_in_yellow_timepiece:
+  plot_id: 24
+  requirement_id: 8
+  requirement_type: item
+  requirement_name: Timepiece
+  
+no_mask_tarot_cards:
+  plot_id: 23
+  requirement_id: 67
+  requirement_type: item
+  requirement_name: Tarot Cards
+
+no_mask_pocket_knife:
+  plot_id: 23
+  requirement_id: 17
+  requirement_type: item
+  requirement_name: Pocket Knife
+
+no_mask_electric_torch:
+  plot_id: 23
+  requirement_id: 4
+  requirement_type: item
+  requirement_name: Electric Torch
+  
+no_mask_timepiece:
+  plot_id: 23
+  requirement_id: 8
+  requirement_type: item
+  requirement_name: Timepiece
+  
+have_you_seen_the_yellow_sign_timepiece:
+  plot_id: 22
+  requirement_id: 8
+  requirement_type: item
+  requirement_name: Timepiece
+  
+have_you_seen_the_yellow_sign_cigars:
+  plot_id: 22
+  requirement_id: 21
+  requirement_type: item
+  requirement_name: Fine Imported Cigars
+
+have_you_seen_the_yellow_sign_newspaper_clippings:
+  plot_id: 22
+  requirement_id: 35
+  requirement_type: item
+  requirement_name: Newpaper Clippings on the Guest List and Theater Reviews
+
+have_you_seen_the_yellow_sign_evening_wear:
+  plot_id: 22
+  requirement_id: 7
+  requirement_type: item
+  requirement_name: Masquerade Costume
+  
+grandfathers_journal_the_key_of_solomon:
+  plot_id: 21
+  requirement_id: 62
+  requirement_type: item
+  requirement_name: The Key of Solomon
+  
+grandfathers_journal_hand_mirror:
+  plot_id: 21
+  requirement_id: 57
+  requirement_type: item
+  requirement_name: Hand Mirror
+  
+grandfathers_journal_candles:
+  plot_id: 21
+  requirement_id: 22
+  requirement_type: item
+  requirement_name: Black Candles
+  
+grandfathers_journal_sulphur:
+  plot_id: 21
+  requirement_id: 49
+  requirement_type: item
+  requirement_name: Sulphur
+  
+grandfathers_journal_chalk:
+  plot_id: 21
+  requirement_id: 53
+  requirement_type: item
+  requirement_name: Chalk
+  
+ulthars_decree_binoculars:
+  plot_id: 20
+  requirement_id: 26
+  requirement_type: item
+  requirement_name: Binoculars
+  
+ulthars_decree_carbide_lamp:
+  plot_id: 20
+  requirement_id: 43
+  requirement_type: item
+  requirement_name: Carbide Lamp
+
+unquiet_dead_region_map:
+  plot_id: 19
+  requirement_id: 19
+  requirement_type: item
+  requirement_name: Miskatonic Valley Map
+  
+unquiet_dead_lantern:
+  plot_id: 19
+  requirement_id: 3
+  requirement_type: item
+  requirement_name: Lantern
+  
+unquiet_dead_shovel:
+  plot_id: 19
+  requirement_id: 2
+  requirement_type: item
+  requirement_name: Shovel
+
+professors_lecture_notebook:
+  plot_id: 18
+  requirement_id: 11
+  requirement_type: item
+  requirement_name: Notebook
+  
+triassic_translations_newspaper_clippings:
+  plot_id: 16
+  requirement_id: 35
+  requirement_type: item
+  requirement_name: Newpaper Clippings
+  
+triassic_translations_crucifix:
+  plot_id: 16
+  requirement_id: 71
+  requirement_type: item
+  requirement_name: Crucifix
+  
+triassic_translations_crowbar:
+  plot_id: 16
+  requirement_id: 10
+  requirement_type: item
+  requirement_name: Crowbar
+  
+polis_of_sunken_sahara_notebook:
+  plot_id: 15
+  requirement_id: 11
+  requirement_type: item
+  requirement_name: Notebook
+  
+polis_of_sunken_sahara_telegram:
+  plot_id: 15
+  requirement_id: 13
+  requirement_type: item
+  requirement_name: Telegram
+  
+polis_of_sunken_sahara_lockpicks:
+  plot_id: 15
+  requirement_id: 6
+  requirement_type: item
+  requirement_name: Lockpicks
+  
+last_man_standing_smelling_salts:
+  plot_id: 11
+  requirement_id: 23
+  requirement_type: item
+  requirement_name: Smelling Salts
+
+last_man_standing_knuckle_dusters:
+  plot_id: 11
+  requirement_id: 68
+  requirement_type: item
+  requirement_name: Knuckle Dusters
+  
+clavis_alchimiae_library_card:
+  plot_id: 10
+  requirement_id: 5
+  requirement_type: item
+  requirement_name: Library Card
+
+the_golden_bough_library_card:
+  plot_id: 2
+  requirement_id: 5
+  requirement_type: item
+  requirement_name: Library Card
+  
+i_ching_cigarettes:
+  plot_id: 3
+  requirement_id: 9
+  requirement_type: item
+  requirement_name: Cigarettes
+  
+emerald_tablet_library_card:
+  plot_id: 4
+  requirement_id: 5
+  requirement_type: item
+  requirement_name: Library Card
+  
+beatus_methodivo_library_card:
+  plot_id: 5
+  requirement_id: 5
+  requirement_type: item
+  requirement_name: Library Card
+  
+key_of_solomon_library_card:
+  plot_id: 6
+  requirement_id: 5
+  requirement_type: item
+  requirement_name: Library Card
+  
+zohar_library_card:
+  plot_id: 8
+  requirement_id: 5
+  requirement_type: item
+  requirement_name: Library Card
+  
+oracles_of_nostradamus_library_card:
+  plot_id: 9
+  requirement_id: 5
+  requirement_type: item
+  requirement_name: Library Card
+  
+night_terrors_easel_and_paints:
+  plot_id: 17
+  requirement_id: 1
+  requirement_type: item
+  requirement_name: Easel and Paints
+  
+night_terrors_laudanum:
+  plot_id: 17
+  requirement_id: 25
+  requirement_type: item
+  requirement_name: Laudanum
+  
+troubled_dreams_laudanum:
+  plot_id: 1
+  requirement_id: 25
+  requirement_type: item
+  requirement_name: Laudanum
+  
+troubled_dreams_notebook:
+  plot_id: 1
+  requirement_id: 11
+  requirement_type: item
+  requirement_name: Notebook
+  
+troubled_dreams_timepiece:
+  plot_id: 1
+  requirement_id: 8
+  requirement_type: item
+  requirement_name: Timepiece

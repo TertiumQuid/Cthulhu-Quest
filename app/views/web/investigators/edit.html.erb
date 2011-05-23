@@ -1,0 +1,105 @@
+<article class='sidebar'>
+  <% unless @equipment.blank? %>
+    <h2>Equipment</h2>
+    <q>Vision is not enough, it must be combined with venture.</q>
+	<table class="tabular">
+	  <tbody>
+		<tr><th>Item</th><th>&nbsp;</th></tr>
+		<%= render :partial => "web/possessions/possession", 
+				   :collection => @equipment %>
+	  </tbody>
+	</table>
+  <% end %>
+
+  <% unless @armaments.blank? %>
+    <h2>Armory</h2>
+    <q>Every man of ambition has to fight his century with its own weapons.</q>
+	<table class="tabular">
+	  <tbody>
+		<tr><th>Weapon</th><th>Power</th><th>Attacks</th><th></th></tr>
+		<%= render :partial => "web/armaments/armament", 
+				   :collection => @armaments %>
+	  </tbody>
+	</table>
+  <% end %>
+
+  <% unless @books.blank? %>
+    <h2>Library</h2>
+    <q>The closest thing you will find to an orderly universe is a good library.</q>
+	<table class="tabular">
+	  <tbody>
+		<tr><th>Book</th><th>&nbsp;</th></tr>
+		<%= render :partial => "web/possessions/possession", 
+				   :collection => @books %>
+		
+	  </tbody>
+	</table>
+  <% end %>	
+</article>
+
+<article>
+  <header>
+	<h2>Your Investigator's Profile</h2>
+  </header>
+
+  <div class="profile">
+  <fieldset>
+    <legend><%= @investigator.name %></legend>
+    <ul>
+	  <li>
+		<header>
+		  <span class='right'>Level <%= @investigator.level %></span>
+		  <%= @investigator.profile_name %>
+		</header>
+	  </li>
+	</ul>
+  	<ul><li><label>Sanity :</label> <%= @investigator.madness_status %></li></ul>
+    <ul>
+	  <li>
+		<% if @investigator.wounds > 0 %>
+		  <%= link_to( '[heal]', heal_web_investigator_path(current_investigator), :class => 'right', :method => :put) if @investigator.possessions.items.medical.count > 0 %>
+		<% end %>
+		<label>Wounds :</label> <%= @investigator.wound_status %>
+	  </li>
+	</ul>
+    <ul>
+	  <li><label>Funds :</label> £<%= @investigator.funds %></li>
+	</ul>
+	
+    <ul>
+	  <li>
+		<label>Moxie :</label> <%= @investigator.moxie %>
+		<span class='right'><em>Use your moxie to hasten and solve investigations</em></span>
+	  </li>
+	</ul>
+  </fieldset>
+
+  <br />
+  <fieldset>	
+    <ul>
+	  <li>
+		<label>Experience :</label> <%= @investigator.experience %>
+		<span class='right'>Next Level  <%= @investigator.next_level_experience %></span>
+	  </li>
+	  <li>
+		<div class='progress'>
+		  <p style='width:<%= @investigator.percent_until_next_level < 1 ? '1' : @investigator.percent_until_next_level %>%'></p>
+	  	  <span>You need <%= @investigator.experience_until_next_level %> more exp</span>
+		</div>
+	  </li>
+	</ul>
+  </fieldset>
+	
+  <fieldset>
+    <legend>
+	  <span class='right' style='font-size:15px;position:relative;top:5px;'>
+		<%= @investigator.skill_points == 0 ? "Skill Points for Next Level" : "Spend Your Skill Points (#{@investigator.skill_points})" %>
+	  </span>
+	  <span>Skills</span>
+	</legend>
+    <ul>
+	<%= render @investigator.stats %> 
+    </ul>
+  </fieldset>
+  </div>
+</article>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cthulhu Quest on Facebook</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <%= stylesheet_link_tag :defaults, :cache => false %>
+
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div id="container">
+	<div id="main">
+	  <%= render :partial => "facebook/facebook/header" %>
+	
+	  <div id="content">
+		<%= yield %>
+	  </div>
+
+	  <%= render :partial => "facebook/facebook/footer" %>
+	</div>
+  </div>
+  <div id="dialogs"></div>
+  <div id="fb-root"></div>
+<script>
+
+window.fbAsyncInit = function() {
+  FB.init({appId: 'd380f16d6396e1216ebc609602651341', status: true, cookie: true, xfbml: true});
+  <% if Rails.env.production? %>
+    FB.Canvas.setSize();
+    FB.Canvas.setAutoResize(500);
+  <% end %>
+};
+
+(function() {
+  var e = document.createElement('script'); e.async = true;
+  e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+  document.getElementById('fb-root').appendChild(e);
+}());
+</script>
+
+<%= render :partial => "web/google_analytics" if Rails.env.production? %>
+</body>
+</html>

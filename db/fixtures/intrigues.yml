@@ -1,0 +1,799 @@
+the_beatus_methodivo_4:
+  id: 103
+  title: Trace Gnostic Overlords to Indian Dynasties
+  challenge_id: 4
+  plot_id: 5
+  difficulty: 3
+  ordinal: 4
+  
+the_oracles_of_nostradamus_5:
+  id: 102
+  title: Prognosticate Forthcoming War 
+  challenge_id: 10
+  plot_id: 9
+  difficulty: 2
+  ordinal: 5
+  
+the_oracles_of_nostradamus_4:
+  id: 101
+  title: Prognosticate Economic Collapse
+  challenge_id: 10
+  plot_id: 9
+  difficulty: 2
+  ordinal: 4
+  
+the_golden_bough_4:
+  id: 100
+  title: Stage a Mock Year-King Sacrifice
+  challenge_id: 7
+  plot_id: 2
+  difficulty: 3
+  ordinal: 4
+  
+the_golden_bough_5:
+  id: 99
+  title: Ponder the Grotesque Truths
+  challenge_id: 10
+  plot_id: 2
+  difficulty: 3
+  ordinal: 5
+    
+the_golden_bough_1:
+  id: 7
+  title: Despair at the Grip of Myth
+  challenge_id: 10
+  plot_id: 2
+  difficulty: 1
+  ordinal: 1
+  
+the_golden_bough_2:
+  id: 6
+  title: Seek the Secret Opinions of Scholars
+  challenge_id: 5
+  plot_id: 2
+  difficulty: 1
+  ordinal: 2
+  
+the_golden_bough_3:
+  id: 5
+  title: Fraudulently Obtain Church Records 
+  challenge_id: 8
+  plot_id: 2
+  difficulty: 3
+  ordinal: 3
+
+the_i_ching_6:
+  id: 98
+  title: Master the Science of Hexagram Divination
+  challenge_id: 10
+  plot_id: 3
+  difficulty: 3
+  ordinal: 6
+  
+the_i_ching_5:
+  id: 97
+  title: Anger and Defeat the Taoist Sorcerer
+  challenge_id: 7
+  plot_id: 3
+  difficulty: 2
+  ordinal: 5
+  
+the_i_ching_4:
+  id: 96
+  title: Follow a Monk Through a Road of Misfortune
+  challenge_id: 1
+  plot_id: 3
+  difficulty: 1
+  ordinal: 4
+  
+malleus_maleficarum_third_5:
+  id: 95
+  title: Defeat the Goddess of the Crossroads
+  challenge_id: 7
+  plot_id: 27
+  difficulty: 7
+  ordinal: 5
+  
+malleus_maleficarum_third_4:
+  id: 94
+  title: Defeat the Three-Formed Witch
+  challenge_id: 3
+  plot_id: 27
+  difficulty: 5
+  ordinal: 4
+  
+malleus_maleficarum_third_3:
+  id: 93
+  title: Defeat Hecate's Daughter
+  challenge_id: 7
+  plot_id: 27
+  difficulty: 5
+  ordinal: 3
+  
+malleus_maleficarum_third_2:
+  id: 92
+  title: Spoil the Witches' Flying Ointment
+  challenge_id: 1
+  plot_id: 27
+  difficulty: 2
+  ordinal: 2
+  
+malleus_maleficarum_third_1:
+  id: 91
+  title: Save the Cousin's Life as She Strikes at Yours
+  challenge_id: 3
+  plot_id: 27
+  difficulty: 3
+  ordinal: 1
+  
+malleus_maleficarum_second_5:
+  id: 90
+  title: Recover the Malleus From a Heap of Desecrated Bibles
+  challenge_id: 10
+  plot_id: 26
+  difficulty: 2
+  ordinal: 5
+  
+malleus_maleficarum_second_4:
+  id: 89
+  title: Follow the Wolves to the Satanic Grove
+  challenge_id: 1
+  plot_id: 26
+  difficulty: 2
+  ordinal: 4
+  
+malleus_maleficarum_second_3:
+  id: 88
+  title: Earn the Trust of the Senior Citizens
+  challenge_id: 6
+  plot_id: 26
+  difficulty: 1
+  ordinal: 3
+  
+malleus_maleficarum_second_2:
+  id: 87
+  title: Remove the Witch Mask from the Cousin's Bedroom
+  challenge_id: 7
+  plot_id: 26
+  difficulty: 2
+  ordinal: 2
+  
+malleus_maleficarum_second_1:
+  id: 86
+  title: Fend Off Vigilante Arsonists at the Cousin's Home
+  challenge_id: 3
+  plot_id: 26
+  difficulty: 3
+  ordinal: 1
+  
+malleus_maleficarum_first_5:
+  id: 85
+  title: Stumble Upon a Vile Herb Garden in the Woods
+  challenge_id: 1
+  plot_id: 7
+  difficulty: 1
+  ordinal: 5
+  
+malleus_maleficarum_first_4:
+  id: 84
+  title: Find an Astonishing Pattern in the Birth Records
+  challenge_id: 4
+  plot_id: 7
+  difficulty: 1
+  ordinal: 4
+  
+malleus_maleficarum_first_3:
+  id: 83
+  title: Resist the Libidinous Advances of Certain Townsfolk
+  challenge_id: 1
+  plot_id: 7
+  difficulty: 1
+  ordinal: 3
+  
+malleus_maleficarum_first_2:
+  id: 82
+  title: Privately Inspect the Accused's "Witch's Mark"
+  challenge_id: 1
+  plot_id: 7
+  difficulty: 1
+  ordinal: 2
+  
+malleus_maleficarum_first_1:
+  id: 81
+  title: Tally the Affairs of Community Leaders
+  challenge_id: 8
+  plot_id: 7
+  difficulty: 1
+  ordinal: 1
+  
+national_electric_light_association_1:
+  id: 80
+  title: Qualify for a NELA Work Contract
+  challenge_id: 5
+  plot_id: 25
+  difficulty: 1
+  ordinal: 1
+  
+national_electric_light_association_2:
+  id: 79
+  title: Assist in the Light Labs
+  challenge_id: 4
+  plot_id: 25
+  difficulty: 2
+  ordinal: 2
+  
+national_electric_light_association_3:
+  id: 78
+  title: Obtain Restricted Laboratory Keys
+  challenge_id: 1
+  plot_id: 25
+  difficulty: 1
+  ordinal: 3
+  
+national_electric_light_association_4:
+  id: 77
+  title: Identify the Light Gate to Another World
+  challenge_id: 5
+  plot_id: 25
+  difficulty: 3
+  ordinal: 4
+  
+king_in_yellow_1:
+  id: 76
+  title: Astral Travel to Aldebaran
+  challenge_id: 7
+  plot_id: 22
+  difficulty: 5
+  ordinal: 1
+  
+king_in_yellow_2:
+  id: 75
+  title: Save the Phantom of Truth from Priest Naotalba
+  challenge_id: 1
+  plot_id: 23
+  difficulty: 5
+  ordinal: 2
+  
+king_in_yellow_3:
+  id: 74
+  title: Behold the Pallid Mask
+  challenge_id: 9
+  plot_id: 23
+  difficulty: 5
+  ordinal: 3
+  
+king_in_yellow_4:
+  id: 73
+  title: Battle the Tatterdemalion Deamon
+  challenge_id: 3
+  plot_id: 23
+  difficulty: 7
+  ordinal: 4
+  
+king_in_yellow_5:
+  id: 72
+  title: Survive the Inauguration of Carcosa
+  challenge_id: 1
+  plot_id: 23
+  difficulty: 5
+  ordinal: 5
+  
+no_mask_1:
+  id: 71
+  title: Discover the Glowing Yellow Symbols on the Doors
+  challenge_id: 7
+  plot_id: 22
+  difficulty: 4
+  ordinal: 1
+  
+no_mask_2:
+  id: 70
+  title: Stumble Upon the Decapitated Du Pont Body
+  challenge_id: 1
+  plot_id: 23
+  difficulty: 3
+  ordinal: 2
+  
+no_mask_3:
+  id: 69
+  title: Stumble Upon the Hanging Rothschild Body
+  challenge_id: 1
+  plot_id: 23
+  difficulty: 3
+  ordinal: 3
+  
+no_mask_4:
+  id: 68
+  title: Stumble Upon the Mutilated Astor Body
+  challenge_id: 1
+  plot_id: 23
+  difficulty: 3
+  ordinal: 4
+  
+no_mask_5:
+  id: 67
+  title: Flee From the Tattered Man
+  challenge_id: 3
+  plot_id: 23
+  difficulty: 5
+  ordinal: 5
+  
+no_mask_6:
+  id: 66
+  title: Assemble the Guests for Escape
+  challenge_id: 6
+  plot_id: 23
+  difficulty: 2
+  ordinal: 6
+  
+have_you_seen_the_yellow_sign_1:
+  id: 65
+  title: Read the Playwright's Scurrilous and Perverse Dramas
+  challenge_id: 10
+  plot_id: 22
+  difficulty: 2
+  ordinal: 1
+  
+have_you_seen_the_yellow_sign_2:
+  id: 64
+  title: Compile a Guest List
+  challenge_id: 6
+  plot_id: 22
+  difficulty: 2
+  ordinal: 2
+  
+have_you_seen_the_yellow_sign_3:
+  id: 63
+  title: Discover the Playwright's Time in the Psychiatry Facility
+  challenge_id: 9
+  plot_id: 22
+  difficulty: 4
+  ordinal: 3
+  
+have_you_seen_the_yellow_sign_4:
+  id: 62
+  title: Steal the Case Records of Deviance and Obsessions
+  challenge_id: 8
+  plot_id: 22
+  difficulty: 3
+  ordinal: 4
+  
+have_you_seen_the_yellow_sign_5:
+  id: 61
+  title: Dress in Costume for the Masquerade 
+  challenge_id: 6
+  plot_id: 22
+  difficulty: 4
+  ordinal: 5
+  
+grandfathers_journal_1:
+  id: 60
+  title: Locate the Abandoned Farmhouse
+  challenge_id: 1
+  plot_id: 21
+  difficulty: 2
+  ordinal: 1
+  
+grandfathers_journal_2:
+  id: 59
+  title: Interview Academic Club Alumni
+  challenge_id: 6
+  plot_id: 21
+  difficulty: 1
+  ordinal: 2
+  
+grandfathers_journal_3:
+  id: 58
+  title: Steal Secret Club Summoning Codex
+  challenge_id: 8
+  plot_id: 21
+  difficulty: 1
+  ordinal: 3
+  
+grandfathers_journal_4:
+  id: 57
+  title: Repair the Farmhouse Portal Wards
+  challenge_id: 7
+  plot_id: 21
+  difficulty: 3
+  ordinal: 4
+  
+grandfathers_journal_5:
+  id: 56
+  title: Put Down the Summoned Horror
+  challenge_id: 7
+  plot_id: 21
+  difficulty: 4
+  ordinal: 5
+  
+ulthars_decree_1:
+  id: 55
+  title: Follow the Trail of Cat Cadavers
+  challenge_id: 1
+  plot_id: 20
+  difficulty: 1
+  ordinal: 1
+  
+ulthars_decree_2:
+  id: 54
+  title: Conduct a Nightwatch
+  challenge_id: 1
+  plot_id: 20
+  difficulty: 1
+  ordinal: 2
+  
+ulthars_decree_3:
+  id: 53
+  title: Discover the Poisoner's Door-Stoop Milk Dish
+  challenge_id: 1
+  plot_id: 20
+  difficulty: 1
+  ordinal: 3
+  
+unquiet_dead_1:
+  id: 52
+  title: Question the Classmates
+  challenge_id: 6
+  plot_id: 19
+  difficulty: 1
+  ordinal: 1
+  
+unquiet_dead_2:
+  id: 51
+  title: Interview the Young Woman Owen Loved
+  challenge_id: 9
+  plot_id: 19
+  difficulty: 1
+  ordinal: 2
+  
+unquiet_dead_3:
+  id: 50
+  title: Review the Coroner's Autopsy Report
+  challenge_id: 4
+  plot_id: 19
+  difficulty: 2
+  ordinal: 3
+  
+unquiet_dead_4:
+  id: 49
+  title: Steal Owen's Copy of Herbert West's Dissertation
+  challenge_id: 1
+  plot_id: 19
+  difficulty: 2
+  ordinal: 4
+  
+unquiet_dead_5:
+  id: 48
+  title: Find the Lab on the Wooded Hill
+  challenge_id: 3
+  plot_id: 19
+  difficulty: 4
+  ordinal: 5
+  
+professors_lecture_1:
+  id: 47
+  title: Mingle With the Audience
+  challenge_id: 4
+  plot_id: 18
+  difficulty: 1
+  ordinal: 1
+
+professors_lecture_2:
+  id: 46
+  title: Heed The Professor's Thesis
+  challenge_id: 10
+  plot_id: 18
+  difficulty: 1
+  ordinal: 2
+  
+night_terrors_1:
+  id: 45
+  title: Record a Dream Journal
+  challenge_id: 4
+  plot_id: 17
+  difficulty: 1
+  ordinal: 1
+
+night_terrors_2:
+  id: 2
+  title: Pen Automatistic Drawings
+  challenge_id: 10
+  plot_id: 17
+  difficulty: 2
+  ordinal: 2
+  
+night_terrors_3:
+  id: 44
+  title: Conquer Dream Paralysis
+  challenge_id: 10
+  plot_id: 17
+  difficulty: 2
+  ordinal: 3
+  
+triassic_translations_1:
+  id: 43
+  title: Visit the Revered's Confederate Clergymen
+  challenge_id: 5
+  plot_id: 16
+  difficulty: 1
+  ordinal: 1
+  
+triassic_translations_2:
+  id: 42
+  title: Take Mass at the Perish
+  challenge_id: 1
+  plot_id: 16
+  difficulty: 1
+  ordinal: 2
+  
+triassic_translations_3:
+  id: 41
+  title: Understand the Sermon's Allusions
+  challenge_id: 5
+  plot_id: 16
+  difficulty: 3
+  ordinal: 1
+  
+triassic_translations_4:
+  id: 40
+  title: Search After Hours Beneath the Altarpiece
+  challenge_id: 1
+  plot_id: 16
+  difficulty: 3
+  ordinal: 4
+
+polis_of_sunken_sahara_1:
+  id: 39
+  title: Circulate the Publisher's Name by Telegram
+  challenge_id: 6
+  plot_id: 15
+  difficulty: 1
+  ordinal: 1
+  
+polis_of_sunken_sahara_2:
+  id: 38
+  title: Make an Introduction to the Publisher
+  challenge_id: 6
+  plot_id: 15
+  difficulty: 2
+  ordinal: 2
+  
+polis_of_sunken_sahara_3:
+  id: 37
+  title: Infiltrate the Archeology Offices
+  challenge_id: 1
+  plot_id: 15
+  difficulty: 2
+  ordinal: 1
+  
+polis_of_sunken_sahara_4:
+  id: 36
+  title: Crack the Manuscript Safe
+  challenge_id: 1
+  plot_id: 15
+  difficulty: 4
+  ordinal: 4
+  
+last_man_standing_1:
+  id: 35
+  title: Attend (and wager on) a Bare Knuckle Match
+  challenge_id: 8
+  plot_id: 11
+  difficulty: 1
+  ordinal: 1
+  
+last_man_standing_2:
+  id: 34
+  title: Train at the Boxing Gym
+  challenge_id: 3
+  plot_id: 11
+  difficulty: 3
+  ordinal: 2
+  
+last_man_standing_3:
+  id: 33
+  title: Negotiate With the Fight Promotor
+  challenge_id: 8
+  plot_id: 11
+  difficulty: 2
+  ordinal: 3
+  
+last_man_standing_4:
+  id: 32
+  title: Become the Last Man Standing
+  challenge_id: 3
+  plot_id: 11
+  difficulty: 6
+  ordinal: 4
+  
+clavis_alchimiae_1:
+  id: 31
+  title: Read Sleeplessly, Carefully, and Deeply
+  challenge_id: 4
+  plot_id: 10
+  difficulty: 3
+  ordinal: 1
+
+clavis_alchimiae_2:
+  id: 30
+  title: Seek the Venerable Commentary of Experts
+  challenge_id: 5
+  plot_id: 10
+  difficulty: 3
+  ordinal: 2
+  
+clavis_alchimiae_3:
+  id: 29
+  title: Invoke the Alchemical Recipes
+  challenge_id: 4
+  plot_id: 10
+  difficulty: 2
+  ordinal: 3
+  
+the_oracles_of_nostradamus_1:
+  id: 28
+  title: Consult the Mirabilis Liber
+  challenge_id: 4
+  plot_id: 9
+  difficulty: 2
+  ordinal: 1
+
+the_oracles_of_nostradamus_2:
+  id: 27
+  title: Identify Candidates for Mabus
+  challenge_id: 5
+  plot_id: 9
+  difficulty: 2
+  ordinal: 2
+  
+the_oracles_of_nostradamus_3:
+  id: 26
+  title: Seek Answers in Salon-de-Provence
+  challenge_id: 1
+  plot_id: 9
+  difficulty: 3
+  ordinal: 3
+  
+the_zohar_1:
+  id: 25
+  title: Read Sleeplessly, Carefully, and Deeply
+  challenge_id: 4
+  plot_id: 8
+  difficulty: 3
+  ordinal: 1
+
+the_zohar_2:
+  id: 24
+  title: Seek the Venerable Commentary of Experts
+  challenge_id: 5
+  plot_id: 8
+  difficulty: 2
+  ordinal: 2
+  
+the_zohar_3:
+  id: 23
+  title: Enhance One's Heavenly Grace
+  challenge_id: 10
+  plot_id: 8
+  difficulty: 3
+  ordinal: 3
+  
+the_key_of_solomon_1:
+  id: 19
+  title: Read Between Allegory and Truth
+  challenge_id: 4
+  plot_id: 6
+  difficulty: 3
+  ordinal: 1
+
+the_key_of_solomon_2:
+  id: 18
+  title: Seek the Venerable Commentary of Experts
+  challenge_id: 5
+  plot_id: 6
+  difficulty: 4
+  ordinal: 2
+  
+the_key_of_solomon_3:
+  id: 17
+  title: Memorize the Daemonology
+  challenge_id: 7
+  plot_id: 6
+  difficulty: 4
+  ordinal: 3
+  
+the_beatus_methodivo_1:
+  id: 16
+  title: Recite the Mantras
+  challenge_id: 10
+  plot_id: 5
+  difficulty: 2
+  ordinal: 1
+
+the_beatus_methodivo_2:
+  id: 15
+  title: Find Secrets in the Caste Records
+  challenge_id: 4
+  plot_id: 5
+  difficulty: 3
+  ordinal: 2
+  
+the_beatus_methodivo_3:
+  id: 14
+  title: Break Bread With the Aghori
+  challenge_id: 1
+  plot_id: 5
+  difficulty: 3
+  ordinal: 3
+    
+the_emerald_tablet_1:
+  id: 13
+  title: Read Sleeplessly, Carefully, and Deeply
+  challenge_id: 4
+  plot_id: 4
+  difficulty: 3
+  ordinal: 1
+  
+the_emerald_tablet_2:
+  id: 12
+  title: Seek the Venerable Commentary of Experts
+  challenge_id: 5
+  plot_id: 4
+  difficulty: 3
+  ordinal: 2
+  
+the_emerald_tablet_3:
+  id: 11
+  title: Internalize the Cryptic Truths
+  challenge_id: 10
+  plot_id: 4
+  difficulty: 5
+  ordinal: 3
+    
+the_i_ching_1:
+  id: 10
+  title: Play the Old Man at an Endless Game of Go
+  challenge_id: 10
+  plot_id: 3
+  difficulty: 2
+  ordinal: 1
+  
+the_i_ching_2:
+  id: 9
+  title: Study the Bā Gùa of the Humble Pawnbroker
+  challenge_id: 5
+  plot_id: 3
+  difficulty: 1
+  ordinal: 2
+  
+the_i_ching_3:
+  id: 8
+  title: Find an Oracle in a Blood Soaked Fish Barrel 
+  challenge_id: 1
+  plot_id: 3
+  difficulty: 1
+  ordinal: 3
+  
+troubled_dreams_1:
+  id: 4
+  title: Record a Dream Journal
+  challenge_id: 4
+  plot_id: 1
+  difficulty: 1
+  ordinal: 1
+  
+troubled_dreams_2:
+  id: 3
+  title: Submit to Hypnosis
+  challenge_id: 9
+  plot_id: 1
+  difficulty: 1
+  ordinal: 2
+  
+troubled_dreams_3:
+  id: 1
+  title: Suffer Alternating Déjà Vu & Jamais Vu
+  challenge_id: 10
+  plot_id: 1
+  difficulty: 1
+  ordinal: 3

@@ -1,0 +1,106 @@
+<table id='ally-grid-table' class='grid-table' cellspacing="5">
+<% 9.times do |idx| %>
+  <% if idx % 3 == 0 %><tr class="<%= 'hidden' if idx >= 9 %>" data-index="<%= (idx / 3) %>"><% end %>
+	  <td>
+		<% if idx < allies.size %>	
+		  <div class='container'>
+			<h4>
+			  <span class='avatar'>	
+			  <% if allies[idx].ally.user %>	
+			    <%= image_tag allies[idx].ally.user.facebook_photo, :height => '50', :width => '50' %>
+			  <% end %>
+			  </span>
+			
+		      <span class="right ui-state-default ui-corner-all remove">
+		        <%= link_to '', facebook_ally_path(allies[idx]), 
+		                    :remote => true,
+		                    :method => 'delete',
+		                    'data-title' => 'Remove Ally',
+		                    :class => 'ui-icon ui-icon-closethick remove-ally-button'%>
+		      </span>			
+			
+			  <%= truncate(allies[idx].ally.name, :length => 20) %>
+			</h4>
+			<h6><%= allies[idx].ally.user ? truncate(allies[idx].ally.user.full_name, :length => 30) : 'unknown' %></h6>
+			
+			<h5><%= allies[idx].ally.profile_name %><br />Level <%= allies[idx].ally.level %></h5>
+			<ul>			
+			  <% allies[idx].ally.positive_stats.each_with_index do |s,s_idx| %>
+			    <% if s_idx % 2 == 0 %>
+			      <li style='color:#201913'>
+				    <span class='even'><%= s.skill_name %></span>
+				    <span class='value'><%= s.skill_level %></span>
+				<% else %>	
+				    <span class='value'><%= s.skill_level %></span>
+				    <span class='odd'><%= s.skill_name %></span>
+			    <% end %>
+				
+			    <% if s_idx % 2 == 1  || s_idx == allies[idx].ally.positive_stats.size %></li><% end %>
+			  <% end %>
+			
+			  <% if allies[idx].ally.wounded? %>
+			    <li style='background-color:#801'>
+				  <span><em>Injured</em></span>
+				  <div class='right'>-<%= allies[idx].ally.wounds %>&hearts; &nbsp;</div>
+				</li>
+			  <% end %>
+			  <% if allies[idx].ally.maddened? %>
+			    <li style='background-color:#346270'>
+				  <span><em>Unwell</em></span>
+				  <div class='right'>-<%= allies[idx].ally.madness %>&there4; &nbsp;</div>
+				</li>
+			  <% end %>
+			  <% if allies[idx].ally.destitute? %>
+			    <li style='background-color:#444'>
+				  <span><em>Destitute</em></span>
+				  <div class='right'>0&pound; &nbsp;</div>
+				</li>
+			  <% end %>			
+			</ul>
+			<h5 class='tab-bottom'>
+			  <% if allies[idx].ally.user && allies[idx].ally.user.last_login_at %>
+				last seen <%= time_ago_in_words(allies[idx].ally.user.last_login_at) %> ago
+			  <% elsif allies[idx].ally.last_income_at %>	
+				last seen <%= time_ago_in_words(allies[idx].ally.last_income_at) %> ago
+			  <% end %>
+			</h5>
+			
+			<div class='cmd'>
+			  <%= link_to "view profile", 
+			              "/facebook/investigators/#{allies[idx].ally_id}", 
+			              :remote => true, 
+			              :class => 'ally-button', 
+			              'data-title' => "Your Ally: #{allies[idx].ally.name}" %>
+			</div>	
+		  </div>
+		<% else %>
+		  <div class='container empty'>
+			<h4>
+			  <span class='avatar'></span>	
+			  Nameless
+			</h4>
+			<h6>&nbsp;</h6>
+			<h5>&nbsp;<br />NO INVESTIGATOR</h5>
+			<ul>
+			  <li>This Inner Circle seat is empty. Add an ally from your other friends, and call upon their help when investigating plots.</li>
+			</ul>
+			<span class='cmd'></span>
+		  </div>
+		<% end %>
+	  </td>	
+  <% if (idx % 3 == 2) %></tr><% end %>	
+<% end %>
+</table>
+<script>
+$(function() {
+  $( "a.ally-button" ).bindAjaxRequester({
+    height: 700	
+  });
+  $( "a.remove-ally-button" ).bindAjaxRequester({
+	confirmation: "Are you sure you want to remove this ally from your Inner Circle?",
+	success: function() { $('#nav-tab-society').trigger('click'); },
+	button: false
+  });
+
+});
+</script>

@@ -1,0 +1,151 @@
+<article class='sidebar'>
+  <% unless @plot_thread.solved? %>	
+  <h2>Requirements</h2>
+  <ul class="picklist">
+	<li class="header">There are investigative prerequisites for this plot.</li>
+    <li>
+	  <div class="body centered">
+		<table>
+		<%= render @prerequisites %>
+	    </table>
+	  </div>
+	</li>
+  </ul>
+  <% end %>
+
+  <h2>Rewards</h2>
+  <ul class="picklist">
+	<li class="header">
+		<%= @plot_thread.solved? ? "You received these rewards for solving the plot." : "You'll receive these rewards for solving the plot." %></li>
+    <li>
+	  <div class="body centered">
+		<table>
+		<%= render @rewards %>
+	    </table>
+	  </div>
+	</li>
+  </ul>
+</article>
+	
+<article>
+  <header>
+	<h2>Plot : <%= @plot_thread.plot.title %></h2>
+  </header>
+
+  <div class="profile">
+    <header><h3><%= @plot_thread.plot.subtitle %></h3></header>
+    <br />
+
+    <fieldset>
+      <legend><%= @plot_thread.status.titleize %></legend>
+      <ul>
+	    <li>
+		  <header>
+			<% if @plot_thread.investigating? %>
+			  Currently investigating at this very moment
+			<% else %>
+			  <%= pluralize( @plot_thread.plot.duration, 'hour' ) %> of investigation required to solve
+			<% end %>
+		  </header>
+		</li>	
+		<% if @plot_thread.solution_id %>
+		  <li><header>The solution was to <%= @plot_thread.solution.title %></header></li>
+		<% end %>
+		
+		<% @plot_thread.investigations.each do |thread| %>
+		  <% next unless @plot_thread.unsolved? %>
+		<% end %>
+	  </ul>
+    </fieldset>
+
+    <% if @plot_thread.plot.description %>
+    <fieldset>
+      <ul><li style='font-size:13px;background:white;'><%= raw @plot_thread.plot.description.gsub(/\n/, "<div style='height:5px;'></div>") %></li></ul>
+    </fieldset>
+    <% end %>
+
+    <fieldset>
+      <legend>Intrigues</legend>
+      <ul>
+	    <% if @plot_thread.investigations.active.exists? %>
+          <% @plot_thread.investigations.active.last.assignments.each do |assignment| %>
+            <li>
+	          <label><%= assignment.intrigue.title %></label>
+	          <span class='right'><%= link_to_assignment_investigator(assignment) %></span>
+            </li>
+          <% end %>
+        <% elsif @plot_thread.solved? %>
+		  <% @solved_investigation.assignments.each_with_index do |assignment,idx| %>
+		    <li>
+			  <label><%= assignment.intrigue.title %></label> 
+	          <span class='right'><%= "#{assignment.intrigue.challenge.name} #{assignment.intrigue.difficulty}" %></span>
+	
+			  <div style='font-size:13px;font-style:italic;'>
+				<%= raw assignment.helpers(:past => true, :html => true) %>
+			  </div>
+			</li>
+		  <% end %>
+        <% else %>
+		  <% @plot_thread.plot.intrigues.each_with_index do |intrigue,idx| %>
+		    <li>
+			  <label><%= intrigue.title %></label> 
+	          <span class='right'><%= "#{intrigue.challenge.name} #{intrigue.difficulty}" %></span>
+	
+			  <% if @plot_thread.solved? %>
+			  <% end %>
+			</li>
+		  <% end %>
+	    <% end %>
+	  </ul>
+    </fieldset>
+
+	<% unless @threats.blank? %>
+    <fieldset>
+      <legend>Threats</legend>
+      <ul>
+	    <%= render :partial => 'web/threats/threat', :collection => @threats, :locals => { :show => (@unsolved_investigations.size > 0 || @plot_thread.solved?) } %>
+	  </ul>
+    </fieldset>
+    <% end %>
+
+    <% unless @plot_thread.solved? %>
+	  <fieldset>
+		<% if @plot_thread.available? %>
+	      <a href="<%= new_web_casebook_investigation_path(@plot_thread) %>">
+		    <button type='submit'>Prepare to Investigate</button>
+		  </a>
+		<% elsif @plot_thread.investigating? %>
+	      <a href="<%= edit_web_casebook_investigation_path( @plot_thread, @plot_thread.investigations.active.last ) %>">
+		    <button type='submit'>Review Investigation</button>
+		  </a>
+		<% end %>
+	  </fieldset>
+	<% end %>
+  </div>
+</article>
+<br />
+
+<% unless @unsolved_investigations.blank? %>
+<article>
+  <header>
+	<h2>Failed Investigations</h2>
+  </header>
+
+  <div class="profile">
+    <fieldset>
+      <ul>	
+	    <% @unsolved_investigations.each do |investigation| %>
+	      <li>
+		    <strong><%= time_ago_in_words( investigation.finished_at )%> ago</strong> you investigated this plot but failed to 
+		    <%= investigation.assignments.select{|a| !a.successful?}.map(&:intrigue).map(&:title).join(", and ") %>.
+		  </li>
+	    <% end %>
+	    <li>
+		  <em style='font-size:12px;'>Your obsessive determination will grant a +<%= @unsolved_investigations.first.consecutive_failure_bonus %> bonus to all challenges next time you attempt to solve this plot.</em>
+		</li>
+	  </ul>
+    </fieldset>
+  </div>
+</article>
+
+<% end %>

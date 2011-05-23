@@ -1,0 +1,15 @@
+<div class="badge investigator">
+  <div>
+	<a class="img" href="<%= web_investigator_path( investigator )%>">
+	  <img src="#" />
+      <label><%= investigator.name %></label>
+	</a>	
+	<ul>
+	  <li><%= investigator.profile_name %></li>
+	  <% investigator.stats.each do |s| %>
+	    <li><label><%= s.skill_name %>:</label> <span><%= s.skill_level %></span></li>
+	  <% end %>		
+	</ul>
+	<p><span class="facebook"><%= investigator.user.full_name %></span></p>
+  </div>
+</div>

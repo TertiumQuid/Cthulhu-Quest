@@ -1,0 +1,53 @@
+<div class="panel">
+  <div class="wrapper">	
+	<%= form_for [:facebook, @spell, @casting], 
+				  :url => facebook_spell_castings_path, 
+				  :remote => true do |f| %>
+				
+		<ul class='profile'>
+		  <li class='super'>
+		    <span class='title'><%= @spell.name %></span>
+		    <q><%= @spell.description %></q>
+		  </li>	
+		  <li style='padding-left:20px;'>
+			<% if current_investigator.moxie >= @spell.time_cost %> 	
+			  <span class='right'>	
+				<div style='float:right;margin-top:5px'>
+				<em style='font-size:14px;'><%= f.label :moxie_speed, raw("Spend #{@spell.time_cost} (of #{current_investigator.moxie}) moxie, cast now &nbsp;") %></em><%= f.check_box :moxie_speed, {:style => 'width:20px;height:20px;position:relative;top:-5px;'}, @spell.time_cost %>
+				</div>
+			  </span>
+			<% end %>
+
+			<%= pluralize( @spell.time_cost, 'hour' ) %> of casting required
+		  </li>	
+		</ul>	
+		
+	    <ul class='profile'>
+		  <li class='super'><span style='font-size:18px;'>Effects</span></li>
+
+	      <% @spell.effects.each do |effect| %>
+	        <li><em><%= effect.description %></em></li>
+	      <% end %>		
+	    </ul>
+		
+	    <ul class='profile'>
+		  <li class='super'><span style='font-size:18px;'>The Price of Magick</span></li>
+
+	      <li><label>Madness :</label> <span><%= @spell.madness_cost > 0 ? @spell.madness_cost : 'no cost' %></span></li>
+	      <li><label>Blood :</label> <span><%= @spell.wound_cost > 0 ? @spell.wound_cost : 'no cost' %></span></li>
+	    </ul>						
+	<% end %>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( "#new_casting" ).bindAjaxRequester({
+	button: $('<div />'),
+    success: function(sender) {
+      $('#nav-tab-magick').trigger('click');
+      $("#dialogs").dialog( "close" ); 
+	}
+  });	
+});
+</script>

@@ -1,0 +1,281 @@
+boston_kingsport:
+  origin_id: 4
+  destination_id: 17
+  mode: train
+  price: 5
+  
+kingsport_boston:
+  origin_id: 17
+  destination_id: 4
+  mode: train
+  price: 5
+  
+dunwich_miskatonic_valley:
+  origin_id: 16
+  destination_id: 1
+  mode: bus
+  price: 1
+  
+dunwich_kingsport:
+  origin_id: 16
+  destination_id: 17
+  mode: train
+  price: 3
+  
+kingsport_dunwich:
+  origin_id: 17
+  destination_id: 16
+  mode: train
+  price: 3
+  
+kingsport_innsmouth:
+  origin_id: 17
+  destination_id: 18
+  mode: train
+  price: 3
+  
+innsmouth_kingsport:
+  origin_id: 18
+  destination_id: 17
+  mode: train
+  price: 3
+
+new_orleans_boston:
+  origin_id: 8
+  destination_id: 4
+  mode: train
+  price: 10
+  
+boston_new_orleans:
+  origin_id: 4
+  destination_id: 8
+  mode: train
+  price: 10
+
+bibliotheque_nationale_paris:
+  origin_id: 19
+  destination_id: 6
+  mode: bus
+  price: 1
+  
+paris_bibliotheque_nationale:
+  origin_id: 6
+  destination_id: 19
+  mode: bus
+  price: 1
+  
+british_museum_london:
+  origin_id: 20
+  destination_id: 5
+  mode: bus
+  price: 1
+  
+london_british_museum:
+  origin_id: 5
+  destination_id: 20
+  mode: bus
+  price: 1
+  
+harvard_university_boston:
+  origin_id: 21
+  destination_id: 4
+  mode: bus
+  price: 1
+  
+boston_harvard_university:
+  origin_id: 4
+  destination_id: 21
+  mode: bus
+  price: 1
+  
+chicago_new_york:
+  origin_id: 10
+  destination_id: 3
+  mode: train
+  price: 10
+  
+new_york_chicago:
+  origin_id: 3
+  destination_id: 10
+  mode: train
+  price: 10
+  
+chicago_boston:
+  origin_id: 10
+  destination_id: 4
+  mode: train
+  price: 10
+  
+boston_chicago:
+  origin_id: 4
+  destination_id: 10
+  mode: train
+  price: 10
+  
+miskatonic_university_arkham:
+  origin_id: 7
+  destination_id: 2
+  mode: bus
+  price: 1
+  
+miskatonic_university_miskatonic_valley:
+  origin_id: 2
+  destination_id: 1
+  mode: bus
+  price: 1
+  
+arkham_miskatonic_university:
+  origin_id: 2
+  destination_id: 7
+  mode: bus
+  price: 1
+  
+paris_new_york:
+  origin_id: 6
+  destination_id: 3
+  mode: steamship
+  price: 75
+  
+new_york_paris:
+  origin_id: 3
+  destination_id: 6
+  mode: steamship
+  price: 75
+  
+paris_london:
+  origin_id: 6
+  destination_id: 5
+  mode: steamship
+  price: 35
+  
+london_paris:
+  origin_id: 5
+  destination_id: 6
+  mode: steamship
+  price: 35
+  
+new_orleans_new_york:
+  origin_id: 8
+  destination_id: 3
+  mode: train
+  price: 10
+  
+new_york_new_orleans:
+  origin_id: 3
+  destination_id: 8
+  mode: train
+  price: 10
+
+boston_arkham:
+  origin_id: 4
+  destination_id: 2
+  mode: train
+  price: 6
+  
+arkham_boston:
+  origin_id: 2
+  destination_id: 4
+  mode: train
+  price: 7
+  
+new_york_boston:
+  origin_id: 3
+  destination_id: 4
+  mode: train
+  price: 5
+  
+boston_new_york:
+  origin_id: 4
+  destination_id: 3
+  mode: train
+  price: 5
+  
+london_new_york:
+  origin_id: 5
+  destination_id: 3
+  mode: steamship
+  price: 60
+  
+new_york_london:
+  origin_id: 3
+  destination_id: 5
+  mode: steamship
+  price: 60
+  
+innsmouth_arkham_county:
+  origin_id: 18
+  destination_id: 1
+  mode: bus
+  price: 5
+  
+innsmouth_arkham:
+  origin_id: 18
+  destination_id: 2
+  mode: bus
+  price: 5
+    
+kingsport_arkham:
+  origin_id: 17
+  destination_id: 2
+  mode: bus
+  price: 2
+  
+dunwich_arkham:
+  origin_id: 16
+  destination_id: 2
+  mode: bus
+  price: 3
+  
+arkham_dunwich:
+  origin_id: 2
+  destination_id: 16
+  mode: bus
+  price: 2
+  
+arkham_kingsport:
+  origin_id: 2
+  destination_id: 17
+  mode: bus
+  price: 2
+  
+arkham_innsmouth:
+  origin_id: 2
+  destination_id: 18
+  mode: bus
+  price: 2
+  
+miskatonic_valley_dunwich:
+  origin_id: 1
+  destination_id: 16
+  mode: train
+  price: 3
+  
+miskatonic_valley_kingsport:
+  origin_id: 1
+  destination_id: 17
+  mode: train
+  price: 3
+  
+miskatonic_valley_innsmouth:
+  origin_id: 1
+  destination_id: 18
+  mode: train
+  price: 5
+  
+miskatonic_valley_arkham:
+  origin_id: 1
+  destination_id: 2
+  mode: train
+  price: 3
+  
+arkham_new_york:
+  origin_id: 2
+  destination_id: 3
+  mode: train
+  price: 8
+  
+new_york_arkham:
+  origin_id: 3
+  destination_id: 2
+  mode: train
+  price: 5

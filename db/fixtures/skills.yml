@@ -1,0 +1,39 @@
+adventure:
+  id: 1
+  name: Adventure    
+    
+bureaucracy:
+  id: 2
+  name: Bureaucracy    
+    
+conflict:
+  id: 3
+  name: Conflict    
+    
+research:
+  id: 4
+  name: Research
+  
+scholarship:
+  id: 5
+  name: Scholarship
+  
+society:
+  id: 6
+  name: Society
+  
+sorcery:
+  id: 7
+  name: Sorcery
+  
+underworld:
+  id: 8
+  name: Underworld
+  
+psychology:
+  id: 9
+  name: Psychology
+  
+sensitivity:
+  id: 10
+  name: Sensitivity

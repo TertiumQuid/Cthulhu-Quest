@@ -1,0 +1,23 @@
+aleph_pi:
+  user: aleph
+  name: Aleph PI
+  profile: occultist
+  profile_name: Occultist
+  funds: 10
+  moxie: 2
+  location: arkham
+    
+beth_pi:
+  user: beth
+  name: Beth PI
+  profile: soldier
+  profile_name: Soldier
+  armed: beth_colt_45_automatic
+  location: arkham
+    
+gimel_pi:      
+  user: gimel  
+  name: Gimel PI
+  profile: professor
+  profile_name: Professor
+  location: arkham

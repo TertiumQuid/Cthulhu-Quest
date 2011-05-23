@@ -1,0 +1,42 @@
+<%= form_tag facebook_contact_introductions_path(@contact), :remote => true, :id => 'introduction-form' do %>
+<div class='para'>
+  <h4>
+	Introductions
+    <em>Uses <%= Introduction::COST %> favors</em>
+  </h4>
+
+  <% if !@contact.located? %>
+    <p>You must travel to <%= @contact.character.location.name %> to meet your contact and arrange an introduction in person.</p>
+  <% elsif !current_investigator.can_introduce? %>
+    <p>You've already arranged an introduction in the last <%= Introduction::TIMEFRAME %> hours; you'd not want to be thought a sycophant.</p>
+  <% else %>
+    <p><em>Select an ally to arrange an introduction with your contact</em></p>
+
+    <%= submit_tag "introduce", :class => 'right', :id => 'introduce-button' %>
+
+    <div id="introduction-radio" class='radio-strip'>
+	  <% @allies.each do |ally| %>
+	    <%= radio_button_tag 'investigator_id', ally.ally_id, false, :id => "introduce-ally-#{ally.id}"  %>
+	    <%= label_tag "introduce-ally-#{ally.id}", nil, :id => "introduce-ally-#{ally.id}-label" do %>
+	      <%= image_tag( ally.ally.user.facebook_photo('small'), :alt => '', :title => '', :width => 40, :height => 40) if ally.ally.user %>
+	      <br />
+	      <%= truncate(ally.ally.user ? ally.ally.user.name : ally.ally.name, :truncate => 16) %>
+	    <% end %>
+	  <% end %>
+    </div>  
+  <% end %>
+</div>	
+<%end %>
+
+<script>
+$(function() {
+  $( "#introduction-radio" ).buttonset();	
+  $( "#introduce-button" ).button();
+  $( "#introduction-form" ).bindAjaxRequester({
+	button: $( "#introduce-button" ),
+	success: function(sender) {
+	  $("#introduction-form").hide();
+	}
+  });
+});
+</script>

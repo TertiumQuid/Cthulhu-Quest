@@ -1,0 +1,228 @@
+sigillum_dei_aemeth_resist_madness:
+  id: 20
+  effecacy_id: 16
+  trigger_id: 86
+  trigger_type: Item
+  duration: 7
+  power: 1
+  name: Sigillum Dei Aemeth
+  target_name: Sanity
+  description: The infinte nature of God's magical seal grants a strength of mind against madness for seven blessed hours.
+
+rod_of_asclepius_restore_health:
+  id: 19
+  effecacy_id: 1
+  trigger_id: 73
+  trigger_type: Item
+  duration: 7
+  power: 2
+  name: Rod of Asclepius
+  target_name: Healing
+  description: The Asklepian scepter makes the bearer as Hippocrates for seven hours, blessing all healing actions during that time.
+
+charmstone_bond_social:
+  id: 18
+  effecacy_id: 10
+  trigger_id: 75
+  trigger_type: Item
+  duration: 12
+  power: 1
+  name: Charmstone
+  target_name: Social Functions
+  description: For twelve hours, where envy and paranoia would disrupt meetings between allies the charmstone compels all to cooperate.
+
+athame_enhance_attacks:
+  id: 17
+  effecacy_id: 15
+  trigger_id: 83
+  trigger_type: Item
+  duration: 9
+  power: 1
+  name: Athame
+  target_name: Attacks
+  description: Like the witch's talon, the Athame makes one quick and deadly, delivering an additional attack in all combat for nine hours.
+
+hand_of_glory_discount_travel:
+  id: 16
+  effecacy_id: 8
+  trigger_id: 82
+  trigger_type: Item
+  duration: 8
+  power: 50
+  name: Hand of Glory
+  target_name: Travel
+  description: Renders the candle-bearer immune to detection, permitting free and unrestricted travel in the world for eight hours.
+
+fire_of_asshurbanipal_challenge_intrigue:
+  id: 15
+  effecacy_id: 14
+  trigger_id: 81
+  trigger_type: Item
+  duration: 3
+  power: 1
+  name: Fire of Asshurbanipal
+  target_name: Intrigues
+  description: Confers the will of ambition upon the owner, granting a bonus against intrigues for three hours.
+  
+abraxas_stone_enhance_attack:
+  id: 14
+  effecacy_id: 4
+  trigger_id: 80
+  trigger_type: Item
+  duration: 6
+  power: 2
+  name: Abraxas Stone Ring
+  target_name: Attacking Power
+  description: Strengthens the wearer with the wisdom and authority of a seasoned warrior for six hours.
+  
+abraxas_stone_enhance_defense:
+  id: 13
+  effecacy_id: 5
+  trigger_id: 80
+  trigger_type: Item
+  duration: 6
+  power: 2
+  name: Abraxas Stone Ring
+  target_name: Defense
+  description: Endures the wearer's body with powers against harm for six hours.
+
+abramelin_oil_hasten_casting:
+  id: 12
+  effecacy_id: 13
+  trigger_id: 74
+  trigger_type: Item
+  duration: 3
+  power: 90
+  name: Abramelin Oil
+  target_name: Ritual spellcasting
+  description: Hastens the invocation of all spells for three hours, reducing the casting rituals to one tenth their time.
+
+sway_of_the_adept_enhance_skill:
+  id: 11
+  effecacy_id: 3
+  trigger_id: 10
+  trigger_type: Spell
+  target_id: 3
+  target_type: Skill
+  duration: 8
+  power: 2
+  name: Sway of the Adept
+  target_name: The skill of conflict
+  description: Enhances the mortal skills of conflict by two for the course of eight hours.
+  
+transmigration_of_consciousness_enhance_skill:
+  id: 10
+  effecacy_id: 3
+  trigger_id: 9
+  trigger_type: Spell
+  target_id: 9
+  target_type: Skill
+  duration: 8
+  power: 2
+  name: Transmigration of Consciousness
+  target_name: The skill of psychology
+  description: Enhances the mortal skills of psychology by two for the course of eight hours.
+  
+adoration_of_atlach_nacha_enhance_skill:
+  id: 9
+  effecacy_id: 3
+  trigger_id: 8
+  trigger_type: Spell
+  target_id: 2
+  target_type: Skill
+  duration: 8
+  power: 2
+  name: Adoration of Atlach Nacha
+  target_name: The skill of Bureaucracy
+  description: Enhances the mortal skills of bureaucracy by two for the course of eight hours.
+  
+trance_state_of_daoloth_enhance_skill:
+  id: 8
+  effecacy_id: 3
+  trigger_id: 7
+  trigger_type: Spell
+  target_id: 4
+  target_type: Skill
+  duration: 8
+  power: 2
+  name: Trance State of Daoloth
+  target_name: The skill of research
+  description: Enhances the mortal skills of research by two for the course of eight hours.
+  
+wine_of_the_thiasus_enhance_skill:
+  id: 7
+  effecacy_id: 3
+  trigger_id: 6
+  trigger_type: Spell
+  target_id: 6
+  target_type: Skill
+  duration: 8
+  power: 2
+  name: Wine of the Thiasus
+  target_name: The skill of society
+  description: Enhances the mortal skills of society by two for the course of eight hours.
+  
+fifty_names_of_marduk_enhance_skill:
+  id: 6
+  effecacy_id: 3
+  trigger_id: 5
+  trigger_type: Spell
+  target_id: 7
+  target_type: Skill
+  duration: 8
+  power: 2
+  name: Fifty Names of Marduk
+  target_name: The skill of sorcery
+  description: Enhances the mortal skills of sorcery by two for the course of eight hours.
+  
+eyes_of_hypnos_enhance_skill:
+  id: 5
+  effecacy_id: 3
+  trigger_id: 4
+  trigger_type: Spell
+  target_id: 10
+  target_type: Skill
+  duration: 8
+  power: 2
+  name: Eyes of Hypnos
+  target_name: The skill of sensitivity
+  description: Enhances the mortal skills of sensitivity by two for the course of eight hours.
+  
+call_of_nodens_enhance_skill:
+  id: 3
+  effecacy_id: 3
+  trigger_id: 3
+  trigger_type: Spell
+  target_id: 1
+  target_type: Skill
+  duration: 8
+  power: 2
+  name: Call of Nodens
+  target_name: The skill of adventure
+  description: Enhances the mortal skills of adventure by two for the course of eight hours.
+  
+flatus_of_tsathoggua_enhance_skill:
+  id: 2
+  effecacy_id: 3
+  trigger_id: 2
+  trigger_type: Spell
+  target_id: 8
+  target_type: Skill
+  duration: 8
+  power: 2
+  name: Flatus of Tsathoggua
+  target_name: The skill of underworld
+  description: Enhances the mortal skills of underworld by two for the course of eight hours.
+  
+chant_of_thoth_enhance_skill:
+  id: 1
+  effecacy_id: 3
+  trigger_id: 1
+  trigger_type: Spell
+  target_id: 5
+  target_type: Skill
+  duration: 8
+  power: 2
+  name: Chant of Thoth
+  target_name: The skill of scholarship
+  description: Enhances the mortal skills of scholarship by two for the course of eight hours.

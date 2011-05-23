@@ -1,0 +1,200 @@
+the_zohar_1:
+  title: Read Sleeplessly, Carefully, and Deeply
+  challenge: research
+  plot: zohar
+  ordinal: 1
+
+the_zohar_2:
+  title: Seek the Venerable Commentary of Experts
+  challenge: scholarship
+  plot: zohar
+  ordinal: 2
+  
+the_zohar_3:
+  title: Enhance One's Heavenly Grace
+  challenge: sensitivity
+  plot: zohar
+  ordinal: 3
+  
+the_malleus_maleficarum_1:
+  title: Read Sleeplessly, Carefully, and Deeply
+  challenge: research
+  plot: malleus_maleficarum
+  ordinal: 1
+
+the_malleus_maleficarum_2:
+  title: Seek the Venerable Commentary of Experts
+  challenge: scholarship
+  plot: malleus_maleficarum
+  ordinal: 2
+  
+the_malleus_maleficarum_3:
+  title: Learn the Arts of Witch Hunting
+  challenge: psychology
+  plot: malleus_maleficarum
+  ordinal: 3
+  
+the_key_of_solomon_1:
+  title: Read Sleeplessly, Carefully, and Deeply
+  challenge: research
+  plot: key_of_solomon
+  ordinal: 1
+
+the_key_of_solomon_2:
+  title: Seek the Venerable Commentary of Experts
+  challenge: scholarship
+  plot: key_of_solomon
+  ordinal: 2
+  
+the_key_of_solomon_3:
+  title: Memorize the Daemonology
+  challenge: sorcery
+  plot: key_of_solomon
+  ordinal: 3
+  
+the_beatus_methodivo_1:
+  title: Read Sleeplessly, Carefully, and Deeply
+  challenge: research
+  plot: beatus_methodivo
+  ordinal: 1
+
+the_beatus_methodivo_2:
+  title: Seek the Venerable Commentary of Experts
+  challenge: scholarship
+  plot: beatus_methodivo
+  ordinal: 2
+  
+the_beatus_methodivo_3:
+  title: Recognize the Unfolding Apocolypse
+  challenge: sensitivity
+  plot: beatus_methodivo
+  ordinal: 3
+    
+the_emerald_tablet_1:
+  title: Read Sleeplessly, Carefully, and Deeply
+  challenge: research
+  plot: emerald_tablet
+  ordinal: 1
+  
+the_emerald_tablet_2:
+  title: Seek the Venerable Commentary of Experts
+  challenge: scholarship
+  plot: emerald_tablet
+  ordinal: 2
+  
+the_emerald_tablet_3:
+  title: Internalize the Cryptic Truths
+  challenge: sensitivity
+  plot: emerald_tablet
+  ordinal: 3
+    
+the_i_ching_1:
+  title: Read Sleeplessly, Carefully, and Deeply
+  challenge: research
+  plot: i_ching
+  ordinal: 1
+  
+the_i_ching_2:
+  title: Seek the Venerable Commentary of Experts
+  challenge: scholarship
+  plot: i_ching  
+  ordinal: 2
+  
+the_i_ching_3:
+  title: Master Hexagram Divination
+  challenge: sensitivity
+  plot: i_ching  
+  ordinal: 3
+    
+the_golden_bough_1:
+  title: Read Sleeplessly, Carefully, and Deeply
+  challenge: research
+  plot: the_golden_bough
+  ordinal: 1
+  
+the_golden_bough_2:
+  title: Seek the Venerable Commentary of Experts
+  challenge: scholarship
+  plot: the_golden_bough  
+  ordinal: 2
+  
+the_golden_bough_3:
+  title: Reflect on the Grotesque Truths
+  challenge: psychology
+  plot: the_golden_bough  
+  ordinal: 3
+  
+hellfire_club_1:
+  title: Befriend an Initiate
+  challenge: society
+  plot: hellfire_club
+  
+hellfire_club_2:
+  title: Pilfer the Member Registry
+  challenge: adventure
+  plot: hellfire_club
+
+hellfire_club_3:
+  title: Pilfer the Hellfire Handbook
+  challenge: society
+  plot: hellfire_club
+  
+hellfire_club_4:
+  title: Forge a Signet Ring
+  challenge: underworld
+  plot: hellfire_club  
+  
+hellfire_club_5:
+  title: Attend the Royal Bacchanal
+  challenge: society
+  plot: hellfire_club
+  
+hellfire_club_6:
+  title: Burn the Clubs's Estate Grounds
+  challenge: conflict
+  plot: hellfire_club  
+    
+fire_in_the_sky_1:
+  title: Discover Multilated Farm Animals
+  challenge: adventure
+  plot: fire_in_the_sky
+  
+fire_in_the_sky_2:
+  title: Discover Smoldering Crop Circles
+  challenge: adventure
+  plot: fire_in_the_sky 
+  
+fire_in_the_sky_3:
+  title: Interrogate Witnesses on the Farms
+  challenge: psychology
+  plot: fire_in_the_sky
+  
+troubled_dreams_1:
+  title: Record a Dream Journal
+  challenge: research
+  plot: troubled_dreams
+  
+troubled_dreams_2:
+  title: Submit to Hypnosis
+  challenge: psychology
+  plot: troubled_dreams
+  
+grandfathers_journal_1:
+  title: Crack Grandfather's War Cipher
+  challenge: research
+  plot: grandfathers_journal
+  
+grandfathers_journal_2:
+  title: Corroborate Independent War Journalism
+  challenge: research
+  plot: grandfathers_journal
+  
+grandfathers_journal_3:  
+  title: Collect Issues of Münchener Beobachter   
+  challenge: research
+  plot: grandfathers_journal
+  
+grandfathers_journal_4:
+  title: Contact Rudolf von Sebottendorff
+  challenge: research
+  plot: grandfathers_journal

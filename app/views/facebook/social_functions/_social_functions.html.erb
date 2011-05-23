@@ -1,0 +1,39 @@
+<div class="box" id='social-functions'>
+  <h3>Host a Social Function</h3>
+  <p><em>Enjoy the pleasure of the company of your most trusted allies by hosting a social function. You may only host one function a day, and allies will have a chance to RSVP as guests. Everyone attending a social function gains some benefit, measured by their behavior.</em></p>
+
+  <div class='grid-list-container' style='height:auto'>
+    <ul class='item-list' id='psychoses-list'>  	
+	  <% social_functions.each do |social_function| %>
+	    <li>
+		  <h3><%= social_function.name %></h3>
+		  <div class='info'>
+		    <em>gain <%= social_function.kind == 'item' ? 'items' : social_function.kind %></em> 
+		    <%= link_to "Host Social", facebook_social_function_socials_path(social_function),
+		                'data-title' => social_function.name,
+		                :class => 'host-button',
+		                :method => 'post',
+		                :remote => true %>			
+			
+		    <div><%= social_function.description %></div>
+		  </div>
+	    </li>
+	  <% end %>
+    </ul>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( ".host-button" ).bindAjaxRequester({
+	confirmation: "Are you sure you wish to host this social function?",
+    success: function(sender) {
+	  var tab = $('#nav-tab-socials');
+	  tab.parent().removeClass('ui-tabs-selected').removeClass('ui-state-active');
+	  tab.trigger('click');
+	  addStatusItem( sender.attr('data-title'), 'hosting');
+    }
+  });
+	
+});
+</script>

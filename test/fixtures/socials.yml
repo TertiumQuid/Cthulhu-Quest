@@ -1,0 +1,5 @@
+beth_estate_auction:
+  investigator: beth_pi
+  social_function: estate_auction
+  created_at: <%= (Time.now - 2.hours).strftime("%Y-%m-%d %H:%M:00") %>
+  appointment_at: <%= (Time.now + 1.hour).strftime("%Y-%m-%d %H:%M:00") %>

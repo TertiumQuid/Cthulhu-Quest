@@ -1,0 +1,281 @@
+unquiet_dead_hand_of_glory:
+  plot_id: 19
+  reward_type: item
+  reward_id: 82
+  reward_name: Hand of Glory
+  
+unquiet_dead_exp:
+  plot_id: 19
+  reward_type: experience
+  reward_id: 10
+  reward_name: +10 EXP
+  
+golden_bough_athame:
+  plot_id: 2
+  reward_type: item
+  reward_id: 83
+  reward_name: Athame
+
+malleus_maleficarum_3_abramelin_oil:
+  plot_id: 27
+  reward_type: item
+  reward_id: 74
+  reward_name: Abramelin Oil
+  
+malleus_maleficarum_3_funds:
+  plot_id: 27
+  reward_type: funds
+  reward_id: 100
+  reward_name: +£100 Reward
+  
+malleus_maleficarum_3_exp:
+  plot_id: 27
+  reward_type: experience
+  reward_id: 15
+  reward_name: +15 EXP
+  
+malleus_maleficarum_2_the_malleus_maleficarum:
+  plot_id: 26
+  reward_type: item
+  reward_id: 63
+  reward_name: The Malleus Maleficarum
+  
+malleus_maleficarum_2_malleus_maleficarum_3:
+  plot_id: 26
+  reward_type: plot
+  reward_id: 27
+  reward_name: Malleus Maleficarum III
+  
+malleus_maleficarum_2_exp:
+  plot_id: 26
+  reward_type: experience
+  reward_id: 10
+  reward_name: +10 EXP
+  
+malleus_maleficarum_1_malleus_maleficarum_2:
+  plot_id: 7
+  reward_type: plot
+  reward_id: 26
+  reward_name: Malleus Maleficarum II
+  
+malleus_maleficarum_1_tarot_cards:
+  plot_id: 7
+  reward_type: item
+  reward_id: 67
+  reward_name: French Tarot Cards
+  
+malleus_maleficarum_1_exp:
+  plot_id: 7
+  reward_type: experience
+  reward_id: 5
+  reward_name: +5 EXP
+  
+national_electric_light_association_wages:
+  plot_id: 25
+  reward_type: funds
+  reward_id: 300
+  reward_name: +£300 Wages
+  
+national_electric_light_association_exp:
+  plot_id: 25
+  reward_type: experience
+  reward_id: 15
+  reward_name: +15 EXP
+
+king_in_yellow_the_king_in_yellow:
+  plot_id: 24
+  reward_type: grimoire
+  reward_id: 9
+  reward_name: The King in Yellow
+  
+king_in_yellow_exp:
+  plot_id: 24
+  reward_type: experience
+  reward_id: 25
+  reward_name: +25 EXP
+  
+no_mask_exp:
+  plot_id: 23
+  reward_type: experience
+  reward_id: 25
+  reward_name: +25 EXP
+  
+no_mask_king_in_yellow:
+  plot_id: 23
+  reward_type: plot
+  reward_id: 24
+  reward_name: The King in Yellow
+  
+have_you_seen_the_yellow_sign_plot_no_mask:
+  plot_id: 22
+  reward_type: plot
+  reward_id: 23
+  reward_name: No mask, NO MASK!
+  
+have_you_seen_the_yellow_sign_exp:
+  plot_id: 22
+  reward_type: experience
+  reward_id: 20
+  reward_name: +20 EXP
+  
+grandfathers_journal_exp:
+  plot_id: 21
+  reward_type: experience
+  reward_id: 20
+  reward_name: +20 EXP
+  
+professors_lecture_exp:
+  plot_id: 18
+  reward_type: experience
+  reward_id: 5
+  reward_name: +5 EXP
+
+troubled_dreams_plot_night_terrors:
+  plot_id: 1
+  reward_type: plot
+  reward_id: 17
+  reward_name: Night Terrors
+  
+night_terrors_exp:
+  plot_id: 17
+  reward_type: experience
+  reward_id: 10
+  reward_name: +10 EXP
+  
+triassic_translations_exp:
+  plot_id: 16
+  reward_type: experience
+  reward_id: 10
+  reward_name: +10 EXP
+  
+triassic_translations_eltdown_shards:
+  plot_id: 16
+  reward_type: grimoire
+  reward_id: 7
+  reward_name: Eltdown Shards
+  
+polis_of_sunken_sahara_exp:
+  plot_id: 15
+  reward_type: experience
+  reward_id: 10
+  reward_name: +10 EXP
+  
+polis_of_sunken_sahara_gharne_fragments:
+  plot_id: 15
+  reward_type: grimoire
+  reward_id: 8
+  reward_name: The G'harne Fragments
+  
+last_man_standing_prize_purse:
+  plot_id: 11
+  reward_type: funds
+  reward_id: 100
+  reward_name: +£100 Prize Purse
+    
+last_man_standing_exp:
+  plot_id: 11
+  reward_type: experience
+  reward_id: 15
+  reward_name: +15 EXP
+  
+clavis_alchimiae_book:
+  plot_id: 10
+  reward_type: item
+  reward_id: 66
+  reward_name: The Clavis Alchimiae
+  
+clavis_alchimiae_exp:
+  plot_id: 10
+  reward_type: experience
+  reward_id: 5
+  reward_name: +5 EXP
+  
+oracles_of_nostradamus_book:
+  plot_id: 9
+  reward_type: item
+  reward_id: 65
+  reward_name: The Oracles of Nostradamus
+  
+oracles_of_nostradamus_exp:
+  plot_id: 9
+  reward_type: experience
+  reward_id: 5
+  reward_name: +5 EXP
+  
+the_zohar_exp:
+  plot_id: 8
+  reward_type: experience
+  reward_id: 5
+  reward_name: +5 EXP
+  
+key_of_solomon_exp:
+  plot_id: 6
+  reward_type: experience
+  reward_id: 5
+  reward_name: +5 EXP
+  
+beatus_methodivo_exp:
+  plot_id: 5
+  reward_type: experience
+  reward_id: 5
+  reward_name: +5 EXP
+  
+i_ching_exp:
+  plot_id: 3
+  reward_type: experience
+  reward_id: 5
+  reward_name: +5 EXP
+  
+emerald_tablet_exp:
+  plot_id: 4
+  reward_type: experience
+  reward_id: 5
+  reward_name: +5 EXP
+  
+golden_bough_exp:
+  plot_id: 2
+  reward_type: experience
+  reward_id: 5
+  reward_name: +5 EXP
+  
+troubled_dreams_exp:
+  plot_id: 1
+  reward_type: experience
+  reward_id: 10
+  reward_name: +10 EXP
+  
+golden_bough_book:
+  plot_id: 2
+  reward_type: item
+  reward_id: 58
+  reward_name: The Golden Bough
+  
+emerald_tablet_book:
+  plot_id: 4
+  reward_type: item
+  reward_id: 59
+  reward_name: Emerald Tablet
+  
+i_ching_book:
+  plot_id: 3
+  reward_type: item
+  reward_id: 60
+  reward_name: I Ching
+  
+beatus_methodivo_book:
+  plot_id: 5
+  reward_type: item
+  reward_id: 61
+  reward_name: Beatus Methodivo
+  
+key_of_solomon_book:
+  plot_id: 6
+  reward_type: item
+  reward_id: 62
+  reward_name: The Key of Solomon
+  
+the_zohar_book:
+  plot_id: 8
+  reward_type: item
+  reward_id: 64
+  reward_name: The Zohar

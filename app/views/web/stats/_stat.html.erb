@@ -1,0 +1,13 @@
+<li>
+  <span class='right stats'>
+    <% stat.next_level_skill_points.times do |n| %>
+      <span class="<%= stat.obtained?(n) ? 'selected' : 'unselected' %>">
+	    <%= raw( stat.obtained?(n) ? "&oplus;" : "&otimes;" ) %>
+	  </span>
+    <% end %>
+	<% if @investigator.skill_points > 0 %>
+	  &nbsp; <%= link_to '[+1]', web_stat_path( stat.skill_id ), :method => :put %>
+	<% end %>
+  </span>
+  <label><%= stat.skill_name %> :</label> <span><%= stat.skill_level %></span>
+</li>

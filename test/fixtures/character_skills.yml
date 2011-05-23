@@ -1,0 +1,65 @@
+malone_sensitivity:
+  skill: sensitivity
+  character: thomas_malone
+  skill_level: 3
+  skill_name: Sensitivity
+  
+malone_psychology:
+  skill: psychology
+  character: thomas_malone
+  skill_level: 3
+  skill_name: Psychology
+  
+malone_research:
+  skill: research
+  character: thomas_malone
+  skill_level: 2
+  skill_name: Research
+  
+malone_underworld:
+  skill: underworld
+  character: thomas_malone
+  skill_level: 4
+  skill_name: Underworld
+  
+malone_bureaucracy:
+  skill: bureaucracy
+  character: thomas_malone
+  skill_level: 2
+  skill_name: Bureaucracy
+  
+malone_conflict:
+  skill: conflict
+  character: thomas_malone
+  skill_level: 5
+  skill_name: Conflict
+  
+armitage_sensitivity:
+  skill: sensitivity
+  character: henry_armitage
+  skill_level: 2
+  skill_name: Sensitivity
+  
+armitage_sorcery:
+  skill: sorcery
+  character: henry_armitage
+  skill_level: 4
+  skill_name: Sorcery
+  
+armitage_research:
+  skill: research
+  character: henry_armitage
+  skill_level: 5
+  skill_name: Research
+  
+armitage_bureaucracy:
+  skill: bureaucracy
+  character: henry_armitage
+  skill_level: 2
+  skill_name: Bureaucracy
+
+armitage_scholarship:
+  skill: scholarship
+  character: henry_armitage
+  skill_level: 7
+  skill_name: Scholarship

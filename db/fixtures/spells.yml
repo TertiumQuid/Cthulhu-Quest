@@ -1,0 +1,109 @@
+sway_of_the_adept:
+  id: 10
+  name: Sway of the Adept
+  kind: empowerment
+  effect: +2 Conflict for 12 hours
+  description: Through the torments of grievous ritual the sorcerer unbalances the flow of universal forces to diverge toward and empower their mortal thews.
+  power: 2
+  duration: 12
+  time_cost: 1
+  target_id: 3
+  
+transmigration_of_consciousness:
+  id: 9
+  name: Transmigration of Consciousness
+  kind: empowerment
+  effect: +2 Psychology for 12 hours
+  description: These elaborate rites are meant to shatter the sorcerer's selfhood and grant access to the principles of man through the vital-astral-physical trichotomy.
+  power: 2
+  duration: 12
+  time_cost: 1
+  target_id: 9
+
+adoration_of_atlach_nacha:
+  id: 8
+  name: Adoration of Atlach-Nacha
+  kind: empowerment
+  effect: +2 Bureaucracy for 12 hours
+  description: The sorcerer willingly suffers dozens of poisonous insect bites while incanting hymns of dark luck and fortune to the malignant spider god.
+  power: 2
+  duration: 12
+  time_cost: 1
+  target_id: 2
+  
+trance_state_of_daoloth:
+  id: 7
+  name: Trance State of Daoloth
+  kind: empowerment
+  effect: +2 Research for 12 hours
+  description: Contemplating the impossible geometric glyphs of the god's faces induces the sorcerer into flashes of astral projections whereby desired knowledge is gained.
+  power: 2
+  duration: 12
+  time_cost: 1
+  target_id: 4
+  
+wine_of_the_thiasus:
+  id: 6
+  name: Wine of the Thiasus
+  kind: empowerment
+  effect: +2 Society for 12 hours
+  description: A pungent ritual wine of original recipe from the ecstatic tables of the Dionysus and the casks of the Thiasus processional. 
+  power: 2
+  duration: 12
+  time_cost: 1
+  target_id: 6
+  
+fifty_names_of_marduk:
+  id: 5
+  name: Fifty Names of Marduk
+  kind: empowerment
+  effect: +2 Sorcery for 12 hours
+  description: Invoking this litany of ancient power-words enbues the sorcerer with the spirit of sages from Chaldean antiquity.
+  power: 2
+  duration: 12
+  time_cost: 1
+  target_id: 7
+  
+eyes_of_hypnos:
+  id: 4
+  name: Eyes of Hypnos
+  kind: empowerment
+  effect: +2 Sensitivity for 12 hours
+  description: Through uncanny discipline and willpower the sorcerer enters a state of lucid somnambulism allowing them to percieve the waking and dreaming worlds simultaneously.
+  power: 2
+  duration: 12
+  time_cost: 1
+  target_id: 10
+  
+call_of_nodens:
+  id: 3
+  name: Call of Nodens
+  kind: empowerment
+  effect: +2 Adventure for 12 hours
+  description: By means of a soundless clarion made from a consecrated shell, the sorcerer may gain the favor of the mighty Nodens.
+  power: 2
+  duration: 12
+  time_cost: 1
+  target_id: 1
+  
+flatus_of_tsathoggua:
+  id: 2
+  name: Flatus of Tsathoggua
+  kind: empowerment
+  effect: +2 Underworld for 12 hours
+  description: A burning gas composed of loathesome reagents from a marsh, when inhaled the sorcerer's voice becomes a vile croaking that enaders them to the underclass and villany.
+  power: 2
+  duration: 12
+  time_cost: 1
+  target_id: 8
+  
+chant_of_thoth:
+  id: 1
+  name: Chant of Thoth
+  kind: empowerment
+  effect: +2 Scholarship for 12 hours
+  description: A mantric chant to the Egyptian god of Knowledge in the unwholesome tongue of the Pharaohs, devised to summon the intelligence of the heart.
+  power: 2
+  duration: 12
+  time_cost: 1
+  target_id: 5

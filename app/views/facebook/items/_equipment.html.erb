@@ -1,0 +1,37 @@
+<div class='grid-list-container'>
+<ul class='grid-list small' id='equipment-list' style='width:570px;'>
+<% items.each do |item| %>
+<li>
+  <h6><%= item.name %></h6>
+  <div class='body'><%= item.description %></div>
+  <div class="info">
+    <%= pluralize(item.uses_count, 'use') %>
+    <span class='amount-owned'>
+    <% if @item_ids && (size = @item_ids.select{|id| item.id == id}.size ) > 0 %>
+      / (<%= size %> owned)
+    <% end %>
+    </span>
+  </div>
+  <div class="cmd">
+    <%= link_to "buy £ #{item.price}", purchase_facebook_possession_path( item ), 
+                'data-title' => item.name,
+				'data-price' => item.price,
+				'data-owned' => size,
+                :class => 'buy-button', 
+                :method => 'post',
+                :remote => true %>	
+  </div>
+</li>
+<% end %>
+
+<% if (items.size % 8) != 0 %>
+  <% (8 - (items.size % 8)).times do %>
+  <li class='empty'>
+    <h6>&nbsp;</h6>
+    <div class='body'>&nbsp;</div>
+    <div class="info">&nbsp;</div>
+  </li>
+  <% end %>
+<% end %>
+</ul>
+</div>

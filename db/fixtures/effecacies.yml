@@ -1,0 +1,63 @@
+resist_madness:
+  id: 16
+  namespace: madness.resist
+  
+enhance_attacks:
+  id: 15
+  namespace: attacks.enhancement
+
+challenge_intrigue:
+  id: 14
+  namespace: intrigue.challenge
+  
+hasten_casting:
+  id: 13
+  namespace: casting.hastening
+  
+hunt_monster_kind:
+  id: 12    
+  namespace: monster_kind.hunting
+
+teleport_location:
+  id: 11    
+  namespace: location.teleportation
+  
+bond_social:
+  id: 10    
+  namespace: social.bond
+  
+hasten_investigation:
+  id: 9    
+  namespace: investigation.hastening    
+
+discount_travel:
+  id: 8    
+  namespace: travel.discount
+
+discount_purchase:
+  id: 7    
+  namespace: purchase.discount    
+    
+multiply_experience:
+  id: 6    
+  namespace: experience.multiplier    
+    
+enhance_defense:
+  id: 5    
+  namespace: defense.enhancement
+  
+enhance_attack:
+  id: 4    
+  namespace: attack.enhancement
+  
+enhance_skill:
+  id: 3    
+  namespace: skill.enhancement
+  
+restore_sanity:
+  id: 2    
+  namespace: sanity.restoration
+  
+restore_health:
+  id: 1
+  namespace: health.restoration

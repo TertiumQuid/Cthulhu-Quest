@@ -1,0 +1,11 @@
+troubled_dreams_notebook:
+  plot: fire_in_the_sky
+  requirement_id: <%= Fixtures.identify(:notebook) %>
+  requirement_type: item
+  requirement_name: Notebook
+
+fire_in_the_sky_troubled_dreams:
+  plot: fire_in_the_sky
+  requirement_id: <%= Fixtures.identify(:troubled_dreams) %>
+  requirement_type: plot
+  requirement_name: Troubled Dreams

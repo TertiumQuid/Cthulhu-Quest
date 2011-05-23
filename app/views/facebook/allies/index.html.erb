@@ -1,0 +1,48 @@
+<div class="panel">
+  <div class="wrapper">
+	<div id='social-tabs' class="tabs">
+	  <ul>
+	    <li><a href="#tabs-allies">Allies <%= "(#{@allies.size}/#{Ally::MAX_ALLIES})" unless @allies.blank? %></a></li>
+	    <li><a href="#tabs-friends">Other Friends <%= "(#{@friends.size})" unless @friends.blank? %></a></li>
+	    <li><%= link_to "Contacts", facebook_contacts_path(:format => :js, :anchor => 'tabs-contacts')  %></li>
+	    <li>
+	      <%= link_to "Investigator Socials #{(@socials.count > 0 ? " (#{@socials.count})" : "")}", 
+	                  facebook_social_functions_path(:format => :js, :anchor => 'tabs-socials'), 
+	                  :id => 'nav-tab-socials'  %>
+	    </li>
+	    <li><a href="#tabs-invites">Invite Friends</a></li>
+      </ul>		
+
+	  <div id="tabs-allies" class='tab-panel'>
+		<div class='box'>
+		  <p><em>Your allies constitute your most valued friends who can be trusted to help you investigate plots. You only have nine seats to assign, but you're free to reorganize your inner circle at any time. You may also find yourself added in turn to the inner circles of your friends.</em></p>
+
+          <%= render :partial => 'facebook/allies/allies', :locals => { :allies => @allies } %>
+	    </div>
+	  </div>
+	  <div id="tabs-friends" class='tab-panel'>
+		<div class='box'>
+		  <p><em>Find worthy friends to add as allies.</em></p>
+			
+		  <% if @friends.blank? %>	
+		    <p class='blank'>No other friends can be found.</p>
+		  <% else %>
+            <%= render :partial => 'facebook/allies/friends', :locals => { :friends => @friends } %>
+          <% end %>
+	    </div>
+	  </div>
+	
+	  <div id="tabs-invites" class='tab-panel'>
+		<div class='box'>
+		  <p><%= render :partial => 'facebook/allies/invite' %></p>
+		</div>
+	  </div>	
+    </div>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( "div#social-tabs" ).tabs();
+});
+</script>

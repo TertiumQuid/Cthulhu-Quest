@@ -1,0 +1,23 @@
+winchester_m1895_rile:
+  name: Winchester M1985 Rile
+  description: A lever action rile with a 28 inch barrel and loading five .303 slugs, this redoubtable model is a deadly yet affordable instrument for hunting and defense. 
+  price: 140
+  power: 4
+  attacks: 1
+  kind: firearm
+  
+colt_45_automatic:
+  name: Colt .45 Automatic M1911
+  description: Used by military the civilian police forces alike, this pistol combines phenomenal stopping power with indefatigable reliability and rapid rate of fire.
+  price: 75
+  power: 3
+  attacks: 3
+  kind: firearm
+  
+remington_double_derringer:
+  name: Remington Double Derringer
+  description: Designed by the Philadelphia gunsmith Henry Derringer, Jr, this descrete pistol has two over-and-under barrels discharging .41 rimfire short rounds.
+  price: 25
+  power: 1
+  attacks: 2
+  kind: firearm

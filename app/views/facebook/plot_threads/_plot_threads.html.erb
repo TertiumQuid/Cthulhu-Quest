@@ -1,0 +1,100 @@
+<div class="box" id='casebook'>
+  <div class='grid-list-container' style='height:auto'>
+    <ul class='item-list green' id='casebook-list'>	
+      <% plot_threads.each do |plot_thread| %>
+        <li>	
+	      <h3>
+			<em><%= plot_thread.plot.duration %> hour investigation</em>
+			<span>PLOT:</span> <%= plot_thread.plot.title %>
+		  </h3>	
+		  <h5>		
+	        <em><%= plot_thread.plot.subtitle %></em>
+	      </h5>
+	
+		  <div style='height:120px;padding-top:10px;'>
+			<ul class='left'>
+			  <li class='title'><span>Requires</span></li>
+		  	  <% plot_thread.plot.prerequisites.each_with_index do |prerequisite,idx| %>
+		       <% satisfied = prerequisite.satisfied?( current_investigator, @item_ids ) %>
+		
+               <% if idx % 2 == 0 %>
+		       <li>
+			     <span class='even <%= 'checked' if satisfied %>'>
+			       <span class='label'><%= prerequisite.requirement_type %></span>
+			       <span><%= prerequisite.requirement_name %></span>
+				   <span class='value'><%= raw satisfied ? "&radic;" : "x" %></span>
+			     </span>
+			   <% else %>
+			     <span class='odd <%= 'checked' if satisfied %>'>
+				   <span class='value'><%= raw satisfied ? "&radic;" : "x" %></span>
+			       <span class='label'><%= prerequisite.requirement_type %></span>
+			       <span><%= prerequisite.requirement_name %></span>			
+                 </span>			
+			   <% end %>
+			
+			   <% if idx % 2 == 1 || idx == plot_thread.plot.prerequisites.size %></li><% end %>
+		     <% end %>
+			</ul>
+			<ul class='left wide'>
+			  <li class='title'><span>Subplots</span></li>
+		  	  <% plot_thread.plot.intrigues.each_with_index do |intrigue,idx| %>	
+		        <% if idx % 2 == 0 %>
+		        <li>
+			      <span class='even'>
+			        <span><%= intrigue.challenge.name %></span>
+			        <em>vs.<%= intrigue.difficulty %></em>
+			      </span>
+			    <% else %>
+			      <span class='odd'>
+			        <em>vs.<%= intrigue.difficulty %></em>
+			        <span><%= intrigue.challenge.name %></span>
+			      </span>
+			    <% end %>
+			
+			    <% if idx % 2 == 1 || idx == plot_thread.plot.prerequisites.size %></li><% end %>
+		      <% end %>
+			</ul>
+			
+			<div class='float-strip cmd'>
+			    <% if @investigation.blank? %>
+			      <%= link_to 'look deeper', 
+			                  new_facebook_casebook_investigation_path(plot_thread), 
+			                  :remote => true, 
+			                  :class => 'investigate-button', 
+			                  'data-title' => "Investigating #{plot_thread.plot_title}" %>
+			    <% else %>
+			      <%= link_to 'preoccupied', 
+			                  'javascript:void(0);', 
+			                  :class => 'investigate-button disabled', 
+			                  :disabled => true %>
+			    <% end %>
+			  <div class='plot-progress progress-bar' data-value='<%= plot_thread.percent_complete %>'>
+				<span><%= plot_thread.percent_complete %>% subplots solved</span>
+		      </div>
+			</div>
+		  </div>
+	
+        </li>
+      <% end %>
+    </ul>
+
+  <div class='float-strip'>
+	<div class='next-prev green'>
+	  <span id='casebook-prev'>&lang; PREV</span> 
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	  <span id='casebook-next'>NEXT &rang;</span>
+	</div>	
+  </div>
+
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( ".plot-progress" ).each(function(index) {
+    var val = parseInt( $(this).attr('data-value') );
+    $(this).progressbar({ value: val });
+  });
+
+});
+</script>

@@ -1,0 +1,13 @@
+<li>
+  <% if show == true %>
+    <label><span class='upcase'><%= threat.monster.name %>:</span> <%= threat.name %></label>
+    <div class='right'>
+	  <span>ATT: <%= threat.monster.attacks %></span>
+	  <span>POW: <%= threat.monster.power %></span>
+	  <span>DEF: <%= threat.monster.defense %></span>
+    </div>
+  <% else %>
+    <span class='right'>???</span>
+    <label>You must do battle with an unknown threat to solve this plot...</label>
+  <% end %>
+</li>

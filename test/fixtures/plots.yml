@@ -1,0 +1,70 @@
+zohar:
+  title: Zohar
+  subtitle: Of the language of the Hebrew God spoken through His creation
+  duration: 2
+  level: 1
+    
+malleus_maleficarum:
+  title: Malleus Maleficarum
+  subtitle: Of the diabolical guises and deceptions of the Witch.
+  duration: 2
+  level: 1
+    
+key_of_solomon:
+  title: Key of Solomon
+  subtitle: Of the great King Solomon's transactions with spirits and deamons
+  duration: 2
+  level: 3
+  
+beatus_methodivo:
+  title: Beatus Methodivo
+  subtitle: Of the Gnostic history of past, present, and future
+  duration: 2
+  level: 1
+    
+emerald_tablet:
+  title: Emerald Tablet
+  subtitle: Of the grand alchemy of cosmic symbology
+  duration: 2
+  level: 1
+    
+i_ching:
+  title: I Ching
+  subtitle: Of the Chinaman's prophetic poetry system
+  duration: 2
+  level: 1
+  
+the_golden_bough:
+  title: Golden Bough
+  subtitle: Of the anthropology of mankind's regarded religions and rituals
+  duration: 2
+  level: 1
+  
+troubled_dreams:
+  title: Troubled Dreams
+  subtitle: Of nightmares which prophecy unpalceable doom
+  duration: 1
+  level: 1
+  madness: 1
+  
+grandfathers_journal:
+  title: Grandfather's Journal
+  subtitle: Of the curious rantings of grandpa's twlight years
+  duration: 1
+  level: 1  
+  madness: 1
+    
+fire_in_the_sky:
+  title: Fire in the Sky
+  subtitle: Of the sinister lights which strafe the farmlands at midnight
+  duration: 3
+  level: 1  
+  madness: 1
+  
+hellfire_club:
+  title: Hellfire Club
+  subtitle: Of the unmasking of society's diabolical elite
+  duration: 5
+  level: 1
+  locations: new_york
+  madness: 1

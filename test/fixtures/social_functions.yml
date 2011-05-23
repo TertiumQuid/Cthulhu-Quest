@@ -1,0 +1,31 @@
+conclave:
+  name: Conclave
+  description: a secret meeting among trusted allies to confide fears, share discoveries, and precipitate the plot.
+  invitation: @name invites you for a discrete meeting in a hidden location by @date to regroup.
+  kind: moxie
+  cooperation: share the dire secrets you've learned, your plans, and your vow to carry on the fight.
+  defection: debate your confederates, then betray their trust by exploiting their secrets to the fullest.
+  
+estate_auction:
+  name: Estate Auction
+  description: a wandorous afternoon of tense bidding for the forgotten relics from the esate of a faded patriarch.
+  invitation: @name invites you to join in the acquisition of useful items by @date for an estate auction.
+  kind: item
+  cooperation: participate with fairness and restraint, ensuring a prudent distribution of the estate's prizes.
+  defection: ruthlessly bid and bluff to acquire the most desirable for yourself.
+  
+smoking_and_brandy:
+  name: Smoking & Brandy
+  description: a intimate and thoughtful evening of rare cigars and fine brandy where fears are eased.
+  invitation: @name invites you for a calming repose over an evening of smoking and bandy by @date.
+  kind: sanity
+  cooperation: relax and enjoy the company of your companions in a rare and tranquil moment of life's respose.
+  defection: realize a vile catharsis through dreadful tales and talk of the darkest matters.
+  
+dinner_reception:
+  name: Dinner Reception
+  description: a well-appointment soiree with well-dished food in warm, healthful, and revitalizing surroundings.
+  invitation: @name would take pleasure at your company by @date for a intimate dinner reception among allies.
+  kind: health
+  cooperation: entertain your dinner companions with wit and good cheer, leaving the evening better for your charm.
+  defection: belittle and threaten your dinner companions, taking irrational sadistic pride in your witty abuse.  

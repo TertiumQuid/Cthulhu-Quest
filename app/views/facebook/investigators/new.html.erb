@@ -1,0 +1,86 @@
+<div class="panel">
+  <div class="wrapper">
+    <div class="box dark">	
+	<%= form_for [:facebook, @investigator], :remote => true, :id => 'new_investigator' do |f| %>
+      <h3>Create Your Investigator</h3>	
+      <p>Choose a profile, give your investigator a name, and you're ready to wage your war on a vast dispassionate darkness.</p>
+		
+	  <h5 class='option'>1. Choose an investigative profile</h5>
+	  <table class="box pager">
+	    <tr>
+          <td style='width:85px;'>
+            <a class='page-nav' href='javascript:void(0)' id='profile-prev' style='left:10px;'>&lang;<span>PREV</span></a>
+	      </td>		
+		  <td>	
+	        <%= f.hidden_field :profile_id %>
+	        <br />
+            <ul class='grid-list small' id='profile-list' style='width:570px;height:180px'>				
+			  <% @profiles.each do |profile| %>
+				<li class='profile-item'>
+				  <h6><%= profile.name %></h6>
+				  <ul>	
+				    <li class='title'>
+					  <span>INCOME</span>
+					  <em>£<%= profile.income %> per day</em>
+					</li>
+					<% profile.profile_skills.each do |s| %>
+					  <li>
+						<span><%= s.skill_name %></span>
+						<em><%= s.skill_level %> &nbsp;</em>
+					  </li>
+					<% end %>
+				  </ul>	
+				  <div class="cmd">
+				    <a class='profile-button' data-value='<%= profile.id %>'>select</a>
+				  </div>				
+				
+				</li>
+	          <% end %>
+	
+			  <% if (@profiles.size % 4) != 0 %>
+			    <% (4 - (@profiles.size % 4)).times do %>
+				  <li class='empty'>
+				    <h6>&nbsp;</h6>
+				    <ul></ul>
+				  </li>
+			    <% end %>
+			  <% end %>	
+		    </ul>	
+	      </td>
+		  <td style='width:75px;'>
+	        <a class='page-nav' href='javascript:void(0)' id='profile-next' style='left:3px;'>&rang;<span>NEXT</span></a>
+	      </td>
+	    </tr>
+      </table>
+
+	  <h5 class='option'>2. Enter your investigator's name</h5>
+      <div class='box' style='text-align:center;padding:10px 0'>
+	    <%= f.text_field :name, :placeholder => 'investigator name' %>
+	  </div>
+	  <%= f.submit "Create Your Investigator", :class => 'mega', :id => 'create-investigator-button' %>
+	  <br />&nbsp;
+    <% end %>
+    </div>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $("#new_investigator").bindAjaxRequester({
+	button: $('#create-investigator-button')
+  });
+  $( ".profile-button" ).button();
+  $( ".profile-button" ).click(function(e){
+	$('.profile-item').removeClass('selected');
+	$(this).parent().parent().addClass('selected');
+	var profileId = $(this).attr('data-value');
+    var formField = $('#investigator_profile_id');
+    formField.val( profileId );
+  });
+
+  $('#profile-list').paginated({
+	controls: { prev: $('#profile-prev'), next: $('#profile-next') },
+	perPage: 4
+  });
+});
+</script>

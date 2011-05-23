@@ -1,0 +1,138 @@
+<div class="box profile" id='investigator'>
+  <em class='title right'>Level <%= investigator.level %> <span><%= investigator.profile_name %></span></em>
+  <h3>
+    <%= truncate(investigator.name, :length => 35) %>
+  </h3>
+  <div class='para square-top-left'>
+	<div class='info'>
+	  <em>&hearts; Wounds</em><span class='investigator-wounds'><%= investigator.wound_status %></span>
+	  <div id='wound-progress' class='progress-bar'>
+		<span><%= investigator.combat_fit? ? "wounds until crippled" : "Crippled!"%></span>
+	  </div>
+	</div>
+	<div class='info'>
+	  <em>&there4; Madness</em><span class='investigator-madness'><%= investigator.madness_status %></span>
+	  <div id='madness-progress' class='progress-bar'>
+		<span>madness until psychosis</span>
+	  </div>	
+	</div>	
+	<div class='info'>
+	  <em>&pound; Funds</em>Holding <strong><%= investigator.funds %></strong> cash
+	  <span class='note'>
+		next income of &pound;<%= investigator.income %> earned in <strong><%= investigator.next_income_at_in_words %></strong>
+	  </span>
+	</div>	
+	<div class='info'>
+	  <em>&otimes; Moxie</em><strong><%= pluralize investigator.moxie, 'point' %></strong>
+	  <span class='note'>gained by studying occult tomes, or hosting a conclave</span>
+	</div>
+  </div>
+
+  <div class='para'>
+	<h4>
+	  Skill Profile
+      <em><%= raw(investigator.skill_points == 0 ? "Advance Your Level to Gain Skill Points" : "Spend Your Skill Points (<span id='skill-point-count'>#{investigator.skill_points}</span>)") %></em>
+	</h4>
+	<ul class='big'>
+      <%= render @stats %>
+	</ul>
+  </div>
+
+  <div class='para'>
+	<h4>
+	  Experience
+	  <em>Total: <%= investigator.experience %> xp</em>
+	</h4>
+	<div class='body'>
+	  <div id='level-bar' class="progress-bar">
+	  	<span><%= "#{investigator.experience_until_next_level} more exp required for level #{investigator.level+1}" %></span>
+	  </div>	
+	</div>
+  </div>
+  <br />
+  <div class='para'>	
+	<%= link_to 'retire investigator', "/facebook/investigator", 
+	                      :method => 'delete',
+	                      :remote => true,				
+	                      :class => 'retire-button right' %>	
+
+	<em>Suffered enough? Hopelessly mad? Retire from your investigations and start anew.</em>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( "#wound-progress" ).progressbar({
+	value: <%= ((investigator.wounds.to_f / investigator.maximum_wounds.to_f) * 100).to_i %>
+  });
+  $( "#madness-progress" ).progressbar({
+	value: <%= ((investigator.madness.to_f / investigator.maximum_madness.to_f) * 100).to_i %>
+  });
+
+  $( "#level-bar" ).progressbar({
+	value: <%= investigator.percent_until_next_level %>
+  });
+
+  $( ".stat-progress" ).each(function(index) {
+    var val = parseInt( $(this).attr('data-value') );
+    $(this).progressbar({ value: val });
+  });
+
+  $( ".retire-button" ).bindAjaxRequester({
+	confirmation: "Are you sure you want to permanently retire your investigator from the game? This cannot be undone, and you will loose all progress."
+  });
+
+  $( "a.add-stat-button" ).bindAjaxRequester({
+	success: function(sender) {
+	  var skillPointLabel = $('#skill-point-count');
+	  var skillPoints = parseInt( skillPointLabel.html() );
+	  var points = parseInt( sender.attr('data-value') );
+	  var step = parseInt( sender.attr('data-step') );
+	
+	  var listItem = sender.parents('li').first();
+	  var skillLevelLabel = listItem.find('.stat-skill-level').first();	
+	  var skillLevel = parseInt( skillLevelLabel.html() );
+	
+	  var progressBar = listItem.children('.stat-progress').first();
+	  var currentProgress = parseInt( progressBar.attr('data-value') );
+	  var currentSkillPoints = parseInt( progressBar.attr('data-skill-points') );
+	  var nextLevelSkillPoints = parseInt( progressBar.attr('data-next-level-skill-points') );
+	  var progressLabel = progressBar.find('strong').first();
+	
+	  var pointsUsed = 1;
+	  if (points > nextLevelSkillPoints - currentSkillPoints) {
+		pointsUsed = nextLevelSkillPoints - currentSkillPoints;
+	  } else if (points > skillPoints) {
+		pointsUsed = skillPoints;
+	  } else if (points > 1) {
+		pointsUsed = points;
+	  };
+	
+	  if ( skillPoints - pointsUsed < 1) { // used all points
+		skillPointLabel.parent().html("Advance Your Level to Gain Skill Points");		
+		$('.add-stat-button').remove();
+	  } else { // still have skill points remaining
+		skillPointLabel.html( skillPoints - pointsUsed );
+	  };
+	
+	  var advanceSteps = step * pointsUsed;
+	  var newProgress = currentProgress + advanceSteps;
+	  var didAdvancedSkill = (newProgress >= 100);
+	
+	  if (didAdvancedSkill) {	
+	    skillLevelLabel.html( skillLevel + 1 );
+	    progressBar.attr('data-skill-points', 0)
+	    progressBar.attr('data-value', 0);	
+	    progressBar.progressbar({value: 0 });
+	    progressLabel.html('0 / ' + nextLevelSkillPoints);
+	  } else {
+	    currentSkillPoints = currentSkillPoints + pointsUsed;
+	    progressBar.attr('data-skill-points', currentSkillPoints)
+	    progressBar.attr('data-value', newProgress);
+	    progressBar.progressbar({value: newProgress });
+	    progressLabel.html(currentSkillPoints + ' / ' + nextLevelSkillPoints);
+	  };
+	}
+  });
+});
+</script>

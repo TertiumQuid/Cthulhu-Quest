@@ -1,0 +1,85 @@
+<div id="sinisterpiece">
+  <div class='panel title'> 
+	<%= link_to '#', :class => 'photo thumb' do%>
+	  <img src="<%= current_user ? current_user.facebook_photo : "/images/web/background.jpg" %>" />
+      <span><%= current_user ? truncate(current_user.name, :length => 10, :omission => '') : 'name' %></span>
+	<% end %>
+	<p>
+	  <span class='super'>The plot unfolds for...</span><br />
+	  <span class='title'><%= current_investigator ? truncate(current_investigator.name, :length => 15, :omission => '') : 'Your Investigator' %></span><br /> 
+	  <span class='subtitle'><%= current_investigator ? current_investigator.profile_name : 'Occupation Unknown' %></span><br />	
+	</p>
+  </div>
+  <div class="panel"><br />	
+    <ul id='sinisterpiece-status-list'>
+    <% if logged_in? && current_investigator %>
+      <% if investigation = current_investigator.investigations.open.first %>
+        <li id='investigation-status-item'>
+	      Investigating <%= investigation.plot_title %><div class="progressbar investigation-status-bar"></div>
+	
+		  <script>$(function() {$( ".investigation-status-bar" ).progressbar({value: <%= investigation.active? ? (100 - investigation.remaining_time_in_percent) : 100 %>});});</script>
+	    </li>
+      <% end %>
+      <% if social = current_investigator.socials.active.first %>
+        <li id='social-status-item'>
+	      Hosting <%= social.name %><div class="progressbar social-status-bar"></div>
+	
+		  <script>$(function() {$( ".social-status-bar" ).progressbar({value: <%= 100 - social.remaining_time_in_percent%>});});</script>		
+	    </li>
+      <% end %>
+      <% if casting = current_investigator.castings.active.first %>
+        <li id='casting-status-item'>
+	      Casting <%= casting.name %><div class="progressbar casting-status-bar"></div>
+	    </li>
+      <% end %>
+      <% if psychosis = current_investigator.psychoses.treating.first %>
+        <li id='asylum-status-item'>
+	      Treating <%= psychosis.name %><div class="progressbar asylum-status-bar"></div>
+	
+		  <script>$(function() {$( ".asylum-status-bar" ).progressbar({value: <%= 100 - psychosis.remaining_time_in_percent%>});});</script>	
+	    </li>
+      <% end %>
+
+    <% else %>
+      <li>Investigating a dreadful plot<div class="progressbar mockbar1"></div></li>
+      <li>Hosting social function<div class="progressbar mockbar2"></div></li>
+      <li>Casting ceremonial spell<div class="progressbar mockbar3"></div></li>
+      <li>Receiving asylum treatment<div class="progressbar mockbar4"></div></li>
+	  <script>
+		$(function() {
+			$( ".mockbar1" ).progressbar({ value: 65 });
+			$( ".mockbar2" ).progressbar({ value: 90 });
+			$( ".mockbar3" ).progressbar({ value: 10 });
+			$( ".mockbar4" ).progressbar({ value: 35 });
+		});
+	  </script>
+    <% end %>	
+    </ul>
+  </div>
+</div>
+
+<script>
+function addStatusItem(title, kind) {
+  var container = $('#sinisterpiece-status-list');
+  var lbl = '';
+  if (kind == 'investigation') {
+    lbl = 'Investigating';
+  } else if (kind == 'social') {
+ 	lbl = 'Hosting';
+  } else if (kind == 'casting') {
+    lbl = 'Casting';
+  } else if (kind == 'asylum') {
+	lbl = 'Treating';
+  };
+  var item = $('<li id="'+kind+'-status-item">'+lbl+' '+title+'</li>');
+  var bar = $('<div class="progressbar '+kind+'-status-bar"></div>');
+  bar.progressbar({ value: 0 });
+  bar.appendTo(item);
+  item.fadeIn(400, function() { item.appendTo(container); });
+};
+
+function removeStatusItem(kind) {
+  var el = $("#"+kind+'-status-item');
+  el.fadeOut(600, function() { el.remove(); });
+};
+</script>

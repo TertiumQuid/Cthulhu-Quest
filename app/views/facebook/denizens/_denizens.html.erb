@@ -1,0 +1,69 @@
+<div class='grid-list-container' style='height:220px;'>
+  <ul class='grid-list big dark' id='denizen-list'>  
+	<% denizens.each do |denizen| %>
+	<li>
+	  <h5><%= denizen.monster.name %> <em><%= denizen.monster.kind %></em></h5>
+	  <center><span class='tab-header'>bounty &pound; <%= denizen.monster.bounty %></span></center>	
+      <div class='desc'><%= truncate(denizen.monster.description, :length => 205) %></div>	
+
+	  <div class="info">
+		<div class='float-strip'>
+	      <div class="circle medium blue"><%= investigator_equals_monster_level(denizen.monster) ? denizen.monster.attacks : '?' %> <em>ATK</em></div>
+		  <div class="circle medium green"><%= investigator_equals_monster_level(denizen.monster) ? denizen.monster.defense : '?' %> <em>DEF</em></div>
+		  <div class="circle medium red"><%= investigator_equals_monster_level(denizen.monster) ? denizen.monster.power : '?' %> <em>POW</em></div>
+		  <div class="circle medium yellow"><%= investigator_equals_monster_level(denizen.monster) ? denizen.monster.madness : '?' %> <em>MAD</em></div>
+	    </div>
+	  </div>	
+	  <div class="cmd">
+	    <%= link_to (current_investigator.blank? || current_investigator.combat_fit? ? 'Hunt It Down' : 'Too Wounded'),
+	                new_facebook_monster_combat_path(denizen.monster), 
+	                :remote => true, 
+	                :class => "hunt-button #{(current_investigator && current_investigator.combat_fit? ? '' : 'disabled')}", 
+	                'data-title' => "Battling a #{denizen.monster.name}" %>
+	  </div>	
+	</li>
+	<% end %>
+	
+
+	<% if (denizens.size % 3) != 0 %>
+	  <% (3 - (denizens.size % 3)).times do %>
+	  <li class='empty'>
+	    <h5>&nbsp;<em>&nbsp;</em></h5>
+	    <center><span class='tab-header'>&nbsp;</span></center>
+	    <div class='desc'>&nbsp;</div>
+	    <div class="info">&nbsp;</div>
+	  </li>
+	  <% end %>
+	<% end %>	
+  </ul>	
+  <div class='float-strip'>
+	<div class='next-prev'>
+	  <span id='denizen-prev'>&lang; PREV</span> 
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	  <span id='denizen-next'>NEXT &rang;</span>
+	</div>	
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( ".hunt-button" ).bindAjaxRequester({ 
+	height: 700,
+	buttons: { 
+	  "Do Battle": function() { 
+	  $('#do-battle-button').click();
+      },	
+	  "Nevermind": function() { 
+        $(this).dialog( "close" ); 
+        $(this).parent( "ui-dialog" ).remove();
+      }
+    }
+  });
+  $( ".hunt-button.disabled" ).button('disable');
+
+  $('#denizen-list').paginated({
+	controls: { prev: $('#denizen-prev'), next: $('#denizen-next') },
+	perPage: 3
+  });
+});
+</script>

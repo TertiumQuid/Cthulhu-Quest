@@ -1,0 +1,20 @@
+<tr>
+<td><%= item.name %></td>
+<td>£<%= item.price %></td>
+<td>
+  <% if logged_in? && current_investigator %>	
+    <% if current_investigator.funds >= item.price %>
+       <%= button_to( 'Buy Now', 
+				     purchase_web_possession_path( item ), 
+				     :method => 'post', :class => 'submit') %>
+	<% else %>
+	  <input type='submit' value='Funds Lacking' disabled='true' />
+	<% end %>
+  <% end %>
+</td>
+</tr>
+<tr>
+  <td colspan="3" style='line-height:14px;padding:5px;'>
+	<em style='font-size:11px;'><%= item.description %></em>
+  </td>
+</tr>

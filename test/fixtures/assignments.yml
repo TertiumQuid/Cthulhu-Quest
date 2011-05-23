@@ -1,0 +1,68 @@
+beth_zohar_investigating_3:
+  investigation: beth_zohar_investigating
+  investigator: beth_pi
+  status: accepted
+  intrigue: the_zohar_3
+  
+beth_zohar_investigating_2:
+  investigation: beth_zohar_investigating
+  investigator: beth_pi
+  status: accepted
+  result: succeeded
+  intrigue: the_zohar_2
+  
+beth_zohar_investigating_1:
+  investigation: beth_zohar_investigating
+  investigator: beth_pi
+  status: accepted
+  result: succeeded
+  intrigue: the_zohar_1
+  
+beth_zohar_failed_3:
+  investigation: beth_zohar_failed
+  investigator: beth_pi
+  status: accepted
+  result: failed
+  intrigue: the_zohar_3
+  
+beth_zohar_failed_2:
+  investigation: beth_zohar_failed
+  investigator: beth_pi
+  status: accepted
+  result: succeeded
+  intrigue: the_zohar_2
+  
+beth_zohar_failed_1:
+  investigation: beth_zohar_failed
+  investigator: beth_pi
+  status: accepted
+  result: succeeded
+  intrigue: the_zohar_1
+  
+aleph_grandfathers_journal_self_1:
+  investigation: aleph_failed
+  investigator: aleph_pi
+  status: accepted
+  result: failed
+  intrigue: grandfathers_journal_1
+
+aleph_grandfathers_journal_self_2:
+  investigation: aleph_failed
+  investigator: aleph_pi
+  status: accepted
+  result: failed
+  intrigue: grandfathers_journal_2
+
+aleph_grandfathers_journal_self_4:
+  investigation: aleph_failed
+  investigator: aleph_pi
+  status: accepted
+  result: failed
+  intrigue: grandfathers_journal_4
+
+aleph_grandfathers_journal_beth:
+  investigation: aleph_investigating
+  investigator: aleph_pi
+  ally: beth_pi
+  status: requested
+  intrigue: grandfathers_journal_1

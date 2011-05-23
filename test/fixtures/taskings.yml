@@ -1,0 +1,49 @@
+arkham_astronomical_anomaly:
+  task: astronomical_anomaly
+  owner_id: <%= Fixtures.identify(:arkham) %>
+  owner_type: Location
+  owner_name: Arkham
+  difficulty: 3
+  reward_name: +£15 Payment
+  reward_id: 15
+  level: 1
+
+miskatonic_university_curate_exhibit:
+  task: university_lecture
+  owner_id: <%= Fixtures.identify(:miskatonic_university) %>
+  owner_type: Location
+  owner_name: Miskatonic University
+  difficulty: 4
+  reward_name: +£30 Payment
+  reward_id: 30
+  level: 3
+
+british_museum_curate_exhibit:
+  task: curate_exhibit
+  owner_id: <%= Fixtures.identify(:british_museum) %>
+  owner_type: Location
+  owner_name: British Museum
+  difficulty: 8
+  reward_name: +£100 Payment
+  reward_id: 100
+  level: 7
+  
+harvard_university_university_lecture:
+  task: university_lecture
+  owner_id: <%= Fixtures.identify(:harvard_university) %>
+  owner_type: Location
+  owner_name: Harvard University
+  difficulty: 7
+  reward_name: +£75 Payment
+  reward_id: 75
+  level: 3
+  
+miskatonic_university_university_lecture:
+  task: university_lecture
+  owner_id: <%= Fixtures.identify(:miskatonic_university) %>
+  owner_type: Location
+  owner_name: Miskatonic University
+  difficulty: 4
+  reward_name: +£50 Payment
+  reward_id: 50
+  level: 2

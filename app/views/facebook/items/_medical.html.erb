@@ -1,0 +1,62 @@
+<table class="box pager">
+  <tr>
+    <td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='medical-prev' style='left:-5px;'>&lang;<span>PREV</span></a>
+    </td>		
+    <td>
+      <div class='grid-list-container' style='height:175px;'>
+        <ul class='grid-list small' id='medical-list' style='width:570px;'>
+          <% possessions.each do |possession| %>
+          <li>
+            <h6><%= possession.item.name %></h6>
+            <div class='body'><%= possession.item.description %></div>
+            <div class="info">
+              <span id="item-uses-<%= possession.id %>"><%= possession.uses_count %></span> 
+              <%= possession.uses_count > 1 ? 'uses' : 'use' %>
+            </div>
+            <div class="cmd">
+              <%= link_to 'minister', 
+                          facebook_investigator_heal_path( @investigator ? @investigator.id : current_investigator, :id => possession.id ), 
+                          'data-counter' => "item-uses-#{possession.id}",
+                          'data-kind' => 'medical',
+                          :class => 'minister-button', 
+                          :method => 'post',
+                          :remote => true %>
+            </div>
+          </li>
+          <% end %>
+
+          <% if (possessions.size % 4) != 0 %>
+            <% (8 - (possessions.size % 4)).times do %>
+              <li class='empty'>
+                <h6>&nbsp;</h6>
+                <div class='body'>&nbsp;</div>
+                <div class="info">&nbsp;</div>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </td>
+    <td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='medical-next' style='left:3px;'>&rang;<span>NEXT</span></a>
+    </td>
+  </tr>
+</table>
+
+<script>
+$(function() {
+  $('#medical-list').paginated({
+	controls: { prev: $('#medical-prev'), next: $('#medical-next') },
+	perPage: 4
+  });
+
+  $( "a.minister-button" ).bindAjaxRequester({
+    success: function(sender, html, json) {
+	  setWoundsLabel(json);
+	  $('#medical-dialog').dialog( "close" );
+	}
+  });
+
+});
+</script>

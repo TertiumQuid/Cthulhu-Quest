@@ -1,0 +1,12 @@
+<div class="box">
+  <div class='grid-list-container' style='height:auto'>
+  <p><em>Your journal comprises a recent history of your investigator's storied activity and interactions with other investigators.</em></p>	
+	
+   <ul class='simple-list' id='journal-list'>
+     <% @journal.each do |journal| %>
+       <li <%= "class='selected'" if journal.activity.passive %>>
+         <em><%= time_ago_in_words(journal.created_at) %> ago</em> <%= journal.message %>
+       </li>
+    <% end %>
+  </ul>	
+</div>

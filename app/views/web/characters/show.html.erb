@@ -1,0 +1,29 @@
+<article>
+  <header>
+	<h2>Character</h2>
+	
+    <div class="profile">
+      <fieldset>
+        <legend><%= @character.name %></legend>	
+	      <ul>
+		    <li>
+			  <header>
+			    <span class='right'><%= "#{@character.location.name}, #{@character.location.zone}" %></span>
+			    <%= @character.profession %>
+			  </header>
+			</li>
+			<li style='margin-top:10px'><em><%= @character.biography %></em></li>
+		  </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Skills</legend>
+        <ul>
+	    <% @character.character_skills.each do |s| %>
+	      <li><label><%= s.skill_name %>:</label> <span><%= s.skill_level %></span></li>
+	    <% end %>
+        </ul>
+      </fieldset>
+    </div>
+  </header>
+</article>

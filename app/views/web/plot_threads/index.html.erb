@@ -1,0 +1,74 @@
+
+<article class='sidebar'>
+  <% unless @assignments.blank? %>
+    <h2>Plot Assignments</h2>
+    <ul class="picklist">
+	  <li class="header">Your friends require your help investigating plot intrigues.</li>
+	  <% @assignments.each do |assignment| %>
+	    <li>
+		  <div class="body">
+			<label><%= assignment.investigation.plot_title %></label>
+			<img class='photo' src='' />
+			<br /><br />
+			<p>
+			  <%= assignment.investigation.investigator.name %> needs your help to <br />
+			  <%= link_to assignment.intrigue.title.downcase, edit_web_assignment_path( assignment ) %>.
+			</p>
+			<%= button_to('Decline to Help', web_assignment_path(assignment, 'assignment[status]' => 'refused'), :method => :put) %>
+			<%= button_to('Help Investigate', web_assignment_path(assignment, 'assignment[status]' => 'accepted'), :method => :put, :class => 'submit') %>
+		  </div>
+		</li>
+	  <% end %>
+	</ul>
+  <% end %>
+
+  <% @active_investigations.each do |investigation| %>
+	<br />
+    <h3><%= link_to investigation.plot_title, edit_web_casebook_investigation_path( investigation.plot_thread, investigation ) %></h3>
+    <ul class="picklist">
+	  <li class="header" style='font-size:16px;'>
+		You're currently investigating this plot, and must wait <strong><%= investigation.investigation_ends_at_in_words %></strong> before you can attempt to solve it.
+	  </li>	
+	  <%= raw helpers( investigation ) %>
+	</ul>
+    <br />
+  <% end %>	
+
+  <%= render :partial => "story" %>
+</article>
+
+<% @ready_investigations.each do |investigation| %>
+  <article>
+    <header>
+	  <h2>Investigation Ready to Solve!</h2>
+    </header>
+
+	<div class="profile">
+	  <fieldset>
+		<legend>
+			<%= link_to investigation.plot_title, edit_web_casebook_investigation_path( investigation.plot_thread_id, investigation.id ) %>
+		</legend>	
+
+		<ul>
+		  <li>
+		    <header>You've investigated for <%= pluralize( investigation.duration, 'hour' ) %> and are ready to  
+			<%= link_to 'solve the plot.', edit_web_casebook_investigation_path( investigation.plot_thread_id, investigation.id ) %></header>
+		  </li>
+		</ul>
+	  </fieldset>		
+	</div>
+  </article>
+  <br />
+<% end %>
+
+<% unless @plot_threads.blank? %>
+  <article>
+    <header>
+	  <h2>Plot Journal <span style='font-size:20px;'>(<%= "#{(@plot_threads.size + @ready_investigations.size)}/#{current_investigator.maximum_plot_threads} open plots allowed" %>)</span></h2>
+    </header>
+
+	<div class="profile">
+	  <%= render :partial => "plot_thread", :collection => @plot_threads %>
+	</div>
+  </article>
+<% end %>

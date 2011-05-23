@@ -1,0 +1,123 @@
+new_orleans_national_electric_light_association:
+  plot_id: 25
+  location_id: 8
+  
+san_francisco_national_electric_light_association:
+  plot_id: 25
+  location_id: 9
+  
+chicago_national_electric_light_association:
+  plot_id: 25
+  location_id: 10
+  
+new_york_national_electric_light_association:
+  plot_id: 25
+  location_id: 3
+  
+boston_national_electric_light_association:
+  plot_id: 25
+  location_id: 4
+  
+harvard_university_oracles_of_nostradamus:
+  plot_id: 9
+  location_id: 21
+  
+bibliotheque_nationale_oracles_of_nostradamus:
+  plot_id: 9
+  location_id: 19
+  
+miskatonic_university_oracles_of_nostradamus:
+  plot_id: 9
+  location_id: 7
+  
+harvard_university_malleus_maleficarum:
+  plot_id: 7
+  location_id: 21
+  
+bibliotheque_nationale_malleus_maleficarum:
+  plot_id: 7
+  location_id: 19
+  
+miskatonic_university_malleus_maleficarum:
+  plot_id: 7
+  location_id: 7
+  
+harvard_university_the_golden_bough:
+  plot_id: 2
+  location_id: 21
+  
+bibliotheque_nationale_the_golden_bough:
+  plot_id: 2
+  location_id: 19
+  
+miskatonic_university_the_golden_bough:
+  plot_id: 2
+  location_id: 7
+  
+hong_kong_i_ching:
+  plot_id: 3
+  location_id: 22
+  
+harvard_university_i_ching:
+  plot_id: 3
+  location_id: 21
+  
+bibliotheque_nationale_i_ching:
+  plot_id: 3
+  location_id: 19
+  
+miskatonic_university_i_ching:
+  plot_id: 3
+  location_id: 7
+  
+harvard_university_zohar:
+  plot_id: 8
+  location_id: 21
+  
+bibliotheque_nationale_zohar:
+  plot_id: 8
+  location_id: 19
+  
+miskatonic_university_zohar:
+  plot_id: 8
+  location_id: 7
+  
+british_museum_triassic_translations:
+  plot_id: 16
+  location_id: 20
+    
+miskatonic_university_professors_lecture:
+  plot_id: 18
+  location_id: 7
+  
+harvard_university_professors_lecture:
+  plot_id: 18
+  location_id: 21
+  
+london_last_man_standing:
+  plot_id: 11
+  location_id: 5
+  
+boston_last_man_standing:
+  plot_id: 11
+  location_id: 4
+  
+arkham_last_man_standing:
+  plot_id: 11
+  location_id: 2
+  
+arkham_unquiet_dead:
+  plot_id: 19
+  location_id: 2
+  
+arkham_university_unquiet_dead:
+  plot_id: 19
+  location_id: 7
+  
+london_polis_of_sunken_sahara:
+  plot_id: 15
+  location_id: 5
+  
+boston_polis_of_sunken_sahara:
+  plot_id: 15
+  location_id: 4

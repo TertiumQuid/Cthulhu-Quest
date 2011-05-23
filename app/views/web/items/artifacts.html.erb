@@ -1,0 +1,21 @@
+<% if current_investigator %>
+  <article class='sidebar funds'>
+    <h2>Funds : £<%= current_investigator.funds %>.00</h2>
+  </article>
+<% end %>
+
+<article>
+  <header>
+	<h2>Arcana &amp; Curio</h2>
+  </header>
+
+  <div class="profile">
+	<p>From the shadowy back alley vendors and windowless specialty shops come the world's fantastic arcana and magical technologies.</p>
+	<table class="tabular">
+	  <tbody>
+		<tr><th>Item Listing</th><th>Price</th><th>&nbsp;</th></tr>
+		<%= render @items %> 
+	  </tbody>
+	</table>	
+  </div>
+</article>

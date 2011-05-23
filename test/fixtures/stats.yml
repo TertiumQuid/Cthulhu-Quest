@@ -1,0 +1,89 @@
+gimel_bureaucracy:
+  investigator: gimel_pi
+  skill: bureaucracy
+  skill_level: 2
+  skill_name: Bureaucracy
+  
+gimel_sorcery:
+  investigator: gimel_pi
+  skill: sorcery
+  skill_level: 2
+  skill_name: Sorcery
+  
+gimel_scholarship:
+  investigator: gimel_pi
+  skill: scholarship
+  skill_level: 7
+  skill_name: Scholarship
+  
+gimel_research:
+  investigator: gimel_pi
+  skill: research
+  skill_level: 3
+  skill_name: Research
+  
+aleph_conflict:
+  investigator: aleph_pi
+  skill: conflict
+  skill_level: 1
+  skill_name: Conflict
+  
+aleph_adventure:
+  investigator: aleph_pi
+  skill: adventure
+  skill_level: 3
+  skill_name: Adventure
+  
+aleph_sorcery:
+  investigator: aleph_pi
+  skill: sorcery
+  skill_level: 4
+  skill_name: Sorcery
+  
+aleph_research:
+  investigator: aleph_pi
+  skill: research
+  skill_level: 2
+  skill_name: Research
+  
+aleph_underworld:
+  investigator: aleph_pi
+  skill: underworld
+  skill_level: 2
+  skill_name: Underworld
+  
+aleph_psychology:
+  investigator: aleph_pi
+  skill: psychology
+  skill_level: 1
+  skill_name: Psychology
+  
+beth_psychology:
+  investigator: beth_pi
+  skill: psychology
+  skill_level: 1
+  skill_name: Psychology
+  
+beth_bureaucracy:
+  investigator: beth_pi
+  skill: bureaucracy
+  skill_level: 2
+  skill_name: Bureaucracy
+  
+beth_adventure:
+  investigator: beth_pi
+  skill: adventure
+  skill_level: 4
+  skill_name: Adventure
+  
+beth_conflict:
+  investigator: beth_pi
+  skill: conflict
+  skill_level: 6
+  skill_name: Conflict
+  
+beth_research:
+  investigator: beth_pi
+  skill: research
+  skill_level: 1
+  skill_name: Research

@@ -1,0 +1,19 @@
+robert_blake:
+  user: robert_blake
+  name: Robert Blake
+  profession: Author
+  location: arkham
+  biography: He had a curious sense that he was looking upon some unknown, ethereal world which might or might not vanish in dream if ever he tried to seek it out and enter it in person. 
+
+thomas_malone:
+  user: thomas_malone
+  name: Detective Thomas F. Malone
+  location: new_york
+  profiles: parapsychologist,athelete,priest,dilettante,gangster,antiquarian,artist,archeologist,police_inspector,psychotheropist,journalist,soldier,occultist,librarian,professor
+  
+henry_armitage:
+  user: henry_armitage
+  name: Dr. Henry Armitage
+  location: miskatonic_university
+  profiles: parapsychologist,athelete,priest,dilettante,gangster,antiquarian,artist,archeologist,police_inspector,psychotheropist,journalist,soldier,occultist,librarian,professor  
+  plots: malleus_maleficarum

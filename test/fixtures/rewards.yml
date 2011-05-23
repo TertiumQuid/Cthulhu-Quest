@@ -1,0 +1,47 @@
+thomas_malone_key_of_solomon:
+  plot: key_of_solomon
+  reward_type: introduction
+  reward_id: <%= Fixtures.identify(:thomas_malone) %>
+  reward_name: Thomas Malone
+  
+the_golden_bough_emerald_tablet:
+  plot: the_golden_bough
+  reward_type: plot
+  reward_id: <%= Fixtures.identify(:emerald_tablet) %>
+  reward_name: Emerald Tablet
+
+fire_in_the_sky_eltdown_shards:
+  plot: fire_in_the_sky
+  reward_type: grimoire
+  reward_id: <%= Fixtures.identify(:eltdown_shards) %>
+  reward_name: Eltdown Shards
+
+fire_in_the_sky_experience:
+  plot: fire_in_the_sky
+  reward_type: experience
+  reward_id: 10
+  reward_name: +10
+
+troubled_dreams_experience:
+  plot: troubled_dreams
+  reward_type: experience
+  reward_id: 25
+  reward_name: +25
+  
+troubled_dreams_funds:
+  plot: troubled_dreams
+  reward_type: funds
+  reward_id: 5
+  reward_name: Recompense
+  
+hellfire_club_signet_ring:
+  plot: hellfire_club
+  reward_type: item
+  reward_id: <%= Fixtures.identify(:signet_ring) %>
+  reward_name: Hellfire Club Signet Ring
+
+grandfathers_journal_funds:
+  plot: grandfathers_journal
+  reward_type: funds
+  reward_id: 25
+  reward_name: Money Box

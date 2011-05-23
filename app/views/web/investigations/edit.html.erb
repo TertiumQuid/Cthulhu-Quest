@@ -1,0 +1,117 @@
+<article class='sidebar'>
+  <h2>Rewards</h2>
+  <ul class="picklist">
+	<li class="header">You'll receive these rewards after you solve the investigation.</li>
+    <li>
+	  <div class="body centered">
+		<table>
+		<%= render @rewards %>
+	    </table>
+	  </div>
+	</li>
+  </ul>
+</article>
+
+<article>
+  <header>
+	<h2>Investigation of <%= @investigation.plot_title %></h2>
+
+    <div class="profile">
+    <fieldset>
+      <% if @investigation.active? %>
+        <legend>Under Investigation... <%= @investigation.investigation_ends_at_in_words %> remaining</legend>
+        <ul><li>You're currently investigating this plot and can't attempt to solve it yet.</li></ul>
+ 		<% if current_investigator.moxie >= @investigation.remaining_hours %>
+          <ul>
+			<li>
+			  <em>But, you can use your moxie...</em>
+			  <span class='right'><%= link_to "Use #{@investigation.remaining_hours} Moxie to finish the investigation", hasten_web_casebook_investigation_path(@investigation.plot_thread_id,@investigation.id), :method => :put %> </span>
+			</li>
+		  </ul>
+ 		<% end %>
+	  <% elsif @investigation.investigated? %>
+        <legend>Investigation Finished!</legend>
+        <ul><li>You've finished investigating this plot; now you can attempt to resolve the intrigues.</li></ul>
+	  <% elsif @investigation.completed? %>
+        <legend>Investigation Successful</legend>
+        <ul><li>You've successfully resolved the intrigues; now you can choose your ideal solution to the plot and claim your investigative rewards. What shall you do?</li></ul>
+	  <% elsif @investigation.solved? %>
+        <legend>Investigation Solved</legend>
+        <ul><li>You solved the plot with this investigation.</li></ul>
+	  <% elsif @investigation.unsolved? %>
+        <legend>Investigation Failed</legend>
+        <ul><li>Your investigation was a dismal failure.</li></ul>
+	  <% end %>
+    </fieldset>	
+    </div>
+	
+	<% unless @investigation.completed? %>
+    <div class="profile">
+    <fieldset>
+      <legend>Intrigues</legend>
+      <ul>
+	  <% @investigation.assignments.each_with_index do |assignment,idx| %>
+	    <li>
+		  <strong><%= assignment.intrigue.title %></strong> 
+          <span class='right'><%= "#{assignment.intrigue.challenge.name} #{assignment.intrigue.difficulty}" %></span>
+		  <br />
+          <% if assignment.self_assigned? %>
+            <em>You're investigating this alone.</em>
+          <% else %>
+			<% if assignment.contact_assigned? %>
+			  <em>You called in a favor from your contact, <%= link_to assignment.contact.name, web_contact_path(assignment.contact) %></em><br />
+			<% end %>
+			<% if assignment.ally_assigned? %>
+			  <em>You asked your ally <%= link_to assignment.ally.name, web_investigator_path(assignment.ally) %> for help 
+			  <% if assignment.requested? %>
+			   but they've not responded yet.
+			  <% elsif assignment.accepted? %>
+			   and they joined the investigation.
+			  <% else %>
+			   but they declined to become involved.
+			  <% end %>
+			  </em><br />
+			<% end %>
+          <% end %>
+		</li>
+	  <% end %>
+	  </ul>
+    </fieldset>	
+    </div>
+    <% end %>
+	
+	<% unless @threats.blank? %>
+      <div class="profile">
+      <fieldset>
+        <legend>Threats</legend>
+        <ul>
+		  <%= render :partial => 'web/threats/threat', :collection => @threats, :locals => { :show => (!@investigation.active? || @investigation.consecutive_failure_bonus > 0) } %>
+	    </ul>
+      </fieldset>	
+      </div>
+	<% end %>
+	
+    <div class="profile">
+	  <fieldset>
+		<% if @investigation.active? %>
+	      <a href="<%= web_casebook_investigation_path(@plot_thread, @investigation) %>" data-method='delete'>
+		    <button type='submit'>Cancel Investigation</button>
+		  </a>
+		<% elsif @investigation.investigated? %>
+	      <a href="<%= complete_web_casebook_investigation_path(@plot_thread, @investigation) %>" data-method='put'>
+		    <button type='submit'>Attempt to Solve</button>
+		  </a>
+		<% elsif @investigation.completed? %>
+		  <% @investigation.plot.solutions.each do |solution| %>
+	      <a href="<%= solve_web_casebook_investigation_path(@plot_thread, @investigation, 'solution_id' => solution.id) %>" data-method='put'>
+		    <button type='submit'>
+			  <span><%= solution.title %>:</span>
+			  <div style='font-size:16px;margin-top:15px;text-transform:none;'><%= solution.description %></div>
+			</button>
+		  </a>
+		  <% end %>
+		<% end %>
+	  </fieldset>	
+	</div>
+  </header>
+</article>

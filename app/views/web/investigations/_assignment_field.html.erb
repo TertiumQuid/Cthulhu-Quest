@@ -1,0 +1,71 @@
+<div class='right'>
+<span class='upcase'><%= assignment_fields.object.intrigue.challenge.name %></span> 
+<em>vs</em> <strong style='font-size:24px;'><%= assignment_fields.object.intrigue.difficulty %></strong>
+</div>
+
+<header>
+  <%= assignment_fields.label assignment_fields.object.intrigue.title %> 
+</header>
+
+<%= assignment_fields.hidden_field :intrigue_id, :value => assignment_fields.object.intrigue.id %>
+<%= assignment_fields.hidden_field :investigator_id, :value => current_investigator.id %>
+
+<br />
+<div class='assigner selected' style='cursor:default;'>
+  <span class='right'>
+	Using <%= assignment_fields.object.intrigue.challenge.name %> of 
+	<%= current_investigator.skill_by_name( assignment_fields.object.intrigue.challenge.name ) %>
+	<span style='font-style:italic;'>
+	<%= current_investigator.wounded? ? " | -#{assignment_fields.object.intrigue.wound_penalty( current_investigator )} wounds" : "" %>
+	<%= assignment_fields.object.intrigue.effect_bonus( current_investigator ) > 0 ? " | +#{assignment_fields.object.intrigue.effect_bonus( current_investigator )} spells" : "" %>	
+	</span>
+  </span>
+  <span style='width:100px;display:inline-block;'>You</span>| <span><%= current_investigator.name %></span>
+</div>	
+
+<% unless (assignable = assignment_fields.object.assignable( @allies.map(&:ally) ) ).blank? %>
+  <div class='assigner'>	
+    <%= assignment_fields.hidden_field :ally_id, 'data-field' => 'ally' %>
+
+    <strong class='right'>&nabla;</strong>
+    <span style='width:100px;display:inline-block;'>Ally</span>| <span data-label='ally'>Assign an ally to help with this intrigue</span>
+
+    <ul class='hidden'>
+	  <% @allies.each do |ally| %>
+	    <% next unless assignable.include?( ally.ally ) %>
+	    <li>
+		  <div data-command='assign-ally' data-id='<%= ally.ally_id %>'>
+		    <span data-label='name'><%= ally.ally.name %></span>
+            <span class='right' style='margin-right:20px;'>
+		      Using <span data-label='challenge'><%= assignment_fields.object.intrigue.challenge.name %></span> of <span data-label='skill'><%= ally.ally.send( assignment_fields.object.intrigue.challenge.name.downcase ) %></span>
+	        </span>		
+	  	  </div>
+	    </li>
+	  <% end %>
+    </ul>	
+  </div>
+<% end %>
+
+<% unless (assignable = assignment_fields.object.assignable( @contacts.map(&:character) ) ).blank? %>
+  <div class='assigner'>
+    <%= assignment_fields.hidden_field :contact_id, 'data-field' => 'contact' %>
+
+    <strong class='right'>&nabla;</strong>
+    <span style='width:100px;display:inline-block;'>Contact</span>| <span data-label='contact'>Use a favor to assign a contact to help with this intrigue</span>
+
+    <ul class='hidden'>
+	  <% @contacts.each do |contact| %>
+	    <% next unless assignable.include?( contact.character ) %>
+	    <li>
+		  <div data-command='assign-contact' data-id='<%= contact.id %>'>
+			<span data-label='name'><%= contact.name %></span>
+            <span class='right' style='margin-right:20px;'>
+	          <em><%= pluralize(contact.favor_count, 'favor') %></em> | 
+		    Using <span data-label='challenge'><%= assignment_fields.object.intrigue.challenge.name %></span> of <span data-label='skill'><%= contact.character.send( assignment_fields.object.intrigue.challenge.name.downcase ) %></span>
+	        </span>		
+	  	  </div>
+	    </li>
+	  <% end %>
+    </ul>
+  </div>
+<% end %>

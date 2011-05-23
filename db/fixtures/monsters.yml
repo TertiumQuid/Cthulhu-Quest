@@ -1,0 +1,192 @@
+shantak:
+  id: 17
+  name: Shantak
+  description: They were not any birds or bats known elsewhere on earth, and were larger than elephants, the Shantak-birds of ill rumor, to whose wings still clung the rime and nitre of the nether pits.
+  kind: creature
+  attacks: 4
+  power: 8
+  defense: 6
+  bounty: 80
+  madness: 9
+  level: 8  
+  
+nightgaunt:
+  id: 16
+  name: Nightgaunt
+  description: They never spoke or laughed, and never smiled because they had no faces at all to smile with, but only a suggestive blankness where a face ought to be. All they ever did was clutch and fly and tickle; that was the way of the nightgaunts.
+  kind: creature
+  attacks: 4
+  power: 5
+  defense: 5
+  bounty: 40
+  madness: 6  
+  level: 4  
+  
+warlock:
+  id: 15
+  name: Warlock
+  description: Diabolical souls can always find great power, striving to obtain mastery of the human and supernatural worlds alike; and yet, they nevertheless inevitablely perish to that which they seek to control in a fantastic, personal Armageddon.
+  kind: human
+  attacks: 2
+  power: 5
+  defense: 7
+  bounty: 25
+  madness: 3  
+  level: 2  
+  
+dark_young:
+  id: 14
+  name: Dark Young
+  description: The scion spawn of the Black Goat Shub-Niggurath, these cloven-footed nests of tentacles are some of the foulest creatures to hunt the ancient woodlands of earth.
+  kind: entity
+  attacks: 4
+  power: 10
+  defense: 10
+  bounty: 130
+  madness: 12
+  level: 20  
+  
+reanimated_zombie:
+  id: 13
+  name: Reanimated Zombie
+  description: Brought to ambling life by the blind powers of science, the zombie is a voiceless automaton almost totally uncontrollable and violently unpredictable.
+  kind: creature
+  attacks: 1
+  power: 5
+  defense: 6
+  bounty: 50
+  madness: 2
+
+novitiate:
+  id: 12
+  name: Novitiate
+  description: They look like you or I, but these novitiates secretly worship alien beings and dark powers. Some have been misled, driven mad, or brainwashed, while a great many greedily volunteer their souls to the service of diabolical things.
+  kind: human
+  attacks: 1
+  power: 4
+  defense: 3
+  bounty: 15
+  
+tcho_tcho:
+  id: 11
+  name: Tcho-Tcho
+  description: Little people with ember eyes and yellow teeth, this asiatic species is often mistaken for Tibetans, Malay, Andaman Islanders, or Hmong, and are responsible for many of these peoples darker, whispered myths.
+  kind: creature
+  attacks: 2
+  power: 4
+  defense: 7
+  bounty: 100
+  madness: 3  
+  level: 5  
+  
+voodoo_zombi:
+  id: 10
+  name: Voodoo Zombi
+  description: Robbed of its free soul, made insentiate to pain and misery, empowered by hex and totem, the zombi of voodoo arts are the murderous servitors of shamans of across the world.
+  kind: creature
+  attacks: 1
+  power: 4
+  defense: 4
+  bounty: 30
+  madness: 3
+
+poltergeist:
+  id: 9
+  name: Poltergeist
+  description: A savagely violent spirit capable of doing great damange and harm by imposing its hateful will on the environment to use against its victims.
+  kind: spirit
+  attacks: 4
+  power: 1
+  defense: 4
+  bounty: 30
+  madness: 5  
+  level: 3
+  
+lunatic:
+  id: 8
+  name: Lunatic
+  description: They could be you. These souls are lost to a violent madness that will not let them rest without blood, without endless blood and as much suffering and the expression of inscrutable messages as can be done. 
+  kind: human
+  attacks: 1
+  power: 2
+  defense: 2
+  bounty: 5
+  
+hunting_horror:
+  id: 7
+  name: Hunting Horror
+  description: An enormous black serpent of smoke and endless fangs, winged yet flying in a coiling impossible paths. The horror is quicker than sound, and most certainly deeply, hopelessly intelligent.
+  kind: entity
+  attacks: 3
+  power: 8
+  defense: 7
+  bounty: 100
+  madness: 10
+  level: 15  
+  
+witch:
+  id: 6
+  name: Witch
+  description: Practitioners of the black arts of lillth and hecate, of the bloated woman and the scarlet woman, babylon's whore and the terrors of salem, the daughters of abomination are a real and present evil.
+  kind: human
+  attacks: 1
+  power: 2
+  defense: 5
+  bounty: 15
+  madness: 1  
+  
+ghoul:
+  id: 5
+  name: Ghoul
+  description: Approaching humanity in varying degrees while never escaping the canine features or hoofed feet or claws or necrotic rubbery flesh that are their hideous marks. They dwell in the squalar of humanity, gibbering beneath the moon before scurring to their sprawling warrens.
+  kind: creature
+  attacks: 2
+  power: 3
+  defense: 2
+  bounty: 15
+  madness: 4
+  level: 2
+    
+byakhee:
+  id: 4
+  name: Byakhee
+  description: Hybrid winged things, not altogether crows, nor moles, nor buzzards, nor ants, nor decomposed human beings. They come from the desolate voids of intersteller space, frequently as bound agents to will of a sorceror, and tend to consign their victims to the further reaches of the universe to die.
+  kind: creature
+  attacks: 4
+  power: 3
+  defense: 3
+  bounty: 50
+  madness: 5  
+  level: 3 
+  
+bunyip:
+  id: 3
+  name: Bunyip
+  description: Eyes the size of man's head; great, sad, and timeless. A humonoid blasphemomy of perhaps a seal and crocodile, this acquatic legacy of the prehistoric world can also stalk the land, yet where ever it seeks its victims is heard by a savage, lonely braying.
+  kind: creature
+  attacks: 1
+  power: 5
+  defense: 4
+  bounty: 15
+  madness: 6
+  level: 6    
+  
+hound_of_tindalos:
+  id: 2
+  name: Hound of Tindalos
+  description: Approaching a horrendous canine shape when it manifests in the 3rd dimension, these unfathomable creatures inhabit the angles of time and space and prey upon those such as humans who descend from and act through curves.
+  kind: entity
+  attacks: 2
+  power: 6
+  defense: 4
+  madness: 7  
+  level: 10
+  
+brute:
+  id: 1
+  name: Brute
+  description: Heavy hands, square jaw, and a simple mind complete the figure of these billigerant thugs, typically drawn from the Irish, Turks, or other lowborn immigrant ranks.
+  kind: human
+  attacks: 1
+  power: 3
+  defense: 1

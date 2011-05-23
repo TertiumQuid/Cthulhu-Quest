@@ -1,0 +1,37 @@
+<div class='grid-list-container' style='height:auto'>
+  <ul class='item-list' id='plot-list'>  	
+	<% @plots.each do |plot| %>
+	  <li>
+		<h3><em>level <%= plot.level %></em> <%= plot.title %></h3>
+		<div class='info'>
+		  <em><%= plot.duration %> hour investigation</em>
+		  <% if plot.available_for?(current_investigator) %>
+	        <%= link_to 'Add to casebook', facebook_location_plot_threads_path(:id => plot.id),  
+	                    'data-title' => plot.title,
+	                    'data-container' => "plot-#{plot.id}-container",
+	                    :class => 'investigate-button', 
+                        :method => 'post',
+                        :remote => true %>
+		
+		  <% else %>
+		    <a href="javascript:void(0)" class='investigate-button disabled'>level <%= plot.level%> needed</a>
+		  <% end %>
+		  <div><%= plot.subtitle %></div>
+		</div>		
+	  </li>
+	<% end %>
+  </ul>
+</div>
+
+<script>
+$(function() {
+  $( "a.investigate-button" ).bindAjaxRequester({
+	confirmation: "Are you sure you wish to add this plot to your casebook?",
+    success: function(sender) {
+      var container_id = sender.attr('data-container');
+      $('#'+container_id ).hide();
+    }
+  });
+  $( "a.investigate-button.disabled" ).button('disable').unbind('');
+});
+</script>

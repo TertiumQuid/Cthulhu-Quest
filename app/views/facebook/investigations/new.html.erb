@@ -1,0 +1,209 @@
+<%= form_for [:web, @plot_thread, @investigation], :url => facebook_casebook_investigations_path, :remote => true do |f| %>
+
+<div class="box profile" id='investigator'>
+  <em class='title right green small'>
+    <%= pluralize( @investigation.plot.duration, 'hour' ) %> of investigation required
+  </em>	
+  <h3 class='green'><span><%= @investigation.plot.title %><span></h3>
+	
+  <div class='para square-top-left green small'>
+	<h4 class='green'><%= @investigation.plot.subtitle %></h4>
+	<%= raw (@investigation.plot.description || '').gsub("\n",'<br />') %>
+  </div>
+
+  <div class='para green'>
+	<h4 class='green'>
+	  Investigation Requires
+      <em>Cannot investigate until requirements are met</em>
+	</h4>
+	<ul class='prerequisite-list'>
+  	  <% @investigation.plot.prerequisites.each do |prerequisite| %>	
+	    <% satisfied = prerequisite.satisfied?( current_investigator ) %>
+        <li class='<%= satisfied ? 'green' : 'red' %>'>
+	      <span class='header'><%= prerequisite.requirement_name %></span>
+	      <div class='body'>
+		    <% if satisfied %>
+		      You currently possess this item
+		    <% else %>
+		      You are MISSING this item
+		    <% end %>
+		  </div>
+		  <span class='footer'>
+			<em><%= raw satisfied ? "&radic;" : "X" %></em>
+			<%= prerequisite.requirement_type %>
+		  </span>
+	    </li>
+	  <% end %>	
+	</ul>
+
+	<h4 class='green'>Plot Rewards</h4>
+    <ul class='reward-list'>	
+	  <% @investigation.plot.rewards.each do |reward| %>
+	    <li class='<%= reward.reward_type %>'>
+		  <span>
+		    <%= ['experience','funds'].include?(reward.reward_type) ? reward.reward_name : "#{reward.reward_type.upcase}: ???" %>
+		  </span>
+		</li>
+	  <% end %>	
+	</ul>
+  </div>
+
+  <div class='para green'>	
+	<h4 class='green'>Assign Your Allies and Contacts to Help Solve Subplots</h4>
+    <ul class='long-list green'>
+	  <%= f.fields_for :assignments do |assignment| %>
+	    <% already_completed = !@completed_assignments.blank? && !@completed_assignments.select{|a| a.intrigue_id == assignment.object.intrigue_id}.blank? %>
+	
+	    <li style='text-align:left;' class='<%= already_completed ? 'checked' : '' %>'>
+		  <%= assignment.hidden_field :intrigue_id, :value => assignment.object.intrigue.id %>
+		  <%= assignment.hidden_field :investigator_id, :value => current_investigator.id %>
+		
+		  <% unless already_completed %>
+            <h3>
+	          <em style='text-align:right'>
+		        <strong class='value big'>
+		  	      <%= (([(current_investigator.send( assignment.object.intrigue.challenge.name.downcase ) - assignment.object.intrigue.difficulty).to_f,1].max / Intrigue::CHALLENGE_RANGE.to_f) * 100).to_i %>%
+		        </strong>
+  	            <span style='font-size:12px;left:25px;position:relative;'>
+			      <%= assignment.object.intrigue.challenge.name %> <%= current_investigator.send( assignment.object.intrigue.challenge.name.downcase ) %> vs. -<%= assignment.object.intrigue.difficulty %>
+			    </span>
+  	          </em> 
+	          <%= assignment.object.intrigue.title %>
+	        </h3>
+	
+	        <% unless (ally_assignables = assignment.object.assignable( @allies.map(&:ally) ) ).blank? %>
+	          <div class='assignment-strip'>
+		        <% @allies.select{|a| ally_assignables.include?( a.ally ) }.each do |ally| %>
+	              <%= assignment.radio_button :ally_id, ally.ally_id %>
+	
+                  <label for='<%= "investigation_assignments_attributes_#{assignment.object_name.gsub(/[^0-9]+/,'')}_ally_id_#{ally.ally_id}" %>' data-group='ally-<%= ally.ally_id %>'>		
+	                <span class='title'><%= ally.name %></span>
+                    <span class='skill'>
+	                  <span class='value'>
+	                    <%= ally.ally.send( assignment.object.intrigue.challenge.name.downcase ) %>
+  	                  </span>
+                      <%= assignment.object.intrigue.challenge.name %>
+                    </span>
+                  </label>
+		        <% end %>
+		      </div>
+	        <% end %>
+
+	        <% unless (contact_assignables = assignment.object.assignable( @contacts.map(&:character) ) ).blank? %>	
+	          <div class='assignment-strip'>
+		        <% @contacts.select{|c| contact_assignables.include?( c.character ) }.each do |contact| %>
+	              <%= assignment.radio_button :contact_id, contact.id %>
+	
+                  <label class='blue' for='<%= "investigation_assignments_attributes_#{assignment.object_name.gsub(/[^0-9]+/,'')}_contact_id_#{contact.id}" %>' data-group='contact-<%= contact.id %>'>		
+	                <span class='title'><%= contact.character.name %></span>
+                    <span class='skill'>
+	                  <span class='value'>
+	                    <%= contact.character.send( assignment.object.intrigue.challenge.name.downcase ) %>
+	                  </span>
+                      <%= assignment.object.intrigue.challenge.name %>
+                    </span>
+                  </label>
+  	            <% end %>
+		      </div>	
+	        <% end %>
+	
+	        <% if ally_assignables.blank? && contact_assignables.blank? %>
+	          <div class='assignment-strip empty'>
+		        No skilled allies or contacts available to help. You'll face this subplot alone.
+		      </div>
+	        <% end %>
+	
+	        <% if threat = assignment.object.intrigue.threat %>
+	          <div class='threat'>
+			    <div class='float-strip'>
+				  <div class='title'>This subplot requires <span style='color:#722;font-weight:bold;font-size:14px;'>combat</span> with: <strong><%= threat.name %></strong></div>
+				
+		          <div class="circle medium blue"><%= investigator_equals_monster_level(threat.monster) ? threat.monster.attacks : '?' %> <em>ATK</em></div>
+			      <div class="circle medium green"><%= investigator_equals_monster_level(threat.monster) ? threat.monster.defense : '?' %> <em>DEF</em></div>
+		          <div class="circle medium red"><%= investigator_equals_monster_level(threat.monster) ? threat.monster.power : '?' %> <em>POW</em></div>
+			      <div class="circle medium yellow"><%= investigator_equals_monster_level(threat.monster) ? threat.monster.madness : '?' %> <em>MAD</em></div>
+		        </div>	      
+		      </div>
+	        <% end %>
+	      <% else %>
+            <h3>
+	          <em style='text-align:right'>
+		        <strong class='value big checked'>&radic;</strong>
+	            <span style='font-size:12px;left:25px;position:relative;'>
+			      <%= assignment.object.intrigue.challenge.name %> vs. -<%= assignment.object.intrigue.difficulty %>
+			    </span>
+	          </em> 
+	          <%= assignment.object.intrigue.title %>
+	        </h3>	
+	        <div class='float-strip'>
+	          <div class='subplot-solved-bar progress-bar' data-value='100' style='margin:0 auto;height:20px;'>
+	              <span style='padding-left:90px;'>ALREADY SOLVED subplot during prior investigation</span>
+	          </div>
+	        </div>
+	        <br />&nbsp;
+	      <% end %>
+	    </li>
+	  <% end %>
+	</ul>
+
+    <% if current_investigator.moxie >= @investigation.plot.duration %>
+      <br />
+      <h4 class='green'>Expedite Investigation?</h4>
+      <div style='padding-left:10px;'>
+	    <% moxie = [@investigation.plot.duration, current_investigator.moxie].min %>
+	    <%= f.check_box :moxie_speed, {:class=>'right'}, moxie, 0 %>
+	    <%= f.label :moxie_speed, '√', :class => 'right checkbox', :style => 'height:20px;' %>
+	    Use <%= moxie %> Moxie and advance your investigation that many hours </div>
+    <% end %>
+  </div>
+</div>
+
+<% end %>
+
+<script>
+$(function() {
+  $( "#investigation_moxie_speed" ).button();
+  $( ".assignment-strip" ).buttonset();
+  $( ".contact-strip" ).buttonset();
+
+  $( ".assignment-strip label").click(function(event){
+	var label = $(this);
+	var radio = $('#'+label.attr('for'));
+	
+	if ( radio.attr('checked') ) {
+	  radio.attr('checked', false);
+	  label.removeClass('ui-state-active');
+	  label.parent('.ui-buttonset').buttonset("refresh");
+	  event.preventDefault();
+	  return false;	
+	};
+	
+    var dataGroup = label.attr('data-group');
+    var otherLabels = $('label[data-group|="'+dataGroup+'"]');
+
+    $.each( otherLabels, function(index, lbl) {	
+	  var groupLabel = $(lbl);
+	  if (label.attr('for') != groupLabel.attr('for') ) {
+        var groupRadio = $('#'+groupLabel.attr('for'));
+		groupRadio.attr('checked', false);
+		groupLabel.removeClass('ui-state-active');
+	  };
+    });	
+
+    radio.attr('checked', true);
+    label.parent('.ui-buttonset').buttonset("refresh");
+
+  });
+
+  $('.subplot-solved-bar').progressbar({value:100});
+
+  $( "#new_investigation" ).bindAjaxRequester({
+	button: $('<div />'),
+    success: function(sender) {
+      $('#nav-tab-casebook').trigger('click');
+      $("#dialogs").dialog( "close" ); 
+      addStatusItem("<%= @investigation.plot_title %>", 'investigating', '<%= @investigation.duration %>');
+	}
+  });
+});
+</script>

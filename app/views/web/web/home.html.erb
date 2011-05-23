@@ -1,0 +1,132 @@
+<aside class='sidebar'>
+  <% if logged_in? %>	
+    <header><h2>Greetings, <%= current_user.name %></h2></header>
+	<% unless current_investigator %>
+      <ul class="picklist">
+        <li>
+	      <br/>
+	      <div class="body">
+		    <div style='color:#666;padding:10px;font-size:15px'>
+			  You <strong>must create an investigator</strong> before you can start playing. 
+		  </div>
+    	  <%= button_to "Create Your Investigator", new_web_investigator_path, :method => 'get', :class => 'submit' %>
+          </div>
+        </li>
+	  </ul>
+	<% end %>
+  <% else %>	
+    <h2>Facebook Connect</h2>
+
+    <ul class="picklist">
+      <li>
+	    <br/>
+	    <div class="body">
+		  <div style='color:#666;padding:10px;font-size:15px'>
+			You <strong>must have a Facebook account to play</strong>. Sign in with Facebook Connect and investigate Lovecraftian plots with your friends.
+		  </div>
+    	  <%= button_to "Connect Your Facebook", oauth_authorize_path, :method => 'get', :class => 'submit' %>
+        </div>
+      </li>
+    </ul>
+  <% end %>
+</aside>
+
+<article>
+  <header>
+	<h2>Development Progress</h2>
+  </header>
+	<br />
+	<p> NOTE: <em>Italicized</em> features are forthcoming, regular text indicates inclusion in the current version.</p>
+	<br />
+	<p><em>Last site update on March 10th, 2011</em></p>
+	<br />
+	<div class='profile'>
+	  <h4>Version 0.08</h4>	
+	  <ul style='padding:20px'>		
+		<li><em>iPhone Web App Implementation</em></li>
+	    <li><em>Dev Blog</em></li>
+	    <li><em>Factions</em></li>
+		<li><em>Insanities</em></li>
+	    <li><em>Tasks</em></li>
+	  </ul>
+	</div>
+		
+	<div class='profile'>
+	  <h4>Version 0.07</h4>	
+	  <ul style='padding:20px'>		
+		<li>Native Facebook Implementation</li>
+	  </ul>
+	</div>
+		
+	<div class='profile'>
+	  <h4>Version 0.06</h4>	
+	  <ul style='padding:20px'>		
+		<li>Investigator Activity Log (Journal)</li>
+	    <li>Plot Acquisition</li>
+	    <li>Hosting Social Functions</li>
+	  </ul>
+	</div>
+	
+	<div class='profile'>
+	  <h4>Version 0.05</h4>	
+	  <ul style='padding:20px'>		
+		<li>Spells / Ritual Magick</li>
+		<li>Travel</li>
+		<li>Madness</li>
+		<li>Grimoires</li>
+	    <li>Monsters</li>
+		<li>Combat</li>
+	    <li>Bounty Hunting</li>
+	    <li>Contacts</li>
+	  </ul>
+	</div>
+	<div class='profile'>
+	  <h4>Version 0.04</h4>	
+	  <ul style='padding:20px'>	
+	    <li>Characters</li>
+	    <li>Moxie</li>	
+	    <li>Investigation History</li>
+		<li>Locations</li>
+	    <li>Investigator Health</li>
+	    <li>Stat Advancement</li>
+	    <li>Weapon Store (Web)</li>
+	    <li>Weaponry</li>
+	  </ul>
+	</div>
+	<div class='profile'>
+	  <h4>Version 0.03</h4>
+	  <ul style='padding:20px'>
+	    <li>Investigator Experience</li>
+	    <li>Skills</li>
+		<li>Daily Login Income / Investigator Funds</li>
+		<li>User Site Cookies / Remember Me</li>
+	    <li>Book Collections</li>
+	  </ul>
+	</div>
+	<div class='profile'>
+	  <h4>Version 0.02</h4>
+	  <ul style='padding:20px'>		
+	    <li>Plot Rewards</li>
+	    <li>Plot Solutions</li>
+	    <li>Plot Resolution</li>
+		<li>Gifting</li>
+		<li>Plot Prerequisites</li>
+		<li>Item Purchase / Management</li>
+	  </ul>
+	</div>
+	<div class='profile'>
+	  <h4>Version 0.01</h4>
+	  <ul style='padding:20px'>	
+		<li>Base CQ Rules Engine</li>
+		<li>Wireframe Site Design</li>
+		<li>User Registration / Facebook Graph</li>
+		<li>Facebook Friend Detection</li>
+		<li>Session Management</li>
+		<li>Investigator Create / View Profile</li>
+		<li>View Casebook / Plot Threads</li>
+		<li>Investigator Ally Management</li>
+		<li>Plot Advancement</li>
+		<li>Plot Ally Assignments</li>
+	  </ul>
+	</div>
+</article>

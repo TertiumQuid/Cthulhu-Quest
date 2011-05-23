@@ -1,0 +1,70 @@
+<br />
+<div class="box profile" id='social-hosting'>
+  <h3>Now Hosting: <%= social.social_function.name %></h3>
+  <p class='square-top-left'>It's your pleasure to be hosting <%= social.social_function.description %></p>
+
+  <div class='para'>
+	<h4>Preparations</h4>
+    <em class='right'><%= SocialFunction::TIMEFRAME %> hour event</em>	
+	<div class='social-progress progress-bar' data-value='<%= social.percent_complete %>'>
+	  <span><%= social.scheduled? ? 'Ready to Host' : "#{social.percent_complete} % Readied" %></span>
+    </div>
+  </div>
+	
+  <div class='para'>
+	<h4>Attending Guests</h4>
+	<div>
+	  <% if social.guests.blank? %>
+	    Your invitations have gone lonely and unanswered. It would, however, behoove your allies to attend, and you should urge them to do so.
+	  <% else %>
+	    Some dear allies will also enjoy the benefits of attending this function.
+	    <ul>
+	  	  <% social.guests.each do |guest| %>
+	      <li>
+		    <span><%= truncate(guest.investigator.name, :length => 12) %></span>
+		    <span class='avatar'>
+		      <%= image_tag guest.investigator.user.facebook_photo, :height=>'40', :width=>'40' if guest.investigator.user %>
+		      <br />
+		      <em><%= guest.investigator.user ? truncate(guest.investigator.user.name,:length=>9) : 'unknown' %></em>
+		    </span>
+		  </li>
+	      <% end %>
+	    </ul>	
+	  <% end %>	
+	</div>
+  </div>
+	
+  <div class='cmd float-strip'>	
+	<% if social.scheduled? %>
+	  <%= link_to 'Host Social Function', 
+	              facebook_social_function_social_path(social.social_function, social),
+	              :method => 'put',
+	              :remote => true,
+	              :class => 'finish-social-button' %>
+	<% else %>
+	  <a href='javascript:void(0)' class='finish-social-button disabled'>preparing to host</a>
+	<% end %>	
+  </div>
+  <br />
+</div>
+
+<script>
+$(function() {
+  $( ".social-progress" ).progressbar({
+	value: <%= social.percent_complete %>
+  });
+
+  $(".finish-social-button").bindAjaxRequester({
+	success: function(sender) {
+      var tab = $('#nav-tab-socials');
+      tab.parent().removeClass('ui-tabs-selected').removeClass('ui-state-active');
+      tab.trigger('click');
+      removeStatusItem('hosting');
+    },
+    failure: function(sender) {
+      removeStatusItem('hosting');
+    }
+  });
+  $( ".finish-social-button.disabled" ).button('disable');
+});
+</script>

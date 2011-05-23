@@ -1,0 +1,29 @@
+aleph_dark_rum:
+  investigator: aleph_pi
+  item: dark_rum
+  item_name: Rum (Dark)
+  uses_count: 4
+  
+aleph_first_aid_kit:
+  investigator: aleph_pi
+  item: first_aid_kit
+  item_name: First Aid Kit
+  uses_count: 7
+  
+aleph_abramelin_oil:
+  investigator: aleph_pi
+  item: abramelin_oil
+  item_name: Abramelin Oil
+  uses_count: 3
+
+aleph_lantern:
+  investigator: aleph_pi
+  item: lantern
+  item_name: Lantern
+  uses_count: 1
+  
+aleph_the_zohar:
+  investigator: aleph_pi
+  item: the_zohar
+  item_name: The Zohar
+  uses_count: 10

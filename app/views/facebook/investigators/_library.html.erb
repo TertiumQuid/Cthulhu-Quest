@@ -1,0 +1,84 @@
+<table class="box pager">
+  <tr>
+    <td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='library-prev' style='left:-5px;'>&lang;<span>PREV</span></a>
+    </td>		
+	<td>
+	  <div class='grid-list-container' style='height:205px;width:570px;'>
+		<ul class='grid-list tall' id='library-list'>
+		<% items.each do |book| %>
+		<li>
+		  <h6><%= book.item_name %></h6>
+		  <div class='body'><%= book.item.description %></div>
+		  <div class="info">
+			Study Sessions <span id='book-uses-<%=book.id%>'><%= book.uses_count || 0 %></span>/<%=book.item.uses_count %>
+		  </div>	
+		  <div class="cmd">
+		    <% if book.used? %>
+			  <div class='study-progress progress-bar' data-value='0'></div>
+		      <a href='javascript:void(0)' class='study-button disabled'>Fully Studied</a>
+		    <% elsif book.studyable? %>
+			  <div class='study-progress progress-bar' data-value='0'></div>
+			  <%= link_to "study", 
+			              facebook_possession_path( book ), 
+			              :disabled => !book.studyable?,
+			              'data-counter' => "book-uses-#{book.id}",
+			              :remote => true,
+			              :method => 'put',
+			              :class => "study-button #{(book.studyable? ? '' : 'disabled')}"  %>
+			<% else %>
+			  <div class='study-progress progress-bar' data-value='<%= 100 - book.remaining_study_time_in_percent %>'></div>
+		      <a href='javascript:void(0)' class='study-button disabled'>studying...</a>
+		    <% end %>
+		  </div>
+		</li>
+		<% end %>
+
+		<% if (items.size % 4) != 0 %>
+		  <% (4 - (items.size % 4)).times do %>
+		  <li class='empty'>
+		    <h6>&nbsp;</h6>
+		    <div class='body'>&nbsp;</div>
+		    <div class="info">&nbsp;</div>
+		  </li>
+		  <% end %>
+		<% end %>
+		</ul>
+	  </div>
+    </td>
+	  <td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='library-next' style='left:3px;'>&rang;<span>NEXT</span></a>
+    </td>
+  </tr>
+</table>
+
+<script>
+$(function() {
+  $('#library-list').paginated({
+	controls: { prev: $('#library-prev'), next: $('#library-next') },
+	perPage: 4
+  });	
+  $( ".study-button" ).bindAjaxRequester({
+	success: function(sender) {
+      var lbl = $('#'+ sender.attr('data-counter') );
+      var val = lbl.text();
+      lbl.text( parseInt(val) - 1);
+	  sender.button( 'option', 'label', 'studying' );
+	  sender.button( 'disable' );
+	  sender.unbind('click');
+	
+	  var bar = sender.siblings('.study-progress').first();
+	  bar.progressbar({ value: val });
+    }
+  });
+  $( ".study-button.disabled" ).button('disable');
+
+  $( ".study-progress" ).each(function(index) {
+    var val = parseInt( $(this).attr('data-value') );
+    if (val > 0) {
+      $(this).progressbar({ value: val });
+    };
+  });
+
+});
+</script>

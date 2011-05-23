@@ -1,0 +1,395 @@
+professor_sorcery:
+  skill: sorcery
+  profile: professor
+  skill_level: 1
+  skill_name: Sorcery
+  
+professor_research:
+  skill: research
+  profile: professor
+  skill_level: 3
+  skill_name: Research
+  
+professor_bureaucracy:
+  skill: bureaucracy
+  profile: professor
+  skill_level: 4
+  skill_name: Bureaucracy
+
+professor_scholarship:
+  skill: scholarship
+  profile: professor
+  skill_level: 7
+  skill_name: Scholarship
+
+librarian_bureaucracy:
+  skill: bureaucracy
+  profile: librarian
+  skill_level: 1
+  skill_name: Bureaucracy
+  
+librarian_sensitivity:
+  skill: sensitivity
+  profile: librarian
+  skill_level: 1
+  skill_name: Sensitivity
+  
+librarian_sorcery:
+  skill: sorcery
+  profile: librarian
+  skill_level: 2
+  skill_name: Sorcery
+  
+librarian_scholarship:
+  skill: scholarship
+  profile: librarian
+  skill_level: 4
+  skill_name: Scholarship
+  
+librarian_research:
+  skill: research
+  profile: librarian
+  skill_level: 7
+  skill_name: Research
+
+occultist_underworld:
+  skill: underworld
+  profile: occultist
+  skill_level: 1
+  skill_name: Underworld
+  
+occultist_conflict:
+  skill: conflict
+  profile: occultist
+  skill_level: 1
+  skill_name: Conflict
+  
+occultist_research:
+  skill: research
+  profile: occultist
+  skill_level: 2
+  skill_name: Research
+  
+occultist_sensitivity:
+  skill: sensitivity
+  profile: occultist
+  skill_level: 3
+  skill_name: Sensitivity
+  
+occultist_adventure:
+  skill: adventure
+  profile: occultist
+  skill_level: 3
+  skill_name: Adventure
+  
+occultist_sorcery:
+  skill: sorcery
+  profile: occultist
+  skill_level: 5
+  skill_name: Sorcery
+
+soldier_bureaucracy:
+  skill: bureaucracy
+  profile: soldier
+  skill_level: 2
+  skill_name: Bureaucracy
+  
+soldier_psychology:
+  skill: psychology
+  profile: soldier
+  skill_level: 2
+  skill_name: Psychology
+
+soldier_adventure:
+  skill: adventure
+  profile: soldier
+  skill_level: 4
+  skill_name: Adventure
+  
+soldier_conflict:
+  skill: conflict
+  profile: soldier
+  skill_level: 7
+  skill_name: Conflict
+
+journalist_underworld:
+  skill: underworld
+  profile: journalist
+  skill_level: 1
+  skill_name: Underworld
+  
+journalist_society:
+  skill: society
+  profile: journalist
+  skill_level: 2
+  skill_name: Society
+  
+journalist_bureaucracy:
+  skill: bureaucracy
+  profile: journalist
+  skill_level: 2
+  skill_name: Bureaucracy
+  
+journalist_adventure:
+  skill: adventure
+  profile: journalist
+  skill_level: 5
+  skill_name: Adventure
+  
+journalist_research:
+  skill: research
+  profile: journalist
+  skill_level: 5
+  skill_name: Research
+
+psychotheropist_bureaucracy:
+  skill: bureaucracy
+  profile: psychotheropist
+  skill_level: 1
+  skill_name: Bureaucracy
+  
+psychotheropist_research:
+  skill: research
+  profile: psychotheropist
+  skill_level: 2
+  skill_name: Research
+  
+psychotheropist_society:
+  skill: society
+  profile: psychotheropist
+  skill_level: 2
+  skill_name: Society
+  
+psychotheropist_sensitivity:
+  skill: sensitivity
+  profile: psychotheropist
+  skill_level: 3
+  skill_name: Sensitivity
+  
+psychotheropist_psychology:
+  skill: psychology
+  profile: psychotheropist
+  skill_level: 7
+  skill_name: Psychology
+
+police_inspector_psychology:
+  skill: psychology
+  profile: police_inspector
+  skill_level: 1
+  skill_name: Psychology
+  
+police_inspector_research:
+  skill: research
+  profile: police_inspector
+  skill_level: 2
+  skill_name: Research
+  
+police_inspector_underworld:
+  skill: underworld
+  profile: police_inspector
+  skill_level: 3
+  skill_name: Underworld
+  
+police_inspector_bureaucracy:
+  skill: bureaucracy
+  profile: police_inspector
+  skill_level: 4
+  skill_name: Bureaucracy
+  
+police_inspector_conflict:
+  skill: conflict
+  profile: police_inspector
+  skill_level: 5
+  skill_name: Conflict
+
+archeologist_scholarship:
+  skill: scholarship
+  profile: archeologist
+  skill_level: 5
+  skill_name: Scholarship
+  
+archeologist_research:
+  skill: research
+  profile: archeologist
+  skill_level: 5
+  skill_name: Research
+  
+archeologist_adventure:
+  skill: adventure
+  profile: archeologist
+  skill_level: 5
+  skill_name: Adventure
+
+artist_adventure:
+  skill: adventure
+  profile: artist
+  skill_level: 1
+  skill_name: Adventure
+  
+artist_sorcery:
+  skill: sorcery
+  profile: artist
+  skill_level: 2
+  skill_name: Sorcery
+  
+artist_society:
+  skill: society
+  profile: artist
+  skill_level: 3
+  skill_name: Society
+  
+artist_psychology:
+  skill: psychology
+  profile: artist
+  skill_level: 3
+  skill_name: Psychology
+  
+artist_sensitivity:
+  skill: sensitivity
+  profile: artist
+  skill_level: 6
+  skill_name: Sensitivity
+
+antiquarian_adventure:
+  skill: adventure
+  profile: antiquarian
+  skill_level: 2
+  skill_name: Adventure
+  
+antiquarian_underworld:
+  skill: underworld
+  profile: antiquarian
+  skill_level: 3
+  skill_name: Underworld
+  
+antiquarian_research:
+  skill: research
+  profile: antiquarian
+  skill_level: 5
+  skill_name: Research
+  
+antiquarian_sorcery:
+  skill: sorcery
+  profile: antiquarian
+  skill_level: 5
+  skill_name: Sorcery
+
+gangster_adventure:
+  skill: adventure
+  profile: gangster
+  skill_level: 4
+  skill_name: Adventure
+  
+gangster_conflict:
+  skill: conflict
+  profile: gangster
+  skill_level: 5
+  skill_name: Conflict
+  
+gangster_underworld:
+  skill: underworld
+  profile: gangster
+  skill_level: 6
+  skill_name: Underworld
+  
+dilettante_sorcery:
+  skill: sorcery
+  profile: dilettante
+  skill_level: 2
+  skill_name: Sorcery
+  
+dilettante_sensitivity:
+  skill: sensitivity
+  profile: dilettante
+  skill_level: 2
+  skill_name: Sensitivity
+  
+dilettante_adventure:
+  skill: adventure
+  profile: dilettante
+  skill_level: 4
+  skill_name: Adventure
+  
+dilettante_society:
+  skill: society
+  profile: dilettante
+  skill_level: 7
+  skill_name: Society
+
+priest_psychology:
+  skill: psychology
+  profile: priest
+  skill_level: 1
+  skill_name: Psychology
+  
+priest_sorcery:
+  skill: sorcery
+  profile: priest
+  skill_level: 3
+  skill_name: Sorcery
+  
+priest_scholarship:
+  skill: scholarship
+  profile: priest
+  skill_level: 3
+  skill_name: Scholarship
+  
+priest_research:
+  skill: research
+  profile: priest
+  skill_level: 3
+  skill_name: Research
+  
+priest_sensitivity:
+  skill: sensitivity
+  profile: priest
+  skill_level: 5
+  skill_name: Sensitivity
+
+athelete_society:
+  skill: society
+  profile: athelete
+  skill_level: 2
+  skill_name: Society
+  
+athelete_underworld:
+  skill: underworld
+  profile: athelete
+  skill_level: 3
+  skill_name: Underworld
+  
+athelete_conflict:
+  skill: conflict
+  profile: athelete
+  skill_level: 4
+  skill_name: Conflict
+  
+athelete_adventure:
+  skill: adventure
+  profile: athelete
+  skill_level: 6
+  skill_name: Adventure
+
+parapsychologist_adventure:
+  skill: adventure
+  profile: parapsychologist
+  skill_level: 2
+  skill_name: Adventure
+  
+parapsychologist_sorcery:
+  skill: sorcery
+  profile: parapsychologist
+  skill_level: 3
+  skill_name: Sorcery
+  
+parapsychologist_psychology:
+  skill: psychology
+  profile: parapsychologist
+  skill_level: 5
+  skill_name: Psychology
+  
+parapsychologist_sensitivity:
+  skill: sensitivity
+  profile: parapsychologist
+  skill_level: 5
+  skill_name: Sensitivity

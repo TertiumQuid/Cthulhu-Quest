@@ -1,0 +1,59 @@
+<% if current_investigator && owned_by_friend?(@investigator) %>
+  <article class='sidebar'>
+    <h2>Send a Gift</h2>
+    <ul class="picklist">
+	  <li class="header">
+		<%= @investigator.user.full_name %> is your friend on Facebook.
+		<br />
+		You can give them funds or items to help their investigations.
+	  </li>
+      <li>
+	    <div class="body centered">
+		  <%= form_tag web_investigator_gift_path( @investigator.id ) do %>
+		    <%= hidden_field_tag 'id', params[:id] %>
+		    <span>Enter either an <strong>amount</strong> of funds to send, or the <strong>exact name</strong> of the item you wish to send.</span>
+		    <%= text_field_tag 'gift', '', :placeholder => 'fund amount or item name' %>
+		    <%= submit_tag "Send Gift", :class => 'submit' %>
+		  <% end %>
+	    </div>
+	  </li>
+    </ul>
+  </article>
+<% end %>
+
+<article>
+  <header>
+	<h2>Investigator Profile</h2>
+  </header>
+
+  <div class="profile">
+    <fieldset>
+      <legend><%= @investigator.name %></legend>
+      <ul>
+	    <li>
+		  <header>
+		    <span class='right'>Level <%= @investigator.level %></span>
+		    <%= @investigator.profile_name %>
+		  </header>
+		</li>
+	  </ul>
+      <ul>
+	    <li>
+		  <% if current_investigator && current_investigator.id != @investigator.id && @investigator.wounds > 0 %>
+		    <%= link_to( '[treat wounds]', heal_web_investigator_path(:id => @investigator.id), :class => 'right', :method => :put) if current_investigator.possessions.items.medical.count > 0 %>
+		  <% end %>
+		  <label>Wounds :</label> <%= @investigator.wound_status %>
+	    </li>
+	  </ul>	
+    </fieldset>
+
+    <fieldset>
+      <legend>Skills</legend>
+      <ul>
+	  <% @investigator.stats.each do |s| %>
+	    <li><label><%= s.skill_name %>:</label> <span><%= s.skill_level %></span></li>
+	  <% end %>
+      </ul>
+    </fieldset>
+  </div>
+</article>

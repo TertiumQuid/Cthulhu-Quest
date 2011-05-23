@@ -1,0 +1,12 @@
+<li>
+<div class="body">
+<label><%= introduction.character.name %></label>
+<img class='photo' src='' />
+<br /><br />
+<p>
+<%= introduction.message %>.
+</p>
+<%= button_to('Dismiss the Introduction', web_introduction_path(introduction), :method => :delete) %>
+<%= button_to('Accept the Introduction', web_introduction_path(introduction), :method => :put, :class => 'submit') %>
+</div>
+</li>

@@ -1,0 +1,29 @@
+adventure:
+  name: Adventure    
+    
+bureaucracy:
+  name: Bureaucracy    
+    
+conflict:
+  name: Conflict    
+    
+research:
+  name: Research
+  
+scholarship:
+  name: Scholarship
+  
+society:
+  name: Society
+  
+sorcery:
+  name: Sorcery
+  
+underworld:
+  name: Underworld
+  
+psychology:
+  name: Psychology
+  
+sensitivity:
+  name: Sensitivity

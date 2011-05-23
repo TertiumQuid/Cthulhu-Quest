@@ -1,0 +1,11 @@
+aleph_failed_acolyte:
+  investigator: aleph_pi
+  assignment: aleph_grandfathers_journal_self_4
+  monster: acolyte
+  weapon: colt_45_automatic
+  result: succeeded
+  logs: |
+        - Aleph attacked (defense 2) against 2 (attack 4) and HIT with a 0.
+        - A Ghoul left you Bloodied and begrimed for 2.
+  created_at: <%= (Time.now - 2.days).strftime("%Y-%m-%d %H:%M:00") %>
+  wounds: 1

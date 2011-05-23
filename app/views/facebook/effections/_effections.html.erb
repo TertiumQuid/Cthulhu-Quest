@@ -1,0 +1,20 @@
+<ul class='listing'>
+  <% @effections.each do |effection| %>
+    <li>
+	  <em class='right' style='margin-right:15px;'>ends in <%= distance_of_time_in_words(Time.now,effection.ends_at) %></em> 
+	  <strong style='font-size:14px;letter-spacing:1.1px;'>
+	    <%= effection.effect.trigger_type %>, <%= effection.effect.name %>
+	  </strong>
+      <div id='<%="effect-bar-#{effection.id}"%>' class="progressbar" style="height:15px;margin:10px 0;width:620px;"></div>
+      <div style='margin-top:5px;'><%= effection.effect.description %></div>
+    </li>
+  <% end %>
+</ul>
+
+<script>
+  $(function() {
+	<% @effections.each do |effection| %>
+	  $( "#<%="effect-bar-#{effection.id}"%>" ).progressbar({ value: <%= 100 - effection.remaining_time_in_percent %> });
+	<% end %>
+  });
+</script>

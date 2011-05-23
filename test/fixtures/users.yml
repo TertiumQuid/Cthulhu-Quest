@@ -1,0 +1,49 @@
+robert_blake:
+  name: Robert
+  full_name: Robert Harrison Blake
+  email: robertblake@cthulhuquest.com
+  created_at: 2010-10-19 17:33:58
+  updated_at: 2010-10-19 17:36:11
+  
+thomas_malone:
+  name: Detective Malone
+  full_name: Detective Thomas F. Malone
+  email: thomasmalone@cthulhuquest.com
+  facebook_id: 100001800019415
+  created_at: 2010-10-19 17:33:58
+  updated_at: 2010-10-19 17:36:11
+  
+henry_armitage:
+  name: Dr. Armitage
+  full_name: Dr. Henry Armitage
+  email: henryarmitage@cthulhuquest.com
+  facebook_id: 100001820990907
+  created_at: 2010-10-19 17:33:58
+  updated_at: 2010-10-19 17:36:11
+  
+aleph:
+  email: aleph@cthulhuquest.com
+  name: Aleph
+  full_name: Aleph First
+  investigator_id: <%= Fixtures.identify(:aleph_pi) %>
+  facebook_id: 100001634063970
+  facebook_token: 155345421154514|5058f76007a0900a9d79193e-100001634063970|mtE5f0kRi8vluBDKUo2mvbUr34M
+  facebook_friend_ids: '100001627764205,100001591165226'
+  last_facebook_update_at: <%= (Time.now).strftime("%Y-%m-%d %H:%M:00") %>
+    
+beth:
+  email: beth@cthulhuquest.com
+  name: Beth
+  full_name: Beth Second
+  investigator_id: <%= Fixtures.identify(:beth_pi) %>
+  facebook_id: 100001627764205
+  facebook_token: 155345421154514|5f775f88fbf7087c1f5e7232-100001627764205|8IncGTLhQgQ5btHzKMY2bD_RhaQ
+  facebook_friend_ids: '100001634063970,100001820990907'
+    
+gimel:        
+  email: gimel@cthulhuquest.com
+  facebook_id: 
+  name: Gimel
+  full_name: Gimel First
+  investigator_id: <%= Fixtures.identify(:gimel_pi) %>
+  facebook_id: 100001591165226

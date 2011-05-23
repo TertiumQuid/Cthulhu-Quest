@@ -1,0 +1,75 @@
+<div class="box" id='social-invitations'>
+<h3>Invitations From Allies</h3>
+<p><em>Investigators who count you among their allies naturally welcome you to their private social functions. Attend, and you can share in the rewards.</em></p>
+
+<table class="box pager">
+  <tr>
+    <td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='social-invitations-prev' style='left:-5px;'>&lang;<span>PREV</span></a>
+    </td>		
+	<td>
+	  <div class='grid-list-container' style='height:185px;'>
+	  <ul class='grid-list small' id='social-invitations-list' style='width:570px;'>
+		<% socials.each do |social| %>
+		<li id='social-invitation-<%= social.id %>'>
+	      <h6><%= social.name %></h6>
+	      <div class='title'><%= social.investigator.name %></div>
+		  <div class='body'>
+			Your ally has arranged <%= social.social_function.description %>
+			<br /><br />
+			<em>Attend and gain <%= social.social_function.kind == 'item' ? 'items' : social.social_function.kind %></em>
+		  </div>	
+		  <div class="info">from <%= time_ago_in_words(social.created_at) %> ago</div>	
+		  <div class="cmd">
+		    <%= link_to 'attend', new_facebook_social_guest_path(social), 
+		                :remote => true,
+		                :class => 'guest-attend-button' %>
+		  </div>	
+		</li>
+		<% end %>
+
+		<% if (socials.size % 4) != 0 %>
+		  <% (4 - (socials.size % 4)).times do %>
+		  <li class='empty'>
+	        <h6>&nbsp;</h6>
+		    <div class="title">&nbsp;</div>	
+		    <div class="body">&nbsp;</div>
+		    <div class="info">&nbsp;</div>
+		    <div class="cmd">&nbsp;</div>
+		  </li>
+		  <% end %>
+		<% end %>	
+	  </ul>
+	  </div>
+    </td>
+	<td style='width:28px;'>
+      <a class='page-nav' href='javascript:void(0)' id='social-invitations-next' style='left:3px;'>&rang;<span>NEXT</span></a>
+    </td>
+  </tr>
+</table>
+</div>
+
+<script>
+$(function() {
+  $('#social-invitations-list').paginated({
+	controls: { prev: $('#social-invitations-prev'), next: $('#social-invitations-next') },
+	perPage: 4
+  });
+
+  $( ".guest-attend-button" ).bindAjaxRequester({
+    height: 450,
+	buttons: { 
+	  "Collaborate": function() { 
+	    $('#guest-cooperate-button').click();
+      },
+	  "Betray": function() { 
+	    $('#guest-defect-button').click();
+      },	
+	  "Nevermind": function() { 
+        $(this).dialog( "close" ); 
+        $(this).parent( "ui-dialog" ).remove();
+      }
+    }
+  });
+});
+</script>

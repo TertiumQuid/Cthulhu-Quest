@@ -1,0 +1,48 @@
+<div id="navigation">
+  <div id="navbar">
+	<%= navigation_button 0, 'Home', facebook_root_path %>
+	<%= navigation_button 1, 'Investigator', (current_investigator ? edit_facebook_investigator_path : new_facebook_investigator_path) %>
+	<%= navigation_button 2, 'Casebook', facebook_casebook_index_path, :disabled => current_investigator.blank? %>	
+	<%= navigation_button 3, 'Society', facebook_allies_path, :disabled => current_investigator.blank? %>	
+	<%= navigation_button 4, 'Magick', facebook_spellbooks_path, :disabled => current_investigator.blank? %>		
+    <%= navigation_button 5, 'Map', facebook_location_path %>
+    <%= navigation_button 6, 'Shop', facebook_items_path %>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( "#navbar" ).buttonset();
+
+  /* manually disable protected button links */
+  $.each( $('.nav-link.disabled'), function(index, link) {	
+	$(link).parent('label').attr('aria-disabled', true).unbind();	
+	$(link).addClass('ui-button-disabled').addClass('ui-state-disabled').button('disable').unbind('');
+	$(link).attr('href', '#').button('disable');
+  });
+});
+
+$(function() {
+  $(".nav-link")
+    .bind("ajax:success", function(obj, data, status, xhr) {
+	  if (status == 'success') {
+        $("#content").html(data);
+      };
+    })
+    .bind("ajax:error", function(obj, data, status, xhr) {
+	  var dialogOptions = { 
+		  title: "Arcane Server Error",
+		  autoOpen: true, 
+	      show: {effect: "fade", duration: 300},		
+	      hide: {effect: "fade", duration: 200},
+	      position: ['center','top'],
+		  modal: true,
+		  minHeight: 250,
+		  width: 700,
+		  buttons: { "Very Well": function(){ $(this).dialog( "close" ); }}
+	  };	
+	  var errorText = "Something terrible has happened on the server, causing an error in time and space. The appropriate deities have been notifed and will soon ply their magic to resolve the issue.";
+	  $("<div />", { html: '<p><br />'+errorText+'</p>' }).dialog(dialogOptions);
+    });
+});
+</script>

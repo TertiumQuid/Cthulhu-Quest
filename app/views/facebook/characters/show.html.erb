@@ -1,0 +1,67 @@
+<div class='ui-tabs-panel'>
+<div class="box profile" style='padding:5px'>
+  <em class='title right'><%= @character.profession %></em>
+  <h3>
+    <%= @character.name %>
+  </h3>	
+
+  <div class='para square-top-left'>		
+    <%= @character.biography %>
+
+	<div class='info'>
+	  &nbsp;<span>Residing in <strong><%= @character.location.name %></strong></span>
+	</div>
+  </div>
+
+  <div class='para'>
+	<h4>Skill Profile</h4>
+	<ul class='big'>	
+      <% @character.character_skills.each do |stat| %>
+	    <li>
+	      <span class='label'>
+	        <%= stat.skill_name %> 
+		    <span><%= stat.skill_level %></span>
+		  </span>
+        </li>
+      <% end %>	
+	</ul>
+  </div>
+
+  <% unless @introduction.blank? %>
+  <div class='para'>
+	<h4>Make Your Introduction to Gain Them as a Contact</h4>
+	At present a suspicious stranger, <%= @introduction.message %> whereby you main gain their trust.
+	
+	<% if @introduction.character.location_id == current_investigator.location_id %>
+	  <%= link_to 'Graciously Accept', 
+	             facebook_introduction_path(@introduction), 
+	             :method => 'put',
+	             :remote => true,
+	             :style => 'display:none',
+	             :class => 'introduction-response-button hidden',
+	             :id => 'accept-introduction-button' %>
+	
+	  <%= link_to 'Brusquely Refuse', 
+	             facebook_introduction_path(@introduction), 
+	             :method => 'delete',
+	             :remote => true,
+	             :style => 'display:none',
+	             :class => 'introduction-response-button hidden',	
+	             :id => 'refuse-introduction-button' %>	
+	<% end %>
+  </div>
+  <% end %>
+</div>
+</div>
+
+<script>
+$(function() {
+  $( "a.introduction-response-button" ).bindAjaxRequester({
+	success: function(sender) {	
+      var tab = $('#nav-tab-map');
+      tab.parent().removeClass('ui-tabs-selected').removeClass('ui-state-active');
+      tab.trigger('click');
+    }
+  });
+});
+</script>

@@ -1,0 +1,440 @@
+malleus_maleficarum_3_depart:
+  id: 63
+  plot_id: 27
+  title: Depart the Village at Once
+  description: leave the accursed village to make its venue and its peace, departing swiftly and without farewells, escorting your contact's poor cousin from the scenes of her horror.
+  kind: neutral
+  
+malleus_maleficarum_3_burn:
+  id: 62
+  plot_id: 27
+  title: Ignite the Auto De Fé
+  description: raise the purifying flame to the chants of the village bewitched and vengeful, committing the half-dead forms of the witch hags to a righteous end sealed with fire and holy words.
+  kind: sinister
+  
+malleus_maleficarum_2_bury:
+  id: 61
+  plot_id: 26
+  title: A Christian Burial
+  description: sort the bones of the infants into their material whole and give them each a Christian burial in the moonlight, praying for their orphan souls.
+  kind: heroic
+  
+malleus_maleficarum_2_spellcast:
+  id: 60
+  plot_id: 26
+  title: Draw Down the Moon
+  description: invoke the Thessalian ritual charged by the arboreal symbolism of the grove and seek advice in the cover of night and ancient wisdom.
+  kind: insane
+  
+malleus_maleficarum_2_alert:
+  id: 59
+  plot_id: 26
+  title: Alert the Villagers
+  description: call upon the courageous of the village to expose the hallowed woodland altars and let the people see god's work be done upon satan's crafts.
+  kind: neutral
+  
+malleus_maleficarum_1_accomplices:
+  id: 58
+  plot_id: 7
+  title: Negotiate Clemency for Naming Accomplices
+  description: assure the accusers that, with sufficient time, you can extract the names and nature of the seniors of the coven the girl has surely fallen afoul.
+  kind: neutral
+  
+malleus_maleficarum_1_advocate:
+  id: 57
+  plot_id: 7
+  title: Advocate as the Defendant's Lawyer
+  description: present yourself as the girl's attorney bound by the laws of Massachusetts but answering only to God and truth, taking the girl into your temporary care.
+  kind: heroic
+  
+malleus_maleficarum_1_swim:
+  id: 56    
+  plot_id: 7
+  title: Conduct a Swimming Test
+  description: appease the villagers with a Witch's swimming test that will leave the hysterical girl barely alive but lend credibility to her case.
+  kind: sinister
+  
+national_electric_light_association_correct:
+  id: 55    
+  plot_id: 25
+  title: Correct the Scientific Formula
+  description: recognize the potential so nearly ruined by the slightly mistaken formulas of the chief scientist, and personally correct his notes with the desired solutions for the light gate.
+  kind: sinister
+  
+national_electric_light_association_sabotage:
+  id: 54    
+  plot_id: 25
+  title: Sabotage the Machinery
+  description: ingeniously reconfigure the light gate's field controls to produce an irreversible closure after a suitably random interval, and replace numbers in the chief scientist's key formulas for good measure.
+  kind: neutral
+  
+national_electric_light_association_destroy:
+  id: 53    
+  plot_id: 25
+  title: Destroy the Machinery 
+  description: smash every last piece of electronic machinery controlling the light field , closing the tiny gate in blinding implosion and averting the risk posed by reckless science.
+  kind: heroic
+  
+king_in_yellow_banish:
+  id: 52    
+  plot_id: 24
+  title: Banish the Yellow Sign
+  description: eradicate all trace of the Yellow Signs that allowed Carcosa to break through reality and bridge the worlds.
+  kind: heroic
+  
+king_in_yellow_sing:
+  id: 51    
+  plot_id: 24
+  title: Sing Cassilda's Song
+  description: retreat the station of the chorus and allow your newfound voice and the words it seems to know to sing out Cassilda's song while the performance transpires.
+  kind: sinister
+  
+no_mask_hide:
+  id: 50    
+  plot_id: 23
+  title: Hide Safely
+  description: wedge yourself into a shallow alcove to pass the hours listening to echoing screams struggling to distinguish between their agony, delight, or horror.
+  kind: neutral
+  
+no_mask_descend:
+  id: 49    
+  plot_id: 23
+  title: Descend Deeper Into the Estate
+  description: breach a series of hidden passageways that network the estate house, and uncover the remaining bodies in impossible scenes of destruction.
+  kind: sinister
+  
+no_mask_usher:
+  id: 48    
+  plot_id: 23
+  title: Usher the Innocents Away
+  description: lead the gathering crowd of senseless revelers and usher them from the estate into the safety of the courtyard grounds and take their leave.
+  kind: heroic
+  
+have_you_seen_the_yellow_sign_watch:
+  id: 47    
+  plot_id: 22
+  title: Watch From the Shadows
+  description: sip your wine from a benighted corner of the ballroom, taking measure of the estate itself and the ebb and flow of the crowds.
+  kind: neutral
+  
+have_you_seen_the_yellow_sign_seek:
+  id: 46    
+  plot_id: 22
+  title: Seek Deeper Connections
+  description: eavesdrop and provoke comments from the guests to learn of deeper relationships between the playwright and the enigmatic masqueraders. 
+  kind: heroic
+  
+have_you_seen_the_yellow_sign_release:
+  id: 45    
+  plot_id: 22
+  title: Find Release in the Festivities
+  description: lose yourself in carnival atmosphere of the evening and drink heavily, circulate among the crowds, and find cause for acerbic wit and scurrilous malice toward the other guests.
+  kind: sinister
+  
+grandfathers_journal_burned:
+  id: 44    
+  plot_id: 21
+  title: Burn the Farmhouse
+  description: set the damn'ed farmhouse ablaze, purifying every last trace of black magic and obscene record of your grandfather's blasphemous mistake.
+  kind: denial
+  
+grandfathers_journal_completed:
+  id: 43    
+  plot_id: 21
+  title: Complete the Ritual
+  description: invoke the terminal incantations overlooked by your grandfather's original summoning and banish the dreadful evil to the eternal prison of dimensions unknown.
+  kind: heroic
+  
+grandfathers_journal_mastered:
+  id: 42    
+  plot_id: 21
+  title: Master the Evil
+  description: use grandfather's notes to transfer mastery over the re-imprisoned horror to yourself, carrying the secret of your dark inheritance with your for the rest of your life.
+  kind: sinister
+  
+ulthars_decree_poison:
+  id: 41    
+  plot_id: 20
+  title: Exchange the Milk
+  description: replace the contents of the poisoner's milk bottles after the morning delivery with the lethal cat's milk.
+  kind: sinister
+  
+ulthars_decree_authorities:
+  id: 40    
+  plot_id: 20
+  title: Call the Authorities
+  description: turn the villain over to the police and the discipline of the local courts.
+  kind: heroic
+
+unquiet_dead_destroy:
+  id: 39    
+  plot_id: 19
+  title: Destroy the Research
+  description: burn the lab, the equipment, the notes, and every last memento of Owen's resurrection of Herbert West's diabolical experiments, committing the dangerous young man to the stern hands of Miskatonic University's disciplinary board.
+  kind: heroic
+  
+unquiet_dead_university:
+  id: 38    
+  plot_id: 19
+  title: Contact the University
+  description: reach out to the dean of the School of Medicine (who has regrettably dealt with similar incidents before), and place the fate of the man into the hand's of Miskatonic University disciplinary board.
+  kind: neutral
+  
+unquiet_dead_police:
+  id: 37    
+  plot_id: 19
+  title: Involve the Police
+  description: turn the wretched young man over to the hands of the police authorities where his perversions of nature can be put to official justice.
+  kind: denial
+  
+unquiet_dead_sympathetic:
+  id: 36    
+  plot_id: 19
+  title: Sympathize with Owen
+  description: recognize the youthful rage behind the brilliant young mind, the rejection of his human affections, and the ideal possibilities of the legacy of Herbert West's work.
+  kind: sinister
+  
+professors_lecture_questioned:
+  id: 35    
+  plot_id: 18
+  title: Don't Attract Attention
+  description: observe quietly from the back of the room, carefully studying the audience.
+  kind: neutral
+  
+professors_lecture_questioned:
+  id: 34    
+  plot_id: 18
+  title: Ask Discriminating Questions 
+  description: catechize the discourse with a penetrating yet subtle line of questioning.
+  kind: scientific
+  
+professors_lecture_challenged:
+  id: 33    
+  plot_id: 18
+  title: Challenge the Implausible
+  description: loudly protest the questionable librarian's Scheherazadian flapdoodle.
+  kind: denial
+
+night_terrors_embraced:
+  id: 32    
+  plot_id: 17
+  title: Embrace the Dreams
+  description: embrace the noctornal odysseys that seem to kill your dreaming soul even while enlightening it.
+  kind: insane
+  
+night_terrors_documented:
+  id: 31    
+  plot_id: 17
+  title: Record What is to Come
+  description: in written word, fragments, sketches, leave presentiments of your encounters for others to find and know. 
+  kind: heroic
+  
+night_terrors_conquered:
+  id: 30    
+  plot_id: 17
+  title: Conquer the Dreams
+  description: release your mind from the thrall of slumbering chains, imposing your will, breaking through the wall of sleep.
+  kind: neutral
+
+triassic_translations_alert:
+  id: 29    
+  plot_id: 16
+  title: Alert the Parishioners 
+  description: spread word to the parishioners that they have entrusted their souls to men dabbling with false idols. 
+  kind: denial
+  
+triassic_translations_notes:
+  id: 28    
+  plot_id: 16
+  title: Destroy the Clergy's Notes
+  description: take the grimoire and destroy the dangerously conjectural notes already penned by those priests enthralled with the Revered's work.
+  kind: heroic
+
+polis_of_sunken_sahara_ranksack:
+  id: 27    
+  plot_id: 15
+  title: Ransack the Archeological Manuscripts
+  description: steal not only the G'harne Fragments but the entire contents of the safe so as to disguise the objective of your theft.
+  kind: neutral
+  
+polis_of_sunken_sahara_copy:
+  id: 26    
+  plot_id: 15
+  title: Copy the Fragments by Moonlight
+  description: in a frenzied hand by the dark light of the office, painstakingly copy the G'harne translations and meticulously erase your presence from the scene of the crime.
+  kind: heroic
+  
+last_man_standing_merciless:
+  id: 25    
+  plot_id: 11
+  title: Win the Gentleman's Fight
+  description: nobly defeat the opponent with a gracious yet suitably unkind demonstration of your skill.
+  kind: heroic
+  
+last_man_standing_merciless:
+  id: 24    
+  plot_id: 11
+  title: Beat the Contender Mercilessly
+  description: in a battle-maze of savage skill and fury beat the contender within an inch of his life.
+  kind: insane
+  
+the_clavis_alchimiae_practiced:
+  id: 23    
+  plot_id: 10
+  title: Experiment with Alchemy
+  description: utilize the chemical instructions to reveal and release the true nature of matter.
+  kind: scientific
+  
+the_clavis_alchimiae_rejected:
+  id: 22    
+  plot_id: 10
+  title: Reject the Teachings
+  description: reject the outlandish conclusions of the author and the tenuous logic of the text.
+  kind: denial  
+  
+the_clavis_alchimiae_understood:
+  id: 21    
+  plot_id: 10
+  title: Comprehend the Text
+  description: come to understand the language of the Hebrew God.
+  kind: neutral
+  
+oracles_of_nostradamus_interpreted:
+  id: 20    
+  plot_id: 9
+  title: Read the History
+  description: read between the cryptic lines of verse into the records of past events whose truths demand abstract telling.
+  kind: scientific
+  
+oracles_of_nostradamus_rejected:
+  id: 19    
+  plot_id: 9
+  title: Reject the Teachings
+  description: reject the outlandish conclusions of the author and the tenuous logic of the text.
+  kind: denial
+  
+oracles_of_nostradamus_interpreted:
+  id: 18    
+  plot_id: 9
+  title: Interpret the Visions
+  description: understand the cryptic verse in the omens of the world today and what will befall tomorrow.
+  kind: insane
+  
+the_zohar_rejected:
+  id: 17    
+  plot_id: 8
+  title: Reject the Teachings
+  description: reject the outlandish conclusions of the author and the tenuous logic of the text.
+  kind: denial  
+  
+the_zohar_understood:
+  id: 16    
+  plot_id: 8
+  title: Comprehend the Text
+  description: come to understand the language of the Hebrew God.
+  kind: neutral
+  
+the_malleus_maleficarum_rejected:
+  id: 15    
+  plot_id: 7
+  title: Reject the Teachings
+  description: reject the outlandish conclusions of the author and the tenuous logic of the text.
+  kind: denial
+  
+the_malleus_maleficarum_understood:
+  id: 14    
+  plot_id: 7
+  title: Comprehend the Text
+  description: come to understand the ancient art of witch hunting and the diabolic incarnations of the witch.
+  kind: neutral
+  
+the_key_of_solomon_rejected:
+  id: 13    
+  plot_id: 6
+  title: Reject the Teachings
+  description: reject the outlandish conclusions of the author and the tenuous logic of the text.
+  kind: denial  
+  
+key_of_solomon_understood:
+  id: 12    
+  plot_id: 6
+  title: Comprehend the Text
+  description: come to understand the ways and means by which man may conduct business with other worlds.
+  kind: neutral
+  
+the_beatus_methododivo_gnostics:
+  id: 11    
+  plot_id: 5
+  title: Embrace the Gnostic Interpretation
+  description: locate the diabolic gnostic philosophy that taints the empires of darkest India.
+  kind: neutral  
+
+the_beatus_methododivo_revelation:
+  id: 10    
+  plot_id: 5
+  title: Embrace Future Revelations
+  description: fix upon the latent powers soon to emerge from their Indian lairs and vie for world rule.
+  kind: neutral
+  
+the_emerald_tablet_rejected:
+  id: 9    
+  plot_id: 4
+  title: Reject the Teachings
+  description: reject the outlandish conclusions of the author and the tenuous logic of the text.
+  kind: denial  
+  
+the_emerald_tablet_understood:
+  id: 8    
+  plot_id: 4
+  title: Comprehend the Text
+  description: come to understand models of reality as systematically transformed through alchemical symbolism.
+  kind: neutral
+  
+the_i_ching_rejected:
+  id: 7
+  plot_id: 3
+  title: Reject the Teachings
+  description: find but chaos in your adventures and little pattern besides, understanding that only man makes order in his universe and requires no children's games to interpret his will.
+  kind: denial  
+  
+the_i_ching_accepted:
+  id: 6    
+  plot_id: 3
+  title: Accept the Teachings
+  description: come to understand the intricate castings in the I Ching system by which one can unveil the flow of destiny and the place and law of all living things.
+  kind: neutral
+
+the_golden_bough_rejected:
+  id: 5    
+  plot_id: 2
+  title: Reject the Teachings
+  description: reject the vile speculations of Sir Frazer and the sexual and pagan obsessions underpinning the work.
+  kind: denial
+  
+the_golden_bough_understood:
+  id: 4    
+  plot_id: 2
+  title: Comprehend the Text
+  description: come to understand the nuanced power of ritual myth, and the symbols of its agents through the science of magic.
+  kind: neutral
+  
+troubled_dreams_embraced:
+  id: 3    
+  plot_id: 1
+  title: Embrace the Dreams
+  description: embrace the dreaming bodement of mankind's universal extinction.
+  kind: insane
+  
+troubled_dreams_documented:
+  id: 2    
+  plot_id: 1
+  title: Record What is to Come
+  description: in written word, fragments, sketches, leave presentiments of the portents for others to find and know. 
+  kind: heroic
+  
+troubled_dreams_banished:
+  id: 1    
+  plot_id: 1
+  title: Banish the Dreams
+  description: banish the nightly trauma of the prophetic dreams and steel your mind.
+  kind: denial

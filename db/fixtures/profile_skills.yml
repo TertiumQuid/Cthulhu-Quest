@@ -1,0 +1,461 @@
+professor_sorcery:
+  id: 68
+  skill_id: 7
+  profile_id: 15
+  skill_level: 1
+  skill_name: Sorcery
+  
+professor_research:
+  id: 66
+  skill_id: 4
+  profile_id: 15
+  skill_level: 3
+  skill_name: Research
+  
+professor_bureaucracy:
+  id: 65
+  skill_id: 2
+  profile_id: 15
+  skill_level: 4
+  skill_name: Bureaucracy
+
+professor_scholarship:
+  id: 64
+  skill_id: 5
+  profile_id: 15
+  skill_level: 7
+  skill_name: Scholarship
+
+librarian_bureaucracy:
+  id: 63
+  skill_id: 2
+  profile_id: 14
+  skill_level: 1
+  skill_name: Bureaucracy
+  
+librarian_sensitivity:
+  id: 62
+  skill_id: 10
+  profile_id: 14
+  skill_level: 1
+  skill_name: Sensitivity
+  
+librarian_sorcery:
+  id: 61
+  skill_id: 7
+  profile_id: 14
+  skill_level: 2
+  skill_name: Sorcery
+  
+librarian_scholarship:
+  id: 60
+  skill_id: 5
+  profile_id: 14
+  skill_level: 4
+  skill_name: Scholarship
+  
+librarian_research:
+  id: 59
+  skill_id: 4
+  profile_id: 14
+  skill_level: 7
+  skill_name: Research
+
+occultist_underworld:
+  id: 58
+  skill_id: 8
+  profile_id: 13
+  skill_level: 1
+  skill_name: Underworld
+  
+occultist_conflict:
+  id: 57
+  skill_id: 3
+  profile_id: 13
+  skill_level: 1
+  skill_name: Conflict
+  
+occultist_research:
+  id: 56
+  skill_id: 4
+  profile_id: 13
+  skill_level: 2
+  skill_name: Research
+  
+occultist_sensitivity:
+  id: 55
+  skill_id: 10
+  profile_id: 13
+  skill_level: 3
+  skill_name: Sensitivity
+  
+occultist_adventure:
+  id: 54
+  skill_id: 1
+  profile_id: 13
+  skill_level: 3
+  skill_name: Adventure
+  
+occultist_sorcery:
+  id: 53
+  skill_id: 7
+  profile_id: 13
+  skill_level: 5
+  skill_name: Sorcery
+
+soldier_bureaucracy:
+  id: 52
+  skill_id: 2
+  profile_id: 12
+  skill_level: 2
+  skill_name: Bureaucracy
+  
+soldier_psychology:
+  id: 51
+  skill_id: 9
+  profile_id: 12
+  skill_level: 2
+  skill_name: Psychology
+
+soldier_adventure:
+  id: 50
+  skill_id: 1
+  profile_id: 12
+  skill_level: 4
+  skill_name: Adventure
+  
+soldier_conflict:
+  id: 49
+  skill_id: 3
+  profile_id: 12
+  skill_level: 7
+  skill_name: Conflict
+
+journalist_underworld:
+  id: 48
+  skill_id: 8
+  profile_id: 11
+  skill_level: 1
+  skill_name: Underworld
+  
+journalist_society:
+  id: 47
+  skill_id: 6
+  profile_id: 11
+  skill_level: 2
+  skill_name: Society
+  
+journalist_bureaucracy:
+  id: 46
+  skill_id: 2
+  profile_id: 11
+  skill_level: 2
+  skill_name: Bureaucracy
+  
+journalist_adventure:
+  id: 45
+  skill_id: 1
+  profile_id: 11
+  skill_level: 5
+  skill_name: Adventure
+  
+journalist_research:
+  id: 44
+  skill_id: 4
+  profile_id: 11
+  skill_level: 5
+  skill_name: Research
+
+psychotheropist_bureaucracy:
+  id: 42
+  skill_id: 2
+  profile_id: 10
+  skill_level: 1
+  skill_name: Bureaucracy
+  
+psychotheropist_research:
+  id: 41
+  skill_id: 4
+  profile_id: 10
+  skill_level: 2
+  skill_name: Research
+  
+psychotheropist_society:
+  id: 40
+  skill_id: 6
+  profile_id: 10
+  skill_level: 2
+  skill_name: Society
+  
+psychotheropist_sensitivity:
+  id: 39
+  skill_id: 10
+  profile_id: 10
+  skill_level: 3
+  skill_name: Sensitivity
+  
+psychotheropist_psychology:
+  id: 38
+  skill_id: 9
+  profile_id: 10
+  skill_level: 7
+  skill_name: Psychology
+
+police_inspector_psychology:
+  id: 37
+  skill_id: 9
+  profile_id: 9
+  skill_level: 1
+  skill_name: Psychology
+  
+police_inspector_research:
+  id: 36
+  skill_id: 4
+  profile_id: 9
+  skill_level: 2
+  skill_name: Research
+  
+police_inspector_underworld:
+  id: 35
+  skill_id: 8
+  profile_id: 9
+  skill_level: 3
+  skill_name: Underworld
+  
+police_inspector_bureaucracy:
+  id: 34
+  skill_id: 2
+  profile_id: 9
+  skill_level: 4
+  skill_name: Bureaucracy
+  
+police_inspector_conflict:
+  id: 33
+  skill_id: 3
+  profile_id: 9
+  skill_level: 5
+  skill_name: Conflict
+
+archeologist_scholarship:
+  id: 32
+  skill_id: 5
+  profile_id: 8
+  skill_level: 5
+  skill_name: Scholarship
+  
+archeologist_research:
+  id: 31
+  skill_id: 4
+  profile_id: 8
+  skill_level: 5
+  skill_name: Research
+  
+archeologist_adventure:
+  id: 30
+  skill_id: 1
+  profile_id: 8
+  skill_level: 5
+  skill_name: Adventure
+
+artist_adventure:
+  id: 29
+  skill_id: 1
+  profile_id: 7
+  skill_level: 1
+  skill_name: Adventure
+  
+artist_sorcery:
+  id: 28
+  skill_id: 7
+  profile_id: 7
+  skill_level: 2
+  skill_name: Sorcery
+  
+artist_society:
+  id: 27
+  skill_id: 6
+  profile_id: 7
+  skill_level: 3
+  skill_name: Society
+  
+artist_psychology:
+  id: 26
+  skill_id: 9
+  profile_id: 7
+  skill_level: 3
+  skill_name: Psychology
+  
+artist_sensitivity:
+  id: 25
+  skill_id: 10
+  profile_id: 7
+  skill_level: 6
+  skill_name: Sensitivity
+
+antiquarian_adventure:
+  id: 24
+  skill_id: 1
+  profile_id: 6
+  skill_level: 2
+  skill_name: Adventure
+  
+antiquarian_underworld:
+  id: 23
+  skill_id: 8
+  profile_id: 6
+  skill_level: 3
+  skill_name: Underworld
+  
+antiquarian_research:
+  id: 22
+  skill_id: 4
+  profile_id: 6
+  skill_level: 5
+  skill_name: Research
+  
+antiquarian_sorcery:
+  id: 21
+  skill_id: 7
+  profile_id: 6
+  skill_level: 5
+  skill_name: Sorcery
+
+gangster_adventure:
+  id: 20
+  skill_id: 1
+  profile_id: 5
+  skill_level: 4
+  skill_name: Adventure
+  
+gangster_conflict:
+  id: 19
+  skill_id: 3
+  profile_id: 5
+  skill_level: 5
+  skill_name: Conflict
+  
+gangster_underworld:
+  id: 18
+  skill_id: 8
+  profile_id: 5
+  skill_level: 6
+  skill_name: Underworld
+  
+dilettante_sorcery:
+  id: 17
+  skill_id: 7
+  profile_id: 4
+  skill_level: 2
+  skill_name: Sorcery
+  
+dilettante_sensitivity:
+  id: 16
+  skill_id: 10
+  profile_id: 4
+  skill_level: 2
+  skill_name: Sensitivity
+  
+dilettante_adventure:
+  id: 15
+  skill_id: 1
+  profile_id: 4
+  skill_level: 4
+  skill_name: Adventure
+  
+dilettante_society:
+  id: 14
+  skill_id: 6
+  profile_id: 4
+  skill_level: 7
+  skill_name: Society
+
+priest_psychology:
+  id: 13
+  skill_id: 9
+  profile_id: 3
+  skill_level: 1
+  skill_name: Psychology
+  
+priest_sorcery:
+  id: 12
+  skill_id: 7
+  profile_id: 3
+  skill_level: 3
+  skill_name: Sorcery
+  
+priest_scholarship:
+  id: 11
+  skill_id: 5
+  profile_id: 3
+  skill_level: 3
+  skill_name: Scholarship
+  
+priest_research:
+  id: 10
+  skill_id: 4
+  profile_id: 3
+  skill_level: 3
+  skill_name: Research
+  
+priest_sensitivity:
+  id: 9
+  skill_id: 10
+  profile_id: 3
+  skill_level: 5
+  skill_name: Sensitivity
+
+athelete_society:
+  id: 8
+  skill_id: 6
+  profile_id: 2
+  skill_level: 2
+  skill_name: Society
+  
+athelete_underworld:
+  id: 7
+  skill_id: 8
+  profile_id: 2
+  skill_level: 3
+  skill_name: Underworld
+  
+athelete_conflict:
+  id: 6
+  skill_id: 3
+  profile_id: 2
+  skill_level: 4
+  skill_name: Conflict
+  
+athelete_adventure:
+  id: 5
+  skill_id: 1
+  profile_id: 2
+  skill_level: 6
+  skill_name: Adventure
+
+parapsychologist_adventure:
+  id: 4
+  skill_id: 1
+  profile_id: 1
+  skill_level: 2
+  skill_name: Adventure
+  
+parapsychologist_sorcery:
+  id: 3
+  skill_id: 7
+  profile_id: 1
+  skill_level: 3
+  skill_name: Sorcery
+  
+parapsychologist_psychology:
+  id: 2
+  skill_id: 9
+  profile_id: 1
+  skill_level: 5
+  skill_name: Psychology
+  
+parapsychologist_sensitivity:
+  id: 1
+  skill_id: 10
+  profile_id: 1
+  skill_level: 5
+  skill_name: Sensitivity

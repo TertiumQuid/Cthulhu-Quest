@@ -1,0 +1,21 @@
+<% if current_investigator %>
+  <article class='sidebar funds'>
+    <h2>Funds : £<%= current_investigator.funds %>.00</h2>
+  </article>
+<% end %>
+
+<article>
+  <header>
+	<h2>Weapons Catalogue</h2>
+  </header>
+
+  <div class="profile">
+	<p>Get your household arsenal and ordinance from such fine suppliers as Revelation, Hawthorne, J. C. Higgens, and Ted Williams, hardware and military surplus outfitting-by-mail.</p>
+	<table class="tabular">
+	  <tbody>
+		<tr><th>Weapon Listing</th><th>Price</th><th>Kind</th><th>Power</th><th>Attacks</th><th>&nbsp;</th></tr>
+		<%= render @weapons %> 
+	  </tbody>
+	</table>	
+  </div>
+</article>

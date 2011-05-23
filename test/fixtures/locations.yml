@@ -1,0 +1,60 @@
+Sydney:
+  name: Sydney
+  zone: Australia
+  
+naples:
+  name: Naples
+  zone: Italy
+  
+cape_town:
+  name: Cape Town
+  zone: South Africa
+  
+berlin:
+  name: Berlin
+  zone: Germany
+  
+rome:
+  name: Rome
+  zone: Italy
+  
+chicago:
+  name: Chicago
+  zone: America
+  
+san_francisco:
+  name: San Francisco
+  zone: America
+  
+new_orleans:
+  name: New Orleans
+  zone: America
+  
+miskatonic_university:
+  location: arkham
+  name: Miskatonic Unversity
+  zone: America
+  
+paris:
+  name: Paris
+  zone: Great Britan
+  
+london:
+  name: London
+  zone: Great Britan
+  
+boston:
+  name: Boston
+  zone: America
+  
+new_york:
+  name: New York
+  zone: America    
+
+arkham:
+  name: Arkham
+  zone: America
+  
+miskatonic_valley:
+  name: Miskatonic Valley
+  zone: America

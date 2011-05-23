@@ -1,0 +1,725 @@
+miskatonic_university_curate_exhibit:
+  id: 66    
+  task_id: 3
+  owner_id: 7
+  owner_type: Location
+  owner_name: Miskatonic University
+  difficulty: 4
+  reward_name: +£30 Payment
+  reward_id: 30
+  level: 3
+  
+new_york_alienist_case_study:
+  id: 65    
+  task_id: 13
+  owner_id: 3
+  owner_type: Location
+  owner_name: New York
+  difficulty: 3
+  reward_name: +£20 Payment
+  reward_id: 20
+  level: 2
+  
+boston_alienist_case_study:
+  id: 64    
+  task_id: 13
+  owner_id: 4
+  owner_type: Location
+  owner_name: Boston
+  difficulty: 3
+  reward_name: +£20 Payment
+  reward_id: 20
+  level: 2
+  
+arkham_alienist_case_study:
+  id: 63    
+  task_id: 13
+  owner_id: 2
+  owner_type: Location
+  owner_name: Arkham
+  difficulty: 6
+  reward_name: +£40 Payment
+  reward_id: 40
+  level: 2
+  
+berlin_alienist_case_study:
+  id: 62    
+  task_id: 13
+  owner_id: 12
+  owner_type: Location
+  owner_name: Berlin
+  difficulty: 5
+  reward_name: +£40 Payment
+  reward_id: 40
+  level: 2
+  
+london_alienist_case_study:
+  id: 61    
+  task_id: 13
+  owner_id: 5
+  owner_type: Location
+  owner_name: London
+  difficulty: 4
+  reward_name: +£40 Payment
+  reward_id: 40
+  level: 3
+  
+london_fence_stolen_goods:
+  id: 60    
+  task_id: 7
+  owner_id: 5
+  owner_type: Location
+  owner_name: London
+  difficulty: 6
+  reward_name: +£30 Payment
+  reward_id: 30
+  level: 4
+  
+paris_fence_stolen_goods:
+  id: 59    
+  task_id: 7
+  owner_id: 6
+  owner_type: Location
+  owner_name: Paris
+  difficulty: 6
+  reward_name: +£40 Payment
+  reward_id: 40
+  level: 3
+  
+chicago_stolen_goods:
+  id: 58    
+  task_id: 7
+  owner_id: 10
+  owner_type: Location
+  owner_name: Chicago
+  difficulty: 3
+  reward_name: +£15 Payment
+  reward_id: 15
+  level: 1
+  
+new_orleans_stolen_goods:
+  id: 57    
+  task_id: 7
+  owner_id: 9
+  owner_type: Location
+  owner_name: New Orleans
+  difficulty: 3
+  reward_name: +£15 Payment
+  reward_id: 15
+  level: 1
+  
+san_francisco_stolen_goods:
+  id: 56    
+  task_id: 7
+  owner_id: 9
+  owner_type: Location
+  owner_name: San Francisco
+  difficulty: 4
+  reward_name: +£20 Payment
+  reward_id: 20
+  level: 2
+  
+boston_fence_stolen_goods:
+  id: 55    
+  task_id: 7
+  owner_id: 4
+  owner_type: Location
+  owner_name: Boston
+  difficulty: 4
+  reward_name: +£20 Payment
+  reward_id: 20
+  level: 2
+  
+new_york_fence_stolen_goods:
+  id: 54    
+  task_id: 7
+  owner_id: 3
+  owner_type: Location
+  owner_name: New York
+  difficulty: 3
+  reward_name: +£20 Payment
+  reward_id: 20
+  level: 2
+
+new_york_fraternal_order_duty:
+  id: 53    
+  task_id: 16
+  owner_id: 3
+  owner_type: Location
+  owner_name: New York
+  difficulty: 6
+  reward_name: +£70 Payment
+  reward_id: 70
+  level: 4
+  
+paris_fraternal_order_duty:
+  id: 52    
+  task_id: 16
+  owner_id: 6
+  owner_type: Location
+  owner_name: Parise
+  difficulty: 6
+  reward_name: +£70 Payment
+  reward_id: 70
+  level: 5
+  
+kingsport_fraternal_order_duty:
+  id: 51    
+  task_id: 16
+  owner_id: 17
+  owner_type: Location
+  owner_name: Kingsport
+  difficulty: 4
+  reward_name: +£30 Payment
+  reward_id: 30
+  level: 3
+  
+rome_fraternal_order_duty:
+  id: 50    
+  task_id: 16
+  owner_id: 11
+  owner_type: Location
+  owner_name: Rome
+  difficulty: 8
+  reward_name: +£150 Payment
+  reward_id: 150
+  level: 6
+  
+new_orleans_fraternal_order_duty:
+  id: 49    
+  task_id: 16
+  owner_id: 8
+  owner_type: Location
+  owner_name: New Orleans
+  difficulty: 3
+  reward_name: +£20 Payment
+  reward_id: 20
+  level: 2
+  
+london_fraternal_order_duty:
+  id: 48    
+  task_id: 16
+  owner_id: 5
+  owner_type: Location
+  owner_name: London
+  difficulty: 8
+  reward_name: +£120 Payment
+  reward_id: 120
+  level: 6
+  
+boston_fraternal_order_duty:
+  id: 47    
+  task_id: 16
+  owner_id: 4
+  owner_type: Location
+  owner_name: Boston
+  difficulty: 3
+  reward_name: +£20 Payment
+  reward_id: 20
+  level: 2
+  
+arkham_fraternal_order_duty:
+  id: 46    
+  task_id: 16
+  owner_id: 2
+  owner_type: Location
+  owner_name: Arkham
+  difficulty: 4
+  reward_name: +£25 Payment
+  reward_id: 25
+  level: 1
+  
+arkham_astronomical_anomaly:
+  id: 45    
+  task_id: 15
+  owner_id: 2
+  owner_type: Location
+  owner_name: Arkham
+  difficulty: 3
+  reward_name: +£15 Payment
+  reward_id: 15
+  level: 1
+  
+london_astronomical_anomaly:
+  id: 44    
+  task_id: 15
+  owner_id: 5
+  owner_type: Location
+  owner_name: London
+  difficulty: 6
+  reward_name: +£50 Payment
+  reward_id: 50
+  level: 3
+  
+boston_astronomical_anomaly:
+  id: 43    
+  task_id: 15
+  owner_id: 4
+  owner_type: Location
+  owner_name: Boston
+  difficulty: 5
+  reward_name: +£35 Payment
+  reward_id: 35
+  level: 3
+  
+boston_loan_shark:
+  id: 42    
+  task_id: 11
+  owner_id: 4
+  owner_type: Location
+  owner_name: Boston
+  difficulty: 3
+  reward_name: +£15 Payment
+  reward_id: 15
+  level: 2
+  
+kingsport_loan_shark:
+  id: 41    
+  task_id: 11
+  owner_id: 17
+  owner_type: Location
+  owner_name: Kingsport
+  difficulty: 3
+  reward_name: +£10 Payment
+  reward_id: 10
+  level: 1
+  
+new_orleans_loan_shark:
+  id: 40    
+  task_id: 11
+  owner_id: 8
+  owner_type: Location
+  owner_name: New Orleans
+  difficulty: 2
+  reward_name: +£10 Payment
+  reward_id: 10
+  level: 1
+  
+new_york_loan_shark:
+  id: 39    
+  task_id: 11
+  owner_id: 3
+  owner_type: Location
+  owner_name: New York
+  difficulty: 5
+  reward_name: +£30 Payment
+  reward_id: 30
+  level: 2
+  
+chicago_loan_shark:
+  id: 38    
+  task_id: 11
+  owner_id: 10
+  owner_type: Location
+  owner_name: Chicago
+  difficulty: 4
+  reward_name: +£25 Payment
+  reward_id: 25
+  level: 1
+  
+paris_census_records:
+  id: 37    
+  task_id: 14
+  owner_id: 6
+  owner_type: Location
+  owner_name: Paris
+  difficulty: 1
+  reward_name: +£5 Payment
+  reward_id: 5
+  level: 1
+  
+london_census_records:
+  id: 36    
+  task_id: 14
+  owner_id: 5
+  owner_type: Location
+  owner_name: London
+  difficulty: 1
+  reward_name: +£5 Payment
+  reward_id: 5
+  level: 1
+  
+boston_census_records:
+  id: 35    
+  task_id: 14
+  owner_id: 4
+  owner_type: Location
+  owner_name: Boston
+  difficulty: 1
+  reward_name: +£5 Payment
+  reward_id: 5
+  level: 1
+  
+new_york_census_records:
+  id: 34    
+  task_id: 14
+  owner_id: 3
+  owner_type: Location
+  owner_name: New York
+  difficulty: 1
+  reward_name: +£5 Payment
+  reward_id: 5
+  level: 1
+  
+san_francisco_census_records:
+  id: 33    
+  task_id: 14
+  owner_id: 9
+  owner_type: Location
+  owner_name: San Francisco
+  difficulty: 1
+  reward_name: +£5 Payment
+  reward_id: 5
+  level: 1
+  
+san_francisco_bootlegging:
+  id: 32    
+  task_id: 2
+  owner_id: 9
+  owner_type: Location
+  owner_name: San Francisco
+  difficulty: 5
+  reward_name: +£50 Payment
+  reward_id: 50
+  level: 4
+  
+chicago_bootlegging:
+  id: 31    
+  task_id: 2
+  owner_id: 10
+  owner_type: Location
+  owner_name: Chicago
+  difficulty: 5
+  reward_name: +£50 Payment
+  reward_id: 50
+  level: 4
+  
+kingsport_bootlegging:
+  id: 30    
+  task_id: 2
+  owner_id: 17
+  owner_type: Location
+  owner_name: Kingsport
+  difficulty: 1
+  reward_name: +£10 Payment
+  reward_id: 10
+  level: 1
+  
+innsmouth_bootlegging:
+  id: 29    
+  task_id: 2
+  owner_id: 18
+  owner_type: Location
+  owner_name: Innsmouth
+  difficulty: 1
+  reward_name: +£5 Payment
+  reward_id: 5
+  level: 1
+  
+new_york_bootlegging:
+  id: 28    
+  task_id: 2
+  owner_id: 3
+  owner_type: Location
+  owner_name: New York
+  difficulty: 4
+  reward_name: +£30 Payment
+  reward_id: 30
+  level: 3
+  
+arkham_bootlegging:
+  id: 27    
+  task_id: 2
+  owner_id: 1
+  owner_type: Location
+  owner_name: Arkham
+  difficulty: 2
+  reward_name: +£15 Payment
+  reward_id: 15
+  level: 1
+  
+boston_bootlegging:
+  id: 26    
+  task_id: 2
+  owner_id: 4
+  owner_type: Location
+  owner_name: Boston
+  difficulty: 3
+  reward_name: +£25 Payment
+  reward_id: 25
+  level: 2
+  
+new_orleans_bootlegging:
+  id: 25    
+  task_id: 2
+  owner_id: 8
+  owner_type: Location
+  owner_name: New Orleans
+  difficulty: 3
+  reward_name: +£15 Payment
+  reward_id: 15
+  level: 1
+  
+london_publish_paper:
+  id: 24    
+  task_id: 4
+  owner_id: 5
+  owner_type: Location
+  owner_name: London
+  difficulty: 7
+  reward_name: +£100 Payment
+  reward_id: 100
+  level: 4
+  
+new_orleans_publish_paper:
+  id: 23    
+  task_id: 4
+  owner_id: 8
+  owner_type: Location
+  owner_name: New Orleans
+  difficulty: 2
+  reward_name: +£20 Payment
+  reward_id: 20
+  level: 1
+  
+paris_publish_paper:
+  id: 22    
+  task_id: 4
+  owner_id: 6
+  owner_type: Location
+  owner_name: Paris
+  difficulty: 6
+  reward_name: +£60 Payment
+  reward_id: 60
+  level: 4
+  
+boston_publish_paper:
+  id: 21    
+  task_id: 4
+  owner_id: 4
+  owner_type: Location
+  owner_name: Boston
+  difficulty: 5
+  reward_name: +£45 Payment
+  reward_id: 45
+  level: 3
+  
+new_york_publish_paper:
+  id: 20    
+  task_id: 4
+  owner_id: 3
+  owner_type: Location
+  owner_name: New York
+  difficulty: 3
+  reward_name: +£35 Payment
+  reward_id: 35
+  level: 2
+  
+chicago_liberty_bonds:
+  id: 19    
+  task_id: 6
+  owner_id: 10
+  owner_type: Location
+  owner_name: Chicago
+  difficulty: 3
+  reward_name: +£30 Payment
+  reward_id: 30
+  level: 1
+  
+san_francisco_liberty_bonds:
+  id: 18    
+  task_id: 6
+  owner_id: 9
+  owner_type: Location
+  owner_name: San Francisco
+  difficulty: 5
+  reward_name: +£40 Payment
+  reward_id: 40
+  level: 2
+  
+boston_liberty_bonds:
+  id: 17    
+  task_id: 6
+  owner_id: 4
+  owner_type: Location
+  owner_name: Boston
+  difficulty: 5
+  reward_name: +£50 Payment
+  reward_id: 50
+  level: 2
+  
+new_york_liberty_bonds:
+  id: 16    
+  task_id: 6
+  owner_id: 3
+  owner_type: Location
+  owner_name: New York
+  difficulty: 7
+  reward_name: +£75 Payment
+  reward_id: 75
+  level: 3
+  
+sydney_lead_safari:
+  id: 15    
+  task_id: 9
+  owner_id: 15
+  owner_type: Location
+  owner_name: Cape Town
+  difficulty: 5
+  reward_name: +£100 Payment
+  reward_id: 100
+  level: 2
+  
+cape_town_lead_safari:
+  id: 14    
+  task_id: 9
+  owner_id: 13
+  owner_type: Location
+  owner_name: Cape Town
+  difficulty: 7
+  reward_name: +£125 Payment
+  reward_id: 125
+  level: 3
+  
+new_york_union_strongarm:
+  id: 13    
+  task_id: 12
+  owner_id: 3
+  owner_type: Location
+  owner_name: New York
+  difficulty: 7
+  reward_name: +£50 Payment
+  reward_id: 50
+  level: 3
+  
+new_york_stage_acting:
+  id: 12    
+  task_id: 10
+  owner_id: 3
+  owner_type: Location
+  owner_name: New York
+  difficulty: 3
+  reward_name: +£25 Payment
+  reward_id: 25
+  level: 2
+  
+london_stage_acting:
+  id: 11    
+  task_id: 10
+  owner_id: 5
+  owner_type: Location
+  owner_name: London
+  difficulty: 6
+  reward_name: +£40 Payment
+  reward_id: 40
+  level: 3
+  
+arkham_union_strongarm:
+  id: 10    
+  task_id: 12
+  owner_id: 2
+  owner_type: Location
+  owner_name: Arkham
+  difficulty: 2
+  reward_name: +£15 Payment
+  reward_id: 15
+  level: 1
+  
+kingsport_union_strongarm:
+  id: 9    
+  task_id: 12
+  owner_id: 17
+  owner_type: Location
+  owner_name: Kingsport
+  difficulty: 1
+  reward_name: +£10 Payment
+  reward_id: 10
+  level: 1
+  
+chicago_union_strongarm:
+  id: 8    
+  task_id: 12
+  owner_id: 10
+  owner_type: Location
+  owner_name: Chicago
+  difficulty: 6
+  reward_name: +£50 Payment
+  reward_id: 50
+  level: 4
+  
+new_orleans_union_strongarm:
+  id: 7    
+  task_id: 12
+  owner_id: 8
+  owner_type: Location
+  owner_name: New Orleans
+  difficulty: 2
+  reward_name: +£20 Payment
+  reward_id: 20
+  level: 1
+  
+san_francisco_union_strongarm:
+  id: 6    
+  task_id: 12
+  owner_id: 9
+  owner_type: Location
+  owner_name: San Francisco
+  difficulty: 6
+  reward_name: +£40 Payment
+  reward_id: 40
+  level: 3
+  
+london_union_strongarm:
+  id: 5    
+  task_id: 12
+  owner_id: 5
+  owner_type: Location
+  owner_name: London
+  difficulty: 4
+  reward_name: +£30 Payment
+  reward_id: 30
+  level: 2
+  
+boston_union_strongarm:
+  id: 4    
+  task_id: 12
+  owner_id: 4
+  owner_type: Location
+  owner_name: Boston
+  difficulty: 2
+  reward_name: +£20 Payment
+  reward_id: 20
+  level: 1
+  
+british_museum_curate_exhibit:
+  id: 3    
+  task_id: 3
+  owner_id: 20
+  owner_type: Location
+  owner_name: British Museum
+  difficulty: 8
+  reward_name: +£100 Payment
+  reward_id: 100
+  level: 7
+  
+harvard_university_university_lecture:
+  id: 2    
+  task_id: 1
+  owner_id: 21
+  owner_type: Location
+  owner_name: Harvard University
+  difficulty: 7
+  reward_name: +£75 Payment
+  reward_id: 75
+  level: 3  
+  
+miskatonic_university_university_lecture:
+  id: 1
+  task_id: 1
+  owner_id: 7
+  owner_type: Location
+  owner_name: Miskatonic University
+  difficulty: 4
+  reward_name: +£50 Payment
+  reward_id: 50
+  level: 2  

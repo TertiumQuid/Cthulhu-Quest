@@ -1,0 +1,322 @@
+malleus_maleficarum_3:
+  id: 27
+  title: Malleus Maleficarum III
+  subtitle: Of the Righteous Judgements Deserved by the Witch
+  level: 2
+  duration: 5
+  madness: 1  
+  description: |
+               From the shadows of Alexandria to the Salem woods, the forces of witchcraft are at work tainting the innocent and unwary. Your contact's cousin has been acting under the influence of demonic impulse, used in the service of seduction, conception, and childbirth in a manner that comes to light only as you confront the village Witches and their infernal practice.
+
+               At the head of the coven are three hags, abiding in Salem for centuries carrying out most horrible rituals necessary to meet the infanticide demands of their demonic pacts. Using magic to enslave young girls, seduce their neighbors, and then through dark powers carry the babies to term in mere days, these little unnatural souls are born only to be massacred in the woods in the name of Chaldaean divinities.
+
+               With the Hammer of the Witches as your guide, you begin pierce the veil of the coven, unmasking its lessor oblivious members through penetrating questions. Under the duress of curse and hex, and must endure sabotage and insidious social intrigues as you track down the hags to their hidden dens.
+
+malleus_maleficarum_2:
+  id: 26
+  title: Malleus Maleficarum II
+  subtitle: Of the Country Heresy and Forgotten Rites of Hecate
+  level: 2
+  duration: 3
+  madness: 2  
+  description: |
+               With time dwindling and your welcome overstayed, investigations must be accelerated. You've somehow managed to arrange for the girl's release into your custody, during which period there are none in the village whose eyes are not fixed upon your every move. Even so, with the cousin at hand you can at last seek more direct answers.
+
+               After a time, you feel almost as if the girl has two personalities, one in whose innocence and fear are plain to see, and another whose difference lies in an imperceptible shift of manner toward a diabolical and insinuating humor. During these darker moments, you find yourselves surrounded by ominous coincidence, such as the presence of black cats, sulfurous odors, and the unseasonable baying of valley wolves. 
+
+               It is only listening to the trembling words of the aged and wizened senior townsfolk as they recount a dark history of the village that you gain an understanding of the forces at play. Absent names, you learn of a coven which has for centuries practiced mass infanticide upon altars in the woods. The Witches use hexes and geas to hide themselves and control their victims, but as an old man says from the shadows of his parlor as he hands you something from a trunk, "this book destroyeth Witches and their heresy like a most powerful spear".
+
+national_electric_light_association:
+  id: 25
+  title: The National Electric Light Association
+  subtitle: Of the Association's Hapless Experiments
+  duration: 3
+  level: 2
+  madness: 2  
+  description: |
+               While NELA's modern laboratories have been quietly opening in the shadows, they now begin to shine their beacon on any man or woman of scientific extraction capable to fill staff positions at their headquarters. 
+
+               Finding an advertisement in Popular Science Monthly promising a generous wage for qualified lab assistants, you can proudly sign on for a vague contract performing unspecified scientific scut work. A modicum of mechanical understanding and an eagerness for heavy lifting should be enough to pass the screening.
+
+               Behind the endless doors of the research lab, the NELA's finest inventors are hard at work exploiting the medium of light, but to what other doors of the universe might their work lead?
+
+king_in_yellow:
+  id: 24
+  title: The King in Yellow
+  subtitle: Of the Last King and Lost Carcosa
+  duration: 5
+  level: 3
+  madness: 4  
+  description: |
+               Having escaped from the abysmally darkened manor, the guests have fled the playwright's morbid midnight theater in various stages of duress and sobriety.
+
+               Those that remain inside feel compelled to find their way to the master hall where candelabras have been lit and an opulent stage unveiled. The towering estate windows reveal a limitless starry space to have replaced the view of the exterior grounds. 
+
+               As inhumanoid costumed creatures take the stage in allegorical pantomime and dreadful music begins to rise, the monstrous play The King In Yellow is about to be performed, with the playwright himself assuming the role of the decadent king of Yhtill.                
+
+no_mask:
+  id: 23
+  title: No mask, NO MASK!
+  subtitle: Of the Deadly Game in the Playwright's Manor Estate
+  duration: 3
+  level: 2
+  madness: 6  
+  description: |
+               At the stoke of midnight the playwright has taken the stage to address his guests.
+
+               Attired in a gaudy tatterdemalion outfit of grotesque design, the guests are informed they shall play a game of hide and seek before the commencement of the play, limited to the hoary estate house, 105 bedrooms large and riddled with curious passageways. 
+
+               The drunken game unlocks a mood of lechery and excess in the darkened estate, and giggling and foppish moans and screams fill the halls. As you creep through the passages trying to avoid the playwright and his harlequin servants, it becomes clear that the game is not so innocent after all, and that, in fact, they play has already begun.
+
+have_you_seen_the_yellow_sign:
+  id: 22
+  title: Have You Seen the Yellow Sign?
+  subtitle: Of the Scion Playwright and His Decadent New Work
+  duration: 4
+  level: 2
+  madness: 8  
+  description: |
+               A dilettante playwright (rumored to be an illegitimate Rothschild son) has emerged from a period of mysterious seclusion to announce the performance of his next great theatrical work, to take place in media res upon his estate grounds where he will be hosting an extravagant private masquerade. 
+
+               An invitation with a twisted yellow seal arrived addressed to you personally; after much thought you can imagine no reason why you were made a guest, but the allure of the event holds some hint of the macabre and sinister.
+
+               Like the other guests, many of whom have been outed in the daily gossip columns, you are under strict instructions to arrive in full costume, and to expect festivities until the latest hours of the night. Everyone from bohemians to eccentric American royalty is rumored to attend.
+
+grandfathers_journal:
+  id: 21
+  title: Grandfather's Journal
+  subtitle: Of the Dreadful Rantings of Grandpa's Twilight Years
+  duration: 4
+  level: 1
+  madness: 6  
+  description: |
+               Before your grandfather was a man of the world, he spent his college years in prolific engagement in one of the top academic clubs at university. After recently passing from this world, your idle perusal of his safekeepings uncovered a journal where grandfather soberly describes a tragedy occasioned by the foolish occult explorations of a small group of he and his club companions many years ago.
+
+               Having only the weakest sense of their actions, the young men used a grimoire acquired by the club president to horrible effect, ultimately summoning to an abandoned farmhouse an otherworldly evil that nearly killed them that night but for the judiciously prepared wards the students had the good sense to heed.
+
+               The wards, however, were to last only so long as the summoners lived. With your grandfather's passing, the last of the old friends has died, and the evil in the farmhouse will soon waken to discover that it can escape into the corporeal realm of man. It's not too late, but you'll have to act wisely to defeat the terrible being.
+
+ulthars_decree:
+  id: 20
+  title: Ulthar's Decree
+  subtitle: Of the Laws of Feline Kingdoms
+  duration: 3
+  level: 1
+  description: |
+               A neighborhood sociopath has been poisoning stray cats whose corpses are beginning to litter the alleyways and imbue the quiet streets with the chilling tension of human malevolence. 
+
+               The screeching death howls of the poor creatures in the midnight hours places the time and direction of the crimes.  Now it's up for someone to put an end to this cruel madness and restore the neighborhood's dignity.                
+
+unquiet_dead:
+  id: 19
+  title: Unquiet Dead
+  subtitle: Of the Legacy of the Notorious Herbert West
+  duration: 3
+  level: 1
+  madness: 4  
+  description: |
+               A student was attacked and badly injured last night, but most mysterious was that her assailant was discovered the next morning in the campus courtyards, himself a corpse cold for an impossible 24 hours or more. So how did a cadaveor manage to live long enough to unmistakably attack a living witness?
+
+               The dead man attended the Miskatonic School of Medicine, a likely beginning for so unusual a case of physiological contradictions. Would not the students who kept the man's company be able to say more? 
+
+               There is one confidant in particular who suggests interest: Corey Owen is the name of a young physician's student, known to have been connected to both the deceased and the victim through their university studies.
+
+professors_lecture:
+  id: 18
+  title: The Professor's Lecture
+  subtitle: Of the Mysterious Librarian, Dr. Henry Armitage
+  duration: 1
+  level: 1
+  description: |
+               The venerable Dr. Henry Armitage is speaking at the university grand lecture hall this evening to an audience of students and scholars. They say his knowledge of rare books is legendary in the library and auction house alike. 
+               
+               Tonight's discourse will concern the vast storehouse of hermetic understanding hidden away in lost manuscripts known only to a few and deciphered by fewer still. None will leave the hall untroubled by a newfound awe for the power of mankind's occultic tomes. From his vantage in the library stacks, who can see as far into the subterfuge of history as Dr. Armitage?
+  
+night_terrors:
+  id: 17
+  title: Night Terrors
+  subtitle: Of consuming nightmares that permit neither rest nor reason
+  duration: 2
+  level: 1
+  madness: 5  
+  description: |
+               The more lurid and gripping your dreams become, the more they recoil from recollection and leave your days filled with a unplaceable sense of growing menace. The force of the impressions left by the dreams is too powerful to ignore, too ominous to oblige, and too strange to forget.
+               
+               Horrors have gripped you that you cannot shake, that have lodged themselves in the corners of your mind where they emenate and presage dire comings, in hints manifest all about the waking world.
+
+               Your mind can no longer endure the nightly torments and daily exhaustion; it's time to reach through the fog of these dreams and banish their chilling, prognostic haze. Whatever meaning has crept into your unconscious mind must be uncovered, understood, expelled.
+               
+triassic_translations:
+  id: 16
+  title: Triassic Translations
+  subtitle: Of the uncanny Eltdown Shard translation and the secrets of the universe told through the intricate glyphs.
+  duration: 6
+  level: 2  
+  madness: 4  
+  description: |
+               The mysterious pottery fragments found in 1882 in southern England have come to be known as the Eltdown Shards, an inscrutable hieroglyphic masterwork whispered to describe cosmic histories and the voyages of ancient astronauts.
+
+               Few translations have been attempted, but of those the most probable is agreed to have been scribed by the Reverend Arthur Brooke Winters-Hall, a learned Sussex Clergyman with not inconsiderable powers of conjecture and imagination. 
+
+               From the ex libris of the English countryside it's possible that the Revered's folios have found their way by blind chance into the bookstalls of nescient peddlers. How might one play chance to stumble upon such a find, should it even exist?
+
+
+polis_of_sunken_sahara:
+  id: 15
+  title: Polis of Sunken Sahara
+  subtitle: Of the translated G'harne Fragments and the legendary city of prehistory conjectually described therein.
+  duration: 6
+  level: 2  
+  madness: 4  
+  description: |
+               The wondrously ancient African city of G'harne would climb second only to Atlantis on ladder of prehistory, if only more about the Saharan megapolis could be learned. Scholars such as Sir Amery Wendy-Smith and Gordon Walmsley have labored over the extracted obsidian fragments with varying success, and the product of their labors deliberately held from the wider, more doubtful, history community.
+               
+               Yet the publisher of an archeological trade journal has let slip that he received a draft manuscript containing the translations and marginalia of G'harne scholars, but would regrettably be destroying the item at the end of his research to honor the ominous request of the mystery translator. 
+               
+               Until that time it can be surmised that the reckless publisher is keeping his copy hidden under lock and key.
+
+magick_book_4:
+  id: 14
+  title: Magick, Liber ABA, Book 4
+  subtitle: Of the Beast's magnum opus of rituals, essays, paths, and practices in the arts and sciences of magick.
+  duration: 6
+  level: 2
+  
+book_of_lies:
+  id: 13
+  title: Book of Lies
+  subtitle: Of the Beast's scripture by which man prepares his mind for chaos and enters the heart of darkness.
+  duration: 6
+  level: 2
+  
+book_of_law:
+  id: 12
+  title: Book of Law
+  subtitle: Of the Beast's blasphemous communion with the Scarlet Woman and the Thebean heresiarch Ankh-ef-en-Khonsu.
+  duration: 6
+  level: 2
+
+last_man_standing:
+  id: 11
+  title: Last Man Standing
+  subtitle: Of the dockside boxing competition among the local toughmen, and the prize purse wagered there.
+  duration: 5
+  level: 1  
+  description: |
+               Feral beasts of the docksides known as sailors, stevedores, teamsters, and strong-arms, turn coin for sport and might to find their Apollo among droves of bloodthirsty whisky-faced peons.
+
+               The bare knuckle boxing tournament held in an candlelit warehouse promises a tidy prize purse, but the fight ladder is made risky by the pitfalls of foul play. It's an honest fight where the telling blows are struck by the treachery of the mysterious mob promotors.
+
+               And yet don't fail to expect the worst examples of mankind's brutish races to put down their labors and pick up their fists to beat you in earnest.
+  
+clavis_alchimiae:
+  id: 10
+  title: Clavis Alchimiae
+  subtitle: Of the applied practice of alchemy and the spiritual pathways of perfection locked within matter.
+  level: 2  
+  madness: 2  
+  duration: 3
+
+prophecies_of_nostradamus:
+  id: 9
+  title: Prophecies of Nostradamus
+  subtitle: Of the imagistic verse of history's immortal poet and seer
+  level: 1  
+  duration: 1
+  description: |
+               The world crumbles from its own velocity across a course long since charted by the humble prophet of midieval France, Nostradamus. The thunder of events from the Great War to the strife of nations and despots, the march of science, airplanes and earthquakes, history is forever trembling in the shadows which darkened the mind of a seer.
+
+               With a proper reading of the quatrains, taken through a wider lens into the more ancient prognostications of sages such as Telesphorus, Joachim of Fiore, and Merlin, you can just make out the stage of history at present moment. It takes equal measures of genius and liquor to fix the events foreseen by Nostradamus in the present day.
+
+               If you can believe anything after the lines of French doomsaying echo from your mind, it's that the worst of the prophecies, the most apocalyptical, are yet to come.  
+  
+zohar:
+  id: 8
+  title: Zohar
+  subtitle: Of the language of the Hebrew God spoken through His creation
+  level: 3 
+  madness: 3   
+  duration: 2
+  
+malleus_maleficarum_1:
+  id: 7
+  title: Malleus Maleficarum I
+  subtitle: Of the diabolical guises and deceptions of the Witch.
+  level: 1  
+  duration: 3
+  madness: 1  
+  description: |
+               Your contact has asked you to intercede in a curious matter of life and death unfolding in the damp woodlands near Salem. They would have you see to the welfare of a young cousin who has been accused of witchcraft and stands ready, say the local rumors, for the farmer's fire, learned and remembered from those dark days of the Trials. Time is of the essence.
+
+               Traveling to the village, you could not feel more unwelcome by the people there, making the plight of the young woman all the more persuasive. Allowed only a brief moment in her confidence, she avows her complete innocence to you before she's dragged away to a private house for temporary imprisonment. Nobody you can approach will acknowledge either the nature nor even the question of her intended fate.
+
+               Many, however, will speak of her crimes, and urge you investigate them yourself before presuming anything. The libidinous characterization of the girl seems unfair, but the uniform agreement from numerous and diverse leaders of the community cannot be ignored.
+  
+key_of_solomon:
+  id: 6
+  title: Key of Solomon
+  subtitle: Of the great King Solomon's transactions with spirits and deamons
+  level: 2  
+  madness: 4  
+  duration: 2
+
+beatus_methodivo:
+  id: 5
+  title: Beatus Methodivo
+  subtitle: Of the Gnostic history of past, present, and future
+  level: 1  
+  duration: 2
+  description: |
+               From the inspired pen of an old-world patriarch comes a dark tale of India's Black Magic empire and the hidden rule of diabolism. Established by the children of Cain, the systems of the Indian mantriks have been chiefly concerned with mass population control, warping the lives of billions in pursuit of everlasting sorcerous dominion.
+
+               From the black-eye ranks of a chattel people will rise great wars, driven by the scourge of their ancient masters, and then shall Rome and the nations of the Dark Continent clash while demons unmask and behold their great work.
+
+               Steeped in Gnostic imagery, the rare volume makes a troubling companion to the annuls of Indian history, suggesting a steady path of invasion across the world, beginning in the darkest slave pits of India and plotted by the taloned hands of immortals  serving a forgotten Demiurge of immeasurable influence and unintelligible desire.
+  
+emerald_tablet:
+  id: 4
+  title: Emerald Tablet
+  subtitle: Of the grand alchemy of cosmic symbology
+  level: 2
+  duration: 3
+  
+i_ching:
+  id: 3
+  title: I Ching
+  subtitle: Of the Chinaman's prophetic poetry system
+  level: 1  
+  duration: 2
+  description: |
+               The legendary I Ching, the celestial's Book of Changes, has for millennia quietly foretold the past and future of mankind to those who could work its systemic hexagrams. Western commentaries have fallen short of the profundity long known to its scholars, and the wider meanings of its grand cosmology found understanding only in the smoky jade eastern mind.
+
+               You'll descend into the warrens of the Chinatown shanties to find characters, low and high, attuned to the knowledge and nature of the venerable tome. Stumbling blindly into shadows of ancient mysticism, only fate and chaos shall be your lodestones through the gambling dens, opium clouds, and bookseller alleyways that become your dingy haunts in the search for the inscrutable signs of a cosmic wheel.
+
+               Albino sages and whiskered thieves will be your escorts and enemies, seeing you compelled ever deeper into the seething yellow hive of the world's strangest ancestors to blind tradition, true wisdom, and cunning lies. If you can keep your senses and body parts intact through the trails, you may too inherit the craft of the wondrous I Ching.
+               
+the_golden_bough:
+  id: 2    
+  title: Golden Bough
+  subtitle: Of the true history of mankind's regarded religions and rituals
+  level: 1  
+  duration: 2
+  madness: 2  
+  description: |
+               From the misty ceremonies of history emerge a troublingly consistent picture of divinities who have worn the masks of the sun and earth, changing names and sacrificing kings in elaborate regicides with ulterior meanings. These rituals are played out even today, engaging man in blind worship and suffering to be understood only through enlightened scrutiny.
+
+               The triumphant march of civilization is more illusion than truth, and if you're to escape the thrall of atavistic magic you must turn to the rich work of James George Frazer and the insights onto which he stumbled.
+
+               Your company in the search will be suspicious academics in university halls and redeemed futility cultists in asylum hospitals, the hidden records of the church, holy books, and your own capacity for comprehending the forces of human myth and darkness
+
+troubled_dreams:
+  id: 1
+  title: Troubled Dreams
+  subtitle: Of nightmares which prophecy unpalceable doom
+  duration: 2
+  level: 1
+  madness: 3
+  description: |
+               Your nights have become strange periods of half-remembered sojourns to furthest reaches of unconscious space, leaving you to wake with feelings of nostalgia, menace, and urgency. The dreamscapes linger in the corners of your mind, a potent mixture of familiarity and the intuition of having touched cosmic truth never known but to you alone.
+
+               Surely there's a way to access the curtained knowledge of your slumbers, and surely you can obtain access by way of lucidity and a strong will, supported by other means of tapping the unconscious world known to trigger man's secret powers to see the unseen.
+
+               The nocturnal disturbance is catching up with you, however. You no longer recognize the face in the mirror, your hands tremble with palsy, and your minor hallucinations are becoming an indistinguishable reality. You must take action, one way or another, before your mind is lost.

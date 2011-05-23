@@ -1,0 +1,52 @@
+<div class='grid-list-container' style='height:420px;width:570px;'>
+<ul class='grid-list tall' id='weapon-list'>
+<% weapons.each do |weapon| %>
+<li>
+  <h6><%= weapon.name %></h6>
+  <div class='body'><%= weapon.description %></div>
+  <div class="info">
+	<div class='float-strip'>
+      <div class="circle medium blue"><%= weapon.attacks %> <em>ATK</em></div>
+	  <div class="circle medium red"><%= weapon.power %> <em>POW</em></div>
+    </div>
+  </div>
+  <div class="cmd">
+	<% if @weapon_ids && @weapon_ids.include?(weapon.id) %>
+	  <a class='weaponize-button disabled' href='javascript:void(0)'>owned</a>
+	<% else %>
+      <%= link_to "buy £ #{weapon.price}", purchase_facebook_armament_path( weapon ), 
+                  'data-title' => weapon.name,
+				  'data-price' => weapon.price,
+                  :class => 'weaponize-button', 
+                  :method => 'post',
+                  :remote => true %>
+    <% end %>
+  </div>
+</li>
+<% end %>
+
+<% if (weapons.size % 8) != 0 %>
+  <% (8 - (weapons.size % 8)).times do %>
+  <li class='empty'>
+    <h6>&nbsp;</h6>
+    <div class='body'>&nbsp;</div>
+    <div class="info">&nbsp;</div>
+  </li>
+  <% end %>
+<% end %>
+</ul>
+</div>
+
+<script>
+$(function() {
+  $( "a.weaponize-button" ).bindAjaxRequester({
+	confirmation: "Are you sure you wish to purchase this weapon?",
+    success: function(sender) {
+      setFundsLabel( -parseInt( sender.attr('data-price') ));
+      sender.button('disable').unbind('');
+      sender.button('option', 'label', 'owned');
+    }
+  });
+  $( ".weaponize-button.disabled" ).button('disable').unbind('');
+});
+</script>

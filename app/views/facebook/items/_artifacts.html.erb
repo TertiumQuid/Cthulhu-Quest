@@ -1,0 +1,29 @@
+<div class='grid-list-container'>
+<ul class='grid-list small' id='artifact-list' style='width:570px;'>
+<% artifacts.each do |item| %>
+<li>
+  <h6><%= item.name %></h6>
+  <div class='body'><%= item.description %></div>
+  <div class="info"><%= pluralize(item.uses_count, 'use') %></div>
+  <div class="cmd">
+    <%= link_to "buy £ #{item.price}", purchase_facebook_possession_path( item ), 
+                'data-title' => item.name,
+				'data-price' => item.price,
+                :class => 'buy-button', 
+                :method => 'post',
+                :remote => true %>	
+  </div>
+</li>
+<% end %>
+
+<% if (artifacts.size % 8) != 0 %>
+  <% (8 - (artifacts.size % 8)).times do %>
+  <li class='empty'>
+    <h6>&nbsp;</h6>
+    <div class='body'>&nbsp;</div>
+    <div class="info">&nbsp;</div>
+  </li>
+  <% end %>
+<% end %>
+</ul>
+</div>

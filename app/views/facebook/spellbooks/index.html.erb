@@ -1,0 +1,89 @@
+<div class="panel">
+  <div class="wrapper">
+	<div id='magic-tabs' class="tabs">
+	  <ul>
+	    <% unless @casting.blank? %><li><a href="#tabs-ritual">Preforming Ritual</a></li><% end %>
+	    <li><a href="#tabs-spellbook">Spellbook</a></li>
+	    <li><a href="#tabs-grimoires">Grimoires</a></li>
+	    <li><a href="#tabs-effections">Magical Effects <%= @effections.blank? ? '' : "(#{@effections.size})" %></a></li>
+      </ul>
+
+      <% unless @casting.blank? %>
+	    <div id="tabs-ritual" class='tab-panel'>
+			<ul class='profile'>
+			  <li class='super'>
+			    <span class='title'><em>Casting</em> <%= @casting.name %></span>
+			    <q><%= @casting.spell.description %></q>
+			  </li>
+			</ul>
+			
+		    <ul class='profile'>	
+		  	  <li>
+			    <label>When the ritual is complete you will receive <%= @casting.spell.effect %></label>
+			  </li>
+			  <li style='padding:15px'>
+		  	    <span class='progressbar-label'>
+			      <%= distance_of_time_in_words(Time.now, (@casting.created_at + @casting.spell.time_cost.hours)) %> of rituals remaining
+			    </span>
+			    <div id='spellcasting-bar' class="progressbar"></div>	
+			  </li>
+		    </ul>			
+	    </div>
+	  <% end %>
+	
+	  <div id="tabs-spellbook" class='tab-panel'>
+		<div class="box">	
+		
+	      <% if @spells.blank? %>
+	        <h3>No Spells</h3>
+	        <p>It seems you remain a fortunate stranger to the dark arts. There are words written in the books of ancient wizards that are absolutely not to be trusted or contemplated without inviting madness and inevitable doom.</p>	
+	      <% else %>
+		    <p><em>Spells may be cast by devoting a certain amount of time to performing the necessary, arduous rituals. Once the ritual culminates, the spell is invoked and will remain active until it elapses.</em></p>
+		
+		    <%= render :partial => 'facebook/spellbooks/spells', :locals => { :spells => @spells } %>
+	      <% end %>		
+		
+		</div>
+	  </div>
+	
+	  <div id="tabs-grimoires" class='tab-panel'>
+		<div class="box">
+	      <% if @spellbooks.blank? %>
+	        <h3>No Grimoires</h3>
+	        <p>Your library is presently bereft of any dark lore and the grimoires which are its insidious agents. <em>Grimoires, however, can be discovered by solving certain plots, and once read will unlock several spells.</em></p>
+	      <% else %>
+		    <p>Mythos grimoires hold lost troves of arcana describing intricate instructions for the working of ritual spells.</p>
+		    <%= render :partial => 'facebook/spellbooks/grimoires', :locals => { :spellbooks => @spellbooks } %>
+	      <% end %>
+	
+	    </div>
+	  </div>
+	
+	  <div id="tabs-effections" class='tab-panel'>
+		<div class="box">
+	      <p>The working of spells will produce effects that can profoundly change the qualities of the caster, for better or worse. <em>Whenever you use certain items or cast spells the effects of these powers will appear here.</em></p>
+          <% if @effections.blank? %>
+            <p>You currently walk untouched by the powers of magick.</p>	
+          <% else %>
+	        <%= render :partial => 'facebook/effections/effections', :locals => { :effections => @effections } %>
+          <% end %>
+        </div>
+	
+	  </div>		
+    </div>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $( "a.cast-button" ).button();
+  $( "a.read-button" ).button();
+  $( "div#magic-tabs" ).tabs();
+
+  <% unless @casting.blank? %>
+    $( "#spellcasting-bar" ).progressbar({
+	  value: <%= (Time.now.to_f / (@casting.created_at + @casting.spell.time_cost.hours).to_f ) %>
+    });
+  <% end %>
+});
+</script>
